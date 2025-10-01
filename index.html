@@ -13,9 +13,9 @@
       background: #0d0f10;
       color: #e9ecf4;
       line-height: 1.6;
-      text-align: center;
     }
     header {
+      text-align: center;
       padding: 40px 20px;
       background: linear-gradient(180deg,#111418,#0d0f10);
       border-bottom: 1px solid #2b2f3a;
@@ -35,15 +35,44 @@
     }
     main {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-      text-align: left;
     }
-    a.btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #18f0b4;
+    }
+    .directory {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #14171d;
+      border: 1px solid #2b2f3a;
       border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #e9ecf4;
+    }
+    .card p {
+      font-size: .9rem;
+      color: #b7becc;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 16px;
+      border-radius: 10px;
       font-weight: bold;
       color: #081014;
       background: linear-gradient(90deg,#18f0b4,#0acb92);
@@ -59,14 +88,34 @@
   </header>
 
   <main>
-    <h2>Welcome</h2>
-    <p>
-      The Cannabis Field Guide is a no-nonsense resource for anyone who wants real-world,
-      field-tested knowledge about cannabis. From cultivation and wellness to survival applications,
-      we cover it all without hype or corporate spin.
-    </p>
-
-    <a class="btn" href="#">Explore the Guide →</a>
+    <h2>Explore the Guide</h2>
+    <div class="directory">
+      <div class="card">
+        <h3>Cultivation</h3>
+        <p>From soil prep to indoor grows — practical cannabis farming tips.</p>
+        <a href="cultivation.html">View Section →</a>
+      </div>
+      <div class="card">
+        <h3>Wellness</h3>
+        <p>Learn how cannabis can help with pain, sleep, appetite, and more.</p>
+        <a href="wellness.html">View Section →</a>
+      </div>
+      <div class="card">
+        <h3>Survival Uses</h3>
+        <p>Fieldcraft & prepper angles — hemp cordage, barter, calm under stress.</p>
+        <a href="survival.html">View Section →</a>
+      </div>
+      <div class="card">
+        <h3>Guides & Laws</h3>
+        <p>Know the rules, stay compliant, and explore safe usage guides.</p>
+        <a href="guides.html">View Section →</a>
+      </div>
+      <div class="card">
+        <h3>Updates & Blog</h3>
+        <p>Independent commentary, gear tests, and cannabis culture news.</p>
+        <a href="blog.html">View Section →</a>
+      </div>
+    </div>
   </main>
 </body>
 </html>

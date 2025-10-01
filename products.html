@@ -4,34 +4,103 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Products — Cannabis Field Guide</title>
-  <meta name="description" content="Honest picks for flower, gummies, and vapes.">
+  <meta name="description" content="Honest picks for flower, gummies, vapes, and deals from trusted partners.">
   <style>
-    body{margin:0;background:#0d0f10;color:#e9ecf4;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif}
-    header,main{max-width:1000px;margin:0 auto;padding:18px 16px}
-    a{color:#18f0b4;text-decoration:none}
-    .card{background:#14171d;border:1px solid #2b2f3a;border-radius:12px;padding:16px;margin:14px 0}
+    :root{--bg:#0d0f10;--ink:#e9ecf4;--muted:#b7becc;--line:#2b2f3a;--panel:#14171d;--accent:#18f0b4;--accent2:#0acb92}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif}
+    header,main,footer{max-width:1000px;margin:0 auto;padding:18px 16px}
+    a{color:var(--accent);text-decoration:none}
+    .muted{color:var(--muted)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
     .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;font-weight:800;color:#081014;
-         background:linear-gradient(90deg,#18f0b4,#0acb92);text-decoration:none}
+         background:linear-gradient(90deg,var(--accent),var(--accent2));text-decoration:none;box-shadow:0 6px 18px rgba(10,203,146,.35)}
+
+    /* product grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .pcard{background:#12151a;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+    .pimg{aspect-ratio:4/3;width:100%;object-fit:cover;background:#0b0d10}
+    .pbody{padding:12px 12px 14px}
+    .ptitle{margin:0 0 4px;font-weight:800}
+    .psub{margin:0 0 10px;font-size:.92rem;color:var(--muted)}
+    .pbtn{display:inline-block;margin-top:auto;padding:10px 12px;border-radius:10px;font-weight:900;color:#081014;text-decoration:none;
+          background:linear-gradient(90deg,#ff6a00,#ffa000,#ff6a00);box-shadow:0 6px 18px rgba(255,106,0,.28)}
   </style>
 </head>
 <body>
   <header>
+    <p style="margin:0 0 8px"><a href="./">← Back to Home</a></p>
     <h1 style="margin:0 0 6px">Products</h1>
-    <p style="margin:0;color:#b7becc">Our straight-talk picks. 21+ only.</p>
-    <p style="margin:8px 0 0"><a href="./">← Back to Home</a></p>
+    <p class="muted" style="margin:0">Our straight-talk picks. 21+ only.</p>
   </header>
 
   <main>
+    <!-- Top money card -->
     <div class="card">
       <h2 style="margin:0 0 6px">GetBud Online — Deals</h2>
-      <p style="margin:0 0 8px;color:#b7becc">Big buds, freebies, friendly service.</p>
+      <p class="muted" style="margin:0 0 8px">Big buds, strong value, friendly support, and frequent freebies.</p>
       <a class="btn" href="YOUR_GETBUD_AFFILIATE_LINK" rel="sponsored noopener">Shop GetBud →</a>
     </div>
 
+    <!-- Product grid (all route to your affiliate link) -->
+    <div class="grid" aria-label="Editor picks">
+      <article class="pcard">
+        <img class="pimg" src="gb.jpg" alt="Editor pick — value flower">
+        <div class="pbody">
+          <h3 class="ptitle">Value Flower Picks</h3>
+          <p class="psub">Best bang-for-buck ounces and smalls.</p>
+          <a class="pbtn" href="YOUR_GETBUD_AFFILIATE_LINK" rel="sponsored noopener">See Deals</a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <img class="pimg" src="gb1.jpg" alt="Editor pick — premium exotics">
+        <div class="pbody">
+          <h3 class="ptitle">Premium & Exotics</h3>
+          <p class="psub">Top-shelf drops worth the splurge.</p>
+          <a class="pbtn" href="YOUR_GETBUD_AFFILIATE_LINK" rel="sponsored noopener">Browse Exotics</a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <img class="pimg" src="gb2.jpg" alt="Editor pick — prerolls">
+        <div class="pbody">
+          <h3 class="ptitle">Prerolls & Minis</h3>
+          <p class="psub">Grab-and-go convenience, solid potency.</p>
+          <a class="pbtn" href="YOUR_GETBUD_AFFILIATE_LINK" rel="sponsored noopener">Shop Prerolls</a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <img class="pimg" src="gb3.jpg" alt="Editor pick — gummies and vapes">
+        <div class="pbody">
+          <h3 class="ptitle">Gummies & Vapes</h3>
+          <p class="psub">Steady dosing, quick onset options.</p>
+          <a class="pbtn" href="YOUR_GETBUD_AFFILIATE_LINK" rel="sponsored noopener">See Edibles/Vapes</a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <img class="pimg" src="gb4.jpg" alt="Editor pick — alt products">
+        <div class="pbody">
+          <h3 class="ptitle">Alt Products</h3>
+          <p class="psub">Legal novel picks & limited runs.</p>
+          <a class="pbtn" href="YOUR_GETBUD_AFFILIATE_LINK" rel="sponsored noopener">Explore</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Editor note -->
     <div class="card">
       <h2 style="margin:0 0 6px">Editor’s Note</h2>
-      <p style="margin:0;color:#b7becc">We’ll add more picks here (gummies, vapes, flower). For now, GetBud is our go-to.</p>
+      <p class="muted" style="margin:0">
+        We’ll add more brand-by-brand breakdowns. For now, GetBud is our go-to for value flower and quick shipping.
+      </p>
     </div>
   </main>
+
+  <footer class="muted" style="max-width:1000px;margin:0 auto 28px;padding:0 16px">
+    This page may contain affiliate links. Always follow local laws.
+  </footer>
 </body>
 </html>

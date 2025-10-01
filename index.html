@@ -7,7 +7,112 @@
   <meta name="description" content="Cannabis Field Guide: Honest information on cultivation, wellness, and survival uses. Independent, field-tested insights.">
 
   <style>
-    body {
+    body <!-- ===== GetBud Header Affiliate Banner (drop this near top of <body>) ===== -->
+<div class="aff-banner" data-aff="https://your-getbud-affiliate-link.example">
+  <button class="aff-banner__close" aria-label="Hide promotion">×</button>
+
+  <a class="aff-banner__link" href="#" rel="sponsored noopener">
+    <!-- Rotating image track (uses your exact filenames) -->
+    <div class="aff-banner__images" aria-hidden="true">
+      <img src="/images/gb.jpg"  alt="" loading="eager"  class="is-active">
+      <img src="/images/gb1.jpg" alt="" loading="lazy">
+      <img src="/images/gb2.jpg" alt="" loading="lazy">
+      <img src="/images/gb3.jpg" alt="" loading="lazy">
+      <img src="/images/gb4.jpg" alt="" loading="lazy">
+    </div>
+
+    <!-- Text overlay -->
+    <div class="aff-banner__copy">
+      <span class="eyebrow">21+ • Discreet • Fast</span>
+      <h3>GetBud Online — Big Buds, Bigger Deals</h3>
+      <span class="cta">Shop Now</span>
+    </div>
+  </a>
+</div>
+
+<style>
+  .aff-banner{
+    --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
+    position:sticky; top:0; z-index:60;
+    background:#0f1116; border-bottom:1px solid var(--line);
+    box-shadow:0 8px 24px rgba(0,0,0,.35);
+  }
+  .aff-banner__link{
+    display:grid; grid-template-columns:110px 1fr; gap:14px;
+    max-width:1200px; margin:0 auto; padding:10px 14px; align-items:center;
+    color:var(--ink); text-decoration:none; position:relative;
+  }
+  .aff-banner__images{position:relative; width:110px; height:64px; overflow:hidden;
+    border-radius:10px; border:1px solid var(--line); background:#0b0d10}
+  .aff-banner__images img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    opacity:0; transition:opacity .6s ease}
+  .aff-banner__images img.is-active{opacity:1}
+
+  .aff-banner__copy{min-width:0}
+  .aff-banner__copy .eyebrow{
+    display:inline-block; font-size:.75rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase}
+  .aff-banner__copy h3{
+    margin:.2rem 0 .35rem; font-size:clamp(1rem,2.2vw,1.25rem); line-height:1.2;
+    font-weight:900; background:linear-gradient(90deg,#18f0b4,#0acb92,#18f0b4);
+    -webkit-background-clip:text; background-clip:text; color:transparent}
+  .aff-banner__copy .cta{
+    display:inline-block; font-weight:900; font-size:.95rem; color:#081014;
+    padding:8px 12px; border-radius:10px;
+    background:linear-gradient(90deg,#ff6a00,#ffa000,#ff6a00);
+    box-shadow:0 6px 18px rgba(255,106,0,.28)}
+  .aff-banner__link:hover .cta{filter:brightness(1.05)}
+
+  .aff-banner__close{
+    position:absolute; right:10px; top:10px; z-index:2;
+    width:32px; height:32px; border-radius:8px;
+    border:1px solid var(--line); background:#14171d; color:#cfd6e4;
+    font-size:20px; line-height:1; cursor:pointer}
+  .aff-banner__close:hover{background:#191d24}
+
+  @media (max-width:560px){
+    .aff-banner__link{grid-template-columns:84px 1fr; gap:10px; padding:10px 12px}
+    .aff-banner__images{width:84px; height:58px}
+    .aff-banner__copy h3{font-size:1.02rem}
+    .aff-banner__copy .cta{font-size:.9rem}
+  }
+</style>
+
+<script>
+  (function(){
+    const root = document.querySelector('.aff-banner');
+    if(!root) return;
+
+    // Respect dismissal
+    const KEY = 'gb_aff_banner_dismissed_v1';
+    if(localStorage.getItem(KEY) === '1'){ root.style.display = 'none'; return; }
+
+    // Wire up link to your affiliate URL
+    const aff = root.dataset.aff || '#';
+    const link = root.querySelector('.aff-banner__link');
+    link.href = aff;
+
+    // Rotate images
+    const imgs = Array.from(root.querySelectorAll('.aff-banner__images img'));
+    let i = 0;
+    setInterval(()=>{
+      imgs[i].classList.remove('is-active');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('is-active');
+    }, 3500);
+
+    // Close button
+    const btn = root.querySelector('.aff-banner__close');
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      root.style.display = 'none';
+      localStorage.setItem(KEY, '1');
+    });
+  })();
+</script>
+<!-- ===== /GetBud Header Affiliate Banner ===== -->
+
+    {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
       background: #0d0f10;

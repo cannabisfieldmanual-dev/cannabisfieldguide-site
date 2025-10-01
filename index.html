@@ -4,189 +4,116 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cannabis Field Guide — Independent Knowledge</title>
-  <meta name="description" content="Cannabis Field Guide: Honest information on cultivation, wellness, and survival uses. Independent, field-tested insights.">
-
+  <meta name="description" content="Cannabis Field Guide: honest, independent information on cultivation, wellness, laws, and product education — with no hype.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0d0f10">
   <style>
-    body <!-- ===== GetBud Header Affiliate Banner (drop this near top of <body>) ===== -->
-<div class="aff-banner" data-aff="https://your-getbud-affiliate-link.example">
-  <button class="aff-banner__close" aria-label="Hide promotion">×</button>
-
-  <a class="aff-banner__link" href="#" rel="sponsored noopener">
-    <!-- Rotating image track (uses your exact filenames) -->
-    <div class="aff-banner__images" aria-hidden="true">
-      <img src="/images/gb.jpg"  alt="" loading="eager"  class="is-active">
-      <img src="/images/gb1.jpg" alt="" loading="lazy">
-      <img src="/images/gb2.jpg" alt="" loading="lazy">
-      <img src="/images/gb3.jpg" alt="" loading="lazy">
-      <img src="/images/gb4.jpg" alt="" loading="lazy">
-    </div>
-
-    <!-- Text overlay -->
-    <div class="aff-banner__copy">
-      <span class="eyebrow">21+ • Discreet • Fast</span>
-      <h3>GetBud Online — Big Buds, Bigger Deals</h3>
-      <span class="cta">Shop Now</span>
-    </div>
-  </a>
-</div>
-
-<style>
-  .aff-banner{
-    --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
-    position:sticky; top:0; z-index:60;
-    background:#0f1116; border-bottom:1px solid var(--line);
-    box-shadow:0 8px 24px rgba(0,0,0,.35);
-  }
-  .aff-banner__link{
-    display:grid; grid-template-columns:110px 1fr; gap:14px;
-    max-width:1200px; margin:0 auto; padding:10px 14px; align-items:center;
-    color:var(--ink); text-decoration:none; position:relative;
-  }
-  .aff-banner__images{position:relative; width:110px; height:64px; overflow:hidden;
-    border-radius:10px; border:1px solid var(--line); background:#0b0d10}
-  .aff-banner__images img{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-    opacity:0; transition:opacity .6s ease}
-  .aff-banner__images img.is-active{opacity:1}
-
-  .aff-banner__copy{min-width:0}
-  .aff-banner__copy .eyebrow{
-    display:inline-block; font-size:.75rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase}
-  .aff-banner__copy h3{
-    margin:.2rem 0 .35rem; font-size:clamp(1rem,2.2vw,1.25rem); line-height:1.2;
-    font-weight:900; background:linear-gradient(90deg,#18f0b4,#0acb92,#18f0b4);
-    -webkit-background-clip:text; background-clip:text; color:transparent}
-  .aff-banner__copy .cta{
-    display:inline-block; font-weight:900; font-size:.95rem; color:#081014;
-    padding:8px 12px; border-radius:10px;
-    background:linear-gradient(90deg,#ff6a00,#ffa000,#ff6a00);
-    box-shadow:0 6px 18px rgba(255,106,0,.28)}
-  .aff-banner__link:hover .cta{filter:brightness(1.05)}
-
-  .aff-banner__close{
-    position:absolute; right:10px; top:10px; z-index:2;
-    width:32px; height:32px; border-radius:8px;
-    border:1px solid var(--line); background:#14171d; color:#cfd6e4;
-    font-size:20px; line-height:1; cursor:pointer}
-  .aff-banner__close:hover{background:#191d24}
-
-  @media (max-width:560px){
-    .aff-banner__link{grid-template-columns:84px 1fr; gap:10px; padding:10px 12px}
-    .aff-banner__images{width:84px; height:58px}
-    .aff-banner__copy h3{font-size:1.02rem}
-    .aff-banner__copy .cta{font-size:.9rem}
-  }
-</style>
-
-<script>
-  (function(){
-    const root = document.querySelector('.aff-banner');
-    if(!root) return;
-
-    // Respect dismissal
-    const KEY = 'gb_aff_banner_dismissed_v1';
-    if(localStorage.getItem(KEY) === '1'){ root.style.display = 'none'; return; }
-
-    // Wire up link to your affiliate URL
-    const aff = root.dataset.aff || '#';
-    const link = root.querySelector('.aff-banner__link');
-    link.href = aff;
-
-    // Rotate images
-    const imgs = Array.from(root.querySelectorAll('.aff-banner__images img'));
-    let i = 0;
-    setInterval(()=>{
-      imgs[i].classList.remove('is-active');
-      i = (i + 1) % imgs.length;
-      imgs[i].classList.add('is-active');
-    }, 3500);
-
-    // Close button
-    const btn = root.querySelector('.aff-banner__close');
-    btn.addEventListener('click', (e)=>{
-      e.preventDefault();
-      root.style.display = 'none';
-      localStorage.setItem(KEY, '1');
-    });
-  })();
-</script>
-<!-- ===== /GetBud Header Affiliate Banner ===== -->
-
-    {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
-      background: #0d0f10;
-      color: #e9ecf4;
-      line-height: 1.6;
+    :root{
+      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc;
+      --line:#2b2f3a; --panel:#14171d; --accent:#18f0b4; --accent2:#0acb92;
     }
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(180deg,#111418,#0d0f10);
-      border-bottom: 1px solid #2b2f3a;
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background:var(--bg); color:var(--ink); line-height:1.6;
     }
-    header h1 {
-      margin: 0;
-      font-size: clamp(28px, 5vw, 46px);
-      font-weight: 900;
-      background: linear-gradient(90deg,#3fae5a,#18f0b4,#3fae5a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    header{
+      text-align:center; padding:40px 20px;
+      background:linear-gradient(180deg,#111418,#0d0f10);
+      border-bottom:1px solid var(--line);
     }
-    header p {
-      margin: 12px 0 0;
-      font-size: 1.1rem;
-      color: #b7becc;
+    header h1{
+      margin:0;
+      font-size:clamp(28px,5vw,46px); font-weight:900;
+      background:linear-gradient(90deg,#3fae5a,#18f0b4,#3fae5a);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
     }
-    main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    header p{margin:12px 0 0; font-size:1.05rem; color:var(--muted)}
+
+    main{padding:40px 20px; max-width:1000px; margin:auto}
+    h2{text-align:center; margin:0 0 22px; color:var(--accent)}
+    .directory{
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #18f0b4;
+    .card{
+      background:var(--panel); border:1px solid var(--line);
+      border-radius:12px; padding:20px; text-align:center;
+      transition:transform .2s ease, box-shadow .2s ease;
     }
-    .directory {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    .card:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .card h3{margin:8px 0 6px}
+    .card p{margin:0; font-size:.92rem; color:var(--muted)}
+    .card a{
+      display:inline-block; margin-top:12px; padding:10px 16px; border-radius:10px; font-weight:800;
+      color:#081014; text-decoration:none; white-space:nowrap;
+      background:linear-gradient(90deg,var(--accent),var(--accent2)); box-shadow:0 6px 18px rgba(10,203,146,.35);
     }
-    .card {
-      background: #14171d;
-      border: 1px solid #2b2f3a;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      transition: transform .2s ease, box-shadow .2s ease;
+
+    .note{max-width:900px; margin:18px auto 0; text-align:center; color:#9aa3ad; font-size:.9rem}
+    /* ===== Sticky GetBud header ad ===== */
+    .aff-banner{
+      --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
+      position:sticky; top:0; z-index:60;
+      background:#0f1116; border-bottom:1px solid var(--line);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    .aff-banner__link{
+      display:grid; grid-template-columns:110px 1fr; gap:14px;
+      max-width:1200px; margin:0 auto; padding:10px 14px; align-items:center;
+      color:var(--ink); text-decoration:none; position:relative;
     }
-    .card h3 {
-      margin: 10px 0;
-      color: #e9ecf4;
-    }
-    .card p {
-      font-size: .9rem;
-      color: #b7becc;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
-      border-radius: 10px;
-      font-weight: bold;
-      color: #081014;
-      background: linear-gradient(90deg,#18f0b4,#0acb92);
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(10,203,146,.35);
+    .aff-banner__images{position:relative; width:110px; height:64px; overflow:hidden;
+      border-radius:10px; border:1px solid var(--line); background:#0b0d10}
+    .aff-banner__images img{
+      position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+      opacity:0; transition:opacity .6s ease}
+    .aff-banner__images img.is-active{opacity:1}
+    .aff-banner__copy .eyebrow{
+      display:inline-block; font-size:.75rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase}
+    .aff-banner__copy h3{
+      margin:.2rem 0 .35rem; font-size:clamp(1rem,2.2vw,1.25rem); line-height:1.2; font-weight:900;
+      background:linear-gradient(90deg,#18f0b4,#0acb92,#18f0b4);
+      -webkit-background-clip:text; background-clip:text; color:transparent}
+    .aff-banner__copy .cta{
+      display:inline-block; font-weight:900; font-size:.95rem; color:#101214;
+      padding:8px 12px; border-radius:10px;
+      background:linear-gradient(90deg,#ff6a00,#ffa000,#ff6a00);
+      box-shadow:0 6px 18px rgba(255,106,0,.28)}
+    .aff-banner__link:hover .cta{filter:brightness(1.05)}
+    .aff-banner__close{
+      position:absolute; right:10px; top:10px; z-index:2; width:32px; height:32px; border-radius:8px;
+      border:1px solid var(--line); background:#14171d; color:#cfd6e4; font-size:20px; line-height:1; cursor:pointer}
+    .aff-banner__close:hover{background:#191d24}
+    @media (max-width:560px){
+      .aff-banner__link{grid-template-columns:84px 1fr; gap:10px; padding:10px 12px}
+      .aff-banner__images{width:84px; height:58px}
+      .aff-banner__copy .cta{font-size:.9rem}
     }
   </style>
 </head>
 <body>
+
+  <!-- ===== GetBud Header Affiliate Banner (uses root-level images) ===== -->
+  <div class="aff-banner" data-aff="https://your-getbud-affiliate-link.example">
+    <button class="aff-banner__close" aria-label="Hide promotion">×</button>
+    <a class="aff-banner__link" href="#" rel="sponsored noopener">
+      <div class="aff-banner__images" aria-hidden="true">
+        <img src="gb.jpg"  alt="" loading="eager" class="is-active">
+        <img src="gb1.jpg" alt="" loading="lazy">
+        <img src="gb2.jpg" alt="" loading="lazy">
+        <img src="gb3.jpg" alt="" loading="lazy">
+        <img src="gb4.jpg" alt="" loading="lazy">
+      </div>
+      <div class="aff-banner__copy">
+        <span class="eyebrow">21+ • Discreet • Fast</span>
+        <h3>GetBud Online — Big Buds, Bigger Deals</h3>
+        <span class="cta">Shop Now</span>
+      </div>
+    </a>
+  </div>
+  <!-- /banner -->
+
   <header>
     <h1>Cannabis Field Guide</h1>
     <p>Independent • Honest • Field-Tested</p>
@@ -197,30 +124,67 @@
     <div class="directory">
       <div class="card">
         <h3>Cultivation</h3>
-        <p>From soil prep to indoor grows — practical cannabis farming tips.</p>
+        <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
         <a href="cultivation.html">View Section →</a>
       </div>
       <div class="card">
         <h3>Wellness</h3>
-        <p>Learn how cannabis can help with pain, sleep, appetite, and more.</p>
+        <p>Pain, sleep, appetite, and mood — dosage basics and formats.</p>
         <a href="wellness.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Survival Uses</h3>
-        <p>Fieldcraft & prepper angles — hemp cordage, barter, calm under stress.</p>
-        <a href="survival.html">View Section →</a>
+        <h3>Laws & Buying</h3>
+        <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
+        <a href="laws.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Guides & Laws</h3>
-        <p>Know the rules, stay compliant, and explore safe usage guides.</p>
+        <h3>Strains & Products</h3>
+        <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
+        <a href="products.html">View Section →</a>
+      </div>
+      <div class="card">
+        <h3>Guides & How-Tos</h3>
+        <p>Roll, store, grind, clean glass, travel tips, and more.</p>
         <a href="guides.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Updates & Blog</h3>
-        <p>Independent commentary, gear tests, and cannabis culture news.</p>
+        <h3>Blog & Deals</h3>
+        <p>Fresh content and rotating promos from trusted partners.</p>
         <a href="blog.html">View Section →</a>
       </div>
     </div>
+
+    <p class="note">21+ only. This site is educational and for legal adults in compliant regions. Always follow local laws.</p>
   </main>
+
+  <script>
+    (function(){
+      const root = document.querySelector('.aff-banner');
+      if(!root) return;
+
+      const KEY = 'gb_aff_banner_dismissed_v1';
+      if(localStorage.getItem(KEY) === '1'){ root.style.display = 'none'; return; }
+
+      // Link to your affiliate URL
+      const aff = root.dataset.aff || '#';
+      root.querySelector('.aff-banner__link').href = aff;
+
+      // Rotate images
+      const imgs = Array.from(root.querySelectorAll('.aff-banner__images img'));
+      let i = 0;
+      setInterval(()=>{
+        imgs[i].classList.remove('is-active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('is-active');
+      }, 3500);
+
+      // Dismiss
+      root.querySelector('.aff-banner__close').addEventListener('click', (e)=>{
+        e.preventDefault();
+        root.style.display = 'none';
+        localStorage.setItem(KEY, '1');
+      });
+    })();
+  </script>
 </body>
 </html>

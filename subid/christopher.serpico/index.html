@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="0;url=https://cannabisfieldguide.org/">
+  <style>
+    body{margin:0;height:100dvh;display:grid;place-items:center;background:#0d0f10;color:#e9ecf4;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif}
+    .card{max-width:520px;padding:24px;border:1px solid #2b2f3a;border-radius:14px;background:#0f1216;box-shadow:0 10px 30px rgba(0,0,0,.35);text-align:center}
+    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;font-weight:900;color:#081014;background:linear-gradient(90deg,#18f0b4,#0acb92);text-decoration:none}
+    .muted{color:#b7becc;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 style="margin:0 0 8px;font-size:1.15rem">Sending you to our partner…</h1>
+    <p class="muted">If nothing happens, use the button below.</p>
+    <a id="go" class="btn" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Continue →</a>
+  </div>
+
+  <script>
+    /*
+      IMPORTANT:
+      Replace DEST with your real affiliate destination (the merchant’s URL)
+      when you have it, e.g. "https://merchant.com/?aff=christopher.serpico".
+      This page removes 404s immediately; updating DEST takes effect instantly.
+    */
+    const DEST = "https://cannabisfieldguide.org/"; // <-- PUT REAL AFFILIATE URL HERE WHEN READY
+    const a = document.getElementById('go');
+    a.href = DEST;
+    a.rel = "sponsored noopener noreferrer";
+    // JS redirect (faster than meta refresh on many hosts)
+    location.replace(DEST);
+  </script>
+</body>
+</html>

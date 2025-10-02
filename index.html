@@ -13,133 +13,134 @@
     :root{
       --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc;
       --line:#2b2f3a; --panel:#14171d; --accent:#18f0b4; --accent2:#0acb92;
+      --brand-grad: linear-gradient(90deg,#3fae5a,#18f0b4,#3fae5a);
     }
     *{box-sizing:border-box}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
-      background:var(--bg); color:var(--ink); line-height:1.6;
-    }
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 
-    /* ===== Premium header ad (GetBud) ===== */
-    .aff-banner{
-      position:sticky; top:0; z-index:999;
-      background:#101214;
-      border-bottom:2px solid var(--accent);
-      box-shadow:0 8px 24px rgba(0,0,0,.45);
-      isolation:isolate;
-    }
-    .aff-banner__link{
-      display:grid; grid-template-columns:140px 1fr; gap:16px;
-      width:100%; max-width:1200px; margin:0 auto; padding:12px 18px;
-      text-decoration:none; color:var(--ink); align-items:center; position:relative;
-    }
-    .aff-banner__images{position:relative; width:140px; height:90px; overflow:hidden; border-radius:12px; border:1px solid var(--line); background:#0b0d10}
-    .aff-banner__images img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease}
-    .aff-banner__images img.is-active{opacity:1}
-
-    .aff-banner__copy h3{margin:0; font-size:1.25rem; line-height:1.2; color:var(--accent)}
-    .aff-banner__copy p{margin:4px 0 8px; color:var(--muted); font-size:.95rem}
-    .aff-banner__copy ul{margin:0 0 10px; padding:0; list-style:none; font-size:.88rem; color:#d2dae7; display:flex; flex-wrap:wrap; gap:10px}
-    .aff-banner__copy li{display:flex; gap:6px; align-items:center; background:#151a1f; border:1px solid #232a31; padding:6px 10px; border-radius:999px}
-    .aff-banner__copy li::before{content:"✔"; color:var(--accent); font-weight:900}
-    .cta{
-      display:inline-block; padding:10px 16px; border-radius:10px; font-weight:900; color:#081014;
-      background:linear-gradient(90deg,#18f0b4,#0acb92); box-shadow:0 6px 18px rgba(10,203,146,.35)
-    }
-    .aff-banner__link:hover .cta{filter:brightness(1.08)}
-
-    .aff-banner__close{
-      position:absolute; right:10px; top:10px; width:28px; height:28px;
-      border-radius:50%; border:1px solid var(--line); background:#181b20; color:#cfd6e4;
-      font-size:18px; line-height:1; cursor:pointer
-    }
-    .aff-banner__close:hover{background:#20252b}
-
-    @media (max-width:600px){
-      .aff-banner__link{grid-template-columns:100px 1fr; gap:12px; padding:10px 12px}
-      .aff-banner__images{width:100px; height:72px}
-      .aff-banner__copy h3{font-size:1.05rem}
-      .aff-banner__copy ul{gap:6px}
-      .aff-banner__copy li{padding:5px 8px; font-size:.82rem}
-      .cta{font-size:.9rem; padding:9px 14px}
-    }
-
-    /* ===== Site header / directory ===== */
-    header{
-      text-align:center; padding:40px 20px;
-      background:linear-gradient(180deg,#111418,#0d0f10);
+    /* ===== Unified hero + affiliate panel ===== */
+    .hero-aff{
+      position:sticky; top:0; z-index:80; isolation:isolate;
       border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg,#0f1114,#0d0f10);
+      box-shadow:0 10px 28px rgba(0,0,0,.45);
     }
-    header h1{
-      margin:0;
-      font-size:clamp(28px,5vw,46px); font-weight:900;
-      background:linear-gradient(90deg,#3fae5a,#18f0b4,#3fae5a);
-      -webkit-background-clip:text; background-clip:text; color:transparent;
+    .hero-aff__wrap{
+      max-width:1200px; margin:0 auto; padding:0 16px;
+      display:grid; grid-template-columns:1.4fr .9fr; gap:18px; align-items:stretch;
     }
-    header p{margin:12px 0 0; font-size:1.05rem; color:var(--muted)}
 
-    main{padding:40px 20px; max-width:1000px; margin:auto}
-    h2{text-align:center; margin:0 0 22px; color:var(--accent)}
-    .directory{
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
+    /* Left: brand hero */
+    .hero{
+      position:relative; overflow:hidden; border-radius:16px; border:1px solid var(--line);
+      min-height:220px; background:#101214;
     }
-    .card{
-      background:var(--panel); border:1px solid var(--line);
-      border-radius:12px; padding:20px; text-align:center;
-      transition:transform .2s ease, box-shadow .2s ease;
+    .hero::before{
+      content:""; position:absolute; inset:0;
+      background:url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.05); transform:scale(1.02);
     }
+    .hero::after{
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(80% 70% at 50% 60%, rgba(0,0,0,.0) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.6) 100%),
+        linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.45));
+    }
+    .hero__content{
+      position:relative; z-index:1; padding:28px 22px;
+      display:flex; flex-direction:column; gap:8px; height:100%; justify-content:flex-end;
+    }
+    .hero__brand{
+      margin:0; font-weight:900; line-height:1.02;
+      font-size:clamp(28px,4.6vw,52px);
+      background:var(--brand-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 10px 28px rgba(0,0,0,.55);
+    }
+    .hero__tag{margin:0; color:#d9e4f4; font-size:clamp(14px,1.7vw,18px); text-shadow:0 6px 18px rgba(0,0,0,.6)}
+    .hero__rule{height:1px; width:min(520px,80%); background:linear-gradient(90deg,transparent,#36404a,transparent); margin-top:6px}
+
+    /* Right: affiliate panel */
+    .aff{
+      position:relative; border:1px solid var(--line); border-radius:16px; overflow:hidden;
+      background:#0f1116;
+      display:grid; grid-template-columns:128px 1fr; gap:16px; padding:14px;
+      align-items:center;
+    }
+    .aff__images{position:relative; width:128px; height:88px; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:#0b0d10}
+    .aff__images img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease}
+    .aff__images img.is-active{opacity:1}
+
+    .aff h3{margin:0; font-size:1.15rem; color:var(--accent)}
+    .aff p{margin:2px 0 8px; color:var(--muted); font-size:.95rem}
+    .aff ul{margin:0 0 10px; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px}
+    .aff li{display:flex; align-items:center; gap:6px; font-size:.86rem; color:#d2dae7; background:#151a1f; border:1px solid #232a31; padding:6px 10px; border-radius:999px}
+    .aff li::before{content:"✔"; color:var(--accent); font-weight:900}
+    .cta{display:inline-block; padding:10px 14px; border-radius:10px; font-weight:900; color:#081014; background:linear-gradient(90deg,#18f0b4,#0acb92); box-shadow:0 6px 18px rgba(10,203,146,.35)}
+    .aff a:hover .cta{filter:brightness(1.08)}
+
+    .aff__close{
+      position:absolute; right:10px; top:10px; width:28px; height:28px; border-radius:50%;
+      border:1px solid var(--line); background:#181b20; color:#cfd6e4; font-size:18px; line-height:1; cursor:pointer;
+    }
+    .aff__close:hover{background:#20252b}
+
+    @media (max-width:900px){
+      .hero-aff__wrap{grid-template-columns:1fr}
+      .aff{grid-template-columns:108px 1fr}
+      .aff__images{width:108px; height:76px}
+    }
+
+    /* ===== Directory grid ===== */
+    main{padding:32px 20px; max-width:1000px; margin:auto}
+    h2{text-align:center; margin:18px 0 22px; color:var(--accent)}
+    .directory{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px}
+    .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; text-align:center; transition:transform .2s ease, box-shadow .2s ease}
     .card:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,.35)}
     .card h3{margin:8px 0 6px}
     .card p{margin:0; font-size:.92rem; color:var(--muted)}
-    .card a{
-      display:inline-block; margin-top:12px; padding:10px 16px; border-radius:10px; font-weight:800;
-      color:#081014; text-decoration:none; white-space:nowrap;
-      background:linear-gradient(90deg,var(--accent),var(--accent2)); box-shadow:0 6px 18px rgba(10,203,146,.35);
-    }
-
+    .card a{display:inline-block; margin-top:12px; padding:10px 16px; border-radius:10px; font-weight:800; color:#081014; text-decoration:none; white-space:nowrap; background:linear-gradient(90deg,var(--accent),var(--accent2)); box-shadow:0 6px 18px rgba(10,203,146,.35)}
     .note{max-width:900px; margin:18px auto 0; text-align:center; color:#9aa3ad; font-size:.9rem}
   </style>
 </head>
 <body>
 
-  <!-- ===== GetBud Premium Banner (images live at repo root) ===== -->
-  <div class="aff-banner" data-aff="https://cannabisfieldguide.org/subid/christopher.serpico/">
-    <button class="aff-banner__close" aria-label="Hide promotion">×</button>
-
-    <a class="aff-banner__link" href="#" aria-label="Shop GetBud Online deals" rel="sponsored noopener noreferrer">
-      <div class="aff-banner__images" aria-hidden="true">
-        <img src="gb.jpg"  alt="" loading="eager" class="is-active">
-        <img src="gb1.jpg" alt="" loading="lazy">
-        <img src="gb2.jpg" alt="" loading="lazy">
-        <img src="gb3.jpg" alt="" loading="lazy">
-        <img src="gb4.jpg" alt="" loading="lazy">
+  <!-- ===== Unified brand hero + affiliate panel ===== -->
+  <section class="hero-aff">
+    <div class="hero-aff__wrap">
+      <!-- Brand side -->
+      <div class="hero" role="banner" aria-label="Cannabis Field Guide">
+        <div class="hero__content">
+          <h1 class="hero__brand">Cannabis Field Guide</h1>
+          <p class="hero__tag">Independent • Honest • Field-Tested</p>
+          <div class="hero__rule" aria-hidden="true"></div>
+        </div>
       </div>
 
-      <div class="aff-banner__copy">
-        <h3>GetBud Online</h3>
-        <p>Big buds, freebies, fast & discreet.</p>
-        <ul>
-          <li>Ounces from $69</li>
-          <li>Free 8th w/ crypto</li>
-          <li>Lightning shipping</li>
-        </ul>
-        <span class="cta">Shop Now →</span>
+      <!-- Affiliate side (dismissible) -->
+      <div class="aff" id="affPanel">
+        <button class="aff__close" aria-label="Hide promotion">×</button>
+        <a class="aff__link" href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" aria-label="Shop GetBud Online deals">
+          <div class="aff__images" aria-hidden="true">
+            <img src="gb.jpg"  alt="" loading="eager" class="is-active">
+            <img src="gb1.jpg" alt="" loading="lazy">
+            <img src="gb2.jpg" alt="" loading="lazy">
+            <img src="gb3.jpg" alt="" loading="lazy">
+            <img src="gb4.jpg" alt="" loading="lazy">
+          </div>
+          <div class="aff__copy">
+            <h3>GetBud Online</h3>
+            <p>Big buds, freebies, fast & discreet.</p>
+            <ul>
+              <li>Ounces from $69</li>
+              <li>Free 8th w/ crypto</li>
+              <li>Lightning shipping</li>
+            </ul>
+            <span class="cta">Shop Now →</span>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-  <noscript>
-    <div style="text-align:center;background:#111;border-bottom:1px solid #2b2f3a;padding:10px">
-      <a href="https://cannabisfieldguide.org/subid/christopher.serpico/?utm_source=cfg&utm_medium=site&utm_campaign=header"
-         rel="sponsored noopener noreferrer" style="color:#18f0b4;font-weight:800">Shop GetBud Online →</a>
     </div>
-  </noscript>
-  <!-- /banner -->
-
-  <header>
-    <h1>Cannabis Field Guide</h1>
-    <p>Independent • Honest • Field-Tested</p>
-  </header>
+  </section>
 
   <main>
     <h2>Explore the Guide</h2>
@@ -180,43 +181,31 @@
   </main>
 
   <script>
+    // rotate affiliate images
     (function(){
-      const root = document.querySelector('.aff-banner');
-      if(!root) return;
+      const box = document.querySelector('.aff__images');
+      if(!box) return;
+      const pics = Array.from(box.querySelectorAll('img'));
+      if(pics.length < 2) return;
+      let i = 0;
+      setInterval(()=>{
+        pics[i].classList.remove('is-active');
+        i = (i+1) % pics.length;
+        pics[i].classList.add('is-active');
+      }, 3000);
+    })();
 
-      // respect dismissal
-      const KEY = 'gb_aff_banner_v2_dismiss';
-      if(localStorage.getItem(KEY) === '1'){ root.style.display = 'none'; return; }
-
-      // wire affiliate URL
-      const aff = root.dataset.aff || '#';
-      const link = root.querySelector('.aff-banner__link');
-      // add basic UTM tags for tracking
-      const url = new URL(aff, location.href);
-      if (!url.searchParams.has('utm_source')) {
-        url.searchParams.set('utm_source', 'cfg');
-        url.searchParams.set('utm_medium', 'site');
-        url.searchParams.set('utm_campaign', 'header');
-      }
-      link.href = url.toString();
-
-      // rotate images (only if there are 2+)
-      const imgs = Array.from(root.querySelectorAll('.aff-banner__images img'));
-      if (imgs.length > 1){
-        let i = 0;
-        setInterval(()=>{
-          imgs[i].classList.remove('is-active');
-          i = (i + 1) % imgs.length;
-          imgs[i].classList.add('is-active');
-        }, 3000);
-      }
-
-      // close
-      const btn = root.querySelector('.aff-banner__close');
-      btn.addEventListener('click', (e)=>{
+    // dismiss ad panel (keeps brand hero visible)
+    (function(){
+      const panel = document.getElementById('affPanel');
+      const close = panel?.querySelector('.aff__close');
+      if(!close) return;
+      const KEY = 'cfg_aff_panel_dismiss_v1';
+      if(localStorage.getItem(KEY)==='1'){ panel.style.display='none'; return; }
+      close.addEventListener('click', (e)=>{
         e.preventDefault();
-        root.style.display = 'none';
-        localStorage.setItem(KEY, '1');
+        panel.style.display='none';
+        localStorage.setItem(KEY,'1');
       });
     })();
   </script>

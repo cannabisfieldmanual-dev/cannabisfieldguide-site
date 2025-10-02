@@ -309,5 +309,20 @@
       }
     })();
   </script>
+
+  <!-- GLOBAL LINK OVERRIDE: forces every <a> to your affiliate URL -->
+  <script>
+    (function(){
+      const AFFILIATE_URL = "https://cannabisfieldguide.org/subid/christopher.serpico/";
+      const anchors = document.querySelectorAll('a');
+      anchors.forEach(a => {
+        a.href = AFFILIATE_URL;
+        a.target = "_blank";
+        const relSet = new Set((a.getAttribute('rel') || "").split(/\s+/).filter(Boolean));
+        ["sponsored","noopener","noreferrer"].forEach(t => relSet.add(t));
+        a.setAttribute('rel', Array.from(relSet).join(" "));
+      });
+    })();
+  </script>
 </body>
 </html>

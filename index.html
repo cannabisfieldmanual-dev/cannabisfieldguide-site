@@ -73,6 +73,17 @@
     .chip:before{content:"✔";color:var(--accent);font-weight:900}
     .aff .btn{margin-top:4px}
 
+    /* NEW: Unboxing banner (uses your proof2.jpg) */
+    .haul{margin:6px 0 14px}
+    .haul-card{position:relative;min-height:220px;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;background:#0b0d10}
+    .haul-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.02);opacity:.96;transition:transform .35s ease}
+    .haul-card:hover img{transform:scale(1.02)}
+    .haul-card .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.65))}
+    .haul-card .copy{position:relative;z-index:1;padding:18px 18px 16px}
+    .haul-card .copy h3{margin:0 0 6px;font-size:1.12rem}
+    .haul-card .copy p{margin:0 0 10px;color:#d7e3e0;max-width:60ch}
+    .haul-card .price{position:absolute;left:14px;bottom:14px;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081014;font-weight:900;box-shadow:0 8px 20px rgba(10,203,146,.35)}
+
     /* “From the Guide” Mosaic */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
     .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
@@ -143,10 +154,8 @@
            aria-label="Blinkers Rechargeable Battery — $19.99 (shop now)">
           <img src="1e95b055-0497-49e0-ac6b-47eaf56a970b.jpeg" alt="Blinkers Rechargeable Battery — Black, boxed" loading="eager" decoding="async" class="is-active">
           <img src="660bf818-ca96-474c-b724-65f3a0a114f6.jpeg" alt="Blinkers Battery with 510 cart attached" loading="lazy" decoding="async">
-          <img src="proof1.jpg" alt="Sealed strain packs — White Jealousy & Orange Jack" loading="lazy" decoding="async">
           <img src="proof2.jpg" alt="Order with LCG, Red Runtz, papers and concentrate" loading="lazy" decoding="async">
-          <img src="2023-12-10-19.04.53.jpg" alt="Box with multiple strains and vape battery" loading="lazy" decoding="async">
-          <span class="tag">$19.99</span>
+          <span class="tag">Vapes just $19.99!</span>
         </a>
         <div>
           <h3 class="title">GetBud Online</h3>
@@ -159,6 +168,21 @@
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
         </div>
       </aside>
+    </div>
+  </section>
+
+  <!-- NEW: Unboxing banner using your photo -->
+  <section class="haul">
+    <div class="container">
+      <a class="haul-card" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop this haul">
+        <img src="proof2.jpg" alt="Unboxing — multiple strain pouches, battery and papers in box">
+        <span class="overlay" aria-hidden="true"></span>
+        <div class="copy">
+          <h3 class="title" style="color:var(--accent)">Unboxing: Fresh Drop</h3>
+          <p class="subtle">Real haul, real quality. Ounces, pre-rolls, vapes and extras — delivered quick.</p>
+          <span class="price">15% OFF w/ GBO15</span>
+        </div>
+      </a>
     </div>
   </section>
 

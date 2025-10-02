@@ -15,6 +15,7 @@
       --panel:#14171d; --accent:#18f0b4; --accent2:#0acb92;
     }
     *{box-sizing:border-box}
+    img{display:block;max-width:100%;height:auto}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 
     /* ===== HERO (brand + affiliate panel) ===== */
@@ -66,14 +67,14 @@
     /* Image mosaic */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
     .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
-    .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:12px}
-    @media (max-width:900px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
-    @media (max-width:600px){.mosaic{grid-template-columns:1fr;grid-auto-rows:200px}}
-    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10}
+    .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+    @media (max-width:900px){.mosaic{grid-template-columns:1fr 1fr}}
+    @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;aspect-ratio:16/10}
+    .tile.big{aspect-ratio:16/20}
     .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05);opacity:.92;transition:transform .4s ease, opacity .3s ease}
     .tile:hover img{transform:scale(1.04);opacity:1}
     .tile .cap{position:absolute;left:10px;bottom:10px;padding:8px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:700;color:#fff}
-    .tile.big{grid-row:span 2}
     .tile a{position:absolute;inset:0;display:block}
 
     /* Category strip (café menu vibe) */
@@ -84,7 +85,7 @@
     .menu-card p{margin:0;color:#b7becc;font-size:.92rem}
     .menu-card a{justify-self:start;margin-top:8px}
 
-    /* QR tile: make sure no dark filter/opacity + white plate */
+    /* QR tile: keep plate white, no filters */
     .menu-card.qr{align-items:stretch}
     .menu-card.qr .qr-plate{
       display:block; width:80px; height:80px; border-radius:10px;
@@ -130,11 +131,11 @@
         <button class="close" aria-label="Hide promotion">×</button>
 
         <div class="aff-rotor" aria-hidden="true">
-          <img src="gb.jpg"  alt="" loading="eager" class="is-active">
-          <img src="gb1.jpg" alt="" loading="lazy">
-          <img src="gb2.jpg" alt="" loading="lazy">
-          <img src="gb3.jpg" alt="" loading="lazy">
-          <img src="gb4.jpg" alt="" loading="lazy">
+          <img src="gb.jpg"  alt="" loading="eager" decoding="async" width="128" height="128" class="is-active">
+          <img src="gb1.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
+          <img src="gb2.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
+          <img src="gb3.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
+          <img src="gb4.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
         </div>
 
         <div class="aff-copy">
@@ -151,26 +152,36 @@
     </div>
   </div>
 
-  <!-- From the Guide: uses your exact filenames -->
+  <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
     <div class="mosaic">
       <div class="tile big">
-        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll" loading="lazy">
+        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll" loading="lazy" decoding="async" width="900" height="1125">
         <a href="guides.html" aria-label="Rolling tips"></a>
         <span class="cap">Rolling Tips</span>
       </div>
+
       <div class="tile">
-        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy">
+        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async" width="600" height="375">
         <a href="blog.html" aria-label="Morning pairings"></a>
         <span class="cap">Morning Pairings</span>
       </div>
-        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy">
+
+      <div class="tile">
+        <img src="oregon-marijuana-sales-hit-79-4-million-in-may-bringing-all-v0-ggMKVKXvmp_-GRXq2i4ktuBrYFSprhC03p65sYvrvQ4.webp" alt="Pre-rolls with a cannabis leaf" loading="lazy" decoding="async" width="600" height="375">
+        <a href="products.html" aria-label="Pre-roll picks"></a>
+        <span class="cap">Pre-Roll Picks</span>
+      </div>
+
+      <div class="tile">
+        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async" width="736" height="414">
         <a href="laws.html" aria-label="Buying legally"></a>
         <span class="cap">Buying Legally</span>
       </div>
+
       <div class="tile">
-        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy">
+        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async" width="612" height="612">
         <a href="wellness.html" aria-label="Formats & dosing"></a>
         <span class="cap">Formats &amp; Dosing</span>
       </div>
@@ -180,7 +191,7 @@
   <!-- Café-style “menu” categories -->
   <section class="menu" aria-label="Shop">
     <div class="menu-card">
-      <img src="cbd.jpg" alt="Flower and value ounces">
+      <img src="cbd.jpg" alt="Flower and value ounces" width="80" height="80" loading="lazy" decoding="async">
       <div>
         <h3>Flower & Value Ounces</h3>
         <p>Great jars without the markup. Rotating deals.</p>
@@ -188,7 +199,7 @@
       </div>
     </div>
     <div class="menu-card">
-      <img src="vape.jpg" alt="Vape cartridges">
+      <img src="vape.jpg" alt="Vape cartridges" width="80" height="80" loading="lazy" decoding="async">
       <div>
         <h3>Vapes</h3>
         <p>Smooth pulls, solid potency, brand variety.</p>
@@ -196,7 +207,7 @@
       </div>
     </div>
     <div class="menu-card">
-      <img src="concentrates.jpg" alt="Gummies and concentrates">
+      <img src="concentrates.jpg" alt="Gummies and concentrates" width="80" height="80" loading="lazy" decoding="async">
       <div>
         <h3>Gummies & Concentrates</h3>
         <p>Simple dosing or top-shelf extracts — your call.</p>
@@ -208,7 +219,7 @@
     <div class="menu-card qr">
       <a class="img-link" href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
         <span class="qr-plate">
-          <img src="qr (4).png" alt="QR code to shop">
+          <img src="qr (4).png" alt="QR code to shop" width="68" height="68" loading="lazy" decoding="async">
         </span>
       </a>
       <div>
@@ -266,7 +277,12 @@
         setInterval(()=>{ imgs[i].classList.remove('is-active'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-active'); }, 3000);
       }
       const close = document.querySelector('.close');
-      close.addEventListener('click', () => { document.querySelector('.aff').style.display = 'none'; });
+      if (close){
+        close.addEventListener('click', () => {
+          const aff = document.querySelector('.aff');
+          if (aff) aff.style.display = 'none';
+        });
+      }
     })();
   </script>
 </body>

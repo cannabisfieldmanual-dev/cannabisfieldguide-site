@@ -11,136 +11,136 @@
 
   <style>
     :root{
-      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc;
-      --line:#2b2f3a; --panel:#14171d; --accent:#18f0b4; --accent2:#0acb92;
-      --brand-grad: linear-gradient(90deg,#3fae5a,#18f0b4,#3fae5a);
+      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
+      --panel:#14171d; --accent:#18f0b4; --accent2:#0acb92; --glow:#3fae5a;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 
-    /* ===== Unified hero + affiliate panel ===== */
-    .hero-aff{
-      position:sticky; top:0; z-index:80; isolation:isolate;
-      border-bottom:1px solid var(--line);
-      background:linear-gradient(180deg,#0f1114,#0d0f10);
-      box-shadow:0 10px 28px rgba(0,0,0,.45);
-    }
-    .hero-aff__wrap{
-      max-width:1200px; margin:0 auto; padding:0 16px;
-      display:grid; grid-template-columns:1.4fr .9fr; gap:18px; align-items:stretch;
-    }
+    /* ===== HERO (brand + affiliate panel) ===== */
+    .hero-wrap{max-width:1200px;margin:22px auto 10px;padding:0 16px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
 
-    /* Left: brand hero */
-    .hero{
-      position:relative; overflow:hidden; border-radius:16px; border:1px solid var(--line);
-      min-height:220px; background:#101214;
+    /* Left: brand card with your photo */
+    .brand-card{
+      position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);
+      background:#0e1014;min-height:280px;
     }
-    .hero::before{
-      content:""; position:absolute; inset:0;
-      background:url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat;
-      filter:saturate(1.05) contrast(1.05); transform:scale(1.02);
+    .brand-media{
+      position:absolute;inset:0;background:
+        linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55)),
+        url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.03);
     }
-    .hero::after{
-      content:""; position:absolute; inset:0;
-      background:
-        radial-gradient(80% 70% at 50% 60%, rgba(0,0,0,.0) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.6) 100%),
-        linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.45));
+    .brand-content{position:relative;z-index:1;padding:26px 22px}
+    .site-title{
+      margin:0 0 10px;font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:900;
+      background:linear-gradient(90deg,#ffffff,#e7fff5,#b6ffe3);
+      -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35);
     }
-    .hero__content{
-      position:relative; z-index:1; padding:28px 22px;
-      display:flex; flex-direction:column; gap:8px; height:100%; justify-content:flex-end;
-    }
-    .hero__brand{
-      margin:0; font-weight:900; line-height:1.02;
-      font-size:clamp(28px,4.6vw,52px);
-      background:var(--brand-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow:0 10px 28px rgba(0,0,0,.55);
-    }
-    .hero__tag{margin:0; color:#d9e4f4; font-size:clamp(14px,1.7vw,18px); text-shadow:0 6px 18px rgba(0,0,0,.6)}
-    .hero__rule{height:1px; width:min(520px,80%); background:linear-gradient(90deg,transparent,#36404a,transparent); margin-top:6px}
+    .site-tag{margin:0;color:#e9f7f2;font-weight:600;letter-spacing:.15px;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+    .site-sub{margin:6px 0 0;color:#cfe7e1;font-size:.95rem;opacity:.95}
 
-    /* Right: affiliate panel */
+    /* Right: affiliate panel WITH custom background image (CSS gradients) */
     .aff{
-      position:relative; border:1px solid var(--line); border-radius:16px; overflow:hidden;
+      position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;
       background:#0f1116;
-      display:grid; grid-template-columns:128px 1fr; gap:16px; padding:14px;
-      align-items:center;
+      /* Layered “image” */
+      background-image:
+        radial-gradient(120px 90px at 18% 18%, rgba(24,240,180,.10), rgba(24,240,180,0) 60%),
+        radial-gradient(170px 120px at 88% 28%, rgba(10,203,146,.08), rgba(10,203,146,0) 65%),
+        radial-gradient(260px 180px at 60% 82%, rgba(63,174,90,.07), rgba(63,174,90,0) 60%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.02) 0 10px, rgba(0,0,0,.02) 10px 20px);
+      backdrop-filter:saturate(1.05);
+      display:grid;grid-template-columns:128px 1fr;gap:16px;padding:14px;align-items:center;
     }
-    .aff__images{position:relative; width:128px; height:88px; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:#0b0d10}
-    .aff__images img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease}
-    .aff__images img.is-active{opacity:1}
-
-    .aff h3{margin:0; font-size:1.15rem; color:var(--accent)}
-    .aff p{margin:2px 0 8px; color:var(--muted); font-size:.95rem}
-    .aff ul{margin:0 0 10px; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px}
-    .aff li{display:flex; align-items:center; gap:6px; font-size:.86rem; color:#d2dae7; background:#151a1f; border:1px solid #232a31; padding:6px 10px; border-radius:999px}
-    .aff li::before{content:"✔"; color:var(--accent); font-weight:900}
-    .cta{display:inline-block; padding:10px 14px; border-radius:10px; font-weight:900; color:#081014; background:linear-gradient(90deg,#18f0b4,#0acb92); box-shadow:0 6px 18px rgba(10,203,146,.35)}
-    .aff a:hover .cta{filter:brightness(1.08)}
-
-    .aff__close{
-      position:absolute; right:10px; top:10px; width:28px; height:28px; border-radius:50%;
-      border:1px solid var(--line); background:#181b20; color:#cfd6e4; font-size:18px; line-height:1; cursor:pointer;
+    .aff::before{
+      content:"";position:absolute;inset:-20% -10% -20% -10%;
+      background:
+        radial-gradient(140% 90% at 100% 0, rgba(0,0,0,0) 0, rgba(0,0,0,.35) 55%, rgba(0,0,0,.55) 100%),
+        linear-gradient(20deg, rgba(255,255,255,.04), rgba(255,255,255,0) 45%);
+      pointer-events:none;z-index:0;
     }
-    .aff__close:hover{background:#20252b}
+    .aff::after{
+      content:"";position:absolute;inset:0;border-radius:16px;
+      box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06);
+      pointer-events:none;z-index:0;
+    }
+    .aff > *{position:relative;z-index:1}
+
+    .aff-rotor{position:relative;width:128px;height:128px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#0b0d10}
+    .aff-rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+    .aff-rotor img.is-active{opacity:1}
+
+    .aff h3{margin:0 0 4px;font-size:1.08rem;color:var(--accent);font-weight:900}
+    .aff p{margin:0 0 10px;color:#bcd5cf;font-size:.93rem}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+    .chip{display:flex;gap:6px;align-items:center;background:#151a1f;border:1px solid #232a31;padding:6px 10px;border-radius:999px;color:#d2dae7;font-size:.86rem}
+    .chip:before{content:"✔";color:var(--accent);font-weight:900}
+    .aff .cta{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:900;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35);text-decoration:none}
+    .aff .cta:hover{filter:brightness(1.08)}
+    .aff .close{position:absolute;right:10px;top:10px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#181b20;color:#cfd6e4;font-size:18px;line-height:1;cursor:pointer}
+    .aff .close:hover{background:#20252b}
 
     @media (max-width:900px){
-      .hero-aff__wrap{grid-template-columns:1fr}
-      .aff{grid-template-columns:108px 1fr}
-      .aff__images{width:108px; height:76px}
+      .aff{grid-template-columns:100px 1fr;padding:12px}
+      .aff-rotor{width:100px;height:100px}
     }
 
-    /* ===== Directory grid ===== */
-    main{padding:32px 20px; max-width:1000px; margin:auto}
-    h2{text-align:center; margin:18px 0 22px; color:var(--accent)}
-    .directory{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px}
-    .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; text-align:center; transition:transform .2s ease, box-shadow .2s ease}
-    .card:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    /* ===== Directory cards ===== */
+    main{padding:28px 16px 46px;max-width:1100px;margin:0 auto}
+    h2{text-align:center;margin:0 0 22px;color:var(--accent)}
+    .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,.35)}
     .card h3{margin:8px 0 6px}
-    .card p{margin:0; font-size:.92rem; color:var(--muted)}
-    .card a{display:inline-block; margin-top:12px; padding:10px 16px; border-radius:10px; font-weight:800; color:#081014; text-decoration:none; white-space:nowrap; background:linear-gradient(90deg,var(--accent),var(--accent2)); box-shadow:0 6px 18px rgba(10,203,146,.35)}
-    .note{max-width:900px; margin:18px auto 0; text-align:center; color:#9aa3ad; font-size:.9rem}
+    .card p{margin:0;color:#b7becc;font-size:.92rem}
+    .card a{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;font-weight:800;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));text-decoration:none;box-shadow:0 6px 18px rgba(10,203,146,.35)}
+    .note{max-width:900px;margin:18px auto 0;text-align:center;color:#9aa3ad;font-size:.9rem}
   </style>
 </head>
 <body>
 
-  <!-- ===== Unified brand hero + affiliate panel ===== -->
-  <section class="hero-aff">
-    <div class="hero-aff__wrap">
-      <!-- Brand side -->
-      <div class="hero" role="banner" aria-label="Cannabis Field Guide">
-        <div class="hero__content">
-          <h1 class="hero__brand">Cannabis Field Guide</h1>
-          <p class="hero__tag">Independent • Honest • Field-Tested</p>
-          <div class="hero__rule" aria-hidden="true"></div>
-        </div>
-      </div>
+  <div class="hero-wrap">
+    <div class="hero">
 
-      <!-- Affiliate side (dismissible) -->
-      <div class="aff" id="affPanel">
-        <button class="aff__close" aria-label="Hide promotion">×</button>
-        <a class="aff__link" href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" aria-label="Shop GetBud Online deals">
-          <div class="aff__images" aria-hidden="true">
-            <img src="gb.jpg"  alt="" loading="eager" class="is-active">
-            <img src="gb1.jpg" alt="" loading="lazy">
-            <img src="gb2.jpg" alt="" loading="lazy">
-            <img src="gb3.jpg" alt="" loading="lazy">
-            <img src="gb4.jpg" alt="" loading="lazy">
+      <!-- Left: Brand card -->
+      <section class="brand-card" aria-label="Cannabis Field Guide">
+        <div class="brand-media" aria-hidden="true"></div>
+        <div class="brand-content">
+          <h1 class="site-title">Cannabis Field Guide</h1>
+          <p class="site-tag">Independent • Honest • Field-Tested</p>
+          <p class="site-sub">Straight talk on cultivation, wellness, laws, and product education — no hype.</p>
+        </div>
+      </section>
+
+      <!-- Right: Affiliate panel with custom background -->
+      <aside class="aff" aria-label="Affiliate promotion">
+        <button class="close" aria-label="Hide promotion">×</button>
+
+        <div class="aff-rotor" aria-hidden="true">
+          <img src="gb.jpg"  alt="" loading="eager" class="is-active">
+          <img src="gb1.jpg" alt="" loading="lazy">
+          <img src="gb2.jpg" alt="" loading="lazy">
+          <img src="gb3.jpg" alt="" loading="lazy">
+          <img src="gb4.jpg" alt="" loading="lazy">
+        </div>
+
+        <div class="aff-copy">
+          <h3>GetBud Online</h3>
+          <p>Big buds, freebies, fast &amp; discreet.</p>
+          <div class="chips">
+            <span class="chip">Ounces from $69</span>
+            <span class="chip">Free 8th w/ crypto</span>
+            <span class="chip">Lightning shipping</span>
           </div>
-          <div class="aff__copy">
-            <h3>GetBud Online</h3>
-            <p>Big buds, freebies, fast & discreet.</p>
-            <ul>
-              <li>Ounces from $69</li>
-              <li>Free 8th w/ crypto</li>
-              <li>Lightning shipping</li>
-            </ul>
-            <span class="cta">Shop Now →</span>
-          </div>
-        </a>
-      </div>
+          <a class="cta" href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer">Shop Now →</a>
+        </div>
+      </aside>
+
     </div>
-  </section>
+  </div>
 
   <main>
     <h2>Explore the Guide</h2>
@@ -156,22 +156,22 @@
         <a href="wellness.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Laws & Buying</h3>
+        <h3>Laws &amp; Buying</h3>
         <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
         <a href="laws.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Strains & Products</h3>
+        <h3>Strains &amp; Products</h3>
         <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
         <a href="products.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Guides & How-Tos</h3>
+        <h3>Guides &amp; How-Tos</h3>
         <p>Roll, store, grind, clean glass, travel tips, and more.</p>
         <a href="guides.html">View Section →</a>
       </div>
       <div class="card">
-        <h3>Blog & Deals</h3>
+        <h3>Blog &amp; Deals</h3>
         <p>Fresh content and rotating promos from trusted partners.</p>
         <a href="blog.html">View Section →</a>
       </div>
@@ -181,31 +181,20 @@
   </main>
 
   <script>
-    // rotate affiliate images
+    // Image rotator + close
     (function(){
-      const box = document.querySelector('.aff__images');
-      if(!box) return;
-      const pics = Array.from(box.querySelectorAll('img'));
-      if(pics.length < 2) return;
+      const rotor = document.querySelectorAll('.aff-rotor img');
       let i = 0;
-      setInterval(()=>{
-        pics[i].classList.remove('is-active');
-        i = (i+1) % pics.length;
-        pics[i].classList.add('is-active');
-      }, 3000);
-    })();
-
-    // dismiss ad panel (keeps brand hero visible)
-    (function(){
-      const panel = document.getElementById('affPanel');
-      const close = panel?.querySelector('.aff__close');
-      if(!close) return;
-      const KEY = 'cfg_aff_panel_dismiss_v1';
-      if(localStorage.getItem(KEY)==='1'){ panel.style.display='none'; return; }
-      close.addEventListener('click', (e)=>{
-        e.preventDefault();
-        panel.style.display='none';
-        localStorage.setItem(KEY,'1');
+      if (rotor.length > 1){
+        setInterval(()=>{
+          rotor[i].classList.remove('is-active');
+          i = (i + 1) % rotor.length;
+          rotor[i].classList.add('is-active');
+        }, 3000);
+      }
+      const close = document.querySelector('.aff .close');
+      close.addEventListener('click', () => {
+        document.querySelector('.aff').style.display = 'none';
       });
     })();
   </script>

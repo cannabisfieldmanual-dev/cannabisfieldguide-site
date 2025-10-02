@@ -15,6 +15,7 @@
       --accent:#18f0b4; --accent2:#0acb92;
       --rad:16px;
       --shadow:0 10px 30px rgba(0,0,0,.35);
+      --promo:#0b1311;
     }
     /* Reset + base */
     *{box-sizing:border-box}
@@ -28,13 +29,20 @@
     .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:6px 10px;border-radius:999px}
     .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
     .btn:hover{filter:brightness(1.06)}
+    .btn-note{display:block;margin-top:6px;font-size:.82rem;color:#a7f5de}
     .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
     .title{margin:0;font-weight:900;letter-spacing:.2px}
     .subtle{color:var(--muted)}
     .section-title{margin:0 0 14px;text-align:center;color:var(--accent);font-size:1.1rem;font-weight:900;letter-spacing:.2px}
 
+    /* Promo bar */
+    .promo{position:sticky;top:0;z-index:60;background:linear-gradient(180deg,rgba(11,19,17,.96),rgba(11,19,17,.9));border-bottom:1px solid #173a31}
+    .promo .wrap{display:flex;justify-content:center;align-items:center;gap:10px;min-height:40px}
+    .promo .text{font-weight:800;letter-spacing:.2px}
+    .promo .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#0d2a23;border:1px solid #1d5043;border-radius:8px;padding:3px 8px}
+
     /* Header */
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
+    header{position:sticky;top:40px;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
     .brand{display:flex;align-items:center;gap:12px}
     .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(24,240,180,.6)}
@@ -69,164 +77,4 @@
 
     /* “From the Guide” Mosaic */
     .mosaic{margin:18px 0}
-    .tiles{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
-    @media (max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
-    @media (max-width:600px){.tiles{grid-template-columns:1fr}}
-    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:170px}
-    .tile.big{height:340px}
-    @media (max-width:900px){.tile{height:150px}.tile.big{height:280px}}
-    @media (max-width:600px){.tile{height:190px}.tile.big{height:300px}}
-    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.92;transition:transform .35s ease, opacity .25s ease}
-    .tile:hover img{transform:scale(1.03);opacity:1}
-    .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
-
-    /* Category “menu” */
-    .menu{margin:8px 0 24px}
-    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-    .menu-card{display:grid;grid-template-columns:74px 1fr;gap:12px;align-items:center;background:#12151a;border:1px solid #242a33;border-radius:14px;padding:12px;position:relative}
-    .menu-card img{width:74px;height:74px;border-radius:10px;object-fit:cover;border:1px solid #2b2f3a}
-    .menu-card h3{margin:0 0 4px;font-size:1rem}
-    .menu-card p{margin:0;color:#b7becc;font-size:.9rem;line-height:1.45}
-
-    /* Directory */
-    main{margin:8px 0 36px}
-    .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .dir-card{padding:16px;text-align:center}
-    .dir-card h3{margin:8px 0 6px;font-size:1.02rem}
-    .dir-card p{margin:0;color:#b7becc;font-size:.92rem}
-    .dir-card .btn{margin-top:12px}
-
-    /* Footer */
-    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
-
-    /* Motion preferences */
-    @media (prefers-reduced-motion: reduce){
-      .rotor img{transition:none}
-      .tile img{transition:none}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <span class="logo-dot" aria-hidden="true"></span>
-        <h1>Cannabis Field Guide</h1>
-      </div>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop pre-rolls, flower, vapes">Shop →</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container wrap">
-      <!-- Brand card -->
-      <article class="brand-card">
-        <div class="brand-media" aria-hidden="true"></div>
-        <div class="brand-content">
-          <p class="kicker subtle">Independent • Honest • Field-Tested</p>
-          <h2 class="site-title title">Straight talk on cultivation, wellness, laws, and product picks — no hype.</h2>
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-            <span class="badge" aria-hidden="true">21+ Only</span>
-            <span class="badge" aria-hidden="true">Pre-Rolls • Flower • Vapes</span>
-          </div>
-          <div style="margin-top:14px">
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls →</a>
-          </div>
-        </div>
-        <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop"></a>
-      </article>
-
-      <!-- Promo / affiliate -->
-      <aside class="aff">
-        <div class="rotor" aria-hidden="true">
-          <img src="gb.jpg"  alt="" loading="eager" decoding="async" class="is-active">
-          <img src="gb1.jpg" alt="" loading="lazy"  decoding="async">
-          <img src="gb2.jpg" alt="" loading="lazy"  decoding="async">
-          <img src="gb3.jpg" alt="" loading="lazy"  decoding="async">
-          <img src="gb4.jpg" alt="" loading="lazy"  decoding="async">
-        </div>
-        <div>
-          <h3 class="title">GetBud Online</h3>
-          <p class="subtle" style="margin:6px 0 10px">Fresh pre-rolls, even burn, discreet + fast.</p>
-          <div class="chips">
-            <span class="chip">Even burn</span>
-            <span class="chip">Strain variety</span>
-            <span class="chip">Multi-pack deals</span>
-          </div>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
-        </div>
-        <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop now"></a>
-      </aside>
-    </div>
-  </section>
-
-  <!-- From the Guide -->
-  <section class="mosaic">
-    <div class="container">
-      <h2 class="section-title">From the Guide</h2>
-      <div class="tiles">
-        <article class="tile big">
-          <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async">
-          <span class="cap">Rolling Tips</span>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Rolling Tips tile"></a>
-        </article>
-
-        <article class="tile">
-          <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
-          <span class="cap">Morning Pairings</span>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Morning Pairings tile"></a>
-        </article>
-
-        <article class="tile">
-          <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
-          <span class="cap">Buying Legally</span>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Buying Legally tile"></a>
-        </article>
-
-        <article class="tile">
-          <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
-          <span class="cap">Formats &amp; Dosing</span>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Formats & Dosing tile"></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- “Menu” categories -->
-  <section class="menu">
-    <div class="container">
-      <div class="menu-grid">
-        <article class="menu-card card">
-          <img src="cbd.jpg" alt="Flower and value ounces">
-          <div>
-            <h3 class="title">Flower &amp; Value Ounces</h3>
-            <p class="subtle">Great jars without the markup. Rotating deals.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
-          </div>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Flower card"></a>
-        </article>
-
-        <article class="menu-card card">
-          <img src="vape.jpg" alt="Vape cartridges">
-          <div>
-            <h3 class="title">Vapes</h3>
-            <p class="subtle">Smooth pulls, solid potency, brand variety.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
-          </div>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Vapes card"></a>
-        </article>
-
-        <article class="menu-card card">
-          <img src="concentrates.jpg" alt="Gummies and concentrates">
-          <div>
-            <h3 class="title">Gummies &amp; Concentrates</h3>
-            <p class="subtle">Simple dosing or top-shelf extracts — your call.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
-          </div>
-          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Gummies card"></a>
-        </article>
-
-        <!-- QR — keep white plate; no filters -->
-        <article class="menu-card card" aria-label="Scan & Shop">
-          <span class="qr-plate" style="display:block;width:74px;height:74px;border-radius:10px;background:#fff;border:1px solid #d9dee5;padding:6px;box-shadow:0 1px 0 rgba(255,255,255,.05), 0 6px 16px rgba(0,0,0,.22);overflow:hidden">
-            <img src="qr (4).png" alt="QR c
+    .tiles{display:grid;grid-template-columns:2fr 1fr 1fr;gap

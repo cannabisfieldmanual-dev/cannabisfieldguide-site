@@ -104,7 +104,7 @@
 <body>
 
   <!-- ===== GetBud Premium Banner (images live at repo root) ===== -->
-  <div class="aff-banner" data-aff="https://gritgearhq.com/subid/christopher.serpico/">
+  <div class="aff-banner" data-aff="https://cannabisfieldguide.org/subid/christopher.serpico/">
     <button class="aff-banner__close" aria-label="Hide promotion">×</button>
 
     <a class="aff-banner__link" href="#" aria-label="Shop GetBud Online deals" rel="sponsored noopener noreferrer">
@@ -130,7 +130,8 @@
   </div>
   <noscript>
     <div style="text-align:center;background:#111;border-bottom:1px solid #2b2f3a;padding:10px">
-      <a href="https://gritgearhq.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" style="color:#18f0b4;font-weight:800">Shop GetBud Online →</a>
+      <a href="https://cannabisfieldguide.org/subid/christopher.serpico/?utm_source=cfg&utm_medium=site&utm_campaign=header"
+         rel="sponsored noopener noreferrer" style="color:#18f0b4;font-weight:800">Shop GetBud Online →</a>
     </div>
   </noscript>
   <!-- /banner -->
@@ -190,7 +191,14 @@
       // wire affiliate URL
       const aff = root.dataset.aff || '#';
       const link = root.querySelector('.aff-banner__link');
-      link.href = aff;
+      // add basic UTM tags for tracking
+      const url = new URL(aff, location.href);
+      if (!url.searchParams.has('utm_source')) {
+        url.searchParams.set('utm_source', 'cfg');
+        url.searchParams.set('utm_medium', 'site');
+        url.searchParams.set('utm_campaign', 'header');
+      }
+      link.href = url.toString();
 
       // rotate images (only if there are 2+)
       const imgs = Array.from(root.querySelectorAll('.aff-banner__images img'));

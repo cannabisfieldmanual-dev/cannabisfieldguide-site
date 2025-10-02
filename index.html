@@ -16,55 +16,32 @@
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-
     .wrap{max-width:1200px;margin:0 auto;padding:0 16px}
 
     /* ===== HERO (brand left + promo right) ===== */
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin:22px auto 16px}
     @media (max-width:940px){.hero{grid-template-columns:1fr}}
 
-    .brand-card{
-      position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);
-      min-height:300px;background:#0f1116;
-    }
-    .brand-media{
-      position:absolute;inset:0;
-      background:
-        radial-gradient(60% 60% at 50% 50%, rgba(0,0,0,.1), rgba(0,0,0,.55)),
-        url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat;
-      filter:saturate(1.05) contrast(1.04);
-    }
+    .brand-card{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);min-height:300px;background:#0f1116}
+    .brand-media{position:absolute;inset:0;background:
+      radial-gradient(60% 60% at 50% 50%, rgba(0,0,0,.1), rgba(0,0,0,.55)),
+      url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat;filter:saturate(1.05) contrast(1.04)}
     .brand-content{position:relative;z-index:1;padding:28px 24px}
-    .logo-chip{
-      display:inline-block;padding:6px 10px;border-radius:999px;
-      background:rgba(201,150,99,.15);border:1px solid rgba(201,150,99,.35);
-      color:#ffe6d0;font-weight:700;font-size:.85rem;backdrop-filter:blur(4px)
-    }
-    .site-title{
-      margin:10px 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:900;
-      background:linear-gradient(90deg,#fff,#d7ffee,#b6ffe3);
-      -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 18px rgba(0,0,0,.36);
-    }
+    .logo-chip{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(201,150,99,.15);border:1px solid rgba(201,150,99,.35);color:#ffe6d0;font-weight:700;font-size:.85rem;backdrop-filter:blur(4px)}
+    .site-title{margin:10px 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:900;background:linear-gradient(90deg,#fff,#d7ffee,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 18px rgba(0,0,0,.36)}
     .site-tag{margin:0;color:#dbe7e3;font-weight:600;letter-spacing:.2px}
     .site-sub{margin:6px 0 0;color:#c4d2cf;font-size:.96rem}
 
-    .aff{
-      position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;
-      background:
-        linear-gradient(180deg,rgba(12,14,17,.8),rgba(12,14,17,.92)),
-        radial-gradient(120px 100px at 85% 10%, rgba(201,150,99,.20), transparent 65%),
-        radial-gradient(220px 140px at 15% 85%, rgba(24,240,180,.10), transparent 60%),
-        #0f1116;
-      display:grid;grid-template-columns:128px 1fr;gap:16px;align-items:center;padding:16px;
-    }
-    .aff .close{position:absolute;right:10px;top:10px;width:28px;height:28px;border-radius:50%;
-      border:1px solid var(--line);background:#181b20;color:#dbe3ef;font-size:18px;line-height:1;cursor:pointer}
+    .aff{position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+      background:linear-gradient(180deg,rgba(12,14,17,.8),rgba(12,14,17,.92)),
+                 radial-gradient(120px 100px at 85% 10%, rgba(201,150,99,.20), transparent 65%),
+                 radial-gradient(220px 140px at 15% 85%, rgba(24,240,180,.10), transparent 60%), #0f1116;
+      display:grid;grid-template-columns:128px 1fr;gap:16px;align-items:center;padding:16px}
+    .aff .close{position:absolute;right:10px;top:10px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#181b20;color:#dbe3ef;font-size:18px;line-height:1;cursor:pointer}
     .aff .close:hover{background:#20252b}
-
     .aff-rotor{position:relative;width:128px;height:128px;border-radius:14px;border:1px solid var(--line);overflow:hidden;background:#0b0d10}
     .aff-rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
     .aff-rotor img.is-active{opacity:1}
-
     .aff h3{margin:0 0 4px;font-size:1.1rem;color:var(--accent);font-weight:900}
     .aff p{margin:0 0 10px;color:#c9d7d3;font-size:.94rem}
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
@@ -72,35 +49,23 @@
     .chip:before{content:"✔";color:var(--accent);font-weight:900}
     .cta{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:900;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));text-decoration:none;box-shadow:0 8px 24px rgba(10,203,146,.35)}
     .cta:hover{filter:brightness(1.07)}
-
-    /* QR card */
-    .qrbox{
-      margin-top:12px;display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:center;
-      background:#12161c;border:1px dashed #2b313a;border-radius:12px;padding:10px
-    }
+    .qrbox{margin-top:12px;display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:center;background:#12161c;border:1px dashed #2b313a;border-radius:12px;padding:10px}
     .qrbox img{width:72px;height:72px;object-fit:contain;border-radius:8px;background:#0b0d10;border:1px solid #232a31}
     .qrbox b{display:block;margin-bottom:2px}
     .qrbox small{color:#aeb7c1}
-
     @media (max-width:940px){.aff{grid-template-columns:100px 1fr}.aff-rotor{width:100px;height:100px}}
 
-    /* ===== Café “Menu” grid ===== */
+    /* ===== Café “Menu” (generic, no item-specific tiles) ===== */
     .menu{margin:10px auto 8px}
     .menu h2{margin:12px 0 14px;color:#ffd8b3;font-weight:900;text-align:center;letter-spacing:.3px}
-    .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-    @media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
-    @media (max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.grid{grid-template-columns:1fr}}
 
-    .tile{
-      position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#101419;min-height:160px;
-    }
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#101419;min-height:160px}
     .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92;filter:saturate(1.05);transition:transform .35s ease, opacity .3s ease}
     .tile:hover img{transform:scale(1.04);opacity:1}
-    .tile .cap{
-      position:absolute;left:10px;bottom:10px;padding:8px 10px;border-radius:10px;
-      background:rgba(16,18,20,.55);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);
-      font-weight:800;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.35)
-    }
+    .tile .cap{position:absolute;left:10px;bottom:10px;padding:8px 10px;border-radius:10px;background:rgba(16,18,20,.55);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.35)}
     .tile a{position:absolute;inset:0;display:block}
 
     /* ===== Directory cards ===== */
@@ -111,7 +76,6 @@
     .card h3{margin:8px 0 6px}
     .card p{margin:0;color:var(--muted);font-size:.92rem}
     .card a{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;font-weight:800;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));text-decoration:none;box-shadow:0 6px 18px rgba(10,203,146,.35)}
-
     .note{max-width:900px;margin:18px auto 0;text-align:center;color:#9aa3ad;font-size:.9rem}
   </style>
 </head>
@@ -145,13 +109,12 @@
         <h3>Shop the Picks</h3>
         <p>Curated deals and brands we actually like. Quick, discreet, and adult-use only.</p>
         <div class="chips">
-          <span class="chip">Flower & pre-rolls</span>
-          <span class="chip">Gummies & vapes</span>
+          <span class="chip">Value & bundles</span>
+          <span class="chip">Popular formats</span>
           <span class="chip">Fast checkout</span>
         </div>
         <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Shop Now →</a>
 
-        <!-- QR card -->
         <div class="qrbox">
           <img src="qr (4).png" alt="QR code linking to Cannabis Field Guide">
           <div>
@@ -163,34 +126,24 @@
     </aside>
   </div>
 
-  <!-- Café “Menu” -->
+  <!-- Café “Menu” (generic tiles pointing to the single affiliate URL) -->
   <section class="wrap menu" aria-label="Shop menu">
     <h2>Today’s Menu</h2>
     <div class="grid">
       <div class="tile">
-        <img src="display-jars.jpg" alt="Flower jars">
+        <img src="coffee-buds.jpg" alt="Coffee and joints vibe">
         <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
-        <span class="cap">Flower</span>
+        <span class="cap">Shop Deals</span>
       </div>
       <div class="tile">
-        <img src="leaf-pre-rolls.jpg" alt="Pre-rolls and leaf">
+        <img src="display-jars.jpg" alt="Dispensary jars">
         <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
-        <span class="cap">Pre-rolls</span>
+        <span class="cap">Value Picks</span>
       </div>
       <div class="tile">
-        <img src="vape.jpg" alt="Vape carts">
+        <img src="concentrates.jpg" alt="Concentrates close-up">
         <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
-        <span class="cap">Vapes</span>
-      </div>
-      <div class="tile">
-        <img src="coffee-buds.jpg" alt="Coffee and joints">
-        <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
-        <span class="cap">Edibles & Gummies</span>
-      </div>
-      <div class="tile">
-        <img src="concentrates.jpg" alt="Concentrates">
-        <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
-        <span class="cap">Concentrates</span>
+        <span class="cap">Potent Options</span>
       </div>
       <div class="tile">
         <img src="cbd.jpg" alt="CBD products">

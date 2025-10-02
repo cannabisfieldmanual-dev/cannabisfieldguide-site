@@ -84,6 +84,9 @@
     .menu-card p{margin:0;color:#b7becc;font-size:.92rem}
     .menu-card a{justify-self:start;margin-top:8px}
 
+    /* QR tile: make sure no dark filter/opacity */
+    .menu-card.qr img{filter:none !important; opacity:1 !important}
+
     /* Directory cards */
     main{padding:28px 16px 46px;max-width:1100px;margin:0 auto}
     h2{text-align:center;margin:0 0 22px;color:var(--accent)}
@@ -131,7 +134,7 @@
             <span class="chip">Free 8th w/ crypto</span>
             <span class="chip">Lightning shipping</span>
           </div>
-          <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Shop Now →</a>
+          <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
         </div>
       </aside>
     </div>
@@ -142,22 +145,27 @@
     <h2>From the Guide</h2>
     <div class="mosaic">
       <div class="tile big">
-        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll">
+        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll" loading="lazy">
         <a href="guides.html" aria-label="Rolling tips"></a>
         <span class="cap">Rolling Tips</span>
       </div>
       <div class="tile">
-        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower">
+        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy">
         <a href="blog.html" aria-label="Morning pairings"></a>
         <span class="cap">Morning Pairings</span>
       </div>
       <div class="tile">
-        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs">
+        <img src="oregon-marijuana-sales-hit-79-4-million-in-may-bringing-all-v0-ggMKVKXvmp_-GRXq2i4ktuBrYFSprhC03p65sYvrvQ4.webp" alt="Pre-rolls with a cannabis leaf" loading="lazy">
+        <a href="products.html" aria-label="Pre-roll picks"></a>
+        <span class="cap">Pre-Roll Picks</span>
+      </div>
+      <div class="tile">
+        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy">
         <a href="laws.html" aria-label="Buying legally"></a>
         <span class="cap">Buying Legally</span>
       </div>
       <div class="tile">
-        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter">
+        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy">
         <a href="wellness.html" aria-label="Formats & dosing"></a>
         <span class="cap">Formats &amp; Dosing</span>
       </div>
@@ -167,35 +175,37 @@
   <!-- Café-style “menu” categories -->
   <section class="menu" aria-label="Shop">
     <div class="menu-card">
-      <img src="cbd.jpg" alt="">
+      <img src="cbd.jpg" alt="Flower and value ounces">
       <div>
         <h3>Flower & Value Ounces</h3>
         <p>Great jars without the markup. Rotating deals.</p>
-        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Browse →</a>
+        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
       </div>
     </div>
     <div class="menu-card">
-      <img src="vape.jpg" alt="">
+      <img src="vape.jpg" alt="Vape cartridges">
       <div>
         <h3>Vapes</h3>
         <p>Smooth pulls, solid potency, brand variety.</p>
-        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Browse →</a>
+        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
       </div>
     </div>
     <div class="menu-card">
-      <img src="concentrates.jpg" alt="">
+      <img src="concentrates.jpg" alt="Gummies and concentrates">
       <div>
         <h3>Gummies & Concentrates</h3>
         <p>Simple dosing or top-shelf extracts — your call.</p>
-        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Browse →</a>
+        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
       </div>
     </div>
-    <div class="menu-card">
-      <img src="qr%20(4).png" alt="">
+    <div class="menu-card qr">
+      <a href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer" target="_blank" style="display:contents">
+        <img src="qr (4).png" alt="QR code to shop">
+      </a>
       <div>
         <h3>Scan & Shop</h3>
         <p>Open on your phone instantly.</p>
-        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Open Link →</a>
+        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer" target="_blank">Open Link →</a>
       </div>
     </div>
   </section>

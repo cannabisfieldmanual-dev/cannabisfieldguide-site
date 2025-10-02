@@ -19,97 +19,97 @@
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 
     /* ===== HERO (brand + affiliate panel) ===== */
-    .hero-wrap{max-width:1200px;margin:22px auto 10px;padding:0 16px}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+    .hero-wrap{max-width:1000px;margin:18px auto 8px;padding:0 14px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
     @media (max-width:900px){.hero{grid-template-columns:1fr}}
 
-    /* Brand card with your photo */
-    .brand-card{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#0e1014;min-height:280px}
+    /* Brand card */
+    .brand-card{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#0e1014;min-height:220px}
     .brand-media{
       position:absolute;inset:0;background:
-        linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55)),
+        linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.6)),
         url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat;
       filter:saturate(1.05) contrast(1.03);
     }
-    .brand-content{position:relative;z-index:1;padding:26px 22px}
+    .brand-content{position:relative;z-index:1;padding:22px 18px}
     .site-title{
-      margin:0 0 10px;font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:900;
+      margin:0 0 8px;font-size:clamp(26px,4.2vw,38px);line-height:1.05;font-weight:900;
       background:linear-gradient(90deg,#ffffff,#e7fff5,#b6ffe3);
       -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35);
     }
     .site-tag{margin:0;color:#e9f7f2;font-weight:600;letter-spacing:.15px;text-shadow:0 1px 12px rgba(0,0,0,.45)}
-    .site-sub{margin:6px 0 0;color:#cfe7e1;font-size:.95rem;opacity:.95}
+    .site-sub{margin:6px 0 0;color:#cfe7e1;font-size:.93rem;opacity:.95}
 
-    /* Affiliate panel (rotating images) */
+    /* Affiliate panel (compact) */
     .aff{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0f1116;
       background-image:
         radial-gradient(120px 90px at 18% 18%, rgba(24,240,180,.10), rgba(24,240,180,0) 60%),
         radial-gradient(170px 120px at 88% 28%, rgba(10,203,146,.08), rgba(10,203,146,0) 65%),
         radial-gradient(260px 180px at 60% 82%, rgba(63,174,90,.07), rgba(63,174,90,0) 60%),
         repeating-linear-gradient(135deg, rgba(255,255,255,.02) 0 10px, rgba(0,0,0,.02) 10px 20px);
-      display:grid;grid-template-columns:128px 1fr;gap:16px;padding:14px;align-items:center}
+      display:grid;grid-template-columns:96px 1fr;gap:12px;padding:12px;align-items:center}
     .aff::after{content:"";position:absolute;inset:0;border-radius:16px;box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06)}
     .aff > *{position:relative;z-index:1}
-    .aff-rotor{position:relative;width:128px;height:128px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#0b0d10}
+    .aff-rotor{position:relative;width:96px;height:96px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#0b0d10}
     .aff-rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
     .aff-rotor img.is-active{opacity:1}
-    .aff h3{margin:0 0 4px;font-size:1.08rem;color:var(--accent);font-weight:900}
-    .aff p{margin:0 0 10px;color:#bcd5cf;font-size:.93rem}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
-    .chip{display:flex;gap:6px;align-items:center;background:#151a1f;border:1px solid #232a31;padding:6px 10px;border-radius:999px;color:#d2dae7;font-size:.86rem}
+    .aff h3{margin:0 0 2px;font-size:1rem;color:var(--accent);font-weight:900}
+    .aff p{margin:0 0 8px;color:#bcd5cf;font-size:.9rem}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+    .chip{display:flex;gap:6px;align-items:center;background:#151a1f;border:1px solid #232a31;padding:5px 9px;border-radius:999px;color:#d2dae7;font-size:.8rem}
     .chip:before{content:"✔";color:var(--accent);font-weight:900}
-    .cta{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:900;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35);text-decoration:none}
+    .cta{display:inline-block;padding:9px 12px;border-radius:10px;font-weight:900;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 6px 18px rgba(10,203,146,.3);text-decoration:none}
     .cta:hover{filter:brightness(1.08)}
-    .close{position:absolute;right:10px;top:10px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#181b20;color:#cfd6e4;font-size:18px;line-height:1;cursor:pointer}
+    .close{position:absolute;right:10px;top:10px;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:#181b20;color:#cfd6e4;font-size:18px;line-height:1;cursor:pointer}
     .close:hover{background:#20252b}
-    @media (max-width:900px){.aff{grid-template-columns:100px 1fr;padding:12px}.aff-rotor{width:100px;height:100px}}
+    @media (max-width:900px){.aff{grid-template-columns:84px 1fr;padding:10px}.aff-rotor{width:84px;height:84px}}
 
-    /* Image mosaic */
-    .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
-    .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
-    .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+    /* Image mosaic (smaller + consistent) */
+    .from{max-width:1000px;margin:8px auto 0;padding:0 14px}
+    .from h2{margin:10px 0 10px;color:var(--accent);text-align:center;font-size:1.1rem}
+    .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}
     @media (max-width:900px){.mosaic{grid-template-columns:1fr 1fr}}
     @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
-    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;aspect-ratio:16/10}
-    .tile.big{aspect-ratio:16/20}
-    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05);opacity:.92;transition:transform .4s ease, opacity .3s ease}
-    .tile:hover img{transform:scale(1.04);opacity:1}
-    .tile .cap{position:absolute;left:10px;bottom:10px;padding:8px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:700;color:#fff}
+    .tile{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:160px}
+    .tile.big{height:320px}
+    @media (max-width:900px){.tile{height:140px}.tile.big{height:260px}}
+    @media (max-width:600px){.tile{height:180px}.tile.big{height:280px}}
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.05);opacity:.92;transition:transform .35s ease, opacity .25s ease}
+    .tile:hover img{transform:scale(1.03);opacity:1}
+    .tile .cap{position:absolute;left:8px;bottom:8px;padding:6px 8px;border-radius:9px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:700;color:#fff;font-size:.85rem}
     .tile a{position:absolute;inset:0;display:block}
 
-    /* Category strip (café menu vibe) */
-    .menu{max-width:1200px;margin:22px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-    .menu-card{display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:center;background:#12151a;border:1px solid #242a33;border-radius:14px;padding:12px}
-    .menu-card img{width:80px;height:80px;border-radius:10px;object-fit:cover;border:1px solid #2b2f3a}
-    .menu-card h3{margin:0 0 4px}
-    .menu-card p{margin:0;color:#b7becc;font-size:.92rem}
-    .menu-card a{justify-self:start;margin-top:8px}
+    /* Category strip */
+    .menu{max-width:1000px;margin:18px auto 0;padding:0 14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .menu-card{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:center;background:#12151a;border:1px solid #242a33;border-radius:12px;padding:10px}
+    .menu-card img{width:70px;height:70px;border-radius:10px;object-fit:cover;border:1px solid #2b2f3a}
+    .menu-card h3{margin:0 0 2px;font-size:1rem}
+    .menu-card p{margin:0;color:#b7becc;font-size:.9rem;line-height:1.45}
+    .menu-card a{justify-self:start;margin-top:6px}
 
-    /* QR tile: keep plate white, no filters */
+    /* QR tile */
     .menu-card.qr{align-items:stretch}
     .menu-card.qr .qr-plate{
-      display:block; width:80px; height:80px; border-radius:10px;
-      background:#fff; border:1px solid #d9dee5; padding:6px;
-      box-shadow:0 1px 0 rgba(255,255,255,.05), 0 8px 18px rgba(0,0,0,.25);
+      display:block; width:70px; height:70px; border-radius:10px;
+      background:#fff; border:1px solid #d9dee5; padding:5px;
+      box-shadow:0 1px 0 rgba(255,255,255,.05), 0 6px 16px rgba(0,0,0,.22);
     }
     .menu-card.qr img{
       width:100%; height:100%; object-fit:contain;
-      filter:none !important; -webkit-filter:none !important;
-      opacity:1 !important; mix-blend-mode:normal !important;
+      filter:none !important; -webkit-filter:none !important; opacity:1 !important; mix-blend-mode:normal !important;
     }
     .menu-card.qr a.img-link{display:contents}
 
     /* Directory cards */
-    main{padding:28px 16px 46px;max-width:1100px;margin:0 auto}
-    h2{text-align:center;margin:0 0 22px;color:var(--accent)}
-    .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;transition:transform .2s ease, box-shadow .2s ease}
-    .card:hover{transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,.35)}
-    .card h3{margin:8px 0 6px}
-    .card p{margin:0;color:#b7becc;font-size:.92rem}
-    .card a{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;font-weight:800;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));text-decoration:none;box-shadow:0 6px 18px rgba(10,203,146,.35)}
-
-    .note{max-width:900px;margin:18px auto 0;text-align:center;color:#9aa3ad;font-size:.9rem}
+    main{padding:24px 14px 40px;max-width:920px;margin:0 auto}
+    h2{text-align:center;margin:0 0 18px;color:var(--accent);font-size:1.1rem}
+    .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .card h3{margin:6px 0 4px;font-size:1rem}
+    .card p{margin:0;color:#b7becc;font-size:.9rem}
+    .card a{display:inline-block;margin-top:10px;padding:9px 14px;border-radius:10px;font-weight:800;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));text-decoration:none;box-shadow:0 6px 18px rgba(10,203,146,.3)}
+    .note{max-width:800px;margin:14px auto 0;text-align:center;color:#9aa3ad;font-size:.88rem}
   </style>
 </head>
 <body>
@@ -131,11 +131,21 @@
         <button class="close" aria-label="Hide promotion">×</button>
 
         <div class="aff-rotor" aria-hidden="true">
-          <img src="gb.jpg"  alt="" loading="eager" decoding="async" width="128" height="128" class="is-active">
-          <img src="gb1.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
-          <img src="gb2.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
-          <img src="gb3.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
-          <img src="gb4.jpg" alt="" loading="lazy"  decoding="async" width="128" height="128">
+          <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
+            <img src="gb.jpg"  alt="" loading="eager" decoding="async" width="96" height="96" class="is-active">
+          </a>
+          <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
+            <img src="gb1.jpg" alt="" loading="lazy"  decoding="async" width="96" height="96">
+          </a>
+          <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
+            <img src="gb2.jpg" alt="" loading="lazy"  decoding="async" width="96" height="96">
+          </a>
+          <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
+            <img src="gb3.jpg" alt="" loading="lazy"  decoding="async" width="96" height="96">
+          </a>
+          <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
+            <img src="gb4.jpg" alt="" loading="lazy"  decoding="async" width="96" height="96">
+          </a>
         </div>
 
         <div class="aff-copy">
@@ -157,26 +167,26 @@
     <h2>From the Guide</h2>
     <div class="mosaic">
       <div class="tile big">
-        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll" loading="lazy" decoding="async" width="900" height="1125">
-        <a href="guides.html" aria-label="Rolling tips"></a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank"></a>
+        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll" loading="lazy" decoding="async">
         <span class="cap">Rolling Tips</span>
       </div>
 
       <div class="tile">
-        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async" width="600" height="375">
-        <a href="blog.html" aria-label="Morning pairings"></a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank"></a>
+        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
         <span class="cap">Morning Pairings</span>
       </div>
 
       <div class="tile">
-        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async" width="736" height="414">
-        <a href="laws.html" aria-label="Buying legally"></a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank"></a>
+        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
         <span class="cap">Buying Legally</span>
       </div>
 
       <div class="tile">
-        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async" width="612" height="612">
-        <a href="wellness.html" aria-label="Formats & dosing"></a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank"></a>
+        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
         <span class="cap">Formats &amp; Dosing</span>
       </div>
     </div>
@@ -185,7 +195,7 @@
   <!-- Café-style “menu” categories -->
   <section class="menu" aria-label="Shop">
     <div class="menu-card">
-      <img src="cbd.jpg" alt="Flower and value ounces" width="80" height="80" loading="lazy" decoding="async">
+      <img src="cbd.jpg" alt="Flower and value ounces" width="70" height="70" loading="lazy" decoding="async">
       <div>
         <h3>Flower & Value Ounces</h3>
         <p>Great jars without the markup. Rotating deals.</p>
@@ -193,7 +203,7 @@
       </div>
     </div>
     <div class="menu-card">
-      <img src="vape.jpg" alt="Vape cartridges" width="80" height="80" loading="lazy" decoding="async">
+      <img src="vape.jpg" alt="Vape cartridges" width="70" height="70" loading="lazy" decoding="async">
       <div>
         <h3>Vapes</h3>
         <p>Smooth pulls, solid potency, brand variety.</p>
@@ -201,7 +211,7 @@
       </div>
     </div>
     <div class="menu-card">
-      <img src="concentrates.jpg" alt="Gummies and concentrates" width="80" height="80" loading="lazy" decoding="async">
+      <img src="concentrates.jpg" alt="Gummies and concentrates" width="70" height="70" loading="lazy" decoding="async">
       <div>
         <h3>Gummies & Concentrates</h3>
         <p>Simple dosing or top-shelf extracts — your call.</p>
@@ -213,7 +223,7 @@
     <div class="menu-card qr">
       <a class="img-link" href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">
         <span class="qr-plate">
-          <img src="qr (4).png" alt="QR code to shop" width="68" height="68" loading="lazy" decoding="async">
+          <img src="qr (4).png" alt="QR code to shop" width="60" height="60" loading="lazy" decoding="async">
         </span>
       </a>
       <div>
@@ -230,32 +240,32 @@
       <div class="card">
         <h3>Cultivation</h3>
         <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
-        <a href="cultivation.html">View Section →</a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View Section →</a>
       </div>
       <div class="card">
         <h3>Wellness</h3>
         <p>Pain, sleep, appetite, and mood — dosage basics and formats.</p>
-        <a href="wellness.html">View Section →</a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View Section →</a>
       </div>
       <div class="card">
         <h3>Laws &amp; Buying</h3>
         <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
-        <a href="laws.html">View Section →</a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View Section →</a>
       </div>
       <div class="card">
         <h3>Strains &amp; Products</h3>
         <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
-        <a href="products.html">View Section →</a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View Section →</a>
       </div>
       <div class="card">
         <h3>Guides &amp; How-Tos</h3>
         <p>Roll, store, grind, clean glass, travel tips, and more.</p>
-        <a href="guides.html">View Section →</a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View Section →</a>
       </div>
       <div class="card">
         <h3>Blog &amp; Deals</h3>
         <p>Fresh content and rotating promos from trusted partners.</p>
-        <a href="blog.html">View Section →</a>
+        <a href="https://cannabisfieldguide.org/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View Section →</a>
       </div>
     </div>
 
@@ -265,7 +275,8 @@
   <script>
     // Image rotator + close
     (function(){
-      const imgs = document.querySelectorAll('.aff-rotor img');
+      const rotor = document.querySelector('.aff-rotor');
+      const imgs = rotor ? rotor.querySelectorAll('img') : [];
       let i = 0;
       if (imgs.length > 1){
         setInterval(()=>{ imgs[i].classList.remove('is-active'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-active'); }, 3000);

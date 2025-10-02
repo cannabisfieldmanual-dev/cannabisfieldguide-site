@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-aff="https://cannabisfieldguide.org/">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,13 +55,12 @@
     .qrbox small{color:#aeb7c1}
     @media (max-width:940px){.aff{grid-template-columns:100px 1fr}.aff-rotor{width:100px;height:100px}}
 
-    /* ===== Café “Menu” (generic, no item-specific tiles) ===== */
+    /* ===== Café “Menu” ===== */
     .menu{margin:10px auto 8px}
     .menu h2{margin:12px 0 14px;color:#ffd8b3;font-weight:900;text-align:center;letter-spacing:.3px}
     .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:560px){.grid{grid-template-columns:1fr}}
-
     .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#101419;min-height:160px}
     .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92;filter:saturate(1.05);transition:transform .35s ease, opacity .3s ease}
     .tile:hover img{transform:scale(1.04);opacity:1}
@@ -113,10 +112,10 @@
           <span class="chip">Popular formats</span>
           <span class="chip">Fast checkout</span>
         </div>
-        <a class="cta" href="https://cannabisfieldguide.org/" rel="sponsored noopener noreferrer">Shop Now →</a>
+        <a class="cta" data-aff-link>Shop Now →</a>
 
         <div class="qrbox">
-          <img src="qr (4).png" alt="QR code linking to Cannabis Field Guide">
+          <img src="qr (4).png" alt="QR code to cannabisfieldguide.org">
           <div>
             <b>Open on your phone</b>
             <small>Scan to visit <span style="opacity:.9">cannabisfieldguide.org</span>—save the site or share with a friend.</small>
@@ -126,28 +125,28 @@
     </aside>
   </div>
 
-  <!-- Café “Menu” (generic tiles pointing to the single affiliate URL) -->
+  <!-- Café “Menu” (all tiles → affiliate URL) -->
   <section class="wrap menu" aria-label="Shop menu">
     <h2>Today’s Menu</h2>
     <div class="grid">
       <div class="tile">
         <img src="coffee-buds.jpg" alt="Coffee and joints vibe">
-        <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
+        <a data-aff-link aria-label="Shop deals"></a>
         <span class="cap">Shop Deals</span>
       </div>
       <div class="tile">
         <img src="display-jars.jpg" alt="Dispensary jars">
-        <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
+        <a data-aff-link aria-label="Value picks"></a>
         <span class="cap">Value Picks</span>
       </div>
       <div class="tile">
         <img src="concentrates.jpg" alt="Concentrates close-up">
-        <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
+        <a data-aff-link aria-label="Potent options"></a>
         <span class="cap">Potent Options</span>
       </div>
       <div class="tile">
         <img src="cbd.jpg" alt="CBD products">
-        <a href="https://cannabisfieldguide.org/" rel="sponsored noopener"></a>
+        <a data-aff-link aria-label="CBD & wellness"></a>
         <span class="cap">CBD & Wellness</span>
       </div>
     </div>
@@ -194,11 +193,23 @@
 
   <script>
     (function(){
+      // Centralized affiliate URL from <html data-aff="...">
+      const AFF = document.documentElement.dataset.aff || 'https://cannabisfieldguide.org/';
+
+      // Wire every element marked data-aff-link
+      document.querySelectorAll('[data-aff-link]').forEach(el => {
+        el.setAttribute('href', AFF);
+        el.setAttribute('rel', 'nofollow sponsored noopener noreferrer');
+      });
+
+      // Image rotator
       const imgs = document.querySelectorAll('.aff-rotor img');
       let i = 0;
       if (imgs.length > 1){
         setInterval(()=>{ imgs[i].classList.remove('is-active'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-active'); }, 3000);
       }
+
+      // Dismiss promo
       const close = document.querySelector('.aff .close');
       if (close) close.addEventListener('click', () => { document.querySelector('.aff').style.display = 'none'; });
     })();

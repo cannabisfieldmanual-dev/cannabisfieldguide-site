@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cannabis Field Guide — Independent Knowledge</title>
-  <meta name="description" content="Cannabis Field Guide: honest, independent info on cultivation, wellness, laws, and product education — no hype.">
+  <meta name="description" content="Cannabis Field Guide: honest, independent info on cultivation, wellness, laws, and product education — no hype. If you use our link: 15% off your first purchase with code GBO15.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0d0f10">
   <link rel="canonical" href="https://cannabisfieldguide.org/">
@@ -15,7 +15,6 @@
       --accent:#18f0b4; --accent2:#0acb92;
       --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
     }
-    /* Reset + base */
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -31,13 +30,7 @@
     .subtle{color:var(--muted)}
     .section-title{margin:0 0 14px;text-align:center;color:var(--accent);font-size:1.1rem;font-weight:900;letter-spacing:.2px}
 
-    /* Promo bar (no sticky to avoid edge-case black screens) */
-    .promo{background:#0b1311;border-bottom:1px solid #173a31}
-    .promo .wrap{display:flex;justify-content:center;align-items:center;gap:10px;min-height:40px}
-    .promo .text{font-weight:800;letter-spacing:.2px}
-    .promo .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#0d2a23;border:1px solid #1d5043;border-radius:8px;padding:3px 8px}
-
-    /* Header (not sticky to remove browser bugs) */
+    /* Header */
     header{border-bottom:1px solid var(--line);background:#0e1012}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
     .brand{display:flex;align-items:center;gap:12px}
@@ -99,10 +92,10 @@
 </head>
 <body>
   <!-- PROMO BAR -->
-  <div class="promo" role="region" aria-label="Promotion">
-    <div class="container wrap" style="display:flex;justify-content:center;align-items:center;gap:10px">
-      <span class="text">If you use our link: <strong>15% OFF your first purchase</strong></span>
-      <span class="code" aria-label="Promo code">Code: <strong>GBO15</strong></span>
+  <div class="promo" role="region" aria-label="Promotion" style="background:#0b1311;border-bottom:1px solid #173a31">
+    <div class="container" style="display:flex;justify-content:center;align-items:center;gap:10px;min-height:40px">
+      <span>If you use our link: <strong>15% OFF your first purchase</strong></span>
+      <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#0d2a23;border:1px solid #1d5043;border-radius:8px;padding:3px 8px">Code: <strong>GBO15</strong></span>
     </div>
   </div>
 
@@ -113,7 +106,7 @@
         <h1>Cannabis Field Guide</h1>
       </div>
       <div style="text-align:right">
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop →</a>
+        <a class="btn" href="#" aria-label="Shop">Shop →</a>
         <small class="btn-note">15% off first purchase — <strong>GBO15</strong></small>
       </div>
     </div>
@@ -132,7 +125,7 @@
             <span class="badge">Pre-Rolls • Flower • Vapes</span>
           </div>
           <div style="margin-top:14px">
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls →</a>
+            <a class="btn" href="#" aria-label="Shop Pre-Rolls">Shop Pre-Rolls →</a>
             <small class="btn-note">Use our link + code <strong>GBO15</strong> for 15% off</small>
           </div>
         </div>
@@ -156,7 +149,7 @@
             <span class="chip">Multi-pack deals</span>
             <span class="chip">15% OFF w/ <strong>GBO15</strong></span>
           </div>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
+          <a class="btn" href="#" aria-label="Shop Now">Shop Now →</a>
           <small class="btn-note">If you use our link: 15% off first purchase — code <strong>GBO15</strong></small>
         </div>
       </aside>
@@ -173,14 +166,15 @@
           <span class="cap">Rolling Tips</span>
         </article>
 
-    <!-- Morning Pairings tile — goes to your subpage, not affiliate -->
-<a href="morning-pairings.html" data-no-aff aria-label="Morning Pairings subpage">
-  <article class="tile card">
-    <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg"
-         alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
-    <span class="cap">Morning Pairings</span>
-  </article>
-</a>
+        <!-- ONLY THIS TILE GOES TO THE SUBPAGE -->
+        <a href="morning-pairings.html" data-no-aff aria-label="Morning Pairings subpage">
+          <article class="tile card">
+            <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg"
+                 alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
+            <span class="cap">Morning Pairings</span>
+          </article>
+        </a>
+        <!-- END SUBPAGE TILE -->
 
         <article class="tile card">
           <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
@@ -204,7 +198,7 @@
           <div>
             <h3 class="title">Flower &amp; Value Ounces</h3>
             <p class="subtle">Great jars without the markup. Rotating deals.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
+            <a class="btn" href="#" aria-label="Browse Flower">Browse →</a>
             <small class="btn-note">15% off first purchase — use <strong>GBO15</strong></small>
           </div>
         </article>
@@ -214,7 +208,7 @@
           <div>
             <h3 class="title">Vapes</h3>
             <p class="subtle">Smooth pulls, solid potency, brand variety.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
+            <a class="btn" href="#" aria-label="Browse Vapes">Browse →</a>
             <small class="btn-note">15% off first purchase — use <strong>GBO15</strong></small>
           </div>
         </article>
@@ -224,7 +218,7 @@
           <div>
             <h3 class="title">Gummies &amp; Concentrates</h3>
             <p class="subtle">Simple dosing or top-shelf extracts — your call.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Browse →</a>
+            <a class="btn" href="#" aria-label="Browse Gummies & Concentrates">Browse →</a>
             <small class="btn-note">15% off first purchase — use <strong>GBO15</strong></small>
           </div>
         </article>
@@ -237,7 +231,7 @@
           <div>
             <h3 class="title">Scan &amp; Shop</h3>
             <p class="subtle">Open on your phone instantly.</p>
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Open Link →</a>
+            <a class="btn" href="#" aria-label="Open Shop Link">Open Link →</a>
             <small class="btn-note">15% off first purchase — code <strong>GBO15</strong></small>
           </div>
         </article>
@@ -253,37 +247,37 @@
         <article class="dir-card card">
           <h3 class="title">Cultivation</h3>
           <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          <a class="btn" href="#" aria-label="View Cultivation">View →</a>
           <small class="btn-note">Use <strong>GBO15</strong> at checkout for 15% off</small>
         </article>
         <article class="dir-card card">
           <h3 class="title">Wellness</h3>
           <p>Pain, sleep, appetite, and mood — dosage basics and formats.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          <a class="btn" href="#" aria-label="View Wellness">View →</a>
           <small class="btn-note">Use <strong>GBO15</strong> at checkout for 15% off</small>
         </article>
         <article class="dir-card card">
           <h3 class="title">Laws &amp; Buying</h3>
           <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          <a class="btn" href="#" aria-label="View Laws & Buying">View →</a>
           <small class="btn-note">Use <strong>GBO15</strong> at checkout for 15% off</small>
         </article>
         <article class="dir-card card">
           <h3 class="title">Strains &amp; Products</h3>
           <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          <a class="btn" href="#" aria-label="View Strains & Products">View →</a>
           <small class="btn-note">Use <strong>GBO15</strong> at checkout for 15% off</small>
         </article>
         <article class="dir-card card">
           <h3 class="title">Guides &amp; How-Tos</h3>
           <p>Roll, store, grind, clean glass, travel tips, and more.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          <a class="btn" href="#" aria-label="View Guides & How-Tos">View →</a>
           <small class="btn-note">Use <strong>GBO15</strong> at checkout for 15% off</small>
         </article>
         <article class="dir-card card">
           <h3 class="title">Blog &amp; Deals</h3>
           <p>Fresh content and rotating promos from trusted partners.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          <a class="btn" href="#" aria-label="View Blog & Deals">View →</a>
           <small class="btn-note">Use <strong>GBO15</strong> at checkout for 15% off</small>
         </article>
       </div>
@@ -296,29 +290,29 @@
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <span>© <span id="y"></span> Cannabis Field Guide</span>
       <div style="text-align:right">
-        <a href="https://getbudonline.com/subid/christopher.serpico/" class="btn" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Flower &amp; More →</a>
+        <a href="#" class="btn" aria-label="Shop All">Shop Pre-Rolls, Flower &amp; More →</a>
         <small class="btn-note">15% off first purchase — code <strong>GBO15</strong></small>
       </div>
     </div>
   </footer>
 
   <script>
-    // Safe JS runs after DOM is ready
     document.addEventListener('DOMContentLoaded', () => {
       // Year
       const y = document.getElementById('y');
       if (y) y.textContent = new Date().getFullYear();
 
-      // Rotor (defensive)
+      // Rotor
       const imgs = document.querySelectorAll('.rotor img');
       let i = 0;
       if (imgs.length > 1){
         setInterval(()=>{ imgs[i].classList.remove('is-active'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-active'); }, 3000);
       }
 
-      // GLOBAL LINK OVERRIDE: every <a> → affiliate URL
+      // GLOBAL AFFILIATE OVERRIDE
+      // Apply affiliate link to every <a> EXCEPT those marked with data-no-aff
       const AFFILIATE_URL = "https://getbudonline.com/subid/christopher.serpico/";
-      document.querySelectorAll('a').forEach(a => {
+      document.querySelectorAll('a:not([data-no-aff])').forEach(a => {
         a.href = AFFILIATE_URL;
         a.target = "_blank";
         const relSet = new Set((a.getAttribute('rel') || "").split(/\s+/).filter(Boolean));

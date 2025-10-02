@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cannabis Field Guide — Independent Knowledge</title>
-  <meta name="description" content="Cannabis Field Guide: honest, independent information on cultivation, wellness, laws, and product education — with no hype.">
+  <meta name="description" content="Cannabis Field Guide: honest, independent information on cultivation, wellness, laws, and product education — no hype.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0d0f10">
   <link rel="canonical" href="https://cannabisfieldguide.org/">
@@ -15,17 +15,22 @@
       --panel:#14171d; --accent:#18f0b4; --accent2:#0acb92; --glow:#3fae5a;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background:var(--bg); color:var(--ink); line-height:1.6;
+      background-image: radial-gradient(1000px 600px at 10% 0%, rgba(24,240,180,.03), rgba(0,0,0,0)),
+                        radial-gradient(900px 540px at 90% 10%, rgba(10,203,146,.03), rgba(0,0,0,0));
+      background-attachment: fixed;
+    }
 
     /* ===== HERO (brand + affiliate panel) ===== */
     .hero-wrap{max-width:1200px;margin:22px auto 10px;padding:0 16px}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
     @media (max-width:900px){.hero{grid-template-columns:1fr}}
 
-    /* Left: brand card with your photo */
     .brand-card{
       position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);
-      background:#0e1014;min-height:280px;
+      background:#0e1014;min-height:280px;box-shadow:0 10px 30px rgba(0,0,0,.35)
     }
     .brand-media{
       position:absolute;inset:0;background:
@@ -37,36 +42,25 @@
     .site-title{
       margin:0 0 10px;font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:900;
       background:linear-gradient(90deg,#ffffff,#e7fff5,#b6ffe3);
-      -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      text-shadow:0 2px 16px rgba(0,0,0,.35);
     }
     .site-tag{margin:0;color:#e9f7f2;font-weight:600;letter-spacing:.15px;text-shadow:0 1px 12px rgba(0,0,0,.45)}
     .site-sub{margin:6px 0 0;color:#cfe7e1;font-size:.95rem;opacity:.95}
 
-    /* Right: affiliate panel WITH custom background image (CSS gradients) */
     .aff{
       position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;
       background:#0f1116;
-      /* Layered “image” */
       background-image:
         radial-gradient(120px 90px at 18% 18%, rgba(24,240,180,.10), rgba(24,240,180,0) 60%),
         radial-gradient(170px 120px at 88% 28%, rgba(10,203,146,.08), rgba(10,203,146,0) 65%),
         radial-gradient(260px 180px at 60% 82%, rgba(63,174,90,.07), rgba(63,174,90,0) 60%),
         repeating-linear-gradient(135deg, rgba(255,255,255,.02) 0 10px, rgba(0,0,0,.02) 10px 20px);
-      backdrop-filter:saturate(1.05);
       display:grid;grid-template-columns:128px 1fr;gap:16px;padding:14px;align-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.35)
     }
-    .aff::before{
-      content:"";position:absolute;inset:-20% -10% -20% -10%;
-      background:
-        radial-gradient(140% 90% at 100% 0, rgba(0,0,0,0) 0, rgba(0,0,0,.35) 55%, rgba(0,0,0,.55) 100%),
-        linear-gradient(20deg, rgba(255,255,255,.04), rgba(255,255,255,0) 45%);
-      pointer-events:none;z-index:0;
-    }
-    .aff::after{
-      content:"";position:absolute;inset:0;border-radius:16px;
-      box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06);
-      pointer-events:none;z-index:0;
-    }
+    .aff::after{content:"";position:absolute;inset:0;border-radius:16px;
+      box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06)}
     .aff > *{position:relative;z-index:1}
 
     .aff-rotor{position:relative;width:128px;height:128px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#0b0d10}
@@ -82,11 +76,20 @@
     .aff .cta:hover{filter:brightness(1.08)}
     .aff .close{position:absolute;right:10px;top:10px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#181b20;color:#cfd6e4;font-size:18px;line-height:1;cursor:pointer}
     .aff .close:hover{background:#20252b}
+    @media (max-width:900px){.aff{grid-template-columns:100px 1fr;padding:12px}.aff-rotor{width:100px;height:100px}}
 
-    @media (max-width:900px){
-      .aff{grid-template-columns:100px 1fr;padding:12px}
-      .aff-rotor{width:100px;height:100px}
-    }
+    /* ===== “From the Guide” image grid ===== */
+    .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
+    .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
+    .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:12px}
+    @media (max-width:900px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
+    @media (max-width:600px){.mosaic{grid-template-columns:1fr;grid-auto-rows:200px}}
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10}
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05);opacity:.9;transition:transform .4s ease, opacity .3s ease}
+    .tile:hover img{transform:scale(1.04);opacity:1}
+    .tile .cap{position:absolute;left:10px;bottom:10px;padding:8px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:700;color:#fff}
+    .tile.big{grid-row:span 2}
+    .tile a{position:absolute;inset:0;display:block}
 
     /* ===== Directory cards ===== */
     main{padding:28px 16px 46px;max-width:1100px;margin:0 auto}
@@ -115,7 +118,7 @@
         </div>
       </section>
 
-      <!-- Right: Affiliate panel with custom background -->
+      <!-- Right: Affiliate panel -->
       <aside class="aff" aria-label="Affiliate promotion">
         <button class="close" aria-label="Hide promotion">×</button>
 
@@ -141,6 +144,38 @@
 
     </div>
   </div>
+
+  <!-- From the Guide (uses your exact filenames) -->
+  <section class="from" aria-label="From the guide">
+    <h2>From the Guide</h2>
+    <div class="mosaic">
+      <div class="tile big">
+        <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with lines of ground flower ready to roll">
+        <a href="guides.html" aria-label="Rolling tips"></a>
+        <span class="cap">Rolling Tips</span>
+      </div>
+      <div class="tile">
+        <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower">
+        <a href="blog.html" aria-label="Morning pairings"></a>
+        <span class="cap">Morning Pairings</span>
+      </div>
+      <div class="tile">
+        <img src="oregon-marijuana-sales-hit-79-4-million-in-may-bringing-all-v0-ggMKVKXvmp_-GRXq2i4ktuBrYFSprhC03p65sYvrvQ4.webp" alt="Pre-rolls with a fresh cannabis leaf">
+        <a href="products.html" aria-label="Pre-roll picks"></a>
+        <span class="cap">Pre-Roll Picks</span>
+      </div>
+      <div class="tile">
+        <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting or displaying buds from jars on a retail counter">
+        <a href="laws.html" aria-label="Buying legally"></a>
+        <span class="cap">Buying Legally</span>
+      </div>
+      <div class="tile">
+        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter">
+        <a href="wellness.html" aria-label="Formats & dosing"></a>
+        <span class="cap">Formats &amp; Dosing</span>
+      </div>
+    </div>
+  </section>
 
   <main>
     <h2>Explore the Guide</h2>
@@ -181,21 +216,18 @@
   </main>
 
   <script>
-    // Image rotator + close
     (function(){
-      const rotor = document.querySelectorAll('.aff-rotor img');
+      const imgs = document.querySelectorAll('.aff-rotor img');
       let i = 0;
-      if (rotor.length > 1){
+      if (imgs.length > 1){
         setInterval(()=>{
-          rotor[i].classList.remove('is-active');
-          i = (i + 1) % rotor.length;
-          rotor[i].classList.add('is-active');
+          imgs[i].classList.remove('is-active');
+          i = (i + 1) % imgs.length;
+          imgs[i].classList.add('is-active');
         }, 3000);
       }
       const close = document.querySelector('.aff .close');
-      close.addEventListener('click', () => {
-        document.querySelector('.aff').style.display = 'none';
-      });
+      close.addEventListener('click', () => { document.querySelector('.aff').style.display = 'none'; });
     })();
   </script>
 </body>

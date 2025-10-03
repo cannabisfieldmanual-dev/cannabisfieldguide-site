@@ -8,6 +8,7 @@
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0d0f10">
   <link rel="canonical" href="https://cannabisfieldguide.org/">
+
   <style>
     :root{
       --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
@@ -15,20 +16,33 @@
       --accent:#18f0b4; --accent2:#0acb92;
       --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
     }
+
+    /* Base */
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .hit{position:absolute;inset:0;z-index:2}
-    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:6px 10px;border-radius:999px}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
-    .btn:hover{filter:brightness(1.06)}
+
+    /* Reusable */
     .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
     .title{margin:0;font-weight:900;letter-spacing:.2px}
     .subtle{color:var(--muted)}
     .section-title{margin:0 0 14px;text-align:center;color:var(--accent);font-size:1.1rem;font-weight:900;letter-spacing:.2px}
+    .hit{position:absolute;inset:0;z-index:2}
+    .stack-12>*{margin:0} .stack-12>*+*{margin-top:12px}
+    .stack-8>*{margin:0} .stack-8>*+*{margin-top:8px}
+
+    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;
+      font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));
+      padding:6px 10px;border-radius:999px}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;
+      color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
+    .btn:hover{filter:brightness(1.06)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#151a1f;border:1px solid #232a31;color:#d2dae7;font-size:.82rem}
+    .chip:before{content:"✔";color:var(--accent);font-weight:900}
+    .chiprow{display:flex;flex-wrap:wrap;gap:8px}
 
     /* Header */
     header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
@@ -44,27 +58,27 @@
     @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
     .brand-card{position:relative;border-radius:var(--rad);overflow:hidden;border:1px solid var(--line);background:var(--panel-2);min-height:280px}
     .brand-media{position:absolute;inset:0;background:
-      linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.6)),
+      linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.66)),
       url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat}
     .brand-content{position:relative;z-index:1;padding:28px 22px}
     .brand-content .kicker{margin:0 0 6px;opacity:.9}
     .brand-content .site-title{margin:0 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900;background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35)}
     .brand-content p{margin:6px 0 0;color:#d7e3e0;max-width:60ch}
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .cta-row{margin-top:14px}
 
     /* Promo (aff) */
-    .aff{display:grid;grid-template-columns:100px 1fr;gap:14px;align-items:center;background:#0f1116;border:1px solid var(--line);border-radius:var(--rad);padding:14px;position:relative;overflow:hidden}
+    .aff{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;background:#0f1116;border:1px solid var(--line);border-radius:var(--rad);padding:14px;position:relative;overflow:hidden}
     .aff::after{content:"";position:absolute;inset:0;border-radius:var(--rad);box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06);pointer-events:none}
-    @media (max-width:520px){.aff{grid-template-columns:84px 1fr;padding:12px}}
-    .rotor{position:relative;width:100px;height:100px;border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#0b0d10;display:block}
+    @media (max-width:560px){.aff{grid-template-columns:90px 1fr;padding:12px}}
+    .rotor{position:relative;width:110px;height:110px;border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#0b0d10;display:block}
     .rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
     .rotor img.is-active{opacity:1}
-    .aff h3{margin:0 0 4px;color:var(--accent);font-size:1.05rem;font-weight:900}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#151a1f;border:1px solid #232a31;color:#d2dae7;font-size:.82rem}
-    .chip:before{content:"✔";color:var(--accent);font-weight:900}
-    .aff .btn{margin-top:4px}
+    .aff .title{color:var(--accent)}
+    .aff .desc{margin:6px 0 10px}
+    .chiprow{margin:8px 0}
 
-    /* “From the Guide” Mosaic */
+    /* From the Guide */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
     .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
     .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
@@ -79,8 +93,8 @@
     .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
 
     /* Directory */
-    main{margin:8px 0 36px}
-    .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    main{margin:22px 0 36px}
+    .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
     .dir-card{padding:16px;text-align:center}
     .dir-card h3{margin:8px 0 6px;font-size:1.02rem}
     .dir-card p{margin:0;color:#b7becc;font-size:.92rem}
@@ -97,17 +111,18 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand">
         <span class="logo-dot" aria-hidden="true"></span>
         <h1>Cannabis Field Guide</h1>
       </div>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop pre-rolls, flower, vapes">
-        Shop →</a>
+      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop pre-rolls, flower, vapes">Shop →</a>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="container wrap">
       <!-- Brand card -->
@@ -116,37 +131,39 @@
         <div class="brand-content">
           <p class="kicker subtle">Independent • Honest • Field-Tested</p>
           <h2 class="site-title title">Straight talk on cultivation, wellness, laws, and product picks — no hype.</h2>
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+
+          <div class="badge-row">
             <span class="badge" aria-hidden="true">21+ Only</span>
             <span class="badge" aria-hidden="true">Pre-Rolls • Flower • Vapes</span>
           </div>
-          <div style="margin-top:14px">
+
+          <div class="cta-row">
             <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls →</a>
           </div>
         </div>
         <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop"></a>
       </article>
 
-      <!-- Promo / affiliate (rotor updated to your 4 images) -->
+      <!-- Promo / affiliate -->
       <aside class="aff card">
         <a href="https://getbudonline.com/subid/christopher.serpico/" class="rotor"
-           rel="sponsored noopener noreferrer" target="_blank"
-           aria-label="Shop now at GetBud Online">
+           rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop now at GetBud Online">
           <img src="concentrates.jpg" alt="Gummies and concentrates" loading="eager" decoding="async" class="is-active">
           <img src="vape.jpg"         alt="Vape cartridges and batteries" loading="lazy"  decoding="async">
           <img src="cbd.jpg"          alt="Flower and value ounces"       loading="lazy"  decoding="async">
-          <img src="qr%20(4).png"     alt="QR code to shop"                loading="lazy"  decoding="async">
+          <img src="qr%20(4).png"     alt="QR code to shop"               loading="lazy"  decoding="async">
         </a>
-        <div>
+
+        <div class="stack-8">
           <h3 class="title">GetBud Online</h3>
-          <p class="subtle" style="margin:6px 0 10px">
-            Fresh pre-rolls, even burn, discreet + fast. <strong>15% off first purchase: GBO15</strong>
-          </p>
-          <div class="chips">
+          <p class="subtle desc">Fresh pre-rolls, even burn, discreet + fast. <strong>15% off first purchase: GBO15</strong></p>
+
+          <div class="chiprow">
             <span class="chip">Even burn</span>
             <span class="chip">Strain variety</span>
             <span class="chip">Multi-pack deals</span>
           </div>
+
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
         </div>
       </aside>
@@ -163,7 +180,7 @@
         <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Rolling Tips tile"></a>
       </article>
 
-      <!-- ONLY THIS ONE goes to the subpage -->
+      <!-- Morning Pairings subpage -->
       <a href="morning-pairings.html" aria-label="Morning Pairings subpage">
         <article class="tile card">
           <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
@@ -171,13 +188,13 @@
         </article>
       </a>
 
+      <!-- Buying Legally subpage -->
       <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
-  <article class="tile card">
-    <img src="Nuggets-buds-retail-counter-736x414.webp"
-         alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
-    <span class="cap">Buying Legally</span>
-  </article>
-</a>
+        <article class="tile card">
+          <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
+          <span class="cap">Buying Legally</span>
+        </article>
+      </a>
 
       <article class="tile card">
         <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
@@ -191,50 +208,54 @@
   <main>
     <div class="container">
       <h2 class="section-title">Explore the Guide</h2>
+
       <div class="directory">
-        <article class="dir-card card">
+        <article class="dir-card card stack-12">
           <h3 class="title">Cultivation</h3>
           <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
         </article>
-        <article class="dir-card card">
+
+        <article class="dir-card card stack-12">
           <h3 class="title">Wellness</h3>
           <p>Pain, sleep, appetite, and mood — dosage basics and formats.</p>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
         </article>
-        <article class="dir-card card">
+
+        <article class="dir-card card stack-12">
           <h3 class="title">Laws &amp; Buying</h3>
           <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
         </article>
-        <article class="dir-card card">
+
+        <article class="dir-card card stack-12">
           <h3 class="title">Strains &amp; Products</h3>
           <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
         </article>
-        <article class="dir-card card">
+
+        <article class="dir-card card stack-12">
           <h3 class="title">Guides &amp; How-Tos</h3>
           <p>Roll, store, grind, clean glass, travel tips, and more.</p>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
         </article>
-        <article class="dir-card card">
+
+        <article class="dir-card card stack-12">
           <h3 class="title">Blog &amp; Deals</h3>
           <p>Fresh content and rotating promos from trusted partners.</p>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
         </article>
       </div>
 
-      <p class="subtle" style="text-align:center;margin:16px 0 0">
-        21+ only. This site is educational and for legal adults in compliant regions. Always follow local laws.
-      </p>
+      <p class="subtle" style="text-align:center;margin:16px 0 0">21+ only. This site is educational and for legal adults in compliant regions. Always follow local laws.</p>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <span>© <span id="y"></span> Cannabis Field Guide</span>
-      <a href="https://getbudonline.com/subid/christopher.serpico/" class="btn" rel="sponsored noopener noreferrer" target="_blank">
-        Shop Pre-Rolls, Flower &amp; More →</a>
+      <a href="https://getbudonline.com/subid/christopher.serpico/" class="btn" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Flower &amp; More →</a>
     </div>
   </footer>
 
@@ -247,7 +268,11 @@
       const imgs = document.querySelectorAll('.rotor img');
       let i = 0;
       if (imgs.length > 1){
-        setInterval(()=>{ imgs[i].classList.remove('is-active'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-active'); }, 3000);
+        setInterval(()=>{
+          imgs[i].classList.remove('is-active');
+          i = (i + 1) % imgs.length;
+          imgs[i].classList.add('is-active');
+        }, 3000);
       }
     })();
   </script>

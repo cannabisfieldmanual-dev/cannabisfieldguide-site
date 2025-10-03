@@ -3,248 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rolling Tips: Cones, Crutches & Easy Alternatives — Cannabis Field Guide</title>
-  <meta name="description" content="Rolling made simple. Cones for older hands or anyone who hates rolling, plus quick fixes, crutch tips, canoe-control, and easy alternatives like rollers, one-hitters, and dry herb vapes." />
-  <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#0d0f10" />
-  <link rel="canonical" href="https://cannabisfieldguide.org/rolling-tips.html" />
+  <title>Cannabis Field Guide — Independent Knowledge</title>
+  <meta name="description" content="Cannabis Field Guide: honest, independent info on cultivation, wellness, laws, and product education — no hype. 15% off first purchase at GetBud Online with code GBO15.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0d0f10">
+  <link rel="canonical" href="https://cannabisfieldguide.org/">
+
   <style>
     :root{
       --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
       --panel:#111418; --panel-2:#0f1216;
       --accent:#18f0b4; --accent2:#0acb92;
       --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
-      --ok:#a7f5de; --warn:#ffb07c;
     }
+
+    /* Base */
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
-    .btn:hover{filter:brightness(1.06)}
-    .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:#0f1216;color:#e9ecf4}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
-    .block{padding:16px 18px}
+
+    /* Reusable */
+    .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
     .title{margin:0;font-weight:900;letter-spacing:.2px}
     .subtle{color:var(--muted)}
-    .pill{display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#0f1216;border:1px solid #2b2f3a;font-size:.8rem;color:#bcd5cf}
+    .section-title{margin:0 0 14px;text-align:center;color:var(--accent);font-size:1.1rem;font-weight:900;letter-spacing:.2px}
+    .hit{position:absolute;inset:0;z-index:2}
+    .stack-12>*{margin:0} .stack-12>*+*{margin-top:12px}
+    .stack-8>*{margin:0} .stack-8>*+*{margin-top:8px}
 
-    /* Header (site) */
+    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;
+      font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));
+      padding:6px 10px;border-radius:999px}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;
+      color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
+    .btn:hover{filter:brightness(1.06)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#151a1f;border:1px solid #232a31;color:#d2dae7;font-size:.82rem}
+    .chip:before{content:"✔";color:var(--accent);font-weight:900}
+    .chiprow{display:flex;flex-wrap:wrap;gap:8px}
+
+    /* Header */
     header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
     .brand{display:flex;align-items:center;gap:12px}
     .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(24,240,180,.6)}
     .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
+    .nav a.btn{font-size:.92rem}
 
-    /* Masthead (single image) */
-    .mast{margin:22px 0 18px}
-    .mast .frame{
-      position:relative; isolation:isolate; border-radius:18px; overflow:hidden;
-      border:1px solid var(--line); box-shadow:var(--shadow);
-      min-height:clamp(320px, 48vw, 520px);
-      background:
-        linear-gradient(96deg, rgba(13,15,16,.88) 0%, rgba(13,15,16,.62) 46%, rgba(13,15,16,.18) 80%, rgba(13,15,16,0) 100%),
-        url("88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg") center/cover no-repeat;
-    }
-    @media (max-width:760px){
-      .mast .frame{
-        background:
-          linear-gradient(180deg, rgba(13,15,16,.92) 0%, rgba(13,15,16,.65) 46%, rgba(13,15,16,.15) 100%),
-          url("88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg") center/cover no-repeat;
-      }
-    }
-    .mast .inner{
-      position:relative; z-index:1; max-width:1100px; margin:0 auto;
-      padding:clamp(18px, 3.4vw, 30px);
-      display:grid; grid-template-columns:minmax(280px, 720px); gap:10px;
-    }
-    .mast .kicker{margin:0 0 2px; color:var(--muted); letter-spacing:.24px; font-weight:700; text-transform:uppercase; font-size:.8rem}
-    .mast h1{
-      margin:2px 0 8px; font-size:clamp(28px, 5vw, 54px); line-height:1.04; font-weight:900;
-      background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);
-      -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow:0 2px 16px rgba(0,0,0,.35);
-    }
-    .mast .lead{margin:6px 0 0; color:#d7e3e0; max-width:62ch}
-    .mast .row{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    /* Hero */
+    .hero{margin:22px 0}
+    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+    @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+    .brand-card{position:relative;border-radius:var(--rad);overflow:hidden;border:1px solid var(--line);background:var(--panel-2);min-height:280px}
+    .brand-media{position:absolute;inset:0;background:
+      linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.66)),
+      url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat}
+    .brand-content{position:relative;z-index:1;padding:28px 22px}
+    .brand-content .kicker{margin:0 0 6px;opacity:.9}
+    .brand-content .site-title{margin:0 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900;background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35)}
+    .brand-content p{margin:6px 0 0;color:#d7e3e0;max-width:60ch}
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .cta-row{margin-top:14px}
 
-    /* Two-col sections */
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width:900px){.two{grid-template-columns:1fr}}
+    /* Promo (aff) */
+    .aff{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;background:#0f1116;border:1px solid var(--line);border-radius:var(--rad);padding:14px;position:relative;overflow:hidden}
+    .aff::after{content:"";position:absolute;inset:0;border-radius:var(--rad);box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06);pointer-events:none}
+    @media (max-width:560px){.aff{grid-template-columns:90px 1fr;padding:12px}}
+    .rotor{position:relative;width:110px;height:110px;border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#0b0d10;display:block}
+    .rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+    .rotor img.is-active{opacity:1}
+    .aff .title{color:var(--accent)}
+    .aff .desc{margin:6px 0 10px}
 
-    /* Lists */
-    .list{margin:0;padding-left:18px}
-    .tip{background:#0f1216;border:1px solid #23303a;border-radius:12px;padding:12px 14px;margin:12px 0}
-    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
-  </style>
-</head>
-<body>
-
-  <!-- Site header -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <span class="logo-dot" aria-hidden="true"></span>
-        <h1>Cannabis Field Guide</h1>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <a href="index.html" class="btn-ghost" aria-label="Return to homepage">← Home</a>
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop →</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Masthead -->
-  <section class="mast">
-    <div class="frame" role="img" aria-label="Rolling tray with paper, filter, and ground flower">
-      <div class="inner">
-        <p class="kicker">Rolling Tips</p>
-        <h1>Cones, crutches & zero-stress joints</h1>
-        <p class="lead">
-          Not everyone wants to learn the art of rolling. If your hands are older, arthritic, or just not into fiddly
-          skills at 7am, use tools that make it easy. Cones are king, crutches keep things tidy, and there are plenty
-          of no-roll options that still deliver a smooth, even burn.
-        </p>
-        <div class="row">
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls & Cones →</a>
-          <a href="index.html" class="btn-ghost" aria-label="Return to homepage">← Back to Home</a>
-        </div>
-      </div>
+    /* From the Guide — uniform grid */
+    .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
+    .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
+    .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.mosaic{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:220px}
+    .tile.big{height:220px} /* neutralize big to keep uniform height */
+    .tile.big{height:220px} /* keep all same height */
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.95;transition:transform .35s ease, opacity .25s ease}
+    .tile:hover img{transform:scale(1.03);opacity:1}
+    .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
+@@ -167,31 +167,48 @@
     </div>
   </section>
 
-  <!-- Why cones -->
-  <section class="container">
-    <article class="card block">
-      <h2 class="title" style="color:var(--accent)">Start here: why I recommend cones (especially for older hands)</h2>
-      <p>
-        Cones are pre-formed papers with a filter already in place. You simply grind, spoon the flower into the open end,
-        tap to settle, and twist shut. They’re perfect for anyone with arthritis, reduced dexterity, or the totally normal
-        feeling of “I do not want to learn a new trick this decade.” Results are consistent, airflow is predictable, and
-        the learning curve is five minutes, not five weekends.
-      </p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
-        <span class="pill">Fast & forgiving</span>
-        <span class="pill">Built-in filter (crutch)</span>
-        <span class="pill">Even burn</span>
-        <span class="pill">Great for sharing</span>
-      </div>
-      <div class="tip">
-        <strong>How to fill a cone (60 seconds):</strong> Grind medium → pinch the cone near the filter so it doesn’t flex →
-        spoon flower in with a folded card or small scoop → tap the filter end on the tray to settle → add a touch more →
-        twist the tip closed like a tiny candy wrapper → quick “toast” around the rim before the first pull.
-      </div>
-    </article>
-  </section>
+ <!-- Rolling Tips subpage tile -->
+<a href="rolling-tips.html" aria-label="Rolling Tips subpage">
+  <article class="tile card">
+    <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
+         alt="Rolling tray with ground flower lines ready to roll"
+         loading="lazy" decoding="async">
+    <span class="cap">Rolling Tips</span>
+  </article>
+</a>
+  <!-- From the Guide (fixed, uniform grid, all tiles inside) -->
+  <section class="from" aria-label="From the guide">
+    <h2>From the Guide</h2>
+    <div class="mosaic">
 
-  <!-- Alternatives & helpers -->
-  <section class="container two">
-    <aside class="card block">
-      <h3 class="title">No-roll alternatives that still feel great</h3>
-      <ul class="list">
-        <li><strong>Pre-rolls:</strong> Skip the prep entirely. Buy a 5–10 pack, keep them in a tube, and you’re always ready.</li>
-        <li><strong>Rolling machine:</strong> A $10 hand roller turns paper + flower into a neat cylinder in ~30 seconds.</li>
-        <li><strong>One-hitter / chillum:</strong> Tiny, discreet, and dose-controlled. Great for two quick puffs.</li>
-        <li><strong>Small pipe:</strong> Minimal gear, easy clean. Use a screen to stop crumbs in the stem.</li>
-        <li><strong>Dry herb vape:</strong> Clean flavor, less smell, gentler on lungs. Perfect for microdosing.</li>
-        <li><strong>Wraps (hemp/corn husk):</strong> If you like blunts, try slow-burn wraps without tobacco.</li>
-      </ul>
-      <div class="tip"><strong>Dexterity tip:</strong> A small tray with raised edges catches everything and makes loading simple.</div>
-    </aside>
+      <!-- Rolling Tips subpage -->
+      <a href="rolling-tips.html" aria-label="Rolling Tips subpage">
+        <article class="tile card">
+          <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
+               alt="Rolling tray with ground flower lines ready to roll"
+               loading="lazy" decoding="async">
+          <span class="cap">Rolling Tips</span>
+        </article>
+      </a>
 
-    <aside class="card block">
-      <h3 class="title">Crutches (filters) 101</h3>
-      <p class="subtle">A crutch gives the mouth-end structure, keeps flower out of your mouth, and improves airflow.</p>
-      <ul class="list">
-        <li><strong>Size:</strong> Small, tight “W” or “M” fold inside a 6–8mm tube works for most cones and papers.</li>
-        <li><strong>Material:</strong> Stiff paper works; card stock is better. Avoid anything glossy or ink-heavy.</li>
-        <li><strong>Placement:</strong> Leave ~1–2mm of paper overhang past the crutch for a clean seal when you roll or twist.</li>
-      </ul>
-      <div class="tip"><strong>Quick fix:</strong> If the tip gets soggy, swap the crutch. It’s not a failure, it’s maintenance.</div>
-    </aside>
-  </section>
+      <!-- Morning Pairings subpage -->
+      <a href="morning-pairings.html" aria-label="Morning Pairings subpage">
+        <article class="tile card">
+          <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
+          <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg"
+               alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
+          <span class="cap">Morning Pairings</span>
+        </article>
+      </a>
 
-  <!-- Burn quality -->
-  <section class="container two">
-    <aside class="card block">
-      <h3 class="title" style="color:var(--accent)">Stop canoeing (uneven burn)</h3>
-      <ul class="list">
-        <li><strong>Grind medium:</strong> Powder burns hot and tunnels; chunky burns lumpy. Think “table salt.”</li>
-        <li><strong>Pack evenly:</strong> Use a small tamping tool or the flat side of a key to level the fill.</li>
-        <li><strong>First light matters:</strong> Toast the edge while gently rotating; take your first draw after an even cherry forms.</li>
-        <li><strong>Fix on the fly:</strong> If one side runs, lick the fast side lightly and roll the joint between fingers to “iron” it.</li>
-      </ul>
-    </aside>
+      <!-- Buying Legally subpage -->
+      <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
+        <article class="tile card">
+          <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
+          <img src="Nuggets-buds-retail-counter-736x414.webp"
+               alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
+          <span class="cap">Buying Legally</span>
+        </article>
+      </a>
 
-    <aside class="card block">
-      <h3 class="title">Taste & comfort upgrades</h3>
-      <ul class="list">
-        <li><strong>Humidity:</strong> Keep flower in a small jar with a 58–62% pack for smoother smoke.</li>
-        <li><strong>Papers:</strong> Rice/hemp papers burn cleaner than thick, flavored sheets.</li>
-        <li><strong>Storage:</strong> Doob tube or tin keeps cones from bending and preserves aroma.</li>
-        <li><strong>Clean pulls:</strong> Sip water between hits; your throat will thank you.</li>
-      </ul>
-    </aside>
-  </section>
+      <!-- Formats & Dosing (kept as external shop link like before) -->
+      <article class="tile card">
+        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
+        <span class="cap">Formats &amp; Dosing</span>
+        <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/"
+           rel="sponsored noopener noreferrer" target="_blank"
+           aria-label="Open shop via Formats &amp; Dosing tile"></a>
+      </article>
 
-  <!-- Tiny how-to for classic hand roll (for the curious) -->
-  <section class="container">
-    <article class="card block">
-      <h3 class="title">Classic hand-roll (when you want the skill badge)</h3>
-      <ol class="list">
-        <li>Make a small crutch and place it on one end of the paper (gum strip up, facing you).</li>
-        <li>Add an even line of medium-ground flower; leave a little space near the tip.</li>
-        <li>Pinch the paper, rock it to shape the cylinder; tuck the non-gum side under and roll upward.</li>
-        <li>Seal with a thin lick on the gum; tap the filter end on the tray to settle and twist the tip.</li>
-        <li>Toast the edge, rotate, and take a gentle first pull.</li>
-      </ol>
-      <div class="tip">
-        <strong>Roll clinic (90 seconds):</strong> small crutch, don’t overpack the tip, tap &amp; spin to settle, twist gently, and
-        toast the edge before first draw. If it canoes, lick the fast side lightly and roll between fingers—like ironing a tiny shirt.
-      </div>
-      <div style="margin-top:10px">
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Grab Cones & Papers →</a>
-        <small style="display:block;margin-top:6px;color:var(--ok)">Prefer zero setup? Try a pre-roll sampler.</small>
-      </div>
-    </article>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container card block" style="margin-bottom:22px">
-    <h3 class="title" style="color:var(--accent)">FAQ</h3>
-    <details open>
-      <summary>Are cones really easier than rolling?</summary>
-      <p>Yes. The filter is built in and all shaping is done for you. Just fill, tap, twist, and go. Great for beginners, older hands, and anyone who values consistency.</p>
-    </details>
-    <details>
-      <summary>Best grind for cones?</summary>
-      <p>Medium. Too fine packs tight and burns hot; too chunky gives uneven airflow. Aim for salt-like texture.</p>
-    </details>
-    <details>
-      <summary>How do I travel with a cone?</summary>
-      <p>Use a doob tube or slim tin, tip up. Keep a few in a zip pouch with a mini lighter, tamp tool, and breath mints.</p>
-    </details>
-    <details>
-      <summary>What if I hate rolling <em>and</em> cones?</summary>
-      <p>Go pre-rolls or a dry herb vape. You’ll get reliable dosing without any paper skills required.</p>
-    </details>
-    <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop Cones & Pre-Rolls →</a>
-      <a href="index.html" class="btn-ghost" aria-label="Return to homepage">← Back to Home</a>
     </div>
   </section>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <span>© <span id="y"></span> Cannabis Field Guide</span>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop Pre-Rolls, Flower &amp; More →</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>

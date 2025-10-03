@@ -1,63 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buying Legally: Fast, Discreet, Adult-Friendly — Cannabis Field Guide (15% OFF w/ GBO15)</title>
-  <meta name="description" content="Real talk on buying cannabis legally online as an adult: how to vet vendors, what discreet shipping looks like, and why I use GetBud Online. 15% OFF code GBO15 with our link." />
-  <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#0d0f10" />
-  <link rel="canonical" href="https://cannabisfieldguide.org/buying-legally.html" />
+<!-- === Masthead (uses Nuggets-buds-retail-counter-736x414.webp) === -->
+<section class="mast">
   <style>
-    :root{
-      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
-      --panel:#111418; --panel-2:#0f1216;
-      --accent:#18f0b4; --accent2:#0acb92;
-      --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
-      --ok:#a7f5de; --warn:#ffb07c;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
-    .btn:hover{filter:brightness(1.06)}
-    .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:10px 14px;border-radius:12px;border:1px solid #2b2f3a;background:#0f1216;color:#e9ecf4}
-    .btn-ghost:hover{filter:brightness(1.06)}
-    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:6px 10px;border-radius:999px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
-    .title{margin:0;font-weight:900;letter-spacing:.2px}
-    .subtle{color:var(--muted)}
-    .pill{display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#0f1216;border:1px solid #2b2f3a;font-size:.8rem;color:#bcd5cf}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
-    .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(24,240,180,.6)}
-    .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
-
-    /* Premium Masthead */
     .mast{margin:22px 0 18px}
     .mast .frame{
       position:relative; isolation:isolate; border-radius:18px; overflow:hidden;
       border:1px solid var(--line); box-shadow:var(--shadow);
       min-height:clamp(320px, 54vw, 520px);
+      /* Your header image + tasteful overlays */
       background:
         radial-gradient(160px 120px at 12% 16%, rgba(24,240,180,.08), rgba(24,240,180,0) 60%),
         radial-gradient(200px 140px at 90% 30%, rgba(10,203,146,.06), rgba(10,203,146,0) 65%),
         linear-gradient(96deg, rgba(13,15,16,.88) 0%, rgba(13,15,16,.70) 38%, rgba(13,15,16,.35) 62%, rgba(13,15,16,0) 100%),
-        url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") left center / cover no-repeat;
+        url("Nuggets-buds-retail-counter-736x414.webp") center/cover no-repeat;
     }
     @media (max-width:760px){
       .mast .frame{
         background:
           radial-gradient(160px 120px at 12% 16%, rgba(24,240,180,.08), rgba(24,240,180,0) 60%),
           linear-gradient(180deg, rgba(13,15,16,.92) 0%, rgba(13,15,16,.68) 46%, rgba(13,15,16,.15) 100%),
-          url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") center / cover no-repeat;
+          url("Nuggets-buds-retail-counter-736x414.webp") center/cover no-repeat;
       }
     }
     .mast .inner{
@@ -68,60 +29,34 @@
     .mast .kicker{margin:0 0 4px; color:var(--muted); letter-spacing:.24px; font-weight:700; text-transform:uppercase; font-size:.8rem}
     .mast h1{
       margin:2px 0 10px; font-size:clamp(28px, 5.2vw, 56px); line-height:1.04; font-weight:900;
-      background:linear-gradient(90deg,#ffffff,#eafff6,#b6ffe3);
-      -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow:0 2px 16px rgba(0,0,0,.35);
+      background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 2px 16px rgba(0,0,0,.35);
     }
     .mast .lead{margin:8px 0 0; color:#d7e3e0; max-width:68ch; font-size:clamp(.98rem, 1.2vw, 1.05rem)}
     .mast .cta-row{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
     .promo-soft{display:block; color:#a7f5de; font-size:.9rem}
-
-    /* Layout helpers */
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width:900px){.two{grid-template-columns:1fr}}
-    .block{padding:16px 18px}
-    .tip{background:#0f1216;border:1px solid #23303a;border-radius:12px;padding:12px 14px;margin:12px 0}
-
-    /* Proof gallery */
-    .proof{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
-    .proof img{border-radius:12px;border:1px solid var(--line)}
-    @media (max-width:720px){.proof{grid-template-columns:1fr}}
-
-    /* Footer */
-    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:10px 14px;border-radius:12px;border:1px solid #2b2f3a;background:#0f1216;color:#e9ecf4}
+    .btn-ghost:hover{filter:brightness(1.06)}
   </style>
-</head>
-<body>
 
-  <!-- Top bar -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <span class="logo-dot" aria-hidden="true"></span>
-        <h1>Cannabis Field Guide</h1>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+  <div class="frame" role="img" aria-label="Gloved hands selecting cannabis buds from glass jars on a counter">
+    <div class="inner">
+      <p class="kicker">Buying Legally</p>
+      <h1>How a grown man without a plug found a legit, discreet source</h1>
+      <p class="lead">
+        Late 30s, no street ties, and wanting to smoke again. Friends who “always smoke” went quiet when I asked for a connect.
+        I even asked CBD shop clerks (don’t). Here’s the playbook I wish I had—how to buy legally online, what compliance looks like,
+        and why I still order from the same shop every two weeks.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop GetBud Online →</a>
+        <span class="promo-soft">Use code <strong>GBO15</strong> for 15% off your first purchase</span>
         <a href="index.html" class="btn-ghost" data-no-aff aria-label="Return to homepage">← Home</a>
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop (15% OFF GBO15) →</a>
       </div>
     </div>
-  </header>
-
-  <!-- Masthead -->
-  <section class="mast">
-    <div class="frame">
-      <div class="inner">
-        <p class="kicker">Buying Legally</p>
-        <h1>How a grown man without a plug found a legit, discreet source</h1>
-        <p class="lead">
-          Late 30s, no street ties, and suddenly wanting to smoke again—yeah, that was me. Friends who “always smoke” went quiet when I asked for a connect. I even caught myself asking twenty-something baristas and CBD shop clerks if they knew anyone (don’t do that; they will look at you like you asked for plutonium). This is the honest playbook I wish I had: how to buy legally and sanely online, what to check for compliance, and why I still order from the same shop every two weeks.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop GetBud Online →</a>
-          <span class="promo-soft">Use code <strong>GBO15</strong> for 15% off your first purchase</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- Your story -->
   <section class="container">

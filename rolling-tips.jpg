@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolling Tips: Cones, Easy Methods & Arthritis-Friendly Tricks — Cannabis Field Guide</title>
+  <meta name="description" content="Rolling made easy. Cones for shaky hands or zero patience, simple step-by-steps, arthritis-friendly tools, burn-fixes, and alternatives to rolling. 15% off with code GBO15." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0d0f10" />
+  <link rel="canonical" href="https://cannabisfieldguide.org/rolling-tips.html" />
+  <style>
+    :root{
+      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
+      --panel:#111418; --panel-2:#0f1216;
+      --accent:#18f0b4; --accent2:#0acb92;
+      --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --ok:#a7f5de; --warn:#ffb07c;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
+    .btn:hover{filter:brightness(1.06)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:#0f1216;color:#e9ecf4}
+    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:6px 10px;border-radius:999px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
+    .block{padding:16px 18px}
+    .title{margin:0;font-weight:900;letter-spacing:.2px}
+    .pill{display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#0f1216;border:1px solid #2b2f3a;font-size:.8rem;color:#bcd5cf}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.05) blur(8px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px rgba(24,240,180,.6)}
+
+    /* Masthead (single image) */
+    .mast{margin:22px 0 18px}
+    .mast .frame{
+      position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:clamp(280px,46vw,440px);
+      background:
+        linear-gradient(96deg,rgba(13,15,16,.88) 0%,rgba(13,15,16,.65) 40%,rgba(13,15,16,.22) 66%,rgba(13,15,16,0) 100%),
+        url("88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg") center/cover no-repeat;
+    }
+    @media (max-width:760px){
+      .mast .frame{
+        background:
+          linear-gradient(180deg,rgba(13,15,16,.92) 0%,rgba(13,15,16,.58) 46%,rgba(13,15,16,.12) 100%),
+          url("88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg") center/cover no-repeat;
+      }
+    }
+    .mast .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:clamp(18px,3.4vw,28px);display:grid;grid-template-columns:minmax(280px,720px)}
+    .mast .kicker{margin:0 0 4px;color:#b7becc;letter-spacing:.22px;text-transform:uppercase;font-weight:800;font-size:.78rem}
+    .mast h1{margin:2px 0 8px;font-size:clamp(28px,5vw,52px);line-height:1.05;font-weight:900;background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35)}
+    .mast p.sub{margin:6px 0 0;color:#d7e3e0;max-width:62ch}
+    .mast .row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+    /* Content blocks */
+    .tip{background:#0f1216;border:1px solid #23303a;border-radius:12px;padding:12px 14px;margin:12px 0}
+    .warn{background:#141118;border-color:#382a2a}
+    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <strong>Cannabis Field Guide</strong>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <a href="index.html" class="btn-ghost" aria-label="Return to homepage">← Home</a>
+        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Masthead -->
+  <section class="mast">
+    <div class="frame" role="img" aria-label="Rolling tray and ground flower ready to roll">
+      <div class="inner">
+        <p class="kicker">Rolling Tips</p>
+        <h1>Cones first. Easy methods, steady hands, and better burns.</h1>
+        <p class="sub">
+          If twisting perfect joints isn’t in the cards—arthritis, shaky hands, or just zero interest—cones are your friend.
+          This page shows you the simplest ways to get a clean, even burn with minimal fuss, plus clever workarounds and
+          alternatives that still deliver a great morning.
+        </p>
+        <div class="row">
+          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop Cones & Pre-Rolls →</a>
+          <span class="badge">15% off first purchase — <strong>GBO15</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Cones -->
+  <section class="container">
+    <article class="card block">
+      <h2 class="title" style="color:var(--accent)">Why cones are the grown-up move</h2>
+      <p>
+        Cones are pre-shaped papers with the crutch already installed. You just fill, tamp, twist, and go.
+        For older hands—or anyone who’d rather enjoy the herb than wrestle a paper—cones solve three problems:
+        <strong>symmetry</strong> (no lumpy rolls), <strong>airflow</strong> (consistent draw resistance),
+        and <strong>speed</strong> (under a minute once you get the rhythm).
+      </p>
+      <div>
+        <span class="pill">Great for arthritis</span>
+        <span class="pill">Built-in crutch</span>
+        <span class="pill">Predictable burns</span>
+        <span class="pill">Easy to portion</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- Cone sizes & paper -->
+  <section class="container grid">
+    <aside class="card block">
+      <h3 class="title">Pick a size that matches your dose</h3>
+      <ul>
+        <li><strong>Single/98 mm “lean” or 1¼ cones (0.3–0.6g):</strong> perfect solo morning cones.</li>
+        <li><strong>84 mm minis (0.2–0.4g):</strong> micro-dose sessions; great with coffee.</li>
+        <li><strong>King/109 mm (0.8–1.2g):</strong> sharing or longer walks—save for later if needed.</li>
+      </ul>
+      <p class="subtle">If you’re returning to cannabis, start small. Two or three minis beat one torpedo you regret.</p>
+    </aside>
+
+    <aside class="card block">
+      <h3 class="title">Paper & taste</h3>
+      <ul>
+        <li><strong>Unbleached/hemp:</strong> neutral flavor, slower burn, everyday pick.</li>
+        <li><strong>Rice:</strong> very thin, lighter smoke; handle gently.</li>
+        <li><strong>Flax or blended:</strong> balanced draw, reliable for beginners.</li>
+      </ul>
+      <p class="subtle">Skip gimmicks. A good cone looks straight, has a snug crutch, and no loose glue line.</p>
+    </aside>
+  </section>
+
+  <!-- Fill a cone step-by-step -->
+  <section class="container">
+    <article class="card block">
+      <h2 class="title" style="color:var(--accent)">1-minute cone method (no stress)</h2>
+      <ol style="margin:0;padding-left:18px">
+        <li><strong>Grind medium-fluffy.</strong> Not powder. Tiny stems out.</li>
+        <li><strong>Create a “funnel.”</strong> Pinch the cone open; rest it in a shot glass or cone holder.</li>
+        <li><strong>Load in thirds.</strong> Sprinkle, then <em>tap the filter on the table</em> to settle.</li>
+        <li><strong>Tamp lightly.</strong> Use a straw, packing tool, or the cone’s stick—gentle pressure.</li>
+        <li><strong>Twist and toast.</strong> Twist the tip shut. Spin the end near a flame to pre-seal the edge; then light.</li>
+      </ol>
+
+      <div class="tip">
+        <strong>Roll clinic (90 seconds):</strong> small crutch, don’t overpack the tip, tap &amp; spin to settle, twist gently,
+        and toast the edge before first draw. If it canoes, lick the fast side lightly and roll between fingers—like ironing a tiny shirt.
+      </div>
+    </article>
+  </section>
+
+  <!-- Arthritis-friendly helpers -->
+  <section class="container grid">
+    <aside class="card block">
+      <h3 class="title">Arthritis-friendly tools</h3>
+      <ul>
+        <li><strong>Cone loader/funnel:</strong> rests on top and guides flower in—no pinching.</li>
+        <li><strong>Tabletop cone packer:</strong> spring-loaded posts tamp for you; very gentle on hands.</li>
+        <li><strong>Simple rolling machine:</strong> for papers, the little crank device does the tuck/roll.</li>
+        <li><strong>Wide-body grinder:</strong> easier grip; consider an electric mill if wrists are sore.</li>
+        <li><strong>Doob tubes:</strong> store half-smoked cones odor-tight; easy open caps.</li>
+      </ul>
+      <p class="subtle">Set up a small “station” on a tray at waist height so you’re not gripping awkwardly.</p>
+    </aside>
+
+    <aside class="card block">
+      <h3 class="title">Troubleshooting burns</h3>
+      <ul>
+        <li><strong>Tunneling:</strong> under-packed tip or wet paper → dry the tip, tamp gently, toast edge before lighting.</li>
+        <li><strong>Canoeing:</strong> over-packed one side → roll between fingers to redistribute; wet the fast side lightly.</li>
+        <li><strong>Harsh draws:</strong> grind too fine or stuffed → loosen top 1 cm, re-tamp lightly.</li>
+        <li><strong>Goes out:</strong> too loose → tamp mid-body with packing tool; relight after a small pull.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- Alternatives to rolling -->
+  <section class="container">
+    <article class="card block">
+      <h2 class="title" style="color:var(--accent)">No interest in rolling at all? Great—try these.</h2>
+      <div class="grid">
+        <div>
+          <h3 class="title">Pre-roll multi-packs</h3>
+          <p>Zero assembly, consistent burn, and easy to portion (two puffs, out). Ideal for mornings or travel.</p>
+          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop Pre-Rolls →</a>
+        </div>
+        <div>
+          <h3 class="title">One-hitters & spoon pipes</h3>
+          <p>Load a tiny pinch, clear in one puff, done. Easiest for micro-dosing and keeping smell brief.</p>
+        </div>
+        <div>
+          <h3 class="title">Dry-herb vaporizers</h3>
+          <p>Gentle on lungs, very discreet aroma, efficient with flower. Great for apartments and shared spaces.</p>
+        </div>
+        <div>
+          <h3 class="title">Concentrate pens (simple carts)</h3>
+          <p>One clean pull for a controlled bump. If you’re scent-sensitive, this is the stealth king.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Smart storage & prep -->
+  <section class="container grid">
+    <aside class="card block">
+      <h3 class="title">Keep it fresh</h3>
+      <ul>
+        <li><strong>Glass jar + humidity pack (58–62%).</strong> Prevents brittle cones and uneven burns.</li>
+        <li><strong>Grind right before packing.</strong> Pre-ground dries out fast and burns hot.</li>
+        <li><strong>Label minis by effect.</strong> “Up / Balanced / Calm” beats guessing.</li>
+      </ul>
+    </aside>
+    <aside class="card block">
+      <h3 class="title">Morning set-ups that work</h3>
+      <ul>
+        <li><strong>Mini cones:</strong> 84–98 mm with ~0.25–0.4 g. Two puffs, park it.</li>
+        <li><strong>Balanced hybrid:</strong> Blue Dream/Strawberry Cough-type for focus + good mood.</li>
+        <li><strong>Doob tube + mint + eyedrops:</strong> stealth kit for commuters.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- Safety -->
+  <section class="container">
+    <article class="card block warn">
+      <h3 class="title" style="color:var(--warn)">Legal & safety notes</h3>
+      <ul>
+        <li>21+ only. Follow your local laws and building policies.</li>
+        <li>Never drive or operate machinery while impaired.</li>
+        <li>Keep flower, cones, and vapes locked away from kids and pets.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+    <article class="card block" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+      <div>
+        <h3 class="title" style="color:var(--accent)">Ready to skip the struggle?</h3>
+        <p class="subtle" style="margin:6px 0 0">Start with cones, or grab a pre-roll bundle and focus on your morning—not the tuck and roll.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Cones & Pre-Rolls →</a>
+        <span class="badge">Code <strong>GBO15</strong> = 15% off</span>
+        <a href="index.html" class="btn-ghost" aria-label="Return to homepage">← Back to Home</a>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <span>© <span id="y"></span> Cannabis Field Guide</span>
+      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop with 15% Off →</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

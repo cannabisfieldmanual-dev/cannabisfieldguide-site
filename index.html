@@ -76,19 +76,16 @@
     .rotor img.is-active{opacity:1}
     .aff .title{color:var(--accent)}
     .aff .desc{margin:6px 0 10px}
-    .chiprow{margin:8px 0}
 
-    /* From the Guide */
+    /* From the Guide — uniform grid */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
     .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
-    .mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
-    @media (max-width:900px){.mosaic{grid-template-columns:1fr 1fr}}
+    .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.mosaic{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
-    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:170px}
-    .tile.big{height:340px}
-    @media (max-width:900px){.tile{height:150px}.tile.big{height:280px}}
-    @media (max-width:600px){.tile{height:190px}.tile.big{height:300px}}
-    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.92;transition:transform .35s ease, opacity .25s ease}
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:220px}
+    .tile.big{height:220px} /* neutralize big to keep uniform height */
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.95;transition:transform .35s ease, opacity .25s ease}
     .tile:hover img{transform:scale(1.03);opacity:1}
     .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
 
@@ -174,7 +171,7 @@
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
     <div class="mosaic">
-      <article class="tile big card">
+      <article class="tile card">
         <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async">
         <span class="cap">Rolling Tips</span>
         <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Rolling Tips tile"></a>
@@ -195,12 +192,6 @@
           <span class="cap">Buying Legally</span>
         </article>
       </a>
-
-      <article class="tile card">
-        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
-        <span class="cap">Formats &amp; Dosing</span>
-        <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Formats & Dosing tile"></a>
-      </article>
     </div>
   </section>
 

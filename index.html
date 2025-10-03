@@ -84,7 +84,7 @@
     @media (max-width:900px){.mosaic{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
     .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:220px}
-    .tile.big{height:220px} /* neutralize big to keep uniform height */
+    .tile.big{height:220px} /* keep all same height */
     .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.95;transition:transform .35s ease, opacity .25s ease}
     .tile:hover img{transform:scale(1.03);opacity:1}
     .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
@@ -167,20 +167,26 @@
     </div>
   </section>
 
- <!-- Rolling Tips subpage tile -->
-<a href="rolling-tips.html" aria-label="Rolling Tips subpage">
-  <article class="tile card">
-    <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
-         alt="Rolling tray with ground flower lines ready to roll"
-         loading="lazy" decoding="async">
-    <span class="cap">Rolling Tips</span>
-  </article>
-</a>
+  <!-- From the Guide (fixed, uniform grid, all tiles inside) -->
+  <section class="from" aria-label="From the guide">
+    <h2>From the Guide</h2>
+    <div class="mosaic">
+
+      <!-- Rolling Tips subpage -->
+      <a href="rolling-tips.html" aria-label="Rolling Tips subpage">
+        <article class="tile card">
+          <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
+               alt="Rolling tray with ground flower lines ready to roll"
+               loading="lazy" decoding="async">
+          <span class="cap">Rolling Tips</span>
+        </article>
+      </a>
 
       <!-- Morning Pairings subpage -->
       <a href="morning-pairings.html" aria-label="Morning Pairings subpage">
         <article class="tile card">
-          <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
+          <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg"
+               alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
           <span class="cap">Morning Pairings</span>
         </article>
       </a>
@@ -188,10 +194,21 @@
       <!-- Buying Legally subpage -->
       <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
         <article class="tile card">
-          <img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
+          <img src="Nuggets-buds-retail-counter-736x414.webp"
+               alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
           <span class="cap">Buying Legally</span>
         </article>
       </a>
+
+      <!-- Formats & Dosing (kept as external shop link like before) -->
+      <article class="tile card">
+        <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
+        <span class="cap">Formats &amp; Dosing</span>
+        <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/"
+           rel="sponsored noopener noreferrer" target="_blank"
+           aria-label="Open shop via Formats &amp; Dosing tile"></a>
+      </article>
+
     </div>
   </section>
 

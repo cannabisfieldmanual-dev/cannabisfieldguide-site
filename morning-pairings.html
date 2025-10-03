@@ -28,21 +28,48 @@
     .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
     .title{margin:0;font-weight:900;letter-spacing:.2px}
     .subtle{color:var(--muted)}
-    /* HERO */
-    .hero{margin:22px 0}
-    .hero-wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}
-    @media (max-width:900px){.hero-wrap{grid-template-columns:1fr}}
-    .hero-card{position:relative;overflow:hidden;border-radius:var(--rad);border:1px solid var(--line);background:var(--panel-2);min-height:280px}
-    .hero-media{position:absolute;inset:0;background:
-      linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.65)),
-      url("depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg") center/cover no-repeat}
-    .hero-content{position:relative;z-index:1;padding:28px 22px}
-    .hero h1{margin:4px 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900;background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35)}
-    .hero p{margin:8px 0 0;color:#d7e3e0;max-width:62ch}
-    .promo-side{padding:16px}
     .pill{display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#0f1216;border:1px solid #2b2f3a;font-size:.8rem;color:#bcd5cf}
 
-    /* GALLERY (no visible captions) */
+    /* === MASTHEAD (coffee image hero) === */
+    .masthead{position:relative; isolation:isolate; margin:22px 0 18px}
+    .masthead .frame{
+      position:relative; border-radius:16px; overflow:hidden;
+      border:1px solid var(--line); box-shadow:var(--shadow);
+      min-height:clamp(280px,48vw,460px);
+      background:
+        linear-gradient(90deg,rgba(13,15,16,.78) 0%,rgba(13,15,16,.55) 38%,rgba(13,15,16,.18) 64%,rgba(13,15,16,0) 100%),
+        url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") left center/cover no-repeat;
+    }
+    @media (max-width:720px){
+      .masthead .frame{
+        background:
+          linear-gradient(180deg,rgba(13,15,16,.78) 0%,rgba(13,15,16,.5) 42%,rgba(13,15,16,.12) 100%),
+          url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") center/cover no-repeat;
+      }
+    }
+    .masthead .inner{
+      position:relative; z-index:1; padding:clamp(18px,3.4vw,28px);
+      max-width:1100px; margin:0 auto; display:grid;
+      grid-template-columns:minmax(260px,620px); gap:10px;
+    }
+    .masthead .kicker{margin:0; color:var(--muted); letter-spacing:.2px}
+    .masthead h1{
+      margin:4px 0 8px; font-size:clamp(28px,5vw,52px); line-height:1.05; font-weight:900;
+      background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 2px 16px rgba(0,0,0,.35);
+    }
+    .masthead p.sub{margin:6px 0 0; color:#d7e3e0; max-width:62ch}
+    .masthead .row{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .masthead .promo{display:block; color:var(--ok); font-size:.9rem; margin-top:2px}
+
+    /* Quick picks card beside/under masthead */
+    .hero-wrap{display:grid; grid-template-columns:1fr .72fr; gap:16px}
+    @media (max-width:900px){ .hero-wrap{grid-template-columns:1fr} }
+    .quick{padding:16px}
+    .quick h3{margin:2px 0 8px; color:var(--accent)}
+
+    /* GALLERY (no captions) */
     .gallery{margin:12px 0 26px}
     .ggrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
     @media (max-width:900px){.ggrid{grid-template-columns:1fr 1fr}}
@@ -56,10 +83,10 @@
 
     /* BODY COPY */
     .content{margin:8px 0 30px}
-    .content h2, .content h3{margin:18px 0 8px}
+    .content h2,.content h3{margin:18px 0 8px}
     .tip{background:#0f1216;border:1px solid #23303a;border-radius:12px;padding:12px 14px;margin:12px 0}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width:900px){.row{grid-template-columns:1fr}}
+
+    /* Footer */
     footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
   </style>
 </head>
@@ -70,100 +97,34 @@
     <span class="badge">15% OFF w/ <strong>GBO15</strong> when you use our link</span>
   </div>
 
-  /* === MASTHEAD (coffee image hero) === */
-.masthead{
-  position: relative;
-  isolation: isolate;
-  margin: 22px 0 18px;
-}
-.masthead .frame{
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  min-height: clamp(280px, 48vw, 460px);
-  background:
-    linear-gradient(90deg, rgba(13,15,16,.75) 0%, rgba(13,15,16,.55) 35%, rgba(13,15,16,.25) 60%, rgba(13,15,16,.0) 100%),
-    url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") left center / cover no-repeat;
-}
-@media (max-width: 720px){
-  .masthead .frame{
-    background:
-      linear-gradient(180deg, rgba(13,15,16,.75) 0%, rgba(13,15,16,.55) 40%, rgba(13,15,16,.15) 100%),
-      url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") center / cover no-repeat;
-  }
-}
-.masthead .inner{
-  position: relative;
-  z-index: 1;
-  padding: clamp(18px, 3.4vw, 28px);
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(260px, 620px);
-  gap: 10px;
-}
-.masthead .kicker{
-  margin: 0;
-  color: var(--muted);
-  letter-spacing: .2px;
-}
-.masthead h1{
-  margin: 4px 0 8px;
-  font-size: clamp(28px, 5vw, 52px);
-  line-height: 1.05;
-  font-weight: 900;
-  background: linear-gradient(90deg,#fff,#eafff6,#b6ffe3);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 2px 16px rgba(0,0,0,.35);
-}
-.masthead p.sub{
-  margin: 6px 0 0;
-  color: #d7e3e0;
-  max-width: 62ch;
-}
-.masthead .row{
-  margin-top: 14px;
-  display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
-}
-.masthead .badge{ box-shadow: 0 6px 18px rgba(10,203,146,.25); }
-.masthead .btn{ font-size: .98rem; padding: 12px 16px; }
-.masthead .promo{
-  display:block; color:#a7f5de; font-size:.9rem; margin-top:4px;
-}
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-wrap">
-      <article class="hero-card">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="subtle" style="margin:0 0 6px">Morning Pairings</p>
+  <!-- Header/Masthead + Quick Picks -->
+  <section class="container hero-wrap" style="margin-bottom:10px">
+    <div class="masthead">
+      <div class="frame">
+        <div class="inner">
+          <p class="kicker">Morning Pairings</p>
           <h1>Ease into the day: sips + smokes that actually work</h1>
-          <p>There’s nothing for a seasoned smoker quite like a hot cup and a crisp little pre-roll. Or as I like to call it, “rise and roast.” <em>jk, I never say that</em>. The idea here is simple: you want a lift that keeps your hands steady, your brain friendly, and your vibe employable. This page shows you how to dial it in.</p>
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <p class="sub">There’s nothing for a seasoned smoker quite like a hot cup and a crisp little pre-roll. Or as I like to call it, “rise and roast.” <em>jk, I never say that</em>. The idea is simple: get a lift that keeps your hands steady, your brain friendly, and your vibe employable.</p>
+          <div class="row">
             <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning Pre-Rolls →</a>
-            <small style="display:block;color:#a7f5de">Use code <strong>GBO15</strong> for 15% off your first purchase</small>
+            <span class="promo">Use code <strong>GBO15</strong> for 15% off your first purchase</span>
           </div>
         </div>
-      </article>
-
-      <aside class="card promo-side">
-        <h3 class="title" style="margin:2px 0 8px;color:var(--accent)">Quick Pairings to Try</h3>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-          <span class="pill">Light roast + ½ pre-roll</span>
-          <span class="pill">Green tea + micro-puff</span>
-          <span class="pill">Citrus smoothie + hybrid</span>
-          <span class="pill">Decaf + CBD-lean</span>
-          <span class="pill">Iced coffee + single vape pull</span>
-        </div>
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop the Morning Set →</a>
-        <small style="display:block;margin-top:6px;color:#a7f5de">15% off first purchase — code <strong>GBO15</strong></small>
-      </aside>
+      </div>
     </div>
+
+    <aside class="card quick">
+      <h3 class="title">Quick Pairings to Try</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="pill">Light roast + ½ pre-roll</span>
+        <span class="pill">Green tea + micro-puff</span>
+        <span class="pill">Citrus smoothie + hybrid</span>
+        <span class="pill">Decaf + CBD-lean</span>
+        <span class="pill">Iced coffee + single vape pull</span>
+      </div>
+      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop the Morning Set →</a>
+      <small style="display:block;margin-top:6px;color:#a7f5de">15% off first purchase — code <strong>GBO15</strong></small>
+    </aside>
   </section>
 
   <!-- IMAGE GALLERY (no descriptors) -->
@@ -175,6 +136,41 @@
       <div class="gitem"><img src="photo-coffee-mug-with-cannabis-leaf-top-it_182527-3261.jpg" alt="Mug with cannabis leaf"></div>
     </div>
   </section>
+
+  <!-- BODY COPY (your original copy retained) -->
+  <section class="content">
+    <div class="container">
+      <h2 class="title" style="color:var(--accent)">Real Talk: dose light, stack slow</h2>
+      <p>My favorite early strains: <strong>Blue Dream</strong>, <strong>Strawberry Cough</strong>, <strong>Maui Wowie</strong>, plus indica-leaning hybrids like <strong>Permanent Marker</strong> and <strong>Gorilla Glue (GG4)</strong>. If you’re headed to an office or university, a <strong>vape</strong> is discreet and doesn’t cling to clothes. We stoners get noseblind—other people don’t. A quick body-spray/cologne pass and <strong>eye drops</strong> (if you get dry-eye) can save the day. Take it slow; coast through the whole day rather than nuking it with frat-boy doses.</p>
+
+      <div class="tip">
+        <h3 class="title" style="font-size:1rem">AM dosing cheat sheet</h3>
+        <ul style="margin:0;padding-left:18px;color:#cfe3df">
+          <li><strong>Start smaller than you think:</strong> 1–3 short puffs. Wait 10–15 minutes.</li>
+          <li><strong>Stack, don’t spike:</strong> Sip coffee/tea between pulls; assess before adding more.</li>
+          <li><strong>Food first:</strong> Toast, yogurt or fruit keeps the ride smooth.</li>
+          <li><strong>Hydrate:</strong> Coffee dehydrates; water keeps the “clean focus.”</li>
+        </ul>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap">
+        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning-Friendly Picks →</a>
+        <small style="color:var(--ok)">Use our link + code <strong>GBO15</strong> for 15% off first purchase</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <a href="index.html" class="btn" data-no-aff aria-label="Return to homepage">← Home</a>
+      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Flower &amp; More →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
 
   <!-- BODY COPY -->
   <section class="content">

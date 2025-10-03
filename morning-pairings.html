@@ -4,324 +4,330 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Morning Pairings: Coffee, Tea & Gentle Wake-and-Bake — Cannabis Field Guide (15% OFF w/ GBO15)</title>
-  <meta name="description" content="Rise easy with coffee, tea and morning-friendly pre-rolls. Real dosing advice, stealth tips for work or class, and strain ideas. Use code GBO15 for 15% off when you shop with our link." />
+  <meta name="description" content="Rise easy with coffee, tea and morning-friendly pre-rolls. Dose-smart tips, stealth for work or class, and strain ideas. Use code GBO15 for 15% off when you shop with our link." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0d0f10" />
   <link rel="canonical" href="https://cannabisfieldguide.org/morning-pairings.html" />
   <style>
     :root{
-      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
-      --panel:#111418; --panel-2:#0f1216;
+      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#232832;
+      --panel:#101318; --panel-2:#0f1216;
       --accent:#18f0b4; --accent2:#0acb92;
+      --ok:#a7f5de; --warn:#ffb07c;
       --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
-      --ok:#a7f5de;
+      --measure:70ch;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
-    .btn:hover{filter:brightness(1.06)}
-    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:6px 10px;border-radius:999px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
-    .title{margin:0;font-weight:900;letter-spacing:.2px}
-    .subtle{color:var(--muted)}
-    .pill{display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#0f1216;border:1px solid #2b2f3a;font-size:.8rem;color:#bcd5cf}
-
-    /* === MASTHEAD (coffee image hero) === */
-    .masthead{position:relative; isolation:isolate; margin:22px 0 18px}
-    .masthead .frame{
-      position:relative; border-radius:16px; overflow:hidden;
-      border:1px solid var(--line); box-shadow:var(--shadow);
-      min-height:clamp(280px,48vw,460px);
-      background:
-        linear-gradient(90deg,rgba(13,15,16,.78) 0%,rgba(13,15,16,.55) 38%,rgba(13,15,16,.18) 64%,rgba(13,15,16,0) 100%),
-        url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") left center/cover no-repeat;
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background:var(--bg); color:var(--ink); line-height:1.7;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    @media (max-width:720px){
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%;height:auto}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+    .prose{max-width:var(--measure); margin:0 auto}
+
+    /* UI */
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;font-weight:900;
+      padding:11px 16px;border-radius:12px;color:#081014;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      box-shadow:0 8px 24px rgba(10,203,146,.35)
+    }
+    .btn:hover{filter:brightness(1.06)}
+    .btn-ghost{
+      display:inline-flex;align-items:center;gap:8px;font-weight:800;
+      padding:10px 14px;border-radius:12px;border:1px solid #2b2f3a;
+      background:#0f1216;color:#e9ecf4
+    }
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;
+      color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));
+      padding:6px 10px;border-radius:999px
+    }
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);box-shadow:var(--shadow)}
+    .title{margin:0;font-weight:900;letter-spacing:.2px}
+    .pill{display:inline-block;margin:0 6px 8px 0;padding:6px 10px;border-radius:999px;background:#11161c;border:1px solid #26303a;font-size:.82rem;color:#cfe1dc}
+    .rule{height:1px;background:linear-gradient(90deg,transparent,#26303a,transparent);margin:22px 0}
+    .kicker{letter-spacing:.24px;text-transform:uppercase;color:var(--muted);font-weight:700;font-size:.8rem;margin:0 0 4px}
+
+    /* Header strip */
+    .top{padding:10px 0 0}
+    .top .container{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+
+    /* Masthead — uses only ONE image as background */
+    .masthead{position:relative;margin:18px 0 8px}
+    .masthead .frame{
+      position:relative; isolation:isolate; border-radius:18px; overflow:hidden;
+      border:1px solid var(--line); box-shadow:var(--shadow);
+      min-height:clamp(320px,48vw,520px);
+      background:
+        radial-gradient(200px 140px at 10% 18%, rgba(24,240,180,.10), rgba(24,240,180,0) 60%),
+        linear-gradient(96deg, rgba(13,15,16,.90) 0%, rgba(13,15,16,.68) 42%, rgba(13,15,16,.32) 68%, rgba(13,15,16,0) 100%),
+        url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") left center / cover no-repeat;
+    }
+    @media (max-width:760px){
       .masthead .frame{
         background:
-          linear-gradient(180deg,rgba(13,15,16,.78) 0%,rgba(13,15,16,.5) 42%,rgba(13,15,16,.12) 100%),
-          url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") center/cover no-repeat;
+          linear-gradient(180deg, rgba(13,15,16,.92) 0%, rgba(13,15,16,.64) 44%, rgba(13,15,16,.18) 100%),
+          url("cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg") center / cover no-repeat;
       }
     }
     .masthead .inner{
-      position:relative; z-index:1; padding:clamp(18px,3.4vw,28px);
-      max-width:1100px; margin:0 auto; display:grid;
-      grid-template-columns:minmax(260px,620px); gap:10px;
+      position:relative; z-index:1; padding:clamp(18px,3.8vw,34px);
+      max-width:1100px; margin:0 auto; display:grid; grid-template-columns:minmax(260px,700px);
+      gap:10px
     }
-    .masthead .kicker{margin:0; color:var(--muted); letter-spacing:.2px}
     .masthead h1{
-      margin:4px 0 8px; font-size:clamp(28px,5vw,52px); line-height:1.05; font-weight:900;
+      margin:6px 0 10px; font-size:clamp(30px,5.2vw,56px); line-height:1.04; font-weight:900;
       background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);
-      -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow:0 2px 16px rgba(0,0,0,.35);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      text-shadow:0 2px 16px rgba(0,0,0,.35)
     }
-    .masthead p.sub{margin:6px 0 0; color:#d7e3e0; max-width:62ch}
-    .masthead .row{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .masthead .promo{display:block; color:var(--ok); font-size:.9rem; margin-top:2px}
+    .masthead p.sub{margin:8px 0 0;color:#d7e3e0}
+    .masthead .row{margin-top:14px; display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .promo{display:block;color:var(--ok);font-size:.92rem}
 
-    /* Quick picks card beside/under masthead */
-    .hero-wrap{display:grid; grid-template-columns:1fr .72fr; gap:16px}
-    @media (max-width:900px){ .hero-wrap{grid-template-columns:1fr} }
-    .quick{padding:16px}
-    .quick h3{margin:2px 0 8px; color:var(--accent)}
+    /* Quick Picks band */
+    .band{
+      margin:10px 0 22px;
+      border:1px solid var(--line); border-radius:14px; background:linear-gradient(180deg,#0f1318,#0e1216);
+      padding:14px
+    }
+    .band h3{margin:2px 0 8px;color:var(--accent)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
 
-    /* GALLERY (no captions) */
-    .gallery{margin:12px 0 26px}
-    .ggrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
-    @media (max-width:900px){.ggrid{grid-template-columns:1fr 1fr}}
-    @media (max-width:600px){.ggrid{grid-template-columns:1fr}}
-    .gitem{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:220px}
-    .gitem.big{height:320px}
-    @media (max-width:900px){.gitem{height:180px}.gitem.big{height:260px}}
-    @media (max-width:600px){.gitem{height:220px}.gitem.big{height:260px}}
-    .gitem img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.95;transition:transform .35s ease, opacity .25s ease}
-    .gitem:hover img{transform:scale(1.03);opacity:1}
-
-    /* BODY COPY */
-    .content{margin:8px 0 30px}
-    .content h2,.content h3{margin:18px 0 8px}
-    .tip{background:#0f1216;border:1px solid #23303a;border-radius:12px;padding:12px 14px;margin:12px 0}
+    /* Content */
+    .section{padding:10px 0 24px}
+    .section h2,.section h3{margin:18px 0 8px}
+    .tip{
+      border:1px solid #22303a;border-radius:12px;background:#0f1216;
+      padding:12px 14px;margin:12px 0
+    }
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+    ul,ol{padding-left:20px}
 
     /* Footer */
-    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
+    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.92rem}
   </style>
 </head>
 <body>
 
   <!-- Promo strip -->
-  <div class="container" style="padding-top:10px">
-    <span class="badge">15% OFF w/ <strong>GBO15</strong> when you use our link</span>
+  <div class="top">
+    <div class="container">
+      <span class="badge">15% OFF w/ <strong>GBO15</strong> when you use our link</span>
+      <a href="index.html" class="btn-ghost" data-no-aff aria-label="Return to homepage">← Home</a>
+    </div>
   </div>
 
-  <!-- Header/Masthead + Quick Picks -->
-  <section class="container hero-wrap" style="margin-bottom:10px">
-    <div class="masthead">
-      <div class="frame">
-        <div class="inner">
-          <p class="kicker">Morning Pairings</p>
-          <h1>Ease into the day: sips + smokes that actually work</h1>
-          <p class="sub">There’s nothing for a seasoned smoker quite like a hot cup and a crisp little pre-roll. Or as I like to call it, “rise and roast.” <em>jk, I never say that</em>. The idea is simple: get a lift that keeps your hands steady, your brain friendly, and your vibe employable.</p>
-          <div class="row">
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning Pre-Rolls →</a>
-            <span class="promo">Use code <strong>GBO15</strong> for 15% off your first purchase</span>
-          </div>
+  <!-- Masthead (single image background) -->
+  <section class="masthead">
+    <div class="frame" role="img" aria-label="Coffee with beans and a cannabis leaf on a dark table">
+      <div class="inner">
+        <p class="kicker">Morning Pairings</p>
+        <h1>Ease into the day: sips + smokes that actually work</h1>
+        <p class="sub">
+          Nothing beats a hot cup and a crisp little pre-roll—call it a micro-ritual for functional adults.
+          The aim isn’t to “blast off,” it’s to <em>tune in</em>: steady hands, friendly brain, and a vibe that keeps your calendar livable.
+        </p>
+        <div class="row">
+          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning Pre-Rolls →</a>
+          <span class="promo">Use code <strong>GBO15</strong> for 15% off your first purchase</span>
         </div>
       </div>
     </div>
+  </section>
 
-    <aside class="card quick">
-      <h3 class="title">Quick Pairings to Try</h3>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+  <!-- Quick picks -->
+  <section class="container section">
+    <div class="band prose">
+      <h3 class="title">Quick pairings to try</h3>
+      <div class="chips">
         <span class="pill">Light roast + ½ pre-roll</span>
         <span class="pill">Green tea + micro-puff</span>
         <span class="pill">Citrus smoothie + hybrid</span>
-        <span class="pill">Decaf + CBD-lean</span>
         <span class="pill">Iced coffee + single vape pull</span>
+        <span class="pill">Decaf + CBD-lean</span>
       </div>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop the Morning Set →</a>
-      <small style="display:block;margin-top:6px;color:#a7f5de">15% off first purchase — code <strong>GBO15</strong></small>
-    </aside>
-  </section>
-
-  <!-- IMAGE GALLERY (no descriptors) -->
-  <section class="gallery">
-    <div class="container ggrid">
-      <div class="gitem big"><img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee and pre-rolls on slate"></div>
-      <div class="gitem"><img src="oregon-marijuana-sales-hit-79-4-million-in-may-bringing-all-v0-ggMKVKXvmp_-GRXq2i4ktuBrYFSprhC03p65sYvrvQ4.webp" alt="Pre-rolls with leaf"></div>
-      <div class="gitem"><img src="cannabis-coffee-with-coffee-beans-table-table_76440-1316.jpg" alt="Espresso and beans"></div>
-      <div class="gitem"><img src="photo-coffee-mug-with-cannabis-leaf-top-it_182527-3261.jpg" alt="Mug with cannabis leaf"></div>
     </div>
   </section>
 
-  <!-- BODY COPY (your original copy retained) -->
-  <section class="content">
-    <div class="container">
-      <h2 class="title" style="color:var(--accent)">Real Talk: dose light, stack slow</h2>
-      <p>My favorite early strains: <strong>Blue Dream</strong>, <strong>Strawberry Cough</strong>, <strong>Maui Wowie</strong>, plus indica-leaning hybrids like <strong>Permanent Marker</strong> and <strong>Gorilla Glue (GG4)</strong>. If you’re headed to an office or university, a <strong>vape</strong> is discreet and doesn’t cling to clothes. We stoners get noseblind—other people don’t. A quick body-spray/cologne pass and <strong>eye drops</strong> (if you get dry-eye) can save the day. Take it slow; coast through the whole day rather than nuking it with frat-boy doses.</p>
+  <!-- Core content -->
+  <section class="container section">
+    <div class="prose">
+      <h2 class="title" style="color:var(--accent)">Real talk: dose light, stack slow</h2>
+      <p>
+        Morning weed is not party weed. It’s tool-belt weed. The goal isn’t to turn up; it’s to turn on. When you wake up,
+        your endocannabinoid system is already nudging mood, appetite, and focus into place. A tiny nudge from THC or CBD
+        can feel like WD-40 for the brain: things move a little smoother, the day gets less squeaky, and your to-do list
+        looks less like a boss fight.
+      </p>
+      <p>
+        Think of caffeine + cannabinoids like a two-knob mixer. Caffeine boosts alertness; THC modulates mood and creativity;
+        CBD trims anxiety spikes. Set the knobs gently and you’ll feel like a well-oiled human spreadsheet. Crank them hard
+        and you’ll be hearing colors in a stand-up meeting. Hence the house rule: <strong>dose light, stack slow</strong>.
+      </p>
 
       <div class="tip">
         <h3 class="title" style="font-size:1rem">AM dosing cheat sheet</h3>
-        <ul style="margin:0;padding-left:18px;color:#cfe3df">
+        <ul style="margin:0;color:#cfe3df">
           <li><strong>Start smaller than you think:</strong> 1–3 short puffs. Wait 10–15 minutes.</li>
-          <li><strong>Stack, don’t spike:</strong> Sip coffee/tea between pulls; assess before adding more.</li>
-          <li><strong>Food first:</strong> Toast, yogurt or fruit keeps the ride smooth.</li>
-          <li><strong>Hydrate:</strong> Coffee dehydrates; water keeps the “clean focus.”</li>
+          <li><strong>Stack, don’t spike:</strong> Alternate sips and pulls; reassess before adding.</li>
+          <li><strong>Food first:</strong> Toast, yogurt, or fruit = smoother lift.</li>
+          <li><strong>Hydrate:</strong> Coffee dehydrates; water preserves the “clean focus.”</li>
         </ul>
       </div>
 
-      <div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap">
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning-Friendly Picks →</a>
-        <small style="color:var(--ok)">Use our link + code <strong>GBO15</strong> for 15% off first purchase</small>
-      </div>
-    </div>
-  </section>
+      <div class="rule"></div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <a href="index.html" class="btn" data-no-aff aria-label="Return to homepage">← Home</a>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Flower &amp; More →</a>
-    </div>
-  </footer>
+      <h2 class="title" style="color:var(--accent)">How much is “light”?</h2>
+      <p>
+        If you’re smoking a pre-roll, think in <strong>puffs</strong>, not grams. Two short puffs = toe in the pool. Three or four = comfortable cruise.
+        Save the face-melt hits for movie night. On a cart, one tiny pull—especially with empty stomach + coffee—goes a long way.
+        If you’re easing back in, <strong>CBD-lean</strong> pre-rolls are training wheels that still feel good.
+      </p>
+      <div class="tip"><strong>AM micro-routine:</strong> water → small bite → 1–2 puffs → wait 10 minutes → sip coffee/tea → decide if you want one more.</div>
 
-</body>
-</html>
-
-
-  <!-- BODY COPY -->
-  <section class="content">
-    <div class="container">
-      <h2 class="title" style="color:var(--accent)">Why mornings hit different</h2>
-      <p>Morning weed is not party weed. It’s tool-belt weed. The goal isn’t to turn up; it’s to turn on. When you wake up, your endocannabinoid system is already doing its quiet maintenance work—nudging mood, appetite, and focus into place. A tiny nudge from THC or CBD can feel like WD-40 for the brain: things move a little smoother, the day gets less squeaky, and your to-do list looks less like a boss fight.</p>
-      <p>That’s why “dose light, stack slow” is the rule. Caffeine + cannabinoids is basically a two-knob mixer: caffeine adds alertness and speed; THC adds creativity and mood (with a side of “don’t overdo it”). CBD smooths edges and keeps anxiety gremlins in the cage. Get those knobs in the right spots and you’ll feel like a well-oiled human spreadsheet. Crank them too hard and you’ll be hearing colors in a stand-up meeting. We don’t want that.</p>
-
-      <h3 class="title" style="color:var(--accent)">How much is “light”?</h3>
-      <p>If you’re smoking a pre-roll, think in <strong>puffs</strong>, not grams. Two short puffs is the equivalent of sticking your toe in the pool. Three or four is “comfortable cruise.” Save the long face-melter pulls for movie night. For vapes, one tiny pull is plenty to test the waters—especially on empty stomach + coffee. If you’re newish, treat <strong>CBD-lean</strong> pre-rolls like training wheels; they keep the steering straight while you learn your pace.</p>
-
-      <div class="tip">
-        <strong>AM Micro-routine:</strong> sip water → small bite (toast, yogurt, fruit) → 1–2 short puffs → wait 10 minutes → sip coffee/tea → decide if you want one more puff. That’s it. You don’t need to “finish” the joint to finish the job.
+      <h2 class="title" style="color:var(--accent)">Strains that play nice before noon</h2>
+      <p>
+        Friendly “clear head” classics: <strong>Blue Dream</strong>, <strong>Strawberry Cough</strong>, <strong>Maui Wowie</strong>.
+        For heavier mornings or shoulder-drop without couch-lock: indica-leaning hybrids like <strong>Permanent Marker</strong> and
+        <strong>Gorilla Glue (GG4)</strong>. Labels are a compass; your dose is the map.
+      </p>
+      <div class="chips">
+        <span class="pill">Blue Dream</span><span class="pill">Strawberry Cough</span><span class="pill">Maui Wowie</span>
+        <span class="pill">Permanent Marker</span><span class="pill">Gorilla Glue (GG4)</span>
       </div>
 
-      <h3 class="title" style="color:var(--accent)">Strains that play nice before noon</h3>
-      <p>For happy-brain clarity: <strong>Blue Dream</strong>, <strong>Strawberry Cough</strong>, <strong>Maui Wowie</strong>. For slightly heavier mornings or days you want the shoulders to drop without the couch-lock: indica-leaning hybrids like <strong>Permanent Marker</strong> and <strong>Gorilla Glue (GG4)</strong>. Don’t overthink the taxonomy—what matters is how it hits you at <em>your</em> dose. If a classic “sativa” makes you racy, drop to two puffs and layer a CBD pull. If a hybrid feels sleepy, pair it with green tea instead of espresso.</p>
-
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px">
-        <span class="pill">Blue Dream</span><span class="pill">Strawberry Cough</span><span class="pill">Maui Wowie</span><span class="pill">Permanent Marker</span><span class="pill">Gorilla Glue (GG4)</span>
-      </div>
+      <div class="rule"></div>
 
       <h2 class="title" style="color:var(--accent)">Five morning pairings that actually work</h2>
-      <div class="row">
+      <div class="grid-2">
         <div>
           <h3>1) Light roast + half pre-roll</h3>
-          <p>Light roasts carry brighter acids and fruit notes that match a gentle, happy strain. Take two short puffs, set it down, and finish the other half later. This keeps the buzz linear instead of spiky, which is perfect for inbox-taming and calendar Tetris.</p>
-          <div class="tip">Dial-in: grind fluffy, roll with good airflow, and keep your pre-roll in a doob tube so it doesn’t stale out between halves.</div>
+          <p>Bright acids + two puffs = linear, friendly focus for inbox triage and calendar Tetris. Smoke half now, half later.</p>
+          <div class="tip">Dial-in: fluffy grind, easy airflow, store the rest in a doob tube so it doesn’t stale.</div>
         </div>
         <div>
           <h3>2) Green tea + micro-puff</h3>
-          <p>Green tea’s the subtle co-pilot. L-theanine + gentle caffeine gives “calm focus.” Add a micro-puff from a CBD-lean or balanced hybrid and you get creative energy without the chattery mental radio. Good for writing, design, or that first stand-up of the day.</p>
-          <div class="tip">If you’re sensitive to caffeine, swap in hojicha (toasted green tea) or a yerba mate half-cup.</div>
+          <p>L-theanine’s “calm focus” + a tiny pull from a balanced or CBD-lean cone = creative energy without chatter.</p>
+          <div class="tip">Caffeine-sensitive? Try hojicha or a half-cup yerba mate.</div>
         </div>
-      </div>
-
-      <div class="row">
         <div>
           <h3>3) Citrus smoothie + balanced hybrid</h3>
-          <p>Vitamin C + cold blender vibes land like a mood light. Two puffs of a friendly hybrid (think Blue Dream & cousins) and the brain feels bright without the glass-edge of straight espresso. Excellent for errands, chores, or light gym time.</p>
+          <p>Cold blender vibes + two puffs of a friendly hybrid (Blue Dream & cousins) = bright mood minus espresso edge.</p>
         </div>
         <div>
           <h3>4) Iced coffee + single vape pull</h3>
-          <p>When you’re leaving the house, a single stealthy pull on a quality cart is all you need. You won’t drag smoke scent through the hallway, and it wears off clean. Add a spritz of body spray or cologne and nobody clocks you in the elevator.</p>
-          <div class="tip">Vape etiquette: never hit inside shared rides, elevators, or anything with a sign. Don’t be that story in the group chat.</div>
+          <p>Heading out? One stealthy pull keeps scent off your clothes and fades cleanly.</p>
+          <div class="tip">Etiquette: never hit in elevators or rideshares. Don’t be the story in someone’s group chat.</div>
         </div>
-      </div>
-
-      <div class="row">
         <div>
           <h3>5) Decaf + CBD-forward</h3>
-          <p>Some days, the ritual is enough. A CBD-forward pre-roll with a decaf (or chicory coffee) is perfect for anxious mornings or rest days. It smooths the edges, loosens the jaw, and lets your actual baseline show up. You’ll be surprised how functional you feel.</p>
-        </div>
-        <div class="tip">
-          <strong>Shop smarter:</strong> pre-rolls that burn evenly are worth it. Look for a straight pack, snug but not overstuffed tip, and a clean hem. Loose, canoe-prone cones waste flower and make your dose unpredictable.
+          <p>Some mornings, the ritual is enough. A CBD-forward cone softens edges and lets your baseline show up.</p>
         </div>
       </div>
 
-      <div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-top:12px">
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning-Friendly Picks →</a>
-        <small style="color:var(--ok)">Use our link + code <strong>GBO15</strong> for 15% off first purchase</small>
-      </div>
+      <div class="rule"></div>
 
       <h2 class="title" style="color:var(--accent)">Stealth & comfort for work or class</h2>
-      <p>Weed smell rules are… not written by stoners. We get noseblind; civilians don’t. If you’re consuming before leaving the house, pick one: a tiny joint outside with wind to your back, or one discreet vape pull by a window. Wash hands, hit a mint, quick spritz, and you’re invisible. Keep a micro-fiber cloth for glasses (and the secret: it wipes off that faint resin scent on your fingers better than paper towels).</p>
+      <p>We get noseblind; civilians don’t. If you toke before leaving, choose one: tiny joint outdoors with wind at your back, or a single cart pull by a window. Wash hands, mint, quick spritz. Invisible.</p>
       <ul>
-        <li><strong>Eyes:</strong> if you get dry or red, a single drop per eye of a lubricating (not whitening) drop is enough. Don’t over-whiten; it looks weird.</li>
-        <li><strong>Breath:</strong> coffee breath is loud; mint + water makes you mystery-fresh, not cologne-bomb fresh.</li>
-        <li><strong>Clothes:</strong> smoke sticks to fleece and heavy knits. A cotton tee + light overshirt = safe. Air it by the door while you grab keys.</li>
+        <li><strong>Eyes:</strong> 1 lubricating drop per eye (not whitening). Over-white looks weird.</li>
+        <li><strong>Breath:</strong> coffee breath is loud; mint + water reads “fresh,” not cologne bomb.</li>
+        <li><strong>Clothes:</strong> smoke clings to fleece. Cotton tee + light overshirt = safer. Air it while you grab keys.</li>
       </ul>
 
       <h2 class="title" style="color:var(--accent)">Science in one paragraph (promise)</h2>
-      <p>Caffeine blocks adenosine (the “rest now” signal) which perks you up. THC boosts dopamine in reward circuits (that “this is nice” feeling) and modulates attention networks; CBD leans anxiolytic. Together at small doses: alert + good mood + softer stress response. Too much of either: jittery brain, wandering focus, weirdly intense fascination with crumbs on the counter. That’s why we stack in <em>increments</em>, not leaps.</p>
+      <p>
+        Caffeine blocks adenosine (the “rest now” signal). THC nudges dopamine and attention networks; CBD eases the edges.
+        At small doses, you get alert + good mood + softer stress response. Too much of either and you’ll be jittery,
+        distractible, and strangely interested in reorganizing your spice drawer.
+      </p>
+
+      <div class="tip">
+        <strong>Roll clinic (90 seconds):</strong> small crutch, don’t overpack the tip, tap & spin to settle, twist gently, and toast the edge before first draw.
+        If it canoes, lick the fast side lightly and roll between fingers—like ironing a tiny shirt.
+      </div>
+
+      <div class="rule"></div>
 
       <h2 class="title" style="color:var(--accent)">Your morning toolkit</h2>
       <ul>
         <li><strong>Pre-roll case / doob tube:</strong> keeps half-smokes fresh and pocket-safe.</li>
-        <li><strong>Simple grinder:</strong> medium grind = smooth burn. Over-powdering makes cones run.</li>
-        <li><strong>Glass of water:</strong> treat it like a second cup of coffee—because your cells want it.</li>
-        <li><strong>Light snack:</strong> even a banana changes how your body handles both caffeine and THC.</li>
-        <li><strong>Notebook app:</strong> morning ideas are slippery. Jot them before Slack eats your brain.</li>
+        <li><strong>Simple grinder:</strong> medium grind = smooth burn; powder makes cones run.</li>
+        <li><strong>Glass of water:</strong> treat it like cup two of coffee—your cells want it.</li>
+        <li><strong>Light snack:</strong> even a banana changes how you handle caffeine + THC.</li>
+        <li><strong>Notes app:</strong> morning ideas are slippery; capture them before Slack pings.</li>
       </ul>
 
-      <div class="tip">
-        <strong>Roll clinic (90 seconds):</strong> use a small crutch, don’t overpack the tip, tap and spin to settle, twist gently, and toast the edge before your first draw. If it canoes, lick the fast side lightly and roll it in between two fingers—like ironing a tiny shirt.
-      </div>
+      <div class="rule"></div>
 
       <h2 class="title" style="color:var(--accent)">Troubleshooting the morning</h2>
-      <p><strong>“I get racy.”</strong> Drop caffeine, keep the puffs. Try a CBD-lean or add one CBD pull as a “brake.” Breathe nose-in, mouth-out for sixty seconds. You’ll land.</p>
-      <p><strong>“I get sleepy.”</strong> You probably stacked too late or chose a snuggle-strain. Cut dose in half and pair with brighter coffee or green tea. Walk around the block—motion unlocks the good part.</p>
-      <p><strong>“My pre-rolls burn ugly.”</strong> Store them upright, don’t crush the filter, and light the edge with a slow rotation. If it still tunnels, the cone was packed uneven—save those for movie night and buy the better ones for mornings.</p>
+      <p><strong>“I get racy.”</strong> Drop caffeine, keep puffs. Add one CBD pull as a brake. Breathe nose-in, mouth-out for 60 seconds.</p>
+      <p><strong>“I get sleepy.”</strong> You stacked too late or chose a snuggle strain. Halve the dose, pair with brighter coffee or green tea, and walk a block.</p>
+      <p><strong>“My pre-rolls burn ugly.”</strong> Store upright, don’t crush the filter, light the edge with a slow rotation. Chronic tunneling? Save that batch for movie night.</p>
 
-      <div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-top:8px">
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Get Better Pre-Rolls →</a>
-        <small style="color:var(--ok)">15% off first purchase with <strong>GBO15</strong></small>
-      </div>
+      <div class="rule"></div>
 
-      <h2 class="title" style="color:var(--accent)">Three easy morning recipes</h2>
-      <h3>1) The Desk Warrior</h3>
+      <h2 class="title" style="color:var(--accent)">Three simple AM recipes</h2>
+      <h3>The Desk Warrior</h3>
       <ul>
-        <li>Half cup light roast + splash of oat or dairy milk</li>
-        <li>Two short puffs of Blue Dream or similar</li>
-        <li>Water chaser + a handful of berries</li>
+        <li>Half cup light roast + splash of milk</li><li>Two short puffs of Blue Dream</li><li>Water chaser + handful of berries</li>
       </ul>
-      <p>Result: bright, cooperative brain. Great for email triage and planning the day without spiraling about the day.</p>
+      <p>Result: bright, cooperative brain for email triage without spirals.</p>
 
-      <h3>2) The Smooth Operator</h3>
+      <h3>The Smooth Operator</h3>
       <ul>
-        <li>Blend: orange, frozen mango, yogurt, water</li>
-        <li>Two puffs of a balanced hybrid (Strawberry Cough cousins play nice)</li>
-        <li>Ten minutes later: one more micro-puff if needed</li>
+        <li>Orange + frozen mango + yogurt + water</li><li>Two puffs of a balanced hybrid</li><li>Optional: one micro-puff 10 minutes later</li>
       </ul>
-      <p>Result: steady mood, warm energy, zero jitters. Doing laundry suddenly counts as self-care.</p>
+      <p>Result: steady mood, warm energy, zero jitters.</p>
 
-      <h3>3) The Quiet Morning</h3>
+      <h3>The Quiet Morning</h3>
       <ul>
-        <li>Decaf or chicory coffee</li>
-        <li>CBD-forward pre-roll (two to four soft puffs)</li>
-        <li>Gentle stretch, sunlight for five minutes</li>
+        <li>Decaf or chicory coffee</li><li>CBD-forward pre-roll (2–4 soft puffs)</li><li>Gentle stretch + five minutes of light</li>
       </ul>
-      <p>Result: your shoulders finally drop away from your ears. Great for anxious brains, Sundays, and “do less, but better” days.</p>
+      <p>Result: shoulders finally drop away from ears. Great for anxious brains and Sundays.</p>
+
+      <div class="rule"></div>
 
       <h2 class="title" style="color:var(--accent)">Tolerance & timing</h2>
-      <p>If you’re a daily user, mornings tell the truth. If two puffs do nothing, don’t triple the dose—shift the <em>timing</em>. Try one puff after your first few sips of coffee and one puff twenty minutes later. Or take two days a week where you go CBD-only until noon. That tiny reset makes your weekday micro-doses feel crisp again.</p>
+      <p>
+        If you’re daily, mornings tell the truth. If two puffs do nothing, don’t triple it—shift timing. One puff after first sips,
+        one puff twenty minutes later. Or take two days a week that are CBD-until-noon. Tiny resets make weekday micro-doses snap again.
+      </p>
 
       <h2 class="title" style="color:var(--accent)">Safety, always</h2>
       <ul>
-        <li>Never consume where it’s illegal or while driving. Easy rule, never worth the story.</li>
-        <li>If a task demands sharp reaction time (machinery, ladders, childcare), skip THC until after.</li>
-        <li>Keep pre-rolls + carts locked away from kids and pets. They are too curious, always.</li>
-        <li>If meds are involved, talk to a pro—caffeine and cannabinoids do interact with some prescriptions.</li>
+        <li>Never consume where illegal or while driving. Not worth the story.</li>
+        <li>If a task demands fast reactions (machinery, ladders, childcare), skip THC until after.</li>
+        <li>Lock away pre-rolls and carts from kids and pets—curiosity is undefeated.</li>
+        <li>If meds are involved, talk to a pro; cannabinoids and caffeine can interact.</li>
       </ul>
 
-      <div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-top:10px">
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Vapes & More →</a>
-        <small style="color:var(--ok)">Use <strong>GBO15</strong> at checkout for 15% off</small>
+      <div class="tip">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Morning-Friendly Picks →</a>
+          <small style="color:var(--ok)">Use <strong>GBO15</strong> at checkout for 15% off</small>
+        </div>
       </div>
 
-      <p style="margin-top:18px;color:#9aa3ad;font-size:.92rem">21+ only. Educational content for legal adults in compliant regions. Always follow local laws. Do not drive impaired.</p>
+      <p class="subtle" style="margin-top:10px">21+ only. Educational content for legal adults in compliant regions. Always follow local laws. Do not drive impaired.</p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <span>© <span id="y"></span> Cannabis Field Guide</span>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop with 15% Off →</a>
+      <a href="index.html" class="btn-ghost" data-no-aff aria-label="Return to homepage">← Back to Home</a>
+      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Vapes &amp; More →</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

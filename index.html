@@ -251,6 +251,59 @@
            aria-label="Open shop via Formats &amp; Dosing tile"></a>
       </article>
 
+
+<!-- Sour Diesel — Product Card -->
+<article class="card sd-card" style="overflow:hidden;position:relative">
+  <figure style="margin:0;position:relative;height:280px">
+    <img src="ILGM-PDP-AK-47-Feminized-Seeds_1600px-2_f097f99b_thumbnail_1024.webp"
+         alt="Sour Diesel feminized cannabis buds" loading="lazy"
+         style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
+    <span class="badge" style="position:absolute;left:12px;top:12px">★★★★★ 4.9/5</span>
+  </figure>
+
+  <div style="position:relative;z-index:1;padding:16px 16px 18px">
+    <h3 class="title" style="color:var(--accent);margin-bottom:6px">Sour Diesel • Feminized</h3>
+    <p class="subtle" style="margin:0 0 10px">Chemdawg × Super Skunk · Sativa-dominant · THC ~21%</p>
+
+    <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+      <li><strong>Effects:</strong> Creative, energetic, talkative</li>
+      <li><strong>Flavors:</strong> Citrus, diesel, herbal, pine, skunky</li>
+      <li><strong>Yield:</strong> up to 710 g/m² · <strong>Flower:</strong> ~77 days</li>
+      <li><strong>Grow Skill:</strong> Challenging · <strong>Climate:</strong> Indoor/Outdoor (sunny/Med/steppe)</li>
+    </ul>
+
+    <div id="sd-stock" class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+      ⚠️ Only <span id="sd-num">15</span> packs left today
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="chip">Feminized</span>
+      <span class="chip">Photoperiod</span>
+      <span class="chip">Caryophyllene · Limonene · Myrcene</span>
+    </div>
+
+    <a class="btn"
+       href="https://ilgm.com/products/sour-diesel-feminized-seeds?_gl=1*1sw4tq*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3NjE3OTIkbzEkZzEkdDE3NTk3NjE3OTIkajYwJGwwJGgw&variant=UHJvZHVjdFZhcmlhbnQ6Njg2&aff=7946#product-description"
+       target="_blank" rel="sponsored noopener noreferrer">
+      View Price & Buy →
+    </a>
+  </div>
+</article>
+
+<script>
+  // Urgency counter (subtle, random)
+  (function(){
+    const el = document.getElementById('sd-num');
+    let n = parseInt(el.textContent || '15', 10);
+    setInterval(() => {
+      if (n > 3 && Math.random() < 0.28) {
+        el.textContent = --n;
+      }
+    }, 7000);
+  })();
+</script>
+
     </div>
   </section>
 

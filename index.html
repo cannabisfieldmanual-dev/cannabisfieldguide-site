@@ -25,8 +25,7 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
 
-    /* Site-wide wallpaper (NEW) */
-    /* Replace url('images/smoke-bg.jpg') with your asset path. */
+    /* Site-wide wallpaper */
     .wallpaper{position:fixed;inset:0;z-index:-1;pointer-events:none;
       background:
         radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
@@ -59,6 +58,7 @@
     .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#151a1f;border:1px solid #232a31;color:#d2dae7;font-size:.82rem}
     .chip:before{content:"✔";color:var(--accent);font-weight:900}
     .chiprow{display:flex;flex-wrap:wrap;gap:8px}
+    .stars{color:#ffdc73;font-weight:900}
 
     /* Header */
     header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
@@ -151,7 +151,7 @@
 </head>
 <body>
 
-  <!-- Site-wide wallpaper (NEW) -->
+  <!-- Site-wide wallpaper -->
   <div class="wallpaper" aria-hidden="true"></div>
 
   <!-- Header -->
@@ -218,7 +218,7 @@
     </div>
   </section>
 
-  <!-- From the Guide (uniform grid) -->
+  <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
     <div class="mosaic">
@@ -230,7 +230,12 @@
             <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
                  alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async">
             <span class="cap">Rolling Tips</span>
-<!-- Morning Pairings subpage -->
+          </div>
+          <div class="meta">Papers, filters, cones, and even burns—step-by-step.</div>
+        </article>
+      </a>
+
+      <!-- Morning Pairings subpage -->
       <a href="morning-pairings.html" aria-label="Morning Pairings subpage">
         <article class="tile2 card">
           <div class="thumb">
@@ -242,11 +247,6 @@
         </article>
       </a>
 
-      <!-- Buying Legally subpage -->y" decoding="async">
-          <span class="cap">Morning Pairings</span>
-        </article>
-      </a>
-
       <!-- Buying Legally subpage -->
       <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
         <article class="tile2 card">
@@ -254,7 +254,12 @@
             <img src="Nuggets-buds-retail-counter-736x414.webp"
                  alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
             <span class="cap">Buying Legally</span>
-<!-- Formats & Dosing (external shop link) -->
+          </div>
+          <div class="meta">ID, purchase limits, delivery rules, and local compliance.</div>
+        </article>
+      </a>
+
+      <!-- Formats & Dosing (external shop link) -->
       <article class="tile2 card">
         <div class="thumb">
           <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
@@ -264,60 +269,100 @@
              aria-label="Open shop via Formats &amp; Dosing tile"></a>
         </div>
         <div class="meta">Gummies, vapes, flower—simple dosing charts and timing.</div>
-      </article>          rel="sponsored noopener noreferrer" target="_blank"
-           aria-label="Open shop via Formats &amp; Dosing tile"></a>
       </article>
 
     </div>
   </section>
 
-<!-- Featured Gear -->
-<section class="from" aria-label="Featured gear">
-  <h2>Featured Gear</h2>
-  <div class="mosaic">
+  <!-- Featured Strain -->
+  <section class="from" aria-label="Featured strain">
+    <h2>Featured Strain</h2>
+    <div class="container" style="padding:0">
+      <!-- Sour Diesel — Overview card -->
+      <article class="card sd-card" style="overflow:hidden;position:relative">
+        <figure style="margin:0;position:relative;height:280px">
+          <img src="ILGM-PDP-AK-47-Feminized-Seeds_1600px-2_f097f99b_thumbnail_1024.webp"
+               alt="Sour Diesel feminized cannabis buds" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
+          <span class="badge" style="position:absolute;left:12px;top:12px">
+            <span class="stars">★★★★★</span> 4.9/5
+          </span>
+        </figure>
 
-    <!-- Smell-Proof Lock Bag — Product Card -->
-    <article class="card" style="overflow:hidden;position:relative;grid-column:1/-1">
-      <figure style="margin:0;position:relative;height:280px">
-        <img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
-        <span class="badge" style="position:absolute;left:12px;top:12px">★★★★★ 4.8/5</span>
-      </figure>
+        <div style="position:relative;z-index:1;padding:16px 16px 18px">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Sour Diesel • Feminized</h3>
+          <p class="subtle" style="margin:0 0 10px">Chemdawg × Super Skunk · Sativa-dominant · THC ~21%</p>
 
-      <div style="position:relative;z-index:1;padding:16px 16px 18px">
-        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smell‑Proof Lock Bag</h3>
-        <p class="subtle" style="margin:0 0 10px">Carbon-lined • TSA‑style combo lock • Modular dividers</p>
+          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+            <li><strong>Effects:</strong> Creative, energetic, talkative</li>
+            <li><strong>Flavors:</strong> Citrus, diesel, herbal, pine, skunky</li>
+            <li><strong>Yield:</strong> up to 710 g/m² · <strong>Flower:</strong> ~77 days</li>
+            <li><strong>Grow Skill:</strong> Challenging · <strong>Climate:</strong> Indoor/Outdoor (sunny/Med/steppe)</li>
+          </ul>
 
-        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
-          <li><strong>Odor control:</strong> 5‑layer carbon filter + airtight zipper</li>
-          <li><strong>Security:</strong> Built‑in 3‑digit combo lock</li>
-          <li><strong>Layout:</strong> Removable padded dividers + mesh lid pockets</li>
-          <li><strong>Travel‑ready:</strong> Discreet fabric, carry handle, D‑rings</li>
-        </ul>
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+            ⚠️ Only <span id="sd-num">15</span> packs left today
+          </div>
 
-        <div class="reviewbar" style="margin:0 0 10px">
-          <span class="stars">★★★★★</span>
-          <span class="subtle"><strong>190+</strong> verified ratings</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+            <span class="chip">Feminized</span>
+            <span class="chip">Photoperiod</span>
+            <span class="chip">Caryophyllene · Limonene · Myrcene</span>
+          </div>
+
+          <a class="btn"
+             href="https://ilgm.com/products/sour-diesel-feminized-seeds?_gl=1*1sw4tq*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3NjE3OTIkbzEkZzEkdDE3NTk3NjE3OTIkajYwJGwwJGgw&variant=UHJvZHVjdFZhcmlhbnQ6Njg2&aff=7946"
+             target="_blank" rel="sponsored noopener noreferrer">
+            View Price &amp; Buy →
+          </a>
         </div>
+      </article>
+    </div>
+  </section>
 
-        <div id="gear-stock" class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-          ⚠️ Only <span id="gear-num">12</span> left — ships today
+  <!-- Featured Gear -->
+  <section class="from" aria-label="Featured gear">
+    <h2>Featured Gear</h2>
+    <div class="mosaic">
+      <!-- Smell-Proof Lock Bag — Product Card -->
+      <article class="card" style="overflow:hidden;position:relative;grid-column:1/-1">
+        <figure style="margin:0;position:relative;height:280px">
+          <img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
+          <span class="badge" style="position:absolute;left:12px;top:12px">★★★★★ 4.8/5</span>
+        </figure>
+
+        <div style="position:relative;z-index:1;padding:16px 16px 18px">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smell-Proof Lock Bag</h3>
+          <p class="subtle" style="margin:0 0 10px">Carbon-lined • TSA-style combo lock • Modular dividers</p>
+
+          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+            <li><strong>Odor control:</strong> 5-layer carbon filter + airtight zipper</li>
+            <li><strong>Security:</strong> Built-in 3-digit combo lock</li>
+            <li><strong>Layout:</strong> Removable padded dividers + mesh lid pockets</li>
+            <li><strong>Travel-ready:</strong> Discreet fabric, carry handle, D-rings</li>
+          </ul>
+
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+            ⚠️ Only <span id="gear-num">12</span> left — ships today
+          </div>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+            <span class="chip">Smell-proof</span>
+            <span class="chip">Locking</span>
+            <span class="chip">Travel size</span>
+          </div>
+
+          <a class="btn" href="https://www.ebay.com/itm/365052416625?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1f0ChVSKzEkeweSzD0Mqx2ly9GAOeVsHreAa%2FaiqfOUWChl2mRVQMxAwjy4xHQyLOzwvkoKCqLWNH0bnR4YZ0%2FXghND29VvVmSuWGO0m%2FoRovupxOYv1bWtY2gGjh5MAkbI6TDtmpUPF7FZAGkFWa18IqohoLT4mqY40vJEgBUCJSCFkUOqS2gs7tMJqy5RsgM%3D" target="_blank" rel="sponsored noopener noreferrer">
+            Check Price on eBay →
+          </a>
         </div>
+      </article>
+    </div>
+  </section>
 
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-          <span class="chip">Smell‑proof</span>
-          <span class="chip">Locking</span>
-          <span class="chip">Travel size</span>
-        </div>
-
-        <a class="btn" href="https://www.ebay.com/itm/365052416625?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1f0ChVSKzEkeweSzD0Mqx2ly9GAOeVsHreAa%2FaiqfOUWChl2mRVQMxAwjy4xHQyLOzwvkoKCqLWNH0bnR4YZ0%2FXghND29VvVmSuWGO0m%2FoRovupxOYv1bWtY2gGjh5MAkbI6TDtmpUPF7FZAGkFWa18IqohoLT4mqY40vJEgBUCJSCFkUOqS2gs7tMJqy5RsgM%3D" target="_blank" rel="sponsored noopener noreferrer">Check Price on eBay →</a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- Directory -->
+  <!-- Directory -->
   <main>
     <div class="container">
       <h2 class="section-title">Explore the Guide</h2>
@@ -411,6 +456,24 @@
         localStorage.setItem(KEY,'1');
         bar.classList.add('age-hidden');
       });
+    })();
+
+    // Sour Diesel urgency counter (subtle, random)
+    (function(){
+      const el = document.getElementById('sd-num');
+      if(el){
+        let n = parseInt(el.textContent || '15', 10);
+        setInterval(()=>{ if(n > 3 && Math.random() < 0.28){ el.textContent = --n; } }, 7000);
+      }
+    })();
+
+    // Gear stock counter (subtle, random)
+    (function(){
+      const el = document.getElementById('gear-num');
+      if(el){
+        let n = parseInt(el.textContent || '12', 10);
+        setInterval(()=>{ if(n > 2 && Math.random() < 0.22){ el.textContent = --n; } }, 8000);
+      }
     })();
   </script>
 </body>

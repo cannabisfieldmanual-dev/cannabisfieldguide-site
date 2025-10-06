@@ -99,6 +99,26 @@
     /* Footer */
     footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
 
+    /* Affiliate disclosure */
+    .disclosure{
+      margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);
+      background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem
+    }
+
+    /* 21+ sticky banner */
+    .age-notice{
+      position:sticky;bottom:0;left:0;right:0;z-index:9999;
+      background:linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);
+      border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);
+      backdrop-filter:saturate(1.1) blur(6px)
+    }
+    .age-wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .age-text{font-size:.95rem}
+    .age-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .age-btn{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081014;border:0;border-radius:10px;padding:9px 12px;font-weight:900;cursor:pointer}
+    .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
+    .age-hidden{display:none}
+
     @media (prefers-reduced-motion: reduce){
       .rotor img{transition:none}
       .tile img{transition:none}
@@ -136,6 +156,11 @@
           <div class="cta-row">
             <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls →</a>
           </div>
+
+          <!-- Affiliate disclosure -->
+          <p class="disclosure" role="note">
+            <strong>Affiliate disclosure:</strong> Some links on this site are affiliate links. If you purchase through them, we may earn a small commission at no extra cost to you. We only recommend products we actually use. Content is for adults <strong>21+</strong>.
+          </p>
         </div>
         <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop"></a>
       </article>
@@ -260,10 +285,22 @@
   <!-- Footer -->
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <span>© <span id="y"></span> Cannabis Field Guide</span>
+      <span>© <span id="y"></span> Cannabis Field Guide — Adults 21+. This site uses affiliate links; we may earn a commission at no extra cost to you.</span>
       <a href="https://getbudonline.com/subid/christopher.serpico/" class="btn" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls, Flower &amp; More →</a>
     </div>
   </footer>
+
+  <!-- 21+ sticky age banner -->
+  <div id="ageNotice" class="age-notice" role="dialog" aria-live="polite" aria-label="21+ age notice">
+    <div class="age-wrap">
+      <span class="age-text">🚨 For adults <strong>21+</strong> (or legal age in your area). By using this site you confirm you are of legal age.</span>
+      <div class="age-actions">
+        <a class="age-link" href="/privacy.html">Privacy</a>
+        <a class="age-link" href="/terms.html">Terms</a>
+        <button id="ageConfirm" class="age-btn">I’m 21+</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Year
@@ -280,6 +317,18 @@
           imgs[i].classList.add('is-active');
         }, 3000);
       }
+    })();
+
+    // 21+ banner memory
+    (function(){
+      const KEY='cfg_age_ok';
+      const bar=document.getElementById('ageNotice');
+      const btn=document.getElementById('ageConfirm');
+      if(localStorage.getItem(KEY)==='1'){ bar.classList.add('age-hidden'); }
+      btn?.addEventListener('click',function(){
+        localStorage.setItem(KEY,'1');
+        bar.classList.add('age-hidden');
+      });
     })();
   </script>
 </body>

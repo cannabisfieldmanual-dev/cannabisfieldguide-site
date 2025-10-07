@@ -1,322 +1,131 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Formats & Dosing — Cannabis Field Guide</title>
-  <meta name="description" content="Formats & dosing guide for flower, vapes, edibles, tinctures, and topicals. Onset times, duration, and a simple dose calculator. 21+ only.">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#0d0f10">
-  <link rel="canonical" href="https://cannabisfieldguide.org/formats-dosing.html">
-
+<!-- Real-World Cannabis Dosing Chart (drop anywhere in your page) -->
+<section class="card cfd-dosing" style="margin:16px 0;overflow:hidden">
   <style>
-    :root{
-      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
-      --panel:#111418; --panel-2:#0f1216; --accent:#18f0b4; --accent2:#0acb92;
-      --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-
-    /* Base */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .subtle{color:var(--muted)} .title{margin:0;font-weight:900;letter-spacing:.2px}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
-    .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
+    .cfd-dosing{background:linear-gradient(180deg,#0f1216,#0c0e12);border:1px solid var(--line);border-radius:16px}
+    .cfd-wrap{padding:16px}
+    .cfd-title{margin:0 0 6px;font-weight:900;font-size:clamp(20px,3.6vw,28px);letter-spacing:.2px;color:#e9ecf4}
+    .cfd-sub{margin:0 0 12px;color:#b7becc}
+    .cfd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:900px){.cfd-grid{grid-template-columns:1fr}}
+    .cfd-card{background:#0f1419;border:1px solid #1f2630;border-radius:14px;padding:12px}
+    .cfd-card h3{margin:0 0 6px;font-size:1rem;color:#18f0b4}
+    .cfd-kicker{margin:0 0 8px;color:#a7c7bf;font-size:.9rem}
+    .cfd-list{margin:0 0 4px 18px;color:#d8e6e1;font-size:.95rem}
+    .cfd-note{margin:6px 0 0;color:#9fb4ad;font-size:.88rem}
+    .cfd-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:12px}
+    .cfd-table th,.cfd-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+    .cfd-table th{background:#0e1217;color:#c8f3e7;font-weight:900}
+    .cfd-foot{margin:12px 0 0;padding:10px;border:1px dashed #26313a;border-radius:12px;color:#cfe7de;background:#0d1216}
     .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#151a1f;border:1px solid #232a31;color:#d2dae7;font-size:.82rem}
-    .chip:before{content:"✔";color:var(--accent);font-weight:900}
-    .stack-8>*{margin:0} .stack-8>*+*{margin-top:8px}
-    .stack-12>*{margin:0} .stack-12>*+*{margin-top:12px}
-
-    /* Wallpaper */
-    .wallpaper{position:fixed;inset:0;z-index:-1;pointer-events:none;
-      background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
-        linear-gradient(180deg, rgba(6,8,9,.55), rgba(6,8,9,.88)),
-        url('images/smoke-bg.jpg') center/cover no-repeat;
-      filter:saturate(1.03) contrast(1.02);
-    }
-    @media (max-width:700px){
-      .wallpaper{background:
-        radial-gradient(900px 400px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
-        linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),
-        url('images/smoke-bg.jpg') center/cover no-repeat}
-    }
-
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
-    .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(24,240,180,.6)}
-    .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
-    .nav a.btn{font-size:.92rem}
-
-    /* Page header */
-    .page-hero{margin:22px 0}
-    .page-hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-    @media (max-width:900px){.page-hero .wrap{grid-template-columns:1fr}}
-    .hero-card{background:var(--panel-2)}
-
-    /* Tabs */
-    .tabs{margin:18px 0;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0f1216,#0c0e12)}
-    .tablist{display:flex;gap:6px;flex-wrap:wrap;padding:8px;background:#0c0f13;border-bottom:1px solid var(--line);position:sticky;top:62px;z-index:5;backdrop-filter:saturate(1.2) blur(8px)}
-    .tab{appearance:none;border:1px solid #1f2630;background:#0f1419;color:#cfe7de;font-weight:800;padding:10px 12px;border-radius:12px;cursor:pointer}
-    .tab[aria-selected="true"]{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081014;border-color:transparent;box-shadow:0 6px 18px rgba(24,240,180,.25)}
-    .tabpanel{display:none;padding:14px} .tabpanel[aria-hidden="false"]{display:block}
-
-    /* Tables */
-    table{width:100%;border-collapse:separate;border-spacing:0}
-    th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
-    th{color:#bfeadf;font-weight:900;background:#0e1217;position:sticky;top:0}
-    tr:last-child td{border-bottom:0}
-    .kicker{color:#9fb4ad;font-size:.9rem;margin:0 0 8px}
-
-    /* Footer & age */
-    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
-    .age-notice{position:sticky;bottom:0;left:0;right:0;z-index:9999;background:linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);backdrop-filter:saturate(1.1) blur(6px)}
-    .age-wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .age-btn{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081014;border:0;border-radius:10px;padding:9px 12px;font-weight:900;cursor:pointer}
-    .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
-    .age-hidden{display:none}
   </style>
-</head>
-<body>
-  <div class="wallpaper" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <span class="logo-dot" aria-hidden="true"></span>
-        <h1>Cannabis Field Guide</h1>
-      </div>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop →</a>
-    </div>
-  </header>
+  <div class="cfd-wrap">
+    <h2 class="cfd-title">Real-World Cannabis Dosing Chart</h2>
+    <p class="cfd-sub">Start low, go slow. Everyone’s different. These are **adult 21+** guidelines—educational, not medical advice.</p>
 
-  <!-- Page hero -->
-  <section class="page-hero">
-    <div class="container wrap">
-      <article class="card hero-card stack-12" style="padding:18px">
-        <h2 class="title" style="font-size:clamp(26px,4.6vw,44px)">Formats & Dosing</h2>
-        <p class="subtle">Start low, go slow. Everyone’s endocannabinoid system is unique. Use these charts and the calculator to plan a comfortable dose. <strong>21+ only.</strong></p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span class="chip">Beginner-friendly</span>
-          <span class="chip">Onset & duration</span>
-          <span class="chip">Dose calculator</span>
-        </div>
+    <div class="cfd-grid">
+
+      <!-- Smoke & Vape -->
+      <article class="cfd-card">
+        <h3>Smoking &amp; Vaping (Flower)</h3>
+        <p class="cfd-kicker">Typical potency: 10–30% THC</p>
+        <ul class="cfd-list">
+          <li><strong>Micro:</strong> 1–2 puffs — calm, clear</li>
+          <li><strong>Low:</strong> 2–4 puffs — mood lift, social</li>
+          <li><strong>Moderate:</strong> 4–8 puffs — strong euphoria</li>
+          <li><strong>High:</strong> 8–12 puffs — heavy head/body</li>
+          <li><strong>Expert:</strong> 12+ puffs — tolerance needed</li>
+        </ul>
+        <p class="cfd-note">Onset 1–5 min • Duration 1–3 hrs</p>
       </article>
 
-      <aside class="card" style="padding:14px">
-        <p class="kicker"><strong>Safety first</strong></p>
-        <ul class="subtle" style="margin:0 0 10px 18px">
-          <li>Wait at least <strong>2 hours</strong> after edibles before redosing.</li>
-          <li>Do not drive or operate machinery while impaired.</li>
-          <li>Store out of reach of children & pets.</li>
-          <li>Follow local laws and regulations.</li>
+      <!-- Edibles -->
+      <article class="cfd-card">
+        <h3>Edibles (THC mg)</h3>
+        <p class="cfd-kicker">Wait **2+ hours** before redosing</p>
+        <ul class="cfd-list">
+          <li><strong>Micro:</strong> 1–2.5 mg — very light</li>
+          <li><strong>Low:</strong> 2.5–5 mg — beginner-friendly</li>
+          <li><strong>Moderate:</strong> 5–10 mg — clear high</li>
+          <li><strong>High:</strong> 10–20 mg — strong, long</li>
+          <li><strong>Expert:</strong> 20–50 mg — experienced only</li>
         </ul>
-        <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop Pre-Rolls, Flower &amp; Vapes →</a>
-      </aside>
-    </div>
-  </section>
+        <p class="cfd-note">Onset 30–120 min • Duration 4–10 hrs</p>
+      </article>
 
-  <!-- Tabs -->
-  <section class="container tabs" id="format-tabs">
-    <nav class="tablist" role="tablist" aria-label="Formats and dosing tabs">
-      <button class="tab" role="tab" aria-selected="true" aria-controls="tab-flower" id="tabbtn-flower">Flower</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-vapes" id="tabbtn-vapes">Vapes</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-edibles" id="tabbtn-edibles">Edibles</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-tinctures" id="tabbtn-tinctures">Tinctures</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-topicals" id="tabbtn-topicals">Topicals</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-calculator" id="tabbtn-calculator">Dose Calculator</button>
-    </nav>
+      <!-- Tinctures / Oils -->
+      <article class="cfd-card">
+        <h3>Tinctures / Oils (Sublingual THC mg)</h3>
+        <p class="cfd-kicker">Hold under tongue 30–60s</p>
+        <ul class="cfd-list">
+          <li><strong>Micro:</strong> 1–2 mg — gentle ease</li>
+          <li><strong>Low:</strong> 2–5 mg — noticeable calm</li>
+          <li><strong>Moderate:</strong> 5–10 mg — balanced high</li>
+          <li><strong>High:</strong> 10–20 mg — heavy relaxation</li>
+          <li><strong>Expert:</strong> 20–40 mg — sedation likely</li>
+        </ul>
+        <p class="cfd-note">Onset 15–45 min • Duration 3–6 hrs</p>
+      </article>
 
-    <!-- Flower -->
-    <div class="tabpanel" role="tabpanel" id="tab-flower" aria-labelledby="tabbtn-flower" aria-hidden="false">
-      <p class="kicker">Typical potency: 10–30% THC (100–300 mg THC per gram)</p>
-      <div class="card" style="padding:14px">
-        <table>
-          <thead><tr><th>Experience</th><th>Approx. Inhalations*</th><th>Notes</th><th>Onset / Duration</th></tr></thead>
-          <tbody>
-            <tr><td>Micro</td><td>1–2 light puffs</td><td>Noticeable calm; minimal intoxication</td><td>2–10 min / 1–3 hrs</td></tr>
-            <tr><td>Low</td><td>2–4 puffs</td><td>Balanced mood lift & focus</td><td>2–10 min / 2–4 hrs</td></tr>
-            <tr><td>Moderate</td><td>4–8 puffs</td><td>Stronger euphoria; dry mouth likely</td><td>2–10 min / 3–5 hrs</td></tr>
-            <tr><td>High</td><td>8+ puffs</td><td>Intense effects; may cause anxiety in new users</td><td>2–10 min / 4–6 hrs</td></tr>
-          </tbody>
-        </table>
-        <p class="subtle" style="margin:8px 0 0">*Puff size and device vary—start with one and wait a few minutes.</p>
-      </div>
-    </div>
+      <!-- Concentrates / Dabs -->
+      <article class="cfd-card">
+        <h3>Concentrates / Dabs</h3>
+        <p class="cfd-kicker">Very potent; use low temp</p>
+        <ul class="cfd-list">
+          <li><strong>Small:</strong> ~0.05–0.1 g (rice-grain) — intense, quick</li>
+          <li><strong>Medium:</strong> ~0.1–0.2 g (pea) — powerful euphoria</li>
+          <li><strong>Large:</strong> ~0.2–0.3 g — overwhelming for most</li>
+        </ul>
+        <p class="cfd-note">Onset 1–3 min • Duration 1–3 hrs</p>
+      </article>
 
-    <!-- Vapes -->
-    <div class="tabpanel" role="tabpanel" id="tab-vapes" aria-labelledby="tabbtn-vapes" aria-hidden="true">
-      <p class="kicker">Typical potency: 60–90% THC distillate</p>
-      <div class="card" style="padding:14px">
-        <table>
-          <thead><tr><th>Experience</th><th>Puffs</th><th>Notes</th><th>Onset / Duration</th></tr></thead>
-          <tbody>
-            <tr><td>Micro</td><td>1 short puff</td><td>Subtle uplift; good for daytime</td><td>1–5 min / 1–2 hrs</td></tr>
-            <tr><td>Low</td><td>1–2 puffs</td><td>Smooth mood lift</td><td>1–5 min / 2–3 hrs</td></tr>
-            <tr><td>Moderate</td><td>2–4 puffs</td><td>Clear euphoria; mind/body effects</td><td>1–5 min / 3–4 hrs</td></tr>
-            <tr><td>High</td><td>4+ puffs</td><td>Strong; increase slowly</td><td>1–5 min / 4–5 hrs</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+      <!-- CBD & Ratios -->
+      <article class="cfd-card">
+        <h3>CBD &amp; Ratios (THC:CBD)</h3>
+        <ul class="cfd-list">
+          <li><strong>0:1 (CBD only)</strong> — non-intoxicating; calm, inflammation</li>
+          <li><strong>1:10</strong> — clear-headed relief; daytime anxiety</li>
+          <li><strong>1:1</strong> — balanced mind/body; pain &amp; sleep</li>
+          <li><strong>5:1+</strong> — THC-forward; strong symptom relief</li>
+        </ul>
+        <p class="cfd-note">CBD may soften THC’s intensity for some users.</p>
+      </article>
 
-    <!-- Edibles -->
-    <div class="tabpanel" role="tabpanel" id="tab-edibles" aria-labelledby="tabbtn-edibles" aria-hidden="true">
-      <p class="kicker">Rule of thumb: wait 2+ hours before taking more</p>
-      <div class="card" style="padding:14px">
-        <table>
-          <thead><tr><th>Experience</th><th>THC (mg)</th><th>What to expect</th><th>Onset / Duration</th></tr></thead>
-          <tbody>
-            <tr><td>Micro</td><td>1–2.5 mg</td><td>Very light relaxation</td><td>30–120 min / 3–6 hrs</td></tr>
-            <tr><td>Low</td><td>2.5–5 mg</td><td>Gentle euphoria; suitable for most first-timers</td><td>45–120 min / 4–8 hrs</td></tr>
-            <tr><td>Moderate</td><td>5–10 mg</td><td>Clear psychoactive effect</td><td>45–120 min / 6–10 hrs</td></tr>
-            <tr><td>High</td><td>10–20+ mg</td><td>Intense; tolerance recommended</td><td>45–120 min / 8–12 hrs</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- Topicals -->
+      <article class="cfd-card">
+        <h3>Topicals (Creams, Balms)</h3>
+        <ul class="cfd-list">
+          <li><strong>Use:</strong> Pea-size on target area</li>
+          <li><strong>Effects:</strong> Local relief; no “high” on intact skin</li>
+          <li><strong>Reapply:</strong> Every 3–4 hrs as needed</li>
+        </ul>
+        <p class="cfd-note">Onset 5–20 min • Duration 2–6 hrs • Non-intoxicating</p>
+      </article>
+
     </div>
 
-    <!-- Tinctures -->
-    <div class="tabpanel" role="tabpanel" id="tab-tinctures" aria-labelledby="tabbtn-tinctures" aria-hidden="true">
-      <p class="kicker">Use sublingually for quicker onset; check label for mg THC / mL</p>
-      <div class="card" style="padding:14px">
-        <table>
-          <thead><tr><th>Experience</th><th>THC (mg)</th><th>mL @ 10 mg/mL</th><th>Onset / Duration</th></tr></thead>
-          <tbody>
-            <tr><td>Micro</td><td>1–2 mg</td><td>0.1–0.2 mL</td><td>15–45 min / 3–6 hrs</td></tr>
-            <tr><td>Low</td><td>2–5 mg</td><td>0.2–0.5 mL</td><td>20–60 min / 4–8 hrs</td></tr>
-            <tr><td>Moderate</td><td>5–10 mg</td><td>0.5–1.0 mL</td><td>20–60 min / 6–10 hrs</td></tr>
-            <tr><td>High</td><td>10–20 mg</td><td>1.0–2.0 mL</td><td>20–60 min / 8–12 hrs</td></tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Onset & Duration table -->
+    <div class="cfd-card" style="margin-top:12px">
+      <table class="cfd-table" aria-label="Onset and duration by method">
+        <thead><tr><th>Method</th><th>Onset</th><th>Duration</th></tr></thead>
+        <tbody>
+          <tr><td>Smoking / Vaping</td><td>1–5 min</td><td>1–3 hrs</td></tr>
+          <tr><td>Edibles</td><td>30–120 min</td><td>4–10 hrs</td></tr>
+          <tr><td>Tinctures (sublingual)</td><td>15–45 min</td><td>3–6 hrs</td></tr>
+          <tr><td>Concentrates / Dabs</td><td>1–3 min</td><td>1–3 hrs</td></tr>
+          <tr><td>Topicals</td><td>5–20 min</td><td>2–6 hrs (local)</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Topicals -->
-    <div class="tabpanel" role="tabpanel" id="tab-topicals" aria-labelledby="tabbtn-topicals" aria-hidden="true">
-      <div class="card stack-12" style="padding:14px">
-        <p>Topicals (balms, salves) are typically non-intoxicating when used on intact skin. They’re best for localized relief. Apply a pea-sized amount to start; reapply every 3–4 hours as needed.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span class="chip">Localized relief</span>
-          <span class="chip">Minimal systemic effect</span>
-          <span class="chip">THC or CBD</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Calculator -->
-    <div class="tabpanel" role="tabpanel" id="tab-calculator" aria-labelledby="tabbtn-calculator" aria-hidden="true">
-      <div class="card" style="padding:14px">
-        <h3 class="title" style="font-size:1.1rem;margin-bottom:8px">Simple Dose Calculator</h3>
-        <p class="subtle" style="margin-top:0">Estimate amounts for flower or edibles/tinctures. These are rough guides—always round <em>down</em> if unsure.</p>
-
-        <div class="stack-12" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <!-- Flower calc -->
-          <div class="card" style="padding:12px">
-            <p class="kicker"><strong>Flower</strong> — grams needed for target mg THC</p>
-            <label class="subtle">Flower potency (% THC)
-              <input id="fl-thc" type="number" min="5" max="35" value="18" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0c0f13;color:var(--ink)">
-            </label>
-            <label class="subtle" style="margin-top:8px;display:block">Target dose (mg THC)
-              <input id="fl-mg" type="number" min="1" max="100" value="5" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0c0f13;color:var(--ink)">
-            </label>
-            <button class="btn" id="fl-run" style="margin-top:10px">Calculate</button>
-            <p id="fl-out" class="subtle" style="margin:10px 0 0"></p>
-          </div>
-
-          <!-- Edible/Tincture calc -->
-          <div class="card" style="padding:12px">
-            <p class="kicker"><strong>Edibles / Tinctures</strong> — servings for target mg</p>
-            <label class="subtle">Potency (mg THC per serving or mL)
-              <input id="ed-mg-per" type="number" min="0.5" step="0.5" value="5" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0c0f13;color:var(--ink)">
-            </label>
-            <label class="subtle" style="margin-top:8px;display:block">Target dose (mg THC)
-              <input id="ed-target" type="number" min="0.5" step="0.5" value="2.5" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0c0f13;color:var(--ink)">
-            </label>
-            <button class="btn" id="ed-run" style="margin-top:10px">Calculate</button>
-            <p id="ed-out" class="subtle" style="margin:10px 0 0"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <span>© <span id="y"></span> Cannabis Field Guide — Adults 21+. Educational content only; not medical advice.</span>
-      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop Pre-Rolls, Flower &amp; Vapes →</a>
-    </div>
-  </footer>
-
-  <!-- Age notice -->
-  <div id="ageNotice" class="age-notice" role="dialog" aria-live="polite" aria-label="21+ age notice">
-    <div class="age-wrap">
-      <span>🚨 For adults <strong>21+</strong> (or legal age in your area). By using this site you confirm you are of legal age.</span>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <a class="age-link" href="/privacy.html">Privacy</a>
-        <a class="age-link" href="/terms.html">Terms</a>
-        <button id="ageConfirm" class="age-btn">I’m 21+</button>
+    <!-- Safety footnote -->
+    <div class="cfd-foot">
+      <strong>Real talk:</strong> Dose depends on you—body, tolerance, food, meds. Avoid driving. Keep away from kids & pets. If you overdo it: hydrate, rest, consider CBD, and wait it out.
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="chip">21+ Only</span>
+        <span class="chip">Start low, go slow</span>
+        <span class="chip">Educational, not medical advice</span>
       </div>
     </div>
   </div>
-
-  <script>
-    // Year & age memory
-    document.getElementById('y').textContent = new Date().getFullYear();
-    (function(){
-      const KEY='cfg_age_ok', bar=document.getElementById('ageNotice'), btn=document.getElementById('ageConfirm');
-      if(localStorage.getItem(KEY)==='1'){ bar.classList.add('age-hidden'); }
-      btn?.addEventListener('click', ()=>{ localStorage.setItem(KEY,'1'); bar.classList.add('age-hidden'); });
-    })();
-
-    // Accessible Tabs
-    (function(){
-      const tabs = document.querySelectorAll('#format-tabs .tab');
-      const panels = document.querySelectorAll('#format-tabs .tabpanel');
-      function activate(id){
-        tabs.forEach(t => t.setAttribute('aria-selected', t.id===id));
-        panels.forEach(p => p.setAttribute('aria-hidden', p.id !== document.getElementById(id).getAttribute('aria-controls')));
-      }
-      tabs.forEach(t=>{
-        t.addEventListener('click',()=>activate(t.id));
-        t.addEventListener('keydown',e=>{
-          const i=[...tabs].indexOf(t);
-          if(e.key==='ArrowRight'){ (tabs[i+1]||tabs[0]).focus(); }
-          if(e.key==='ArrowLeft'){ (tabs[i-1]||tabs[tabs.length-1]).focus(); }
-        });
-      });
-    })();
-
-    // Dose calculator
-    (function(){
-      // Flower: grams = target mg / (THC% * 10)  because %THC * 1000 mg/g = mg THC per gram
-      const flRun = document.getElementById('fl-run'), flOut = document.getElementById('fl-out');
-      flRun?.addEventListener('click', ()=>{
-        const pct = Math.max(1, Math.min(40, parseFloat(document.getElementById('fl-thc').value||'18')));
-        const mg  = Math.max(0.5, parseFloat(document.getElementById('fl-mg').value||'5'));
-        const mgPerGram = pct * 10; // e.g., 18% ≈ 180 mg/g
-        const grams = mg / mgPerGram;
-        const eighths = grams / 3.5;
-        flOut.textContent = `≈ ${grams.toFixed(3)} g (${(grams*1000).toFixed(0)} mg flower) — about ${(eighths*100).toFixed(2)}% of an eighth. Take 1–2 puffs, wait 5–10 min.`;
-      });
-
-      // Edible/Tincture: servings = target mg / mg-per-serving
-      const edRun = document.getElementById('ed-run'), edOut = document.getElementById('ed-out');
-      edRun?.addEventListener('click', ()=>{
-        const per = Math.max(0.1, parseFloat(document.getElementById('ed-mg-per').value||'5'));
-        const target = Math.max(0.1, parseFloat(document.getElementById('ed-target').value||'2.5'));
-        const servings = target / per;
-        edOut.textContent = `≈ ${servings.toFixed(2)} serving(s). If new to edibles, start with 1/4–1/2 serving and wait 2 hours.`;
-      });
-    })();
-  </script>
-</body>
-</html>
+</section>

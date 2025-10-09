@@ -55,6 +55,8 @@
     .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;
       color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
     .btn:hover{filter:brightness(1.06)}
+    .btn-outline{display:inline-flex;align-items:center;justify-content:center;font-weight:900;padding:11px 14px;border-radius:12px;border:1px solid #2a3340;background:#11161b;color:var(--ink)}
+    .btn-outline:hover{border-color:#3a4656}
     .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#151a1f;border:1px solid #232a31;color:#d2dae7;font-size:.82rem}
     .chip:before{content:"✔";color:var(--accent);font-weight:900}
     .chiprow{display:flex;flex-wrap:wrap;gap:8px}
@@ -75,7 +77,7 @@
     .brand-card{position:relative;border-radius:var(--rad);overflow:hidden;border:1px solid var(--line);background:var(--panel-2);min-height:280px}
     .brand-media{position:absolute;inset:0;background:
       linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.66)),
-      url("cannabis-leaf-silhouette-photo.jpg") center/cover no-repeat}
+      url('cannabis-leaf-silhouette-photo.jpg') center/cover no-repeat}
     .brand-content{position:relative;z-index:1;padding:28px 22px}
     .brand-content .kicker{margin:0 0 6px;opacity:.9}
     .brand-content .site-title{margin:0 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900;background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35)}
@@ -147,6 +149,29 @@
       .rotor img{transition:none}
       .tile img{transition:none}
     }
+
+    /* === CTA Hero (added) === */
+    .cta-hero{margin:22px 0}
+    .cta-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+    @media (max-width:900px){.cta-hero .wrap{grid-template-columns:1fr}}
+    .cta-visual{position:relative;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;background:linear-gradient(180deg,#0f141b 0%,#0b0d11 100%)}
+    .cta-visual .glow{position:absolute;inset:0;background:
+      radial-gradient(80% 60% at 20% 10%, rgba(122,255,175,.25) 0%, rgba(122,255,175,0) 60%),
+      radial-gradient(60% 70% at 90% 30%, rgba(106,194,255,.25) 0%, rgba(106,194,255,0) 60%);
+      pointer-events:none}
+    .cta-visual .content{position:relative;z-index:1;padding:22px 18px 26px;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px}
+    .cta-visual .kicker{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    .cta-visual h2{margin:6px 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900}
+    .cta-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+    @media (max-width:640px){.cta-chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    .cta-chip{border:1px solid var(--line);border-radius:999px;padding:8px 10px;text-align:center;color:#d2dae7;font-size:.82rem;background:#101418}
+    .cta-copy{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--rad);padding:18px}
+    .cta-copy h3{margin:0 0 6px;font-size:1.06rem;color:#8ff5d8;font-weight:900}
+    .cta-bullets{margin:10px 0 0;padding:0;list-style:none;color:#d5dbe6}
+    .cta-bullets li{display:flex;gap:8px;margin:8px 0}
+    .cta-bullets li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    @media (max-width:520px){.cta-actions{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -218,6 +243,58 @@
     </div>
   </section>
 
+  <!-- CTA HERO: Autoflower Bible (added) -->
+  <section class="cta-hero">
+    <div class="container wrap">
+
+      <!-- Visual / headline card -->
+      <article class="cta-visual card">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="content">
+          <div class="kicker">Field Guide • Beginner Safe</div>
+          <h2 class="title">Grow Smart. Start Fast.</h2>
+          <p class="subtle" style="max-width:60ch">
+            No hype. Just the exact steps and gear a first-time grower needs to run a clean
+            autoflower from seed to jar—without blowing your budget.
+          </p>
+
+          <div class="cta-chips">
+            <div class="cta-chip">2×2–3×3 Tents</div>
+            <div class="cta-chip">150–250W LEDs</div>
+            <div class="cta-chip">18/6 or 20/4</div>
+            <div class="cta-chip">8–12 Week Runs</div>
+          </div>
+        </div>
+        <!-- decorative corner blob -->
+        <svg class="hit" style="position:absolute;right:-24px;top:-24px;width:180px;height:180px;opacity:.25;pointer-events:none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#7fdc7a"/><stop offset="100%" stop-color="#6ac2ff"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#g)" d="M40.3,-66.3C53.5,-59.6,66.7,-53.4,72.7,-42.9C78.7,-32.3,77.5,-17.5,77,-2.9C76.4,11.8,76.4,26.2,71.1,38.3C65.7,50.4,55,60.2,42.4,66.7C29.8,73.2,14.9,76.4,0.2,76.1C-14.5,75.9,-29,72.2,-40.7,64.3C-52.4,56.4,-61.2,44.2,-67.7,31C-74.2,17.8,-78.4,3.6,-77.3,-10.2C-76.1,-23.9,-69.6,-37.2,-59.2,-45.9C-48.9,-54.5,-34.7,-58.5,-21.5,-65.1C-8.4,-71.6,3.6,-80.9,15.5,-83.1C27.5,-85.4,39.5,-80.7,40.3,-66.3Z" transform="translate(100 100)"/>
+        </svg>
+      </article>
+
+      <!-- Copy + CTAs -->
+      <aside class="cta-copy card">
+        <h3>New: Autoflower Bible for Beginners</h3>
+        <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
+        <ul class="cta-bullets">
+          <li>Honest pros & cons (less time to fix mistakes)</li>
+          <li>Simple setup (2×2–3×3), sane budgets</li>
+          <li>Germination and feeding made easy</li>
+        </ul>
+        <div class="cta-actions">
+          <a class="btn" href="/guides/autoflower-bible" aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
+          <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+        </div>
+        <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+      </aside>
+
+    </div>
+  </section>
+
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
@@ -271,195 +348,107 @@
         <div class="meta">Gummies, vapes, flower—simple dosing charts and timing.</div>
       </article>
 
-      export default function CannabisGuideCTA() {
-  return (
-    <div className="min-h-screen w-full bg-[#0b0d11] text-slate-100 flex items-center justify-center p-6">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-6">
-        {/* Visual Card */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800">
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(80% 60% at 20% 10%, rgba(122,255,175,.25) 0%, rgba(122,255,175,0) 60%), radial-gradient(60% 70% at 90% 30%, rgba(106,194,255,.25) 0%, rgba(106,194,255,0) 60%), linear-gradient(180deg, #0f141b 0%, #0b0d11 100%)",
-            }}
-          />
-          <div className="relative p-6 md:p-8 h-full flex flex-col justify-end">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-[10px] tracking-[0.2em] uppercase text-slate-300/80 font-bold">Field Guide</span>
-              <span className="inline-block h-1 w-1 rounded-full bg-emerald-400/80" />
-              <span className="text-[10px] tracking-[0.2em] uppercase text-slate-400">Beginner Safe</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black leading-tight">
-              Grow Smart. Start Fast.
-            </h2>
-            <p className="mt-3 text-slate-300/90 md:text-lg max-w-prose">
-              No hype. Just the exact steps and gear a first-time grower needs to run a clean autoflower from seed to jar—without blowing your budget.
-            </p>
-            <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-300/80">
-              {[
-                "2×2–3×3 Tents",
-                "150–250W LEDs",
-                "18/6 or 20/4",
-                "8–12 Week Runs",
-              ].map((chip) => (
-                <div
-                  key={chip}
-                  className="border border-slate-700/70 rounded-full px-3 py-2 text-center"
-                >
-                  {chip}
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Decorative corner */}
-          <svg className="absolute -top-6 -right-6 w-48 h-48 opacity-30" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stopColor="#7fdc7a" />
-                <stop offset="100%" stopColor="#6ac2ff" />
-              </linearGradient>
-            </defs>
-            <path fill="url(#g)" d="M40.3,-66.3C53.5,-59.6,66.7,-53.4,72.7,-42.9C78.7,-32.3,77.5,-17.5,77,-2.9C76.4,11.8,76.4,26.2,71.1,38.3C65.7,50.4,55,60.2,42.4,66.7C29.8,73.2,14.9,76.4,0.2,76.1C-14.5,75.9,-29,72.2,-40.7,64.3C-52.4,56.4,-61.2,44.2,-67.7,31C-74.2,17.8,-78.4,3.6,-77.3,-10.2C-76.1,-23.9,-69.6,-37.2,-59.2,-45.9C-48.9,-54.5,-34.7,-58.5,-21.5,-65.1C-8.4,-71.6,3.6,-80.9,15.5,-83.1C27.5,-85.4,39.5,-80.7,40.3,-66.3Z" transform="translate(100 100)" />
-          </svg>
-        </div>
-
-        {/* Copy + CTA */}
-        <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-[#0f141b] p-6 md:p-8 flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-extrabold text-emerald-300/90">New: Autoflower Bible for Beginners</h3>
-            <p className="mt-2 text-slate-300/90">
-              A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.
-            </p>
-            <ul className="mt-4 space-y-2 text-slate-300/90">
-              <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"/> Honest pros & cons (less time to fix mistakes)</li>
-              <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"/> Simple setup (2×2–3×3), sane budgets</li>
-              <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"/> Germination and feeding made easy</li>
-            </ul>
-          </div>
-
-          <div className="mt-6 grid sm:flex items-stretch gap-3">
-            <a href="/guides/autoflower-bible" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-black bg-amber-400 text-black shadow-[0_8px_28px_rgba(255,176,32,0.25)] hover:brightness-110">Read the Guide</a>
-            <a href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-black border border-slate-600 hover:border-slate-400">Start with AK‑47 Autoflower</a>
-          </div>
-
-          <div className="mt-4 text-xs text-slate-400">Affiliate disclosure: we may earn a commission from links. No extra cost to you.</div>
-        </div>
-      </div>
     </div>
-  )
-}
+  </section>
+
+  <!-- Featured Strain (Side-by-Side) -->
+  <section class="from" aria-label="Featured strain">
+    <h2>Featured Strains</h2>
+
+    <style>
+      /* inline tweak for this section only */
+      .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+      @media (max-width:900px){.featured-grid{grid-template-columns:1fr}}
+    </style>
+
+    <div class="container featured-grid" style="padding:0">
+
+      <!-- Sour Diesel — Overview card -->
+      <article class="card sd-card" style="overflow:hidden;position:relative">
+        <figure style="margin:0;position:relative;height:280px">
+          <img src="ILGM-PDP-AK-47-Feminized-Seeds_1600px-2_f097f99b_thumbnail_1024.webp"
+               alt="Sour Diesel feminized cannabis buds" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
+          <span class="badge" style="position:absolute;left:12px;top:12px">
+            <span class="stars">★★★★★</span> 4.9/5
+          </span>
+        </figure>
+
+        <div style="position:relative;z-index:1;padding:16px 16px 18px">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Sour Diesel • Feminized</h3>
+          <p class="subtle" style="margin:0 0 10px">Chemdawg × Super Skunk · Sativa-dominant · THC ~21%</p>
+
+          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+            <li><strong>Effects:</strong> Creative, energetic, talkative</li>
+            <li><strong>Flavors:</strong> Citrus, diesel, herbal, pine, skunky</li>
+            <li><strong>Yield:</strong> up to 710 g/m² · <strong>Flower:</strong> ~77 days</li>
+            <li><strong>Grow Skill:</strong> Challenging · <strong>Climate:</strong> Indoor/Outdoor (sunny/Med/steppe)</li>
+          </ul>
+
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+            ⚠️ Only <span id="sd-num">15</span> packs left today
+          </div>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+            <span class="chip">Feminized</span>
+            <span class="chip">Photoperiod</span>
+            <span class="chip">Caryophyllene · Limonene · Myrcene</span>
+          </div>
+
+          <a class="btn"
+             href="https://ilgm.com/products/sour-diesel-feminized-seeds?_gl=1*1sw4tq*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3NjE3OTIkbzEkZzEkdDE3NTk3NjE3OTIkajYwJGwwJGgw&variant=UHJvZHVjdFZhcmlhbnQ6Njg2&aff=7946"
+             target="_blank" rel="sponsored noopener noreferrer">
+            View Price &amp; Buy →
+          </a>
+        </div>
+      </article>
+
+      <!-- Runtz — Overview card -->
+      <article class="card" style="overflow:hidden;position:relative">
+        <figure style="margin:0;position:relative;height:280px">
+          <img src="Runtz_c897fc1b_thumbnail_4096.webp"
+               alt="Runtz feminized cannabis buds" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
+          <span class="badge" style="position:absolute;left:12px;top:12px">
+            <span class="stars">★★★★★</span> 4.8/5
+          </span>
+        </figure>
+
+        <div style="position:relative;z-index:1;padding:16px 16px 18px">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Runtz • Feminized</h3>
+          <p class="subtle" style="margin:0 0 10px">
+            Zkittlez × Gelato #33 · Balanced hybrid · THC 19–29%
+          </p>
+
+          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+            <li><strong>Effects:</strong> Euphoric head high, relaxed body</li>
+            <li><strong>Flavors:</strong> Candy-sweet, fruity, creamy</li>
+            <li><strong>Grow Skill:</strong> Intermediate · Loves SCROG/SOG &amp; HST</li>
+            <li><strong>Notes:</strong> Many phenos; indoor/outdoor/greenhouse</li>
+          </ul>
+
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+            ⚠️ Only <span id="runtz-num">10</span> packs left today
+          </div>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+            <span class="chip">Feminized</span>
+            <span class="chip">Hybrid ~50/50</span>
+            <span class="chip">Caryophyllene · Limonene · Linalool</span>
+          </div>
+
+          <a class="btn"
+             href="https://ilgm.com/products/runtz-feminized-seeds?_gl=1*1icr84l*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3ODg5NTkkbzIkZzEkdDE3NTk3ODg5ODkkajMwJGwwJGg"
+             target="_blank" rel="noopener noreferrer">
+            View Price &amp; Buy →
+          </a>
+        </div>
+      </article>
 
     </div>
   </section>
-<!-- Featured Strain (Side-by-Side) -->
-<section class="from" aria-label="Featured strain">
-  <h2>Featured Strains</h2>
-
-  <style>
-    /* inline tweak for this section only */
-    .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width:900px){.featured-grid{grid-template-columns:1fr}}
-  </style>
-
-  <div class="container featured-grid" style="padding:0">
-
-    <!-- Sour Diesel — Overview card -->
-    <article class="card sd-card" style="overflow:hidden;position:relative">
-      <figure style="margin:0;position:relative;height:280px">
-        <img src="ILGM-PDP-AK-47-Feminized-Seeds_1600px-2_f097f99b_thumbnail_1024.webp"
-             alt="Sour Diesel feminized cannabis buds" loading="lazy"
-             style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
-        <span class="badge" style="position:absolute;left:12px;top:12px">
-          <span class="stars">★★★★★</span> 4.9/5
-        </span>
-      </figure>
-
-      <div style="position:relative;z-index:1;padding:16px 16px 18px">
-        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Sour Diesel • Feminized</h3>
-        <p class="subtle" style="margin:0 0 10px">Chemdawg × Super Skunk · Sativa-dominant · THC ~21%</p>
-
-        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
-          <li><strong>Effects:</strong> Creative, energetic, talkative</li>
-          <li><strong>Flavors:</strong> Citrus, diesel, herbal, pine, skunky</li>
-          <li><strong>Yield:</strong> up to 710 g/m² · <strong>Flower:</strong> ~77 days</li>
-          <li><strong>Grow Skill:</strong> Challenging · <strong>Climate:</strong> Indoor/Outdoor (sunny/Med/steppe)</li>
-        </ul>
-
-        <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-          ⚠️ Only <span id="sd-num">15</span> packs left today
-        </div>
-
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-          <span class="chip">Feminized</span>
-          <span class="chip">Photoperiod</span>
-          <span class="chip">Caryophyllene · Limonene · Myrcene</span>
-        </div>
-
-        <a class="btn"
-           href="https://ilgm.com/products/sour-diesel-feminized-seeds?_gl=1*1sw4tq*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3NjE3OTIkbzEkZzEkdDE3NTk3NjE3OTIkajYwJGwwJGgw&variant=UHJvZHVjdFZhcmlhbnQ6Njg2&aff=7946"
-           target="_blank" rel="sponsored noopener noreferrer">
-          View Price &amp; Buy →
-        </a>
-      </div>
-    </article>
-
-    <!-- Runtz — Overview card -->
-    <article class="card" style="overflow:hidden;position:relative">
-      <figure style="margin:0;position:relative;height:280px">
-        <img src="Runtz_c897fc1b_thumbnail_4096.webp"
-             alt="Runtz feminized cannabis buds" loading="lazy"
-             style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
-        <span class="badge" style="position:absolute;left:12px;top:12px">
-          <span class="stars">★★★★★</span> 4.8/5
-        </span>
-      </figure>
-
-      <div style="position:relative;z-index:1;padding:16px 16px 18px">
-        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Runtz • Feminized</h3>
-        <p class="subtle" style="margin:0 0 10px">
-          Zkittlez × Gelato #33 · Balanced hybrid · THC 19–29%
-        </p>
-
-        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
-          <li><strong>Effects:</strong> Euphoric head high, relaxed body</li>
-          <li><strong>Flavors:</strong> Candy-sweet, fruity, creamy</li>
-          <li><strong>Grow Skill:</strong> Intermediate · Loves SCROG/SOG &amp; HST</li>
-          <li><strong>Notes:</strong> Many phenos; indoor/outdoor/greenhouse</li>
-        </ul>
-
-        <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-          ⚠️ Only <span id="runtz-num">10</span> packs left today
-        </div>
-
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-          <span class="chip">Feminized</span>
-          <span class="chip">Hybrid ~50/50</span>
-          <span class="chip">Caryophyllene · Limonene · Linalool</span>
-        </div>
-
-        <a class="btn"
-           href="https://ilgm.com/products/runtz-feminized-seeds?_gl=1*1icr84l*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3ODg5NTkkbzIkZzEkdDE3NTk3ODg5ODkkajMwJGwwJGg"
-           target="_blank" rel="noopener noreferrer">
-          View Price &amp; Buy →
-        </a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<script>
-  // Counters
-  (function(){
-    const sd = document.getElementById('sd-num');
-    if(sd){ let n=+sd.textContent||15; setInterval(()=>{ if(n>3 && Math.random()<0.28){ sd.textContent=--n; } },7000); }
-    const rz = document.getElementById('runtz-num');
-    if(rz){ let m=+rz.textContent||10; setInterval(()=>{ if(m>3 && Math.random()<0.26){ rz.textContent=--m; } },7500); }
-  })();
-</script>
 
   <!-- Featured Gear -->
   <section class="from" aria-label="Featured gear">
@@ -598,22 +587,14 @@
       });
     })();
 
-    // Sour Diesel urgency counter (subtle, random)
+    // Counters (subtle, random)
     (function(){
-      const el = document.getElementById('sd-num');
-      if(el){
-        let n = parseInt(el.textContent || '15', 10);
-        setInterval(()=>{ if(n > 3 && Math.random() < 0.28){ el.textContent = --n; } }, 7000);
-      }
-    })();
-
-    // Gear stock counter (subtle, random)
-    (function(){
-      const el = document.getElementById('gear-num');
-      if(el){
-        let n = parseInt(el.textContent || '12', 10);
-        setInterval(()=>{ if(n > 2 && Math.random() < 0.22){ el.textContent = --n; } }, 8000);
-      }
+      const sd = document.getElementById('sd-num');
+      if(sd){ let n=+sd.textContent||15; setInterval(()=>{ if(n>3 && Math.random()<0.28){ sd.textContent=--n; } },7000); }
+      const rz = document.getElementById('runtz-num');
+      if(rz){ let m=+rz.textContent||10; setInterval(()=>{ if(m>3 && Math.random()<0.26){ rz.textContent=--m; } },7500); }
+      const gear = document.getElementById('gear-num');
+      if(gear){ let g=+gear.textContent||12; setInterval(()=>{ if(g>2 && Math.random()<0.22){ gear.textContent=--g; } },8000); }
     })();
   </script>
 </body>

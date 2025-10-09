@@ -271,6 +271,85 @@
         <div class="meta">Gummies, vapes, flower—simple dosing charts and timing.</div>
       </article>
 
+      export default function CannabisGuideCTA() {
+  return (
+    <div className="min-h-screen w-full bg-[#0b0d11] text-slate-100 flex items-center justify-center p-6">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-6">
+        {/* Visual Card */}
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800">
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(80% 60% at 20% 10%, rgba(122,255,175,.25) 0%, rgba(122,255,175,0) 60%), radial-gradient(60% 70% at 90% 30%, rgba(106,194,255,.25) 0%, rgba(106,194,255,0) 60%), linear-gradient(180deg, #0f141b 0%, #0b0d11 100%)",
+            }}
+          />
+          <div className="relative p-6 md:p-8 h-full flex flex-col justify-end">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-[10px] tracking-[0.2em] uppercase text-slate-300/80 font-bold">Field Guide</span>
+              <span className="inline-block h-1 w-1 rounded-full bg-emerald-400/80" />
+              <span className="text-[10px] tracking-[0.2em] uppercase text-slate-400">Beginner Safe</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black leading-tight">
+              Grow Smart. Start Fast.
+            </h2>
+            <p className="mt-3 text-slate-300/90 md:text-lg max-w-prose">
+              No hype. Just the exact steps and gear a first-time grower needs to run a clean autoflower from seed to jar—without blowing your budget.
+            </p>
+            <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-300/80">
+              {[
+                "2×2–3×3 Tents",
+                "150–250W LEDs",
+                "18/6 or 20/4",
+                "8–12 Week Runs",
+              ].map((chip) => (
+                <div
+                  key={chip}
+                  className="border border-slate-700/70 rounded-full px-3 py-2 text-center"
+                >
+                  {chip}
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Decorative corner */}
+          <svg className="absolute -top-6 -right-6 w-48 h-48 opacity-30" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stopColor="#7fdc7a" />
+                <stop offset="100%" stopColor="#6ac2ff" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#g)" d="M40.3,-66.3C53.5,-59.6,66.7,-53.4,72.7,-42.9C78.7,-32.3,77.5,-17.5,77,-2.9C76.4,11.8,76.4,26.2,71.1,38.3C65.7,50.4,55,60.2,42.4,66.7C29.8,73.2,14.9,76.4,0.2,76.1C-14.5,75.9,-29,72.2,-40.7,64.3C-52.4,56.4,-61.2,44.2,-67.7,31C-74.2,17.8,-78.4,3.6,-77.3,-10.2C-76.1,-23.9,-69.6,-37.2,-59.2,-45.9C-48.9,-54.5,-34.7,-58.5,-21.5,-65.1C-8.4,-71.6,3.6,-80.9,15.5,-83.1C27.5,-85.4,39.5,-80.7,40.3,-66.3Z" transform="translate(100 100)" />
+          </svg>
+        </div>
+
+        {/* Copy + CTA */}
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-[#0f141b] p-6 md:p-8 flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-extrabold text-emerald-300/90">New: Autoflower Bible for Beginners</h3>
+            <p className="mt-2 text-slate-300/90">
+              A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.
+            </p>
+            <ul className="mt-4 space-y-2 text-slate-300/90">
+              <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"/> Honest pros & cons (less time to fix mistakes)</li>
+              <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"/> Simple setup (2×2–3×3), sane budgets</li>
+              <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"/> Germination and feeding made easy</li>
+            </ul>
+          </div>
+
+          <div className="mt-6 grid sm:flex items-stretch gap-3">
+            <a href="/guides/autoflower-bible" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-black bg-amber-400 text-black shadow-[0_8px_28px_rgba(255,176,32,0.25)] hover:brightness-110">Read the Guide</a>
+            <a href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-black border border-slate-600 hover:border-slate-400">Start with AK‑47 Autoflower</a>
+          </div>
+
+          <div className="mt-4 text-xs text-slate-400">Affiliate disclosure: we may earn a commission from links. No extra cost to you.</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
     </div>
   </section>
 <!-- Featured Strain (Side-by-Side) -->

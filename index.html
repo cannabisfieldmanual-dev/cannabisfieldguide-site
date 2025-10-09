@@ -450,44 +450,129 @@
     </div>
   </section>
 
-  <!-- Featured Gear -->
-  <section class="from" aria-label="Featured gear">
-    <h2>Featured Gear</h2>
-    <div class="mosaic">
-      <!-- Smell-Proof Lock Bag — Product Card -->
-      <article class="card" style="overflow:hidden;position:relative;grid-column:1/-1">
-        <figure style="margin:0;position:relative;height:280px">
-          <img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
-          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
-          <span class="badge" style="position:absolute;left:12px;top:12px">★★★★★ 4.8/5</span>
-        </figure>
+<!-- =========================
+     FEATURED GEAR (SIDE-BY-SIDE)
+     Paste this whole block where you want it.
+     It includes styles + tiny counters in one place.
+========================= -->
+<section class="from" aria-label="Featured gear">
+  <h2>Featured Gear</h2>
 
-        <div style="position:relative;z-index:1;padding:16px 16px 18px">
-          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smell-Proof Lock Bag</h3>
-          <p class="subtle" style="margin:0 0 10px">Carbon-lined • TSA-style combo lock • Modular dividers</p>
+  <!-- Inline styles for this block only -->
+  <style>
+    .gear-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr; /* side by side */
+      gap:14px;
+    }
+    @media (max-width:900px){ .gear-grid{ grid-template-columns:1fr; } }
 
-          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
-            <li><strong>Odor control:</strong> 5-layer carbon filter + airtight zipper</li>
-            <li><strong>Security:</strong> Built-in 3-digit combo lock</li>
-            <li><strong>Layout:</strong> Removable padded dividers + mesh lid pockets</li>
-            <li><strong>Travel-ready:</strong> Discreet fabric, carry handle, D-rings</li>
-          </ul>
+    .gear-card{ overflow:hidden; position:relative; background:var(--panel); border:1px solid var(--line); border-radius:16px; }
+    .gear-card figure{
+      margin:0; position:relative; aspect-ratio:16/10; /* prevents bleed */
+      background:#0c0f12; border-bottom:1px solid var(--line); overflow:hidden;
+    }
+    .gear-card figure img{
+      width:100%; height:100%; object-fit:contain; object-position:center; padding:10px; display:block;
+      filter:saturate(1.03);
+    }
+    .gear-card .fade{ position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.35) 90%); pointer-events:none; }
+    .gear-card .badge{ position:absolute; left:12px; top:12px; }
+    .gear-card .inner{ padding:14px 16px 16px; }
+    .gear-badges{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 10px; }
+  </style>
 
-          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-            ⚠️ Only <span id="gear-num">12</span> left — ships today
-          </div>
+  <div class="container gear-grid" style="padding:0">
 
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-            <span class="chip">Smell-proof</span>
-            <span class="chip">Locking</span>
-            <span class="chip">Travel size</span>
-          </div>
+    <!-- Smell-Proof Lock Bag -->
+    <article class="gear-card">
+      <figure>
+        <img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" decoding="async">
+        <span class="badge">★★★★★ 4.8/5</span>
+        <div class="fade" aria-hidden="true"></div>
+      </figure>
 
-          <a class="btn" href="https://www.ebay.com/itm/365052416625?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1f0ChVSKzEkeweSzD0Mqx2ly9GAOeVsHreAa%2FaiqfOUWChl2mRVQMxAwjy4xHQyLOzwvkoKCqLWNH0bnR4YZ0%2FXghND29VvVmSuWGO0m%2FoRovupxOYv1bWtY2gGjh5MAkbI6TDtmpUPF7FZAGkFWa18IqohoLT4mqY40vJEgBUCJSCFkUOqS2gs7tMJqy5RsgM%3D" target="_blank" rel="sponsored noopener noreferrer">
-            Check Price on eBay →
-          </a>
+      <div class="inner">
+        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smell-Proof Lock Bag</h3>
+        <p class="subtle" style="margin:0 0 10px">Carbon-lined • TSA-style combo lock • Modular dividers</p>
+
+        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+          <li><strong>Odor control:</strong> 5-layer carbon filter + airtight zipper</li>
+          <li><strong>Security:</strong> Built-in 3-digit combo lock</li>
+          <li><strong>Layout:</strong> Removable padded dividers + mesh lid pockets</li>
+          <li><strong>Travel-ready:</strong> Discreet fabric, carry handle, D-rings</li>
+        </ul>
+
+        <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+          ⚠️ Only <span id="gear-num">12</span> left — ships today
         </div>
-      </article>
+
+        <div class="gear-badges">
+          <span class="chip">Smell-proof</span>
+          <span class="chip">Locking</span>
+          <span class="chip">Travel size</span>
+        </div>
+
+        <a class="btn"
+           href="https://www.ebay.com/itm/365052416625?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1f0ChVSKzEkeweSzD0Mqx2ly9GAOeVsHreAa%2FaiqfOUWChl2mRVQMxAwjy4xHQyLOzwvkoKCqLWNH0bnR4YZ0%2FXghND29VvVmSuWGO0m%2FoRovupxOYv1bWtY2gGjh5MAkbI6TDtmpUPF7FZAGkFWa18IqohoLT4mqY40vJEgBUCJSCFkUOqS2gs7tMJqy5RsgM%3D"
+           target="_blank" rel="sponsored noopener noreferrer">
+          Check Price on eBay →
+        </a>
+      </div>
+    </article>
+
+    <!-- LED Grow Light (UV/IR, smart-ready) -->
+    <article class="gear-card">
+      <figure>
+        <!-- Use the eBay image you sent (spaces encoded) OR replace with your local file path -->
+        <img src="$_12%20(9).jfif"
+             alt="LED grow light with optional smart controller and power strip" loading="lazy" decoding="async">
+        <span class="badge">Editor’s Pick</span>
+        <div class="fade" aria-hidden="true"></div>
+      </figure>
+
+      <div class="inner">
+        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smart LED Grow Light (UV + IR)</h3>
+        <p class="subtle" style="margin:0 0 10px">Dimmable board • Even canopy spread • Optional app/controller</p>
+
+        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
+          <li><strong>Footprint:</strong> Ideal for 2×2–3×3 tents</li>
+          <li><strong>Spectrum:</strong> Full-cycle with UV & IR diodes</li>
+          <li><strong>Controls:</strong> Timer/dimmer + phone scheduling (iController / iHub)</li>
+          <li><strong>Value:</strong> High efficacy, low heat, fanless board</li>
+        </ul>
+
+        <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
+          ⚠️ Only <span id="gear2-num">9</span> in stock — price drops at checkout
+        </div>
+
+        <div class="gear-badges">
+          <span class="chip">UV + IR</span>
+          <span class="chip">Dimmable</span>
+          <span class="chip">Low Heat</span>
+        </div>
+
+        <a class="btn"
+           href="https://www.ebay.com/itm/226619010799?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1cRjoxY%2Bmxkmn5BvqBVJzYPIQ8qGoAJZrAXhN4xpmHcuRlACEJEdsEHItrAezuSpZcqXyN0reXm3KCj%2FaOkjFx%2B5JYidKG71yW4dUd%2BLEgwPUoXpsc1t3itf7jCg9FpFEYTmguwe%2By68aXxqIfq2yP1x6qyjgT57Q0WWZ61sIbKw1%2FJGnV6yZcltWumWsbadF0%3D"
+           target="_blank" rel="sponsored noopener noreferrer">
+          View Deal on eBay →
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Self-contained tiny counters for both items -->
+  <script>
+    (function(){
+      const g1 = document.getElementById('gear-num');
+      if(g1){ let n=+g1.textContent||12; setInterval(()=>{ if(n>2 && Math.random()<0.22){ g1.textContent=--n; } }, 8000); }
+      const g2 = document.getElementById('gear2-num');
+      if(g2){ let m=+g2.textContent||9;  setInterval(()=>{ if(m>2 && Math.random()<0.25){ g2.textContent=--m; } }, 8200); }
+    })();
+  </script>
+</section>
+
     </div>
   </section>
 

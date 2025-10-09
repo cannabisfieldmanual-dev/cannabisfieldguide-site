@@ -10,50 +10,17 @@
   <link rel="canonical" href="https://cannabisfieldguide.org/">
 
   <style>
-    :root{
-      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
-      --panel:#111418; --panel-2:#0f1216;
-      --accent:#18f0b4; --accent2:#0acb92;
-      --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-
-    /* Base */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-
-    /* Site-wide wallpaper */
-    .wallpaper{position:fixed;inset:0;z-index:-1;pointer-events:none;
-      background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
-        linear-gradient(180deg, rgba(6,8,9,.55), rgba(6,8,9,.88)),
-        url('images/smoke-bg.jpg') center/cover no-repeat;
-      filter:saturate(1.03) contrast(1.02);
-    }
-    @media (max-width:700px){
-      .wallpaper{background:
-        radial-gradient(900px 400px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
-        linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),
-        url('images/smoke-bg.jpg') center/cover no-repeat}
-    }
-
-    /* Reusable */
+    :root{ --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a; --panel:#111418; --panel-2:#0f1216; --accent:#18f0b4; --accent2:#0acb92; --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35); }
+    *{box-sizing:border-box} html,body{height:100%} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%;height:auto} a{color:inherit;text-decoration:none} .container{max-width:1100px;margin:0 auto;padding:0 18px}
+    .wallpaper{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),linear-gradient(180deg, rgba(6,8,9,.55), rgba(6,8,9,.88)),url('images/smoke-bg.jpg') center/cover no-repeat;filter:saturate(1.03) contrast(1.02)}
+    @media (max-width:700px){.wallpaper{background:radial-gradient(900px 400px at 20% -10%, rgba(24,240,180,.08), transparent 60%),linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),url('images/smoke-bg.jpg') center/cover no-repeat}}
     .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
-    .title{margin:0;font-weight:900;letter-spacing:.2px}
-    .subtle{color:var(--muted)}
+    .title{margin:0;font-weight:900;letter-spacing:.2px} .subtle{color:var(--muted)}
     .section-title{margin:0 0 14px;text-align:center;color:var(--accent);font-size:1.1rem;font-weight:900;letter-spacing:.2px}
-    .hit{position:absolute;inset:0;z-index:2}
-    .stack-12>*{margin:0} .stack-12>*+*{margin-top:12px}
-    .stack-8>*{margin:0} .stack-8>*+*{margin-top:8px}
-
-    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;
-      font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));
-      padding:6px 10px;border-radius:999px}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;
-      color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
+    .hit{position:absolute;inset:0;z-index:2} .stack-12>*{margin:0}.stack-12>*+*{margin-top:12px} .stack-8>*{margin:0}.stack-8>*+*{margin-top:8px}
+    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:.82rem;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:6px 10px;border-radius:999px}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:11px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(10,203,146,.35)}
     .btn:hover{filter:brightness(1.06)}
     .btn-outline{display:inline-flex;align-items:center;justify-content:center;font-weight:900;padding:11px 14px;border-radius:12px;border:1px solid #2a3340;background:#11161b;color:var(--ink)}
     .btn-outline:hover{border-color:#3a4656}
@@ -61,222 +28,118 @@
     .chip:before{content:"✔";color:var(--accent);font-weight:900}
     .chiprow{display:flex;flex-wrap:wrap;gap:8px}
     .stars{color:#ffdc73;font-weight:900}
-
-    /* Header */
     header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(24,240,180,.6)}
-    .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
+    .brand{display:flex;align-items:center;gap:12px}.logo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(24,240,180,.6)} .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
     .nav a.btn{font-size:.92rem}
-
-    /* Hero */
-    .hero{margin:22px 0}
-    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
-    @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+    .hero{margin:22px 0}.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:16px} @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
     .brand-card{position:relative;border-radius:var(--rad);overflow:hidden;border:1px solid var(--line);background:var(--panel-2);min-height:280px}
-    .brand-media{position:absolute;inset:0;background:
-      linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.66)),
-      url('cannabis-leaf-silhouette-photo.jpg') center/cover no-repeat}
-    .brand-content{position:relative;z-index:1;padding:28px 22px}
-    .brand-content .kicker{margin:0 0 6px;opacity:.9}
+    .brand-media{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.66)),url('cannabis-leaf-silhouette-photo.jpg') center/cover no-repeat}
+    .brand-content{position:relative;z-index:1;padding:28px 22px}.brand-content .kicker{margin:0 0 6px;opacity:.9}
     .brand-content .site-title{margin:0 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900;background:linear-gradient(90deg,#fff,#eafff6,#b6ffe3);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.35)}
     .brand-content p{margin:6px 0 0;color:#d7e3e0;max-width:60ch}
-    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .cta-row{margin-top:14px}
-
-    /* Promo (aff) */
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.cta-row{margin-top:14px}
     .aff{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;background:#0f1116;border:1px solid var(--line);border-radius:var(--rad);padding:14px;position:relative;overflow:hidden}
     .aff::after{content:"";position:absolute;inset:0;border-radius:var(--rad);box-shadow:inset 0 0 0 1px rgba(24,240,180,.06), inset 0 0 60px rgba(24,240,180,.06);pointer-events:none}
     @media (max-width:560px){.aff{grid-template-columns:90px 1fr;padding:12px}}
     .rotor{position:relative;width:110px;height:110px;border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#0b0d10;display:block}
     .rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
     .rotor img.is-active{opacity:1}
-    .aff .title{color:var(--accent)}
-    .aff .desc{margin:6px 0 10px}
-
-    /* From the Guide — uniform grid */
-    .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
-    .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
-    .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media (max-width:900px){.mosaic{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
+    .aff .title{color:var(--accent)} .aff .desc{margin:6px 0 10px}
+    .from{max-width:1200px;margin:10px auto 0;padding:0 16px} .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
+    .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px} @media (max-width:900px){.mosaic{grid-template-columns:repeat(2,1fr)}} @media (max-width:600px){.mosaic{grid-template-columns:1fr}}
     .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10;height:220px}
     .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.95;transition:transform .35s ease, opacity .25s ease}
     .tile:hover img{transform:scale(1.03);opacity:1}
     .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
-
-    /* Tiles with description under image */
     .tile2{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b0d10}
     .tile2 .thumb{position:relative;height:220px}
     .tile2 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);opacity:.95;transition:transform .35s ease, opacity .25s ease}
     .tile2:hover .thumb img{transform:scale(1.03);opacity:1}
     .tile2 .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
     .tile2 .meta{padding:10px 12px;border-top:1px solid var(--line);background:#0f1316;color:#b7becc;font-size:.92rem}
-
-    /* Directory */
     main{margin:22px 0 36px}
     .directory{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-    .dir-card{padding:16px;text-align:center}
-    .dir-card h3{margin:8px 0 6px;font-size:1.02rem}
-    .dir-card p{margin:0;color:#b7becc;font-size:.92rem}
-    .dir-card .btn{margin-top:12px}
-
-    /* Footer */
+    .dir-card{padding:16px;text-align:center} .dir-card h3{margin:8px 0 6px;font-size:1.02rem} .dir-card p{margin:0;color:#b7becc;font-size:.92rem} .dir-card .btn{margin-top:12px}
     footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
-
-    /* Affiliate disclosure */
-    .disclosure{
-      margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);
-      background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem
-    }
-
-    /* 21+ sticky banner */
-    .age-notice{
-      position:sticky;bottom:0;left:0;right:0;z-index:9999;
-      background:linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);
-      border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);
-      backdrop-filter:saturate(1.1) blur(6px)
-    }
+    .disclosure{margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem}
+    .age-notice{position:sticky;bottom:0;left:0;right:0;z-index:9999;background:linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);backdrop-filter:saturate(1.1) blur(6px)}
     .age-wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .age-text{font-size:.95rem}
-    .age-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .age-text{font-size:.95rem} .age-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     .age-btn{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081014;border:0;border-radius:10px;padding:9px 12px;font-weight:900;cursor:pointer}
-    .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
-    .age-hidden{display:none}
-
-    @media (prefers-reduced-motion: reduce){
-      .rotor img{transition:none}
-      .tile img{transition:none}
-    }
-
-    /* === CTA Hero (added) === */
-    .cta-hero{margin:22px 0}
-    .cta-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
-    @media (max-width:900px){.cta-hero .wrap{grid-template-columns:1fr}}
+    .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px} .age-hidden{display:none}
+    @media (prefers-reduced-motion: reduce){ .rotor img{transition:none} .tile img{transition:none} }
+    .cta-hero{margin:22px 0} .cta-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:16px} @media (max-width:900px){.cta-hero .wrap{grid-template-columns:1fr}}
     .cta-visual{position:relative;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;background:linear-gradient(180deg,#0f141b 0%,#0b0d11 100%)}
-    .cta-visual .glow{position:absolute;inset:0;background:
-      radial-gradient(80% 60% at 20% 10%, rgba(122,255,175,.25) 0%, rgba(122,255,175,0) 60%),
-      radial-gradient(60% 70% at 90% 30%, rgba(106,194,255,.25) 0%, rgba(106,194,255,0) 60%);
-      pointer-events:none}
+    .cta-visual .glow{position:absolute;inset:0;background:radial-gradient(80% 60% at 20% 10%, rgba(122,255,175,.25) 0%, rgba(122,255,175,0) 60%),radial-gradient(60% 70% at 90% 30%, rgba(106,194,255,.25) 0%, rgba(106,194,255,0) 60%);pointer-events:none}
     .cta-visual .content{position:relative;z-index:1;padding:22px 18px 26px;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px}
     .cta-visual .kicker{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
     .cta-visual h2{margin:6px 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900}
-    .cta-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
-    @media (max-width:640px){.cta-chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    .cta-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px} @media (max-width:640px){.cta-chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .cta-chip{border:1px solid var(--line);border-radius:999px;padding:8px 10px;text-align:center;color:#d2dae7;font-size:.82rem;background:#101418}
     .cta-copy{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--rad);padding:18px}
     .cta-copy h3{margin:0 0 6px;font-size:1.06rem;color:#8ff5d8;font-weight:900}
     .cta-bullets{margin:10px 0 0;padding:0;list-style:none;color:#d5dbe6}
     .cta-bullets li{display:flex;gap:8px;margin:8px 0}
     .cta-bullets li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-    .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-    @media (max-width:520px){.cta-actions{grid-template-columns:1fr}}
+    .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px} @media (max-width:520px){.cta-actions{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-
-  <!-- Site-wide wallpaper -->
   <div class="wallpaper" aria-hidden="true"></div>
 
-  <!-- Header -->
   <header>
     <div class="container nav">
-      <div class="brand">
-        <span class="logo-dot" aria-hidden="true"></span>
-        <h1>Cannabis Field Guide</h1>
-      </div>
+      <div class="brand"><span class="logo-dot" aria-hidden="true"></span><h1>Cannabis Field Guide</h1></div>
       <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop pre-rolls, flower, vapes">Shop →</a>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="container wrap">
-      <!-- Brand card -->
       <article class="brand-card">
         <div class="brand-media" aria-hidden="true"></div>
         <div class="brand-content">
           <p class="kicker subtle">Independent • Honest • Field-Tested</p>
           <h2 class="site-title title">Straight talk on cultivation, wellness, laws, and product picks — no hype.</h2>
-
-          <div class="badge-row">
-            <span class="badge" aria-hidden="true">21+ Only</span>
-            <span class="badge" aria-hidden="true">Pre-Rolls • Flower • Vapes</span>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls →</a>
-          </div>
-
-          <!-- Affiliate disclosure -->
-          <p class="disclosure" role="note">
-            <strong>Affiliate disclosure:</strong> Some links on this site are affiliate links. If you purchase through them, we may earn a small commission at no extra cost to you. We only recommend products we actually use. Content is for adults <strong>21+</strong>.
-          </p>
+          <div class="badge-row"><span class="badge" aria-hidden="true">21+ Only</span><span class="badge" aria-hidden="true">Pre-Rolls • Flower • Vapes</span></div>
+          <div class="cta-row"><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Pre-Rolls →</a></div>
+          <p class="disclosure" role="note"><strong>Affiliate disclosure:</strong> Some links on this site are affiliate links. If you purchase through them, we may earn a small commission at no extra cost to you. We only recommend products we actually use. Content is for adults <strong>21+</strong>.</p>
         </div>
         <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop"></a>
       </article>
 
-      <!-- Promo / affiliate -->
       <aside class="aff card">
-        <a href="https://getbudonline.com/subid/christopher.serpico/" class="rotor"
-           rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop now at GetBud Online">
+        <a href="https://getbudonline.com/subid/christopher.serpico/" class="rotor" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop now at GetBud Online">
           <img src="concentrates.jpg" alt="Gummies and concentrates" loading="eager" decoding="async" class="is-active">
-          <img src="vape.jpg"         alt="Vape cartridges and batteries" loading="lazy"  decoding="async">
-          <img src="cbd.jpg"          alt="Flower and value ounces"       loading="lazy"  decoding="async">
-          <img src="qr%20(4).png"     alt="QR code to shop"               loading="lazy"  decoding="async">
+          <img src="vape.jpg" alt="Vape cartridges and batteries" loading="lazy" decoding="async">
+          <img src="cbd.jpg" alt="Flower and value ounces" loading="lazy" decoding="async">
+          <img src="qr%20(4).png" alt="QR code to shop" loading="lazy" decoding="async">
         </a>
-
         <div class="stack-8">
           <h3 class="title">GetBud Online</h3>
           <p class="subtle desc">Fresh pre-rolls, even burn, discreet + fast. <strong>15% off first purchase: GBO15</strong></p>
-
-          <div class="chiprow">
-            <span class="chip">Even burn</span>
-            <span class="chip">Strain variety</span>
-            <span class="chip">Multi-pack deals</span>
-          </div>
-
+          <div class="chiprow"><span class="chip">Even burn</span><span class="chip">Strain variety</span><span class="chip">Multi-pack deals</span></div>
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
         </div>
       </aside>
     </div>
   </section>
 
-  <!-- CTA HERO: Autoflower Bible (added) -->
+  <!-- CTA HERO -->
   <section class="cta-hero">
     <div class="container wrap">
-
-      <!-- Visual / headline card -->
       <article class="cta-visual card">
         <div class="glow" aria-hidden="true"></div>
         <div class="content">
           <div class="kicker">Field Guide • Beginner Safe</div>
           <h2 class="title">Grow Smart. Start Fast.</h2>
-          <p class="subtle" style="max-width:60ch">
-            No hype. Just the exact steps and gear a first-time grower needs to run a clean
-            autoflower from seed to jar—without blowing your budget.
-          </p>
-
-          <div class="cta-chips">
-            <div class="cta-chip">2×2–3×3 Tents</div>
-            <div class="cta-chip">150–250W LEDs</div>
-            <div class="cta-chip">18/6 or 20/4</div>
-            <div class="cta-chip">8–12 Week Runs</div>
-          </div>
+          <p class="subtle" style="max-width:60ch">No hype. Just the exact steps and gear a first-time grower needs to run a clean autoflower from seed to jar—without blowing your budget.</p>
+          <div class="cta-chips"><div class="cta-chip">2×2–3×3 Tents</div><div class="cta-chip">150–250W LEDs</div><div class="cta-chip">18/6 or 20/4</div><div class="cta-chip">8–12 Week Runs</div></div>
         </div>
-        <!-- decorative corner blob -->
-        <svg class="hit" style="position:absolute;right:-24px;top:-24px;width:180px;height:180px;opacity:.25;pointer-events:none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#7fdc7a"/><stop offset="100%" stop-color="#6ac2ff"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#g)" d="M40.3,-66.3C53.5,-59.6,66.7,-53.4,72.7,-42.9C78.7,-32.3,77.5,-17.5,77,-2.9C76.4,11.8,76.4,26.2,71.1,38.3C65.7,50.4,55,60.2,42.4,66.7C29.8,73.2,14.9,76.4,0.2,76.1C-14.5,75.9,-29,72.2,-40.7,64.3C-52.4,56.4,-61.2,44.2,-67.7,31C-74.2,17.8,-78.4,3.6,-77.3,-10.2C-76.1,-23.9,-69.6,-37.2,-59.2,-45.9C-48.9,-54.5,-34.7,-58.5,-21.5,-65.1C-8.4,-71.6,3.6,-80.9,15.5,-83.1C27.5,-85.4,39.5,-80.7,40.3,-66.3Z" transform="translate(100 100)"/>
-        </svg>
       </article>
 
-      <!-- Copy + CTAs -->
+      <!-- Copy + CTAs (link FIXED) -->
       <aside class="cta-copy card">
         <h3>New: Autoflower Bible for Beginners</h3>
         <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
@@ -286,12 +149,11 @@
           <li>Germination and feeding made easy</li>
         </ul>
         <div class="cta-actions">
-          <a class="btn" href="/guides/autoflower-bible" aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
+          <a class="btn" href="/guides/autoflower-bible-for-beginners" aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
           <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
         </div>
         <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
       </aside>
-
     </div>
   </section>
 
@@ -299,348 +161,148 @@
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
     <div class="mosaic">
-
-      <!-- Rolling Tips subpage -->
       <a href="rolling-tips.html" aria-label="Rolling Tips subpage">
         <article class="tile2 card">
-          <div class="thumb">
-            <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
-                 alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async">
-            <span class="cap">Rolling Tips</span>
-          </div>
+          <div class="thumb"><img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async"><span class="cap">Rolling Tips</span></div>
           <div class="meta">Papers, filters, cones, and even burns—step-by-step.</div>
         </article>
       </a>
 
-      <!-- Morning Pairings subpage -->
       <a href="morning-pairings.html" aria-label="Morning Pairings subpage">
         <article class="tile2 card">
-          <div class="thumb">
-            <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg"
-                 alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
-            <span class="cap">Morning Pairings</span>
-          </div>
+          <div class="thumb"><img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async"><span class="cap">Morning Pairings</span></div>
           <div class="meta">Light sativas with coffee or tea for a clear, upbeat start.</div>
         </article>
       </a>
 
-     <!-- Buying Legally subpage -->
-<a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
-  <article class="tile2 card">
-    <div class="thumb">
-      <img src="Nuggets-buds-retail-counter-736x414.webp"
-           alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
-      <span class="cap">Buying Legally</span>
-    </div>
-    <div class="meta">ID, purchase limits, delivery rules, and local compliance.</div>
-  </article>
-</a>
+      <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
+        <article class="tile2 card">
+          <div class="thumb"><img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async"><span class="cap">Buying Legally</span></div>
+          <div class="meta">ID, purchase limits, delivery rules, and local compliance.</div>
+        </article>
+      </a>
 
-<!-- Formats & Dosing (external shop link) -->
-<article class="tile2 card">
-  <div class="thumb">
-    <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
-    <span class="cap">Formats &amp; Dosing</span>
-    <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/"
-       rel="sponsored noopener noreferrer" target="_blank"
-       aria-label="Open shop via Formats &amp; Dosing tile"></a>
-  </div>
-  <div class="meta">Gummies, vapes, flower—simple dosing charts and timing.</div>
-</article>
+      <article class="tile2 card">
+        <div class="thumb">
+          <img src="istockphoto-2075431460-612x612.jpg" alt="Dispensary jars on counter" loading="lazy" decoding="async">
+          <span class="cap">Formats &amp; Dosing</span>
+          <a class="hit" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank" aria-label="Open shop via Formats &amp; Dosing tile"></a>
+        </div>
+        <div class="meta">Gummies, vapes, flower—simple dosing charts and timing.</div>
+      </article>
 
-<!-- Funny Patch (affiliate) -->
-<article class="tile2 card">
-  <div class="thumb">
-    <!-- If you didn’t rename the file, keep the encoded spaces below -->
-    <img src="s-l1600%20(25).jpg"
-         alt="Black and red novelty patch that reads ‘Sorry I’m High’" loading="lazy" decoding="async"
-         style="object-position:center">
-    <span class="cap">‘Sorry I’m High’ Patch</span>
-    <a class="hit"
-       href="https://www.ebay.com/itm/225454254027?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1"
-       rel="sponsored noopener noreferrer" target="_blank"
-       aria-label="Buy the ‘Sorry I’m High’ patch on eBay"></a>
-  </div>
-  <div class="meta">Velcro-backed novelty patch—great for stash bags, tent walls, or jackets. Usually under $10.</div>
-</article>
-
-      
+      <article class="tile2 card">
+        <div class="thumb">
+          <img src="s-l1600%20(25).jpg" alt="Black and red novelty patch that reads ‘Sorry I’m High’" loading="lazy" decoding="async" style="object-position:center">
+          <span class="cap">‘Sorry I’m High’ Patch</span>
+          <a class="hit" href="https://www.ebay.com/itm/225454254027?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" rel="sponsored noopener noreferrer" target="_blank" aria-label="Buy the ‘Sorry I’m High’ patch on eBay"></a>
+        </div>
+        <div class="meta">Velcro-backed novelty patch—great for stash bags, tent walls, or jackets. Usually under $10.</div>
+      </article>
     </div>
   </section>
 
-  <!-- Featured Strain (Side-by-Side) -->
+  <!-- Featured Strains -->
   <section class="from" aria-label="Featured strain">
     <h2>Featured Strains</h2>
-
-    <style>
-      /* inline tweak for this section only */
-      .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-      @media (max-width:900px){.featured-grid{grid-template-columns:1fr}}
-    </style>
-
+    <style>.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:900px){.featured-grid{grid-template-columns:1fr}}</style>
     <div class="container featured-grid" style="padding:0">
-
-      <!-- Sour Diesel — Overview card -->
       <article class="card sd-card" style="overflow:hidden;position:relative">
         <figure style="margin:0;position:relative;height:280px">
-          <img src="ILGM-PDP-AK-47-Feminized-Seeds_1600px-2_f097f99b_thumbnail_1024.webp"
-               alt="Sour Diesel feminized cannabis buds" loading="lazy"
-               style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+          <img src="ILGM-PDP-AK-47-Feminized-Seeds_1600px-2_f097f99b_thumbnail_1024.webp" alt="Sour Diesel feminized cannabis buds" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
-          <span class="badge" style="position:absolute;left:12px;top:12px">
-            <span class="stars">★★★★★</span> 4.9/5
-          </span>
+          <span class="badge" style="position:absolute;left:12px;top:12px"><span class="stars">★★★★★</span> 4.9/5</span>
         </figure>
-
         <div style="position:relative;z-index:1;padding:16px 16px 18px">
           <h3 class="title" style="color:var(--accent);margin-bottom:6px">Sour Diesel • Feminized</h3>
           <p class="subtle" style="margin:0 0 10px">Chemdawg × Super Skunk · Sativa-dominant · THC ~21%</p>
-
           <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
             <li><strong>Effects:</strong> Creative, energetic, talkative</li>
             <li><strong>Flavors:</strong> Citrus, diesel, herbal, pine, skunky</li>
             <li><strong>Yield:</strong> up to 710 g/m² · <strong>Flower:</strong> ~77 days</li>
             <li><strong>Grow Skill:</strong> Challenging · <strong>Climate:</strong> Indoor/Outdoor (sunny/Med/steppe)</li>
           </ul>
-
-          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-            ⚠️ Only <span id="sd-num">15</span> packs left today
-          </div>
-
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-            <span class="chip">Feminized</span>
-            <span class="chip">Photoperiod</span>
-            <span class="chip">Caryophyllene · Limonene · Myrcene</span>
-          </div>
-
-          <a class="btn"
-             href="https://ilgm.com/products/sour-diesel-feminized-seeds?_gl=1*1sw4tq*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3NjE3OTIkbzEkZzEkdDE3NTk3NjE3OTIkajYwJGwwJGgw&variant=UHJvZHVjdFZhcmlhbnQ6Njg2&aff=7946"
-             target="_blank" rel="sponsored noopener noreferrer">
-            View Price &amp; Buy →
-          </a>
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">⚠️ Only <span id="sd-num">15</span> packs left today</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><span class="chip">Feminized</span><span class="chip">Photoperiod</span><span class="chip">Caryophyllene · Limonene · Myrcene</span></div>
+          <a class="btn" href="https://ilgm.com/products/sour-diesel-feminized-seeds?aff=7946" target="_blank" rel="sponsored noopener noreferrer">View Price &amp; Buy →</a>
         </div>
       </article>
 
-      <!-- Runtz — Overview card -->
       <article class="card" style="overflow:hidden;position:relative">
         <figure style="margin:0;position:relative;height:280px">
-          <img src="Runtz_c897fc1b_thumbnail_4096.webp"
-               alt="Runtz feminized cannabis buds" loading="lazy"
-               style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
+          <img src="Runtz_c897fc1b_thumbnail_4096.webp" alt="Runtz feminized cannabis buds" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.03)">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.85))"></div>
-          <span class="badge" style="position:absolute;left:12px;top:12px">
-            <span class="stars">★★★★★</span> 4.8/5
-          </span>
+          <span class="badge" style="position:absolute;left:12px;top:12px"><span class="stars">★★★★★</span> 4.8/5</span>
         </figure>
-
         <div style="position:relative;z-index:1;padding:16px 16px 18px">
           <h3 class="title" style="color:var(--accent);margin-bottom:6px">Runtz • Feminized</h3>
-          <p class="subtle" style="margin:0 0 10px">
-            Zkittlez × Gelato #33 · Balanced hybrid · THC 19–29%
-          </p>
-
+          <p class="subtle" style="margin:0 0 10px">Zkittlez × Gelato #33 · Balanced hybrid · THC 19–29%</p>
           <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
             <li><strong>Effects:</strong> Euphoric head high, relaxed body</li>
             <li><strong>Flavors:</strong> Candy-sweet, fruity, creamy</li>
             <li><strong>Grow Skill:</strong> Intermediate · Loves SCROG/SOG &amp; HST</li>
             <li><strong>Notes:</strong> Many phenos; indoor/outdoor/greenhouse</li>
           </ul>
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">⚠️ Only <span id="runtz-num">10</span> packs left today</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><span class="chip">Feminized</span><span class="chip">Hybrid ~50/50</span><span class="chip">Caryophyllene · Limonene · Linalool</span></div>
+          <a class="btn" href="https://ilgm.com/products/runtz-feminized-seeds?aff=7946" target="_blank" rel="sponsored noopener noreferrer">View Price &amp; Buy →</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-            ⚠️ Only <span id="runtz-num">10</span> packs left today
-          </div>
-
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-            <span class="chip">Feminized</span>
-            <span class="chip">Hybrid ~50/50</span>
-            <span class="chip">Caryophyllene · Limonene · Linalool</span>
-          </div>
-
-          <a class="btn"
-             href="https://ilgm.com/products/runtz-feminized-seeds?_gl=1*1icr84l*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NTk3ODg5NTkkbzIkZzEkdDE3NTk3ODg5ODkkajMwJGwwJGg"
-             target="_blank" rel="noopener noreferrer">
-            View Price &amp; Buy →
-          </a>
+  <!-- Featured Gear (side-by-side) -->
+  <section class="from" aria-label="Featured gear">
+    <h2>Featured Gear</h2>
+    <style>.gear-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:900px){.gear-grid{grid-template-columns:1fr}} .gear-card{overflow:hidden;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px} .gear-card figure{margin:0;position:relative;aspect-ratio:16/10;background:#0c0f12;border-bottom:1px solid var(--line);overflow:hidden} .gear-card figure img{width:100%;height:100%;object-fit:contain;object-position:center;padding:10px;display:block;filter:saturate(1.03)} .gear-card .fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.35) 90%);pointer-events:none} .gear-card .badge{position:absolute;left:12px;top:12px} .gear-card .inner{padding:14px 16px 16px} .gear-badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}</style>
+    <div class="container gear-grid" style="padding:0">
+      <article class="gear-card">
+        <figure><img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" decoding="async"><span class="badge">★★★★★ 4.8/5</span><div class="fade" aria-hidden="true"></div></figure>
+        <div class="inner">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smell-Proof Lock Bag</h3>
+          <p class="subtle" style="margin:0 0 10px">Carbon-lined • TSA-style combo lock • Modular dividers</p>
+          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55"><li><strong>Odor control:</strong> 5-layer carbon filter + airtight zipper</li><li><strong>Security:</strong> Built-in 3-digit combo lock</li><li><strong>Layout:</strong> Removable padded dividers + mesh lid pockets</li><li><strong>Travel-ready:</strong> Discreet fabric, carry handle, D-rings</li></ul>
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">⚠️ Only <span id="gear-num">12</span> left — ships today</div>
+          <div class="gear-badges"><span class="chip">Smell-proof</span><span class="chip">Locking</span><span class="chip">Travel size</span></div>
+          <a class="btn" href="https://www.ebay.com/itm/365052416625?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener noreferrer">US $25.05 →</a>
         </div>
       </article>
 
+      <article class="gear-card">
+        <figure><img src="$_12%20(9).jfif" alt="LED grow light with optional smart controller and power strip" loading="lazy" decoding="async"><span class="badge">Editor’s Pick</span><div class="fade" aria-hidden="true"></div></figure>
+        <div class="inner">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smart LED Grow Light (UV + IR)</h3>
+          <p class="subtle" style="margin:0 0 10px">Dimmable board • Even canopy spread • Optional app/controller</p>
+          <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55"><li><strong>Footprint:</strong> Ideal for 2×2–3×3 tents</li><li><strong>Spectrum:</strong> Full-cycle with UV & IR diodes</li><li><strong>Controls:</strong> Timer/dimmer + phone scheduling (iController / iHub)</li><li><strong>Value:</strong> High efficacy, low heat, fanless board</li></ul>
+          <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">⚠️ Only <span id="gear2-num">9</span> in stock — price drops at checkout</div>
+          <div class="gear-badges"><span class="chip">UV + IR</span><span class="chip">Dimmable</span><span class="chip">Low Heat</span></div>
+          <a class="btn" href="https://www.ebay.com/itm/226619010799?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener noreferrer">Price: $79.99 →</a>
+        </div>
+      </article>
     </div>
+    <script>
+      (function(){
+        const g1=document.getElementById('gear-num'); if(g1){let n=+g1.textContent||12; setInterval(()=>{if(n>2&&Math.random()<0.22){g1.textContent=--n;}},8000);}
+        const g2=document.getElementById('gear2-num'); if(g2){let m=+g2.textContent||9; setInterval(()=>{if(m>2&&Math.random()<0.25){g2.textContent=--m;}},8200);}
+      })();
+    </script>
   </section>
 
-<!-- =========================
-     FEATURED GEAR (SIDE-BY-SIDE)
-     Paste this whole block where you want it.
-     It includes styles + tiny counters in one place.
-========================= -->
-<section class="from" aria-label="Featured gear">
-  <h2>Featured Gear</h2>
-
-  <!-- Inline styles for this block only -->
-  <style>
-    .gear-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr; /* side by side */
-      gap:14px;
-    }
-    @media (max-width:900px){ .gear-grid{ grid-template-columns:1fr; } }
-
-    .gear-card{ overflow:hidden; position:relative; background:var(--panel); border:1px solid var(--line); border-radius:16px; }
-    .gear-card figure{
-      margin:0; position:relative; aspect-ratio:16/10; /* prevents bleed */
-      background:#0c0f12; border-bottom:1px solid var(--line); overflow:hidden;
-    }
-    .gear-card figure img{
-      width:100%; height:100%; object-fit:contain; object-position:center; padding:10px; display:block;
-      filter:saturate(1.03);
-    }
-    .gear-card .fade{ position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.35) 90%); pointer-events:none; }
-    .gear-card .badge{ position:absolute; left:12px; top:12px; }
-    .gear-card .inner{ padding:14px 16px 16px; }
-    .gear-badges{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 10px; }
-  </style>
-
-  <div class="container gear-grid" style="padding:0">
-
-    <!-- Smell-Proof Lock Bag -->
-    <article class="gear-card">
-      <figure>
-        <img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" decoding="async">
-        <span class="badge">★★★★★ 4.8/5</span>
-        <div class="fade" aria-hidden="true"></div>
-      </figure>
-
-      <div class="inner">
-        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smell-Proof Lock Bag</h3>
-        <p class="subtle" style="margin:0 0 10px">Carbon-lined • TSA-style combo lock • Modular dividers</p>
-
-        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
-          <li><strong>Odor control:</strong> 5-layer carbon filter + airtight zipper</li>
-          <li><strong>Security:</strong> Built-in 3-digit combo lock</li>
-          <li><strong>Layout:</strong> Removable padded dividers + mesh lid pockets</li>
-          <li><strong>Travel-ready:</strong> Discreet fabric, carry handle, D-rings</li>
-        </ul>
-
-        <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-          ⚠️ Only <span id="gear-num">12</span> left — ships today
-        </div>
-
-        <div class="gear-badges">
-          <span class="chip">Smell-proof</span>
-          <span class="chip">Locking</span>
-          <span class="chip">Travel size</span>
-        </div>
-
-        <a class="btn"
-           href="https://www.ebay.com/itm/365052416625?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1f0ChVSKzEkeweSzD0Mqx2ly9GAOeVsHreAa%2FaiqfOUWChl2mRVQMxAwjy4xHQyLOzwvkoKCqLWNH0bnR4YZ0%2FXghND29VvVmSuWGO0m%2FoRovupxOYv1bWtY2gGjh5MAkbI6TDtmpUPF7FZAGkFWa18IqohoLT4mqY40vJEgBUCJSCFkUOqS2gs7tMJqy5RsgM%3D"
-           target="_blank" rel="sponsored noopener noreferrer">
-          US $25.05 →
-        </a>
-      </div>
-    </article>
-
-    <!-- LED Grow Light (UV/IR, smart-ready) -->
-    <article class="gear-card">
-      <figure>
-        <!-- Use the eBay image you sent (spaces encoded) OR replace with your local file path -->
-        <img src="$_12%20(9).jfif"
-             alt="LED grow light with optional smart controller and power strip" loading="lazy" decoding="async">
-        <span class="badge">Editor’s Pick</span>
-        <div class="fade" aria-hidden="true"></div>
-      </figure>
-
-      <div class="inner">
-        <h3 class="title" style="color:var(--accent);margin-bottom:6px">Smart LED Grow Light (UV + IR)</h3>
-        <p class="subtle" style="margin:0 0 10px">Dimmable board • Even canopy spread • Optional app/controller</p>
-
-        <ul style="margin:0 0 12px 18px;color:#d6dbe5;font-size:.93rem;line-height:1.55">
-          <li><strong>Footprint:</strong> Ideal for 2×2–3×3 tents</li>
-          <li><strong>Spectrum:</strong> Full-cycle with UV & IR diodes</li>
-          <li><strong>Controls:</strong> Timer/dimmer + phone scheduling (iController / iHub)</li>
-          <li><strong>Value:</strong> High efficacy, low heat, fanless board</li>
-        </ul>
-
-        <div class="subtle" style="font-weight:800;color:#ff6b6b;margin:0 0 12px">
-          ⚠️ Only <span id="gear2-num">9</span> in stock — price drops at checkout
-        </div>
-
-        <div class="gear-badges">
-          <span class="chip">UV + IR</span>
-          <span class="chip">Dimmable</span>
-          <span class="chip">Low Heat</span>
-        </div>
-
-        <a class="btn"
-           href="https://www.ebay.com/itm/226619010799?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1cRjoxY%2Bmxkmn5BvqBVJzYPIQ8qGoAJZrAXhN4xpmHcuRlACEJEdsEHItrAezuSpZcqXyN0reXm3KCj%2FaOkjFx%2B5JYidKG71yW4dUd%2BLEgwPUoXpsc1t3itf7jCg9FpFEYTmguwe%2By68aXxqIfq2yP1x6qyjgT57Q0WWZ61sIbKw1%2FJGnV6yZcltWumWsbadF0%3D"
-           target="_blank" rel="sponsored noopener noreferrer">
-          Price: $79.99 →
-        </a>
-      </div>
-    </article>
-
-  </div>
-
-  <!-- Self-contained tiny counters for both items -->
-  <script>
-    (function(){
-      const g1 = document.getElementById('gear-num');
-      if(g1){ let n=+g1.textContent||12; setInterval(()=>{ if(n>2 && Math.random()<0.22){ g1.textContent=--n; } }, 8000); }
-      const g2 = document.getElementById('gear2-num');
-      if(g2){ let m=+g2.textContent||9;  setInterval(()=>{ if(m>2 && Math.random()<0.25){ g2.textContent=--m; } }, 8200); }
-    })();
-  </script>
-</section>
-
-    </div>
-  </section>
-
-  <!-- Directory -->
   <main>
     <div class="container">
       <h2 class="section-title">Explore the Guide</h2>
-
       <div class="directory">
-        <article class="dir-card card stack-12">
-          <h3 class="title">Cultivation</h3>
-          <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
-        </article>
-
-        <article class="dir-card card stack-12">
-          <h3 class="title">Wellness</h3>
-          <p>Pain, sleep, appetite, and mood — dosage basics and formats.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
-        </article>
-
-        <article class="dir-card card stack-12">
-          <h3 class="title">Laws &amp; Buying</h3>
-          <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
-        </article>
-
-        <article class="dir-card card stack-12">
-          <h3 class="title">Strains &amp; Products</h3>
-          <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
-        </article>
-
-        <article class="dir-card card stack-12">
-          <h3 class="title">Guides &amp; How-Tos</h3>
-          <p>Roll, store, grind, clean glass, travel tips, and more.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
-        </article>
-
-        <article class="dir-card card stack-12">
-          <h3 class="title">Blog &amp; Deals</h3>
-          <p>Fresh content and rotating promos from trusted partners.</p>
-          <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
-        </article>
+        <article class="dir-card card stack-12"><h3 class="title">Cultivation</h3><p>From soil prep to indoor grows — practical, step-by-step how-tos.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
+        <article class="dir-card card stack-12"><h3 class="title">Wellness</h3><p>Pain, sleep, appetite, and mood — dosage basics and formats.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
+        <article class="dir-card card stack-12"><h3 class="title">Laws &amp; Buying</h3><p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
+        <article class="dir-card card stack-12"><h3 class="title">Strains &amp; Products</h3><p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
+        <article class="dir-card card stack-12"><h3 class="title">Guides &amp; How-Tos</h3><p>Roll, store, grind, clean glass, travel tips, and more.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
+        <article class="dir-card card stack-12"><h3 class="title">Blog &amp; Deals</h3><p>Fresh content and rotating promos from trusted partners.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
       </div>
-
       <p class="subtle" style="text-align:center;margin:16px 0 0">21+ only. This site is educational and for legal adults in compliant regions. Always follow local laws.</p>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <span>© <span id="y"></span> Cannabis Field Guide — Adults 21+. This site uses affiliate links; we may earn a commission at no extra cost to you.</span>
@@ -648,56 +310,18 @@
     </div>
   </footer>
 
-  <!-- 21+ sticky age banner -->
   <div id="ageNotice" class="age-notice" role="dialog" aria-live="polite" aria-label="21+ age notice">
     <div class="age-wrap">
       <span class="age-text">🚨 For adults <strong>21+</strong> (or legal age in your area). By using this site you confirm you are of legal age.</span>
-      <div class="age-actions">
-        <a class="age-link" href="/privacy.html">Privacy</a>
-        <a class="age-link" href="/terms.html">Terms</a>
-        <button id="ageConfirm" class="age-btn">I’m 21+</button>
-      </div>
+      <div class="age-actions"><a class="age-link" href="/privacy.html">Privacy</a><a class="age-link" href="/terms.html">Terms</a><button id="ageConfirm" class="age-btn">I’m 21+</button></div>
     </div>
   </div>
 
   <script>
-    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Image rotor (fade every 3s)
-    (function(){
-      const imgs = document.querySelectorAll('.rotor img');
-      let i = 0;
-      if (imgs.length > 1){
-        setInterval(()=>{
-          imgs[i].classList.remove('is-active');
-          i = (i + 1) % imgs.length;
-          imgs[i].classList.add('is-active');
-        }, 3000);
-      }
-    })();
-
-    // 21+ banner memory
-    (function(){
-      const KEY='cfg_age_ok';
-      const bar=document.getElementById('ageNotice');
-      const btn=document.getElementById('ageConfirm');
-      if(localStorage.getItem(KEY)==='1'){ bar.classList.add('age-hidden'); }
-      btn?.addEventListener('click',function(){
-        localStorage.setItem(KEY,'1');
-        bar.classList.add('age-hidden');
-      });
-    })();
-
-    // Counters (subtle, random)
-    (function(){
-      const sd = document.getElementById('sd-num');
-      if(sd){ let n=+sd.textContent||15; setInterval(()=>{ if(n>3 && Math.random()<0.28){ sd.textContent=--n; } },7000); }
-      const rz = document.getElementById('runtz-num');
-      if(rz){ let m=+rz.textContent||10; setInterval(()=>{ if(m>3 && Math.random()<0.26){ rz.textContent=--m; } },7500); }
-      const gear = document.getElementById('gear-num');
-      if(gear){ let g=+gear.textContent||12; setInterval(()=>{ if(g>2 && Math.random()<0.22){ gear.textContent=--g; } },8000); }
-    })();
+    (function(){const imgs=document.querySelectorAll('.rotor img');let i=0;if(imgs.length>1){setInterval(()=>{imgs[i].classList.remove('is-active');i=(i+1)%imgs.length;imgs[i].classList.add('is-active')},3000)}})();
+    (function(){const KEY='cfg_age_ok';const bar=document.getElementById('ageNotice');const btn=document.getElementById('ageConfirm');if(localStorage.getItem(KEY)==='1'){bar.classList.add('age-hidden');}btn?.addEventListener('click',function(){localStorage.setItem(KEY,'1');bar.classList.add('age-hidden');});})();
+    (function(){const sd=document.getElementById('sd-num');if(sd){let n=+sd.textContent||15;setInterval(()=>{if(n>3&&Math.random()<0.28){sd.textContent=--n;}},7000);}const rz=document.getElementById('runtz-num');if(rz){let m=+rz.textContent||10;setInterval(()=>{if(m>3&&Math.random()<0.26){rz.textContent=--m;}},7500);}const gear=document.getElementById('gear-num');if(gear){let g=+gear.textContent||12;setInterval(()=>{if(g>2&&Math.random()<0.22){gear.textContent=--g;}},8000);}})();
   </script>
 </body>
 </html>

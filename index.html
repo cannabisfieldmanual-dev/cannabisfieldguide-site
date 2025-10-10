@@ -236,8 +236,37 @@
 
 </article>
 
-<!-- 4-Bucket DWC Hydro Kit (square, compact) -->
-<article class="tile2 card square">
+<!-- 4-Bucket DWC Hydro Kit (compact + NOT huge) -->
+<style>
+  /* Only affects THIS card */
+  .tile2.card.tile-fit{border-radius:12px;overflow:hidden}
+  .tile2.card.tile-fit .thumb{
+    position:relative;
+    height:auto !important;           /* override any tall defaults */
+    aspect-ratio: 4 / 3;              /* shorter than square */
+    background:#0c0f12; overflow:hidden;
+  }
+  .tile2.card.tile-fit .thumb img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:contain;               /* no cropping / no giant zoom */
+    padding:10px;                     /* add a little breathing room */
+    display:block;
+  }
+  .tile2.card.tile-fit .cap{
+    position:absolute; left:8px; bottom:8px; font-size:.8rem;
+    padding:6px 8px; border-radius:9px; font-weight:800;
+    background:rgba(10,12,14,.6); border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(4px);
+  }
+  .tile2.card.tile-fit .meta{
+    padding:8px 10px; border-top:1px solid var(--line);
+    background:#0f1316; color:#b7becc; font-size:.88rem; line-height:1.4;
+  }
+  /* Prevent grid from making tall rows */
+  .mosaic{align-items:start}
+</style>
+
+<article class="tile2 card tile-fit">
   <div class="thumb">
     <img src="s-l1600%20(27).jpg"
          alt="Four-bucket DWC hydroponic system with air pump"

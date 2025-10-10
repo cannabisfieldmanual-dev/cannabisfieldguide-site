@@ -16,7 +16,6 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
 
-    /* Background */
     .wallpaper{position:fixed;inset:0;z-index:-1;pointer-events:none;background:
       radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
       linear-gradient(180deg, rgba(6,8,9,.55), rgba(6,8,9,.88)),
@@ -26,7 +25,6 @@
       linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),
       url('images/smoke-bg.jpg') center/cover no-repeat}}
 
-    /* Primitives */
     .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
     .title{margin:0;font-weight:900;letter-spacing:.2px}
     .subtle{color:var(--muted)}
@@ -44,7 +42,6 @@
     .chiprow{display:flex;flex-wrap:wrap;gap:8px}
     .stars{color:#ffdc73;font-weight:900}
 
-    /* Header */
     header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
     .brand{display:flex;align-items:center;gap:12px}
@@ -52,7 +49,6 @@
     .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
     .nav a.btn{font-size:.92rem}
 
-    /* HERO */
     .hero{margin:22px 0}
     .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
     @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
@@ -73,7 +69,6 @@
     .aff .title{color:var(--accent)}
     .aff .desc{margin:6px 0 10px}
 
-    /* CTA hero */
     .cta-hero{margin:22px 0}
     .cta-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
     @media (max-width:900px){.cta-hero .wrap{grid-template-columns:1fr}}
@@ -95,7 +90,6 @@
     .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
     @media (max-width:520px){.cta-actions{grid-template-columns:1fr}}
 
-    /* From the Guide grid + tiles */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
     .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
     .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
@@ -108,13 +102,6 @@
     .tile2 .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
     .tile2 .meta{padding:10px 12px;border-top:1px solid var(--line);background:#0f1316;color:#b7becc;font-size:.92rem;line-height:1.4}
 
-    /* Square + product-fit variants */
-    .tile2.card.square .thumb{aspect-ratio:1/1}
-    .tile2.card.square .thumb img{object-fit:cover}
-    .tile2.card.product-fit .thumb{aspect-ratio:4/3}
-    .tile2.card.product-fit .thumb img{object-fit:contain;padding:10px}
-
-    /* Featured gear */
     .gear-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     @media (max-width:900px){.gear-grid{grid-template-columns:1fr}}
     .gear-card{overflow:hidden;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px}
@@ -125,11 +112,9 @@
     .gear-card .inner{padding:14px 16px 16px}
     .gear-badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
 
-    /* Footer / notices */
     footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
     .disclosure{margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem}
 
-    /* Age bar */
     .age-notice{position:sticky;bottom:0;left:0;right:0;z-index:9999;background:
       linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);
       border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);backdrop-filter:saturate(1.1) blur(6px)}
@@ -140,26 +125,8 @@
     .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
     .age-hidden{display:none}
     @media (prefers-reduced-motion: reduce){ .rotor img, .tile2 .thumb img {transition:none} }
-
-    /* Glow box for Explore section */
-    .glow-box{
-      position: relative; border-radius: 16px; padding: 16px;
-      background: linear-gradient(180deg,#0f1418 0%, #0b0d11 100%);
-      border: 1px solid rgba(24,240,180,.25);
-      box-shadow:
-        0 0 0 1px rgba(24,240,180,.18) inset,
-        0 12px 36px rgba(0,0,0,.35),
-        0 0 32px rgba(24,240,180,.18),
-        0 0 64px rgba(24,240,180,.12);
-    }
-    .glow-box::before{
-      content:""; position:absolute; inset:-6px; border-radius: 20px;
-      background:
-        radial-gradient(60% 50% at 20% 0%, rgba(24,240,180,.25), transparent 60%),
-        radial-gradient(70% 60% at 100% 20%, rgba(10,203,146,.18), transparent 60%),
-        radial-gradient(70% 60% at 0% 60%, rgba(24,240,180,.16), transparent 60%);
-      filter: blur(18px); z-index: 0; pointer-events:none;
-    }
+    .glow-box{position: relative; border-radius: 16px; padding: 16px;background: linear-gradient(180deg,#0f1418 0%, #0b0d11 100%);border: 1px solid rgba(24,240,180,.25);box-shadow:0 0 0 1px rgba(24,240,180,.18) inset,0 12px 36px rgba(0,0,0,.35),0 0 32px rgba(24,240,180,.18),0 0 64px rgba(24,240,180,.12);}
+    .glow-box::before{content:""; position:absolute; inset:-6px; border-radius: 20px;background:radial-gradient(60% 50% at 20% 0%, rgba(24,240,180,.25), transparent 60%),radial-gradient(70% 60% at 100% 20%, rgba(10,203,146,.18), transparent 60%),radial-gradient(70% 60% at 0% 60%, rgba(24,240,180,.16), transparent 60%);filter: blur(18px); z-index: 0; pointer-events:none;}
     .glow-box > *{ position:relative; z-index:1; }
     .glow-box .section-title{ color:#8ff5d8; }
   </style>
@@ -224,66 +191,30 @@
           </div>
         </div>
       </article>
-      
-<!-- Copy + CTAs (HARD PATH TO SUBPAGE) -->
-<aside class="cta-copy card">
-  <h3>New: Autoflower Bible for Beginners</h3>
-  <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
-  <ul class="cta-bullets">
-    <li>Honest pros &amp; cons (less time to fix mistakes)</li>
-    <li>Simple setup (2×2–3×3), sane budgets</li>
-    <li>Germination and feeding made easy</li>
-  </ul>
-  <div class="cta-actions">
-    <a class="btn"
-       href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
-       aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
 
-    <a class="btn-outline"
-       href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-       target="_blank" rel="sponsored noopener"
-       aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-  </div>
-  <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
-</aside>
+      <!-- Copy + CTAs (HARD PATH TO SUBPAGE) -->
+      <aside class="cta-copy card">
+        <h3>New: Autoflower Bible for Beginners</h3>
+        <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
+        <ul class="cta-bullets">
+          <li>Honest pros &amp; cons (less time to fix mistakes)</li>
+          <li>Simple setup (2×2–3×3), sane budgets</li>
+          <li>Germination and feeding made easy</li>
+        </ul>
+        <div class="cta-actions">
+          <a class="btn" id="autoBibleBtn"
+             href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
+             aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
 
-
-  <script>
-    (function(){
-      const btn = document.getElementById('autoBibleBtn');
-      if(!btn) return;
-
-      // Try most likely paths in order; use the first that returns 200 OK.
-      const candidates = [
-        '/cannabisfieldguide-site/autoflower-bible-for-beginners/',
-        '/cannabisfieldguide-site/autoflower-bible-for-beginners/index.html',
-        'cannabisfieldguide-site/autoflower-bible-for-beginners/',
-        'cannabisfieldguide-site/autoflower-bible-for-beginners/index.html',
-        '/autoflower-bible-for-beginners/',
-        '/autoflower-bible-for-beginners/index.html'
-      ];
-
-      (async () => {
-        for (const url of candidates) {
-          try {
-            const res = await fetch(url, { method:'HEAD', cache:'no-store' });
-            if (res.ok) {
-              btn.href = url;
-              btn.textContent = 'Read the Guide →';
-              btn.removeAttribute('disabled');
-              return;
-            }
-          } catch(_) { /* try next */ }
-        }
-        // Fallback if HEAD is blocked or all fail – still clickable
-        btn.href = '/cannabisfieldguide-site/autoflower-bible-for-beginners/';
-        btn.textContent = 'Read the Guide (fallback) →';
-        btn.removeAttribute('disabled');
-      })();
-    })();
-  </script>
-</aside>
-
+          <a class="btn-outline"
+             href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
+             target="_blank" rel="sponsored noopener"
+             aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+        </div>
+        <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+      </aside>
+    </div>
+  </section>
 
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
@@ -301,7 +232,6 @@
         </article>
       </a>
 
-      <!-- Morning Pairings (file is at repo root per your listing) -->
       <a href="/morning-pairings.html" aria-label="Morning Pairings subpage">
         <article class="tile2 card">
           <div class="thumb">
@@ -324,21 +254,19 @@
         </article>
       </a>
 
-      <!-- Leaf Aloha Shirt (square, uniform size) -->
       <article class="tile2 card square">
         <div class="thumb">
           <img src="s-l1600%20(26).jpg"
                alt="Pink/blue leaf-print aloha shirt with cannabis leaves" loading="lazy" decoding="async">
           <span class="cap">Leaf Aloha Shirt</span>
           <a class="hit"
-             href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1eNgX3jjVvpuNePbfHHuN4a0cwOc0O%2F50uwOSxl4p4kjEMXfhyq6QN0L1kwEwjGCqjATEwZWi6MpoViCrSqEU1p1OwJ7hCFmlrdnWQeB8nHGIbHsC5QfNGfGwpK1%2FsofQ61rht7zkkqdzJS5RX55o8693BoaxT%2FsEGak5Mv2I%2BGC%2Fhwt6dQgMJVCFAYwQJ2of8%3D"
+             href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1"
              target="_blank" rel="sponsored noopener noreferrer"
              aria-label="Buy the leaf print aloha shirt"></a>
         </div>
         <div class="meta">Breezy leaf + palm print, easy festival layer.</div>
       </article>
 
-      <!-- 4-Bucket DWC Hydro Kit (product-fit; not tiny, not huge) -->
       <article class="tile2 card product-fit">
         <div class="thumb">
           <img src="s-l1600%20(27).jpg"
@@ -410,6 +338,46 @@
         </div>
       </article>
     </div>
+
+    <!-- NEW: Grow Tents & Kits -->
+    <h2 class="section-title" style="margin-top:18px">Grow Tents &amp; Kits</h2>
+    <div class="container gear-grid" style="padding:0">
+      <!-- VIVOSUN Complete Kit -->
+      <article class="gear-card">
+        <figure>
+          <!-- Using the exact filename you provided -->
+          <img src="s-l1600 (30).jpg" alt="VIVOSUN complete grow tent kit with LED and inline fan" loading="lazy" decoding="async">
+          <span class="badge">Complete Kit</span>
+          <div class="fade" aria-hidden="true"></div>
+        </figure>
+        <div class="inner">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">VIVOSUN Complete Grow Tent Kit</h3>
+          <p class="subtle" style="margin:0 0 10px">100W / 200W / 400W LEDs + inline fan kit.</p>
+          <div class="gear-badges">
+            <span class="chip">All-in-one</span><span class="chip">Inline Fan</span><span class="chip">Carbon Filter</span>
+          </div>
+          <a class="btn" href="https://www.ebay.com/itm/314745793247?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener noreferrer">See VIVOSUN Kits →</a>
+        </div>
+      </article>
+
+      <!-- Spider Farmer 1680D Tent -->
+      <article class="gear-card">
+        <figure>
+          <!-- Using the exact filename you provided -->
+          <img src="s-l1600 (31).jpg" alt="Spider Farmer 1680D mylar grow tents lineup" loading="lazy" decoding="async">
+          <span class="badge">Heavy-Duty 1680D</span>
+          <div class="fade" aria-hidden="true"></div>
+        </figure>
+        <div class="inner">
+          <h3 class="title" style="color:var(--accent);margin-bottom:6px">Spider Farmer 1680D Grow Tent</h3>
+          <p class="subtle" style="margin:0 0 10px">Light-tight mylar, reinforced frame, tidy cable ports.</p>
+          <div class="gear-badges">
+            <span class="chip">Tear-Resistant</span><span class="chip">Easy Access</span><span class="chip">Multiple Sizes</span>
+          </div>
+          <a class="btn" href="https://www.ebay.com/itm/197074934288?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener noreferrer">See Spider Farmer →</a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- Explore the Guide (glow box) -->
@@ -444,7 +412,7 @@
     </div>
   </footer>
 
-  <!-- Age + small counters + image rotor -->
+  <!-- Age + tiny counters + image rotor -->
   <div id="ageNotice" class="age-notice" role="dialog" aria-live="polite" aria-label="21+ age notice">
     <div class="age-wrap">
       <span class="age-text">🚨 For adults <strong>21+</strong> (or legal age in your area). By using this site you confirm you are of legal age.</span>
@@ -473,12 +441,12 @@
       btn?.addEventListener('click',function(){localStorage.setItem(KEY,'1');bar.classList.add('age-hidden');});
     })();
 
-    // tiny stock counters
+    // tiny stock counters (fun, optional)
     (function(){
       const sd=document.getElementById('sd-num'); if(sd){let n=+sd.textContent||15; setInterval(()=>{if(n>3&&Math.random()<0.28){sd.textContent=--n;}},7000);}
       const rz=document.getElementById('runtz-num'); if(rz){let m=+rz.textContent||10; setInterval(()=>{if(m>3&&Math.random()<0.26){rz.textContent=--m;}},7500);}
       const gear=document.getElementById('gear-num'); if(gear){let g=+gear.textContent||12; setInterval(()=>{if(g>2&&Math.random()<0.22){g.textContent=--g;}},8000);}
-      const gear2=document.getElementById('gear2-num'); if(gear2){let h=+gear2.textContent||9; setInterval(()=>{if(h>2&&Math.random()<0.25){gear2.textContent=--h;}},8200);}
+      const gear2=document.getElementById('gear2-num'); if(gear2){let h=+gear2.textContent||9; setInterval(()=>{if(h>2&&Math.random()<0.25){h.textContent=--h;}},8200);}
     })();
   </script>
 </body>

@@ -225,7 +225,7 @@
         </div>
       </article>
 
-   <!-- 🔁 SWAP THIS BLOCK FOR YOUR CTA ASIDE -->
+  <!-- Copy + CTAs (SIMPLE FIX: relative path + trailing slash) -->
 <aside class="cta-copy card">
   <h3>New: Autoflower Bible for Beginners</h3>
   <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
@@ -234,47 +234,15 @@
     <li>Simple setup (2×2–3×3), sane budgets</li>
     <li>Germination and feeding made easy</li>
   </ul>
-
   <div class="cta-actions">
-    <!-- The script below sets the correct path at runtime (no HEAD requests, no guessing) -->
-    <a id="autoBibleBtn" class="btn" href="#" aria-label="Read the Autoflower Bible for Beginners">Read the Guide →</a>
+    <!-- ✅ Works from index.html in this repo: goes to /cannabisfieldguide-site/autoflower-bible-for-beginners/ on GH Pages -->
+    <a class="btn" href="autoflower-bible-for-beginners/" aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
+
     <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
   </div>
-
   <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
-
-  <script>
-    (function () {
-      var btn = document.getElementById('autoBibleBtn');
-      if (!btn) return;
-
-      // If the site is served as a GitHub Pages *project* at /cannabisfieldguide-site/,
-      // use that prefix. If it's served at the domain root, use the root path.
-      var path = window.location.pathname || '';
-      var isProjectPrefix = path.indexOf('/cannabisfieldguide-site/') === 0;
-
-      var target = isProjectPrefix
-        ? '/cannabisfieldguide-site/autoflower-bible-for-beginners/'
-        : '/autoflower-bible-for-beginners/';
-
-      // If you're serving from a folder (not root), this also works because it’s absolute.
-      btn.href = target;
-    })();
-  </script>
 </aside>
 
-  <div class="cta-actions">
-    <!-- href resolved by script below -->
-    <a id="autoBibleBtn" class="btn" href="#" aria-label="Read the Autoflower Bible for Beginners" disabled>Read the Guide…</a>
-    <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-  </div>
-
-  <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
-
-  <style>
-    /* keep it self-contained */
-    #autoBibleBtn[disabled]{opacity:.6;pointer-events:none;filter:grayscale(20%)}
-  </style>
 
   <script>
     (function(){

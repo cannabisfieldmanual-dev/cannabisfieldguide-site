@@ -235,21 +235,25 @@
 </section>
 
 </article>
-
-<!-- 4-Bucket DWC Hydro Kit (compact + NOT huge) -->
+<!-- 4-Bucket DWC Hydro Kit (truly compact + no huge image) -->
 <style>
   /* Only affects THIS card */
-  .tile2.card.tile-fit{border-radius:12px;overflow:hidden}
+  .tile2.card.tile-fit{
+    border-radius:12px; overflow:hidden;
+    max-width: 340px;          /* keep the whole card small */
+    place-self: start;         /* stop grid from stretching it */
+  }
   .tile2.card.tile-fit .thumb{
     position:relative;
-    height:auto !important;           /* override any tall defaults */
-    aspect-ratio: 4 / 3;              /* shorter than square */
+    height: 160px !important;  /* fixed, short thumbnail height */
     background:#0c0f12; overflow:hidden;
+    border-bottom:1px solid var(--line);
   }
   .tile2.card.tile-fit .thumb img{
-    position:absolute; inset:0; width:100%; height:100%;
-    object-fit:contain;               /* no cropping / no giant zoom */
-    padding:10px;                     /* add a little breathing room */
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit: contain;       /* never zoom past bounds */
+    padding: 10px;             /* breathing room around product */
     display:block;
   }
   .tile2.card.tile-fit .cap{
@@ -259,12 +263,30 @@
     backdrop-filter:blur(4px);
   }
   .tile2.card.tile-fit .meta{
-    padding:8px 10px; border-top:1px solid var(--line);
-    background:#0f1316; color:#b7becc; font-size:.88rem; line-height:1.4;
+    padding:8px 10px; background:#0f1316;
+    color:#b7becc; font-size:.88rem; line-height:1.4;
+    border-top:1px solid var(--line);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; /* 1 tidy line */
   }
-  /* Prevent grid from making tall rows */
-  .mosaic{align-items:start}
+
+  /* Prevent the mosaic grid from enforcing tall rows */
+  .mosaic{ align-items: start; }
 </style>
+
+<article class="tile2 card tile-fit">
+  <div class="thumb">
+    <img src="s-l1600%20(27).jpg"
+         alt="Four-bucket DWC hydroponic system with air pump"
+         loading="lazy" decoding="async">
+    <span class="cap">4-Bucket DWC Kit</span>
+    <a class="hit"
+       href="https://www.ebay.com/itm/403829354759?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1"
+       target="_blank" rel="sponsored noopener noreferrer"
+       aria-label="Buy the 4-bucket DWC hydro kit"></a>
+  </div>
+  <div class="meta">Beginner DWC with air pump — fast veg in small tents.</div>
+</article>
+
 
 <article class="tile2 card tile-fit">
   <div class="thumb">

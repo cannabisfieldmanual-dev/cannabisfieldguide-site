@@ -348,8 +348,40 @@
     </div>
   </section>
 
-  <main>
-    <div class="container">
+ <!-- ✅ Add this CSS -->
+<style>
+  .glow-box{
+    position: relative;
+    border-radius: 16px;
+    padding: 16px;
+    background: linear-gradient(180deg,#0f1418 0%, #0b0d11 100%);
+    border: 1px solid rgba(24,240,180,.25);
+    box-shadow:
+      0 0 0 1px rgba(24,240,180,.18) inset,
+      0 12px 36px rgba(0,0,0,.35),
+      0 0 32px rgba(24,240,180,.18),
+      0 0 64px rgba(24,240,180,.12);
+  }
+  .glow-box::before{
+    content:"";
+    position:absolute; inset:-6px;
+    border-radius: 20px;
+    background:
+      radial-gradient(60% 50% at 20% 0%, rgba(24,240,180,.25), transparent 60%),
+      radial-gradient(70% 60% at 100% 20%, rgba(10,203,146,.18), transparent 60%),
+      radial-gradient(70% 60% at 0% 60%, rgba(24,240,180,.16), transparent 60%);
+    filter: blur(18px);
+    z-index: 0;
+    pointer-events:none;
+  }
+  .glow-box > *{ position:relative; z-index:1; }
+  .glow-box .section-title{ color:#8ff5d8; }
+</style>
+
+<!-- ✅ Replace your <main> with this -->
+<main>
+  <div class="container">
+    <div class="glow-box">
       <h2 class="section-title">Explore the Guide</h2>
       <div class="directory" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
         <article class="dir-card card stack-12"><h3 class="title">Cultivation</h3><p>From soil prep to indoor grows — practical, step-by-step how-tos.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
@@ -361,7 +393,8 @@
       </div>
       <p class="subtle" style="text-align:center;margin:16px 0 0">21+ only. This site is educational and for legal adults in compliant regions. Always follow local laws.</p>
     </div>
-  </main>
+  </div>
+</main>
 
   <!-- Banner -->
   <div class="container" style="margin:16px auto">

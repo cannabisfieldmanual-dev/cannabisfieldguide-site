@@ -225,30 +225,65 @@
         </div>
       </article>
 
-      <!-- Copy + CTAs (PATH FIXED to the actual file) -->
-      <aside class="cta-copy card">
-        <h3>New: Autoflower Bible for Beginners</h3>
-        <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
-        <ul class="cta-bullets">
-          <li>Honest pros &amp; cons (less time to fix mistakes)</li>
-          <li>Simple setup (2×2–3×3), sane budgets</li>
-          <li>Germination and feeding made easy</li>
-        </ul>
-        <div class="cta-actions">
-          <!-- ✅ EXACT FILE PATH to prevent 404s -->
-          <a class="btn"
-             href="/cannabisfieldguide-site/autoflower-bible-for-beginners/index.html"
-             aria-label="Read the Autoflower Bible for Beginners">Read the Guide</a>
+     <!-- ✅ SWAP THIS ENTIRE BLOCK IN PLACE OF YOUR CURRENT CTA ASIDE -->
+<aside class="cta-copy card">
+  <h3>New: Autoflower Bible for Beginners</h3>
+  <p class="subtle">A step-by-step playbook with gear picks, week-by-week milestones, common mistakes, and real photos—built from actual first runs.</p>
+  <ul class="cta-bullets">
+    <li>Honest pros &amp; cons (less time to fix mistakes)</li>
+    <li>Simple setup (2×2–3×3), sane budgets</li>
+    <li>Germination and feeding made easy</li>
+  </ul>
 
-          <a class="btn-outline"
-             href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-             target="_blank" rel="sponsored noopener"
-             aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-        </div>
-        <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
-      </aside>
-    </div>
-  </section>
+  <div class="cta-actions">
+    <!-- href resolved by script below -->
+    <a id="autoBibleBtn" class="btn" href="#" aria-label="Read the Autoflower Bible for Beginners" disabled>Read the Guide…</a>
+    <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+  </div>
+
+  <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+
+  <style>
+    /* keep it self-contained */
+    #autoBibleBtn[disabled]{opacity:.6;pointer-events:none;filter:grayscale(20%)}
+  </style>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('autoBibleBtn');
+      if(!btn) return;
+
+      // Try most likely paths in order; use the first that returns 200 OK.
+      const candidates = [
+        '/cannabisfieldguide-site/autoflower-bible-for-beginners/',
+        '/cannabisfieldguide-site/autoflower-bible-for-beginners/index.html',
+        'cannabisfieldguide-site/autoflower-bible-for-beginners/',
+        'cannabisfieldguide-site/autoflower-bible-for-beginners/index.html',
+        '/autoflower-bible-for-beginners/',
+        '/autoflower-bible-for-beginners/index.html'
+      ];
+
+      (async () => {
+        for (const url of candidates) {
+          try {
+            const res = await fetch(url, { method:'HEAD', cache:'no-store' });
+            if (res.ok) {
+              btn.href = url;
+              btn.textContent = 'Read the Guide →';
+              btn.removeAttribute('disabled');
+              return;
+            }
+          } catch(_) { /* try next */ }
+        }
+        // Fallback if HEAD is blocked or all fail – still clickable
+        btn.href = '/cannabisfieldguide-site/autoflower-bible-for-beginners/';
+        btn.textContent = 'Read the Guide (fallback) →';
+        btn.removeAttribute('disabled');
+      })();
+    })();
+  </script>
+</aside>
+
 
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">

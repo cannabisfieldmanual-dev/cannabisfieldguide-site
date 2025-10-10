@@ -214,9 +214,36 @@
     }
   }
 </style>
+<!-- Leaf Aloha Shirt (extra-short tile) -->
+<style>
+  /* Ultra-compact variant for THIS card only */
+  .tile2.card.tile-xs{display:flex;flex-direction:column;border-radius:12px;overflow:hidden}
+  .tile2.card.tile-xs .thumb{
+    position:relative; height:150px; /* ↓ shorter box */
+    overflow:hidden; background:#0c0f12;
+  }
+  .tile2.card.tile-xs .thumb img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center; display:block;
+  }
+  .tile2.card.tile-xs .cap{
+    position:absolute; left:8px; bottom:8px; font-size:.8rem;
+    padding:6px 8px; border-radius:9px; background:rgba(10,12,14,.6);
+    backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,.08); font-weight:800;
+  }
+  .tile2.card.tile-xs .meta{
+    padding:8px 10px; border-top:1px solid var(--line);
+    background:#0f1316; color:#b7becc; font-size:.85rem; line-height:1.35;
+  }
+  /* Clamp description to 1 line for consistent height */
+  @supports (-webkit-line-clamp: 1) {
+    .tile2.card.tile-xs .meta{
+      display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden;
+    }
+  }
+</style>
 
-<!-- Leaf Aloha Shirt (affiliate) — COMPACT tile -->
-<article class="tile2 card tile-compact">
+<article class="tile2 card tile-xs">
   <div class="thumb">
     <img src="s-l1600%20(26).jpg"
          alt="Pink/blue leaf-print aloha shirt with cannabis leaves"
@@ -227,9 +254,7 @@
        target="_blank" rel="sponsored noopener noreferrer"
        aria-label="Buy the leaf print aloha shirt"></a>
   </div>
-  <div class="meta">
-    Breezy mesh button-down with leaf + palm print. Easy festival layer—pairs with black shorts and slip-ons.
-  </div>
+  <div class="meta">Breezy leaf + palm print, easy festival layer.</div>
 </article>
 
 <!-- =========================

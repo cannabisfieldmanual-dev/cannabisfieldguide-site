@@ -164,100 +164,76 @@
     <a href="rolling-tips.html" aria-label="Rolling Tips subpage">
       <article class="tile2 card">
         <div class="thumb">
-          <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg" alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async">
+          <img src="88715b1757ee90b5fe8f47801e28bec8.jpeg.6ed6cc1396894ee008b2b5060dcbe082.jpeg"
+               alt="Rolling tray with ground flower lines ready to roll" loading="lazy" decoding="async">
           <span class="cap">Rolling Tips</span>
         </div>
         <div class="meta">Papers, filters, cones, and even burns—step-by-step.</div>
       </article>
     </a>
 
-     <a href="autoflower-bible-for-beginners/" aria-label="Autoflower Bible for Beginners subpage">
-        <article class="tile2 card">
-          <div class="thumb"><img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg" alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async"><span class="cap">Morning Pairings</span></div>
-          <div class="meta">Light sativas with coffee or tea for a clear, upbeat start.</div>
-        </article>
-      </a>
+    <!-- FIXED: Morning Pairings goes to the correct page -->
+    <a href="/morning-pairings.html" aria-label="Morning Pairings subpage">
+      <article class="tile2 card">
+        <div class="thumb">
+          <img src="depositphotos_347819474-stock-photo-delicious-cup-coffee-pile-high.jpg"
+               alt="Coffee cup with pre-rolls and flower" loading="lazy" decoding="async">
+          <span class="cap">Morning Pairings</span>
+        </div>
+        <div class="meta">Light sativas with coffee or tea for a clear, upbeat start.</div>
+      </article>
+    </a>
 
-      <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
-        <article class="tile2 card">
-          <div class="thumb"><img src="Nuggets-buds-retail-counter-736x414.webp" alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async"><span class="cap">Buying Legally</span></div>
-          <div class="meta">ID, purchase limits, delivery rules, and local compliance.</div>
-        </article>
-      </a>
-<!-- Compact tile styles (won’t affect your other tiles) -->
-<style>
-  /* Compact variant: shorter media, tight text, no tall boxes */
-  .tile2.card.tile-compact{display:flex;flex-direction:column;border-radius:14px;overflow:hidden}
-  .tile2.card.tile-compact .thumb{
-    position:relative; aspect-ratio:4/3; /* shorter than 16:9 to kill vertical stretch */
-    height:auto; overflow:hidden; background:#0c0f12;
-  }
-  .tile2.card.tile-compact .thumb img{
-    position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover; object-position:center; display:block;
-  }
-  .tile2.card.tile-compact .cap{
-    position:absolute; left:10px; bottom:10px;
-    padding:7px 10px; border-radius:10px;
-    background:rgba(10,12,14,.6); backdrop-filter:blur(4px);
-    border:1px solid rgba(255,255,255,.08); font-weight:800;
-  }
-  .tile2.card.tile-compact .meta{
-    padding:10px 12px; border-top:1px solid var(--line);
-    background:#0f1316; color:#b7becc; font-size:.9rem; line-height:1.45;
-    display:flex; align-items:center; min-height:48px; /* prevents big empty area */
-  }
-  /* Optional: clamp to 2 lines to keep height consistent */
-  @supports (-webkit-line-clamp: 2) {
-    .tile2.card.tile-compact .meta{
-      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
-    }
-  }
-<!-- COMPACT SQUARE TILES (overwrite previous rules) -->
-<style>
-  /* Prevent the grid from stretching cards */
-  .mosaic{ align-items:start; }
+    <a href="buying-legally.html" data-no-aff aria-label="Buying Legally subpage">
+      <article class="tile2 card">
+        <div class="thumb">
+          <img src="Nuggets-buds-retail-counter-736x414.webp"
+               alt="Selecting buds from a jar with tongs" loading="lazy" decoding="async">
+          <span class="cap">Buying Legally</span>
+        </div>
+        <div class="meta">ID, purchase limits, delivery rules, and local compliance.</div>
+      </article>
+    </a>
 
-  /* Use a unique class so we only affect these two tiles */
-  .tile2.card.square{ border-radius:12px; overflow:hidden; display:block; }
+    <!-- Compact tile styles (won’t affect your other tiles) -->
+    <style>
+      .tile2.card.tile-compact{display:flex;flex-direction:column;border-radius:14px;overflow:hidden}
+      .tile2.card.tile-compact .thumb{position:relative;aspect-ratio:4/3;height:auto;overflow:hidden;background:#0c0f12}
+      .tile2.card.tile-compact .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+      .tile2.card.tile-compact .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
+      .tile2.card.tile-compact .meta{padding:10px 12px;border-top:1px solid var(--line);background:#0f1316;color:#b7becc;font-size:.9rem;line-height:1.45;display:flex;align-items:center;min-height:48px}
+      @supports (-webkit-line-clamp: 2){
+        .tile2.card.tile-compact .meta{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+      }
+    </style>
 
-  /* Kill any earlier fixed-height rules */
-  .tile2.card.square .thumb{
-    position:relative;
-    height:auto !important; max-height:none !important;
-    aspect-ratio:1/1;          /* perfect square thumbnail */
-    overflow:hidden; background:#0c0f12;
-  }
-  .tile2.card.square .thumb img{
-    position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover; object-position:center; display:block;
-  }
-  .tile2.card.square .cap{
-    position:absolute; left:8px; bottom:8px; font-size:.8rem;
-    padding:6px 8px; border-radius:9px; font-weight:800;
-    background:rgba(10,12,14,.6); border:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(4px);
-  }
-  .tile2.card.square .meta{
-    padding:8px 10px; border-top:1px solid var(--line);
-    background:#0f1316; color:#b7becc; font-size:.86rem; line-height:1.35;
-    display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden;
-  }
-</style>
+    <!-- COMPACT SQUARE TILES (overwrite previous rules) -->
+    <style>
+      .mosaic{align-items:start}
+      .tile2.card.square{border-radius:12px;overflow:hidden;display:block}
+      .tile2.card.square .thumb{position:relative;height:auto !important;max-height:none !important;aspect-ratio:1/1;overflow:hidden;background:#0c0f12}
+      .tile2.card.square .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+      .tile2.card.square .cap{position:absolute;left:8px;bottom:8px;font-size:.8rem;padding:6px 8px;border-radius:9px;font-weight:800;background:rgba(10,12,14,.6);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(4px)}
+      .tile2.card.square .meta{padding:8px 10px;border-top:1px solid var(--line);background:#0f1316;color:#b7becc;font-size:.86rem;line-height:1.35;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+    </style>
 
-<!-- Leaf Aloha Shirt (square, compact) -->
-<article class="tile2 card square">
-  <div class="thumb">
-    <img src="s-l1600%20(26).jpg"
-         alt="Pink/blue leaf-print aloha shirt with cannabis leaves"
-         loading="lazy" decoding="async">
-    <span class="cap">Leaf Aloha Shirt</span>
-    <a class="hit"
-       href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1eNgX3jjVvpuNePbfHHuN4a0cwOc0O%2F50uwOSxl4p4kjEMXfhyq6QN0L1kwEwjGCqjATEwZWi6MpoViCrSqEU1p1OwJ7hCFmlrdnWQeB8nHGIbHsC5QfNGfGwpK1%2FsofQ61rht7zkkqdzJS5RX55o8693BoaxT%2FsEGak5Mv2I%2BGC%2Fhwt6dQgMJVCFAYwQJ2of8%3D"
-       target="_blank" rel="sponsored noopener noreferrer"
-       aria-label="Buy the leaf print aloha shirt"></a>
+    <!-- Leaf Aloha Shirt (square, compact) -->
+    <article class="tile2 card square">
+      <div class="thumb">
+        <img src="s-l1600%20(26).jpg"
+             alt="Pink/blue leaf-print aloha shirt with cannabis leaves"
+             loading="lazy" decoding="async">
+        <span class="cap">Leaf Aloha Shirt</span>
+        <a class="hit"
+           href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1eNgX3jjVvpuNePbfHHuN4a0cwOc0O%2F50uwOSxl4p4kjEMXfhyq6QN0L1kwEwjGCqjATEwZWi6MpoViCrSqEU1p1OwJ7hCFmlrdnWQeB8nHGIbHsC5QfNGfGwpK1%2FsofQ61rht7zkkqdzJS5RX55o8693BoaxT%2FsEGak5Mv2I%2BGC%2Fhwt6dQgMJVCFAYwQJ2of8%3D"
+           target="_blank" rel="sponsored noopener noreferrer"
+           aria-label="Buy the leaf print aloha shirt"></a>
+      </div>
+      <div class="meta">Breezy leaf + palm print, easy festival layer.</div>
+    </article>
   </div>
-  <div class="meta">Breezy leaf + palm print, easy festival layer.</div>
+</section>
+
 </article>
 
 <!-- 4-Bucket DWC Hydro Kit (square, compact) -->

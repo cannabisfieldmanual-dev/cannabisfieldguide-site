@@ -213,37 +213,43 @@
       display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
     }
   }
-</style>
-<!-- Leaf Aloha Shirt (extra-short tile) -->
+<!-- Leaf Aloha Shirt (super-compact, no squish, no tall box) -->
 <style>
-  /* Ultra-compact variant for THIS card only */
-  .tile2.card.tile-xs{display:flex;flex-direction:column;border-radius:12px;overflow:hidden}
-  .tile2.card.tile-xs .thumb{
-    position:relative; height:150px; /* ↓ shorter box */
+  /* Stop the grid from forcing equal/tall rows */
+  .mosaic { align-items: start; }
+
+  /* Compact, square tile just for this card */
+  .tile2.card.tile-square { border-radius:12px; overflow:hidden; display:block; }
+
+  /* Override any earlier .tile2 .thumb height rules */
+  .tile2.card.tile-square .thumb{
+    position:relative;
+    height:auto !important;           /* beat earlier fixed heights */
+    aspect-ratio: 1 / 1;              /* perfect square thumbnail */
     overflow:hidden; background:#0c0f12;
   }
-  .tile2.card.tile-xs .thumb img{
+  .tile2.card.tile-square .thumb img{
     position:absolute; inset:0; width:100%; height:100%;
     object-fit:cover; object-position:center; display:block;
   }
-  .tile2.card.tile-xs .cap{
+  .tile2.card.tile-square .cap{
     position:absolute; left:8px; bottom:8px; font-size:.8rem;
     padding:6px 8px; border-radius:9px; background:rgba(10,12,14,.6);
     backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,.08); font-weight:800;
   }
-  .tile2.card.tile-xs .meta{
+  .tile2.card.tile-square .meta{
     padding:8px 10px; border-top:1px solid var(--line);
-    background:#0f1316; color:#b7becc; font-size:.85rem; line-height:1.35;
+    background:#0f1316; color:#b7becc; font-size:.86rem; line-height:1.35;
   }
-  /* Clamp description to 1 line for consistent height */
+  /* Keep meta to a single tidy line to avoid tall boxes */
   @supports (-webkit-line-clamp: 1) {
-    .tile2.card.tile-xs .meta{
+    .tile2.card.tile-square .meta{
       display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden;
     }
   }
 </style>
 
-<article class="tile2 card tile-xs">
+<article class="tile2 card tile-square">
   <div class="thumb">
     <img src="s-l1600%20(26).jpg"
          alt="Pink/blue leaf-print aloha shirt with cannabis leaves"

@@ -81,10 +81,10 @@
     .aff .title{color:var(--accent)}
     .aff .desc{margin:6px 0 10px}
 
-    /* CTA: Autoflower + Two-up */
+    /* Autoflower CTA */
     .auto-cta{
       position:relative; display:grid; grid-template-columns:minmax(240px,320px) 1fr;
-      gap:14px; align-items:center; max-width:900px; margin:18px auto; padding:14px;
+      gap:14px; align-items:center; max-width:900px; margin:0; padding:14px;
       background:var(--panel-2); border:1px solid var(--line); border-radius:var(--rad);
     }
     .auto-cta .shot{
@@ -104,13 +104,20 @@
       .auto-cta .shot{max-height:160px}
     }
 
+    /* Two-up section (ILGM promo + Autoflower CTA) */
     .two-up{
       display:grid; grid-template-columns:1fr minmax(340px,520px);
       gap:16px; align-items:stretch; max-width:1100px; margin:24px auto; padding:0 18px;
     }
-    .two-up .promo{display:block; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#0b0d11}
-    .two-up .promo img{width:100%; height:100%; object-fit:cover; display:block}
     @media (max-width:900px){ .two-up{ grid-template-columns:1fr } }
+
+    .promo-wrap{display:grid; grid-template-rows:auto 1fr; gap:12px}
+    .promo{display:block; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#0b0d11}
+    .promo img{width:100%; height:auto; display:block}
+
+    .promo-desc{padding:14px}
+    .promo-desc .promo-list{margin:10px 0 0; padding:0 0 0 18px; color:#d5dbe6}
+    .promo-desc .promo-list li{margin:6px 0}
 
     /* From the Guide grid + tiles */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
@@ -209,38 +216,32 @@
     </div>
   </section>
 
- <!-- Left: ILGM banner + description -->
-<div class="promo-wrap" aria-labelledby="grow-bible-title">
-  <a class="promo" href="https://ilgm.com/resources/landing/grow-bible?aff=7946"
-     target="_blank" rel="sponsored noopener noreferrer" aria-label="ILGM Grow Bible">
-    <img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-726x276.jpg"
-         alt="ILGM Grow Bible — free download banner"
-         style="width:100%;height:auto;display:block">
-  </a>
+  <!-- Two-up: ILGM promo (with description) + Autoflower CTA -->
+  <section class="two-up" aria-label="Starter guide and grow bible">
+    <article class="promo-wrap card" aria-labelledby="grow-bible-title">
+      <a class="promo" href="https://ilgm.com/resources/landing/grow-bible?aff=7946"
+         target="_blank" rel="sponsored noopener noreferrer" aria-label="ILGM Grow Bible">
+        <img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-726x276.jpg"
+             alt="ILGM Grow Bible — free download banner">
+      </a>
+      <div class="promo-desc">
+        <h3 id="grow-bible-title" class="title" style="font-size:1rem;color:#8ff5d8;margin-bottom:6px">What You’ll Learn in the Grow Bible</h3>
+        <p class="subtle" style="margin:0 0 8px">A straightforward, beginner-friendly path from seed to cured bud.</p>
+        <ul class="promo-list">
+          <li>Choosing seeds (auto, photo, feminized)</li>
+          <li>From germination to harvest — step by step</li>
+          <li>Indoor vs. outdoor: pros &amp; cons</li>
+          <li>Soil vs. hydro: picking a medium</li>
+          <li>Dialing in lights for healthy growth</li>
+          <li>Watering &amp; feeding basics that work</li>
+          <li>Pruning &amp; training for better yields</li>
+          <li>Fixing pests, diseases &amp; deficiencies</li>
+          <li>Harvest, dry, and cure the right way</li>
+        </ul>
+        <p class="subtle" style="margin:10px 0 0">Start growing today — with fewer mistakes.</p>
+      </div>
+    </article>
 
-  <div class="promo-desc card">
-    <h3 id="grow-bible-title" class="title" style="font-size:1rem;color:#8ff5d8;margin-bottom:6px">
-      What You’ll Learn in the Grow Bible
-    </h3>
-    <p class="subtle" style="margin:0 0 8px">
-      A straightforward, beginner-friendly path from seed to cured bud.
-    </p>
-    <ul class="promo-list">
-      <li>Choosing seeds (auto, photo, feminized)</li>
-      <li>From germination to harvest — step by step</li>
-      <li>Indoor vs. outdoor: pros &amp; cons</li>
-      <li>Soil vs. hydro: picking a medium</li>
-      <li>Dialing in lights for healthy growth</li>
-      <li>Watering &amp; feeding basics that work</li>
-      <li>Pruning &amp; training for better yields</li>
-      <li>Fixing pests, diseases &amp; deficiencies</li>
-      <li>Harvest, dry, and cure the right way</li>
-    </ul>
-    <p style="margin:10px 0 0" class="subtle">Start growing today — with fewer mistakes.</p>
-  </div>
-</div>
-
-    <!-- Right: Autoflower CTA card -->
     <aside class="cta-copy auto-cta card">
       <a class="hit" href="/autoflower-bible-for-beginners/#starter-guide" aria-label="Open: Autoflower for Beginners — Starter Guide"></a>
       <figure class="shot">
@@ -328,7 +329,9 @@
         <div class="meta">Beginner-friendly DWC with air pump — fast veg in small tents.</div>
       </article>
 
-      <a href="https://ilgm.com/collections/deals?aff=7946"  ><img src="https://static.affiliatly.com/affiliate_files/banners/21567/croptober-2025-af---banner-300x300.jpg" width="300" height="300" alt="" /></a>
+      <a href="https://ilgm.com/collections/deals?aff=7946" target="_blank" rel="sponsored noopener noreferrer" aria-label="ILGM Deals">
+        <img src="https://static.affiliatly.com/affiliate_files/banners/21567/croptober-2025-af---banner-300x300.jpg" width="300" height="300" alt="ILGM Croptober deals banner" />
+      </a>
     </div>
   </section>
 

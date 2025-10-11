@@ -209,42 +209,48 @@
     </div>
   </section>
 
- <!-- CTA: Autoflower for Beginners (front page) -->
-<aside class="cta-copy card" style="display:grid;grid-template-columns:1fr .9fr;gap:14px;align-items:center">
-  <!-- use your exact filename -->
-  <figure class="card" style="margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0d11">
+<!-- CTA: Autoflower for Beginners (compact & sleek) -->
+<style>
+  .auto-cta{display:grid;grid-template-columns:300px 1fr;gap:14px;align-items:center}
+  .auto-cta .shot{position:relative;aspect-ratio:16/10;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0d11;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  .auto-cta .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:.98;transform:scale(1.01)}
+  .auto-cta h3{margin:0 0 4px;color:#8ff5d8;font-size:1.02rem}
+  .auto-cta p{margin:0 0 6px}
+  .auto-cta .cta-bullets{margin:8px 0 0;padding:0;list-style:none}
+  .auto-cta .cta-bullets li{display:flex;gap:8px;margin:6px 0}
+  .auto-cta .cta-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+  @media (max-width:820px){.auto-cta{grid-template-columns:1fr}.auto-cta .shot{max-height:160px}}
+</style>
+
+<aside class="cta-copy card auto-cta">
+  <figure class="shot">
+    <!-- keep exact filename -->
     <img src="img-1681182405780.webp"
          alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-         loading="lazy" decoding="async"
-         style="width:100%;height:100%;object-fit:cover;display:block;opacity:.98">
+         loading="lazy" decoding="async">
   </figure>
 
   <div>
-    <h3 class="title" style="margin:0 0 6px;color:#8ff5d8">Autoflower for Beginners</h3>
-    <p class="subtle">Straightforward steps to run a clean first grow: simple gear, clear milestones, fewer mistakes.</p>
+    <h3 class="title">Autoflower for Beginners</h3>
+    <p class="subtle">Straightforward steps to run a clean first grow with simple gear and fewer mistakes.</p>
     <ul class="cta-bullets">
       <li>2×2–3×3 tents, sane budgets</li>
       <li>Light &amp; feeding made easy</li>
       <li>Week-by-week checkpoints</li>
     </ul>
     <div class="cta-actions">
-      <!-- absolute path to the subpage -->
       <a class="btn"
          href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
-         aria-label="Read Autoflower for Beginners">
-        Read the Starter Guide →
-      </a>
+         aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
       <a class="btn-outline"
          href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
          target="_blank" rel="sponsored noopener"
-         aria-label="Buy AK-47 Autoflower seeds">
-        Start with AK-47 Autoflower
-      </a>
+         aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
     </div>
-    <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+    <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
   </div>
 </aside>
-
+  
       <!-- Copy + CTAs (with image) -->
       <aside class="cta-copy card">
         <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:12px;align-items:center">

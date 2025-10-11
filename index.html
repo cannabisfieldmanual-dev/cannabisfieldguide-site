@@ -125,6 +125,13 @@
     .gear-card .inner{padding:14px 16px 16px}
     .gear-badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
 
+    /* Explore directory cards (adds a small header image for Cultivation only) */
+    .dir-card{display:grid;grid-template-rows:auto auto 1fr auto;gap:8px;padding:14px}
+    .dir-thumb{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0b0f12}
+    .dir-thumb img{width:100%;height:120px;object-fit:cover;display:block} /* <= SMALLER image */
+    .dir-card h3{margin:0}
+    .dir-card p{margin:0}
+
     /* Footer / notices */
     footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
     .disclosure{margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem}
@@ -209,44 +216,44 @@
     </div>
   </section>
 
-<!-- CTA: Autoflower for Beginners (compact & sleek) -->
-<style>
-  .auto-cta{display:grid;grid-template-columns:300px 1fr;gap:14px;align-items:center}
-  .auto-cta .shot{position:relative;aspect-ratio:16/10;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0d11;box-shadow:0 10px 24px rgba(0,0,0,.25)}
-  .auto-cta .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:.98;transform:scale(1.01)}
-  .auto-cta h3{margin:0 0 4px;color:#8ff5d8;font-size:1.02rem}
-  .auto-cta p{margin:0 0 6px}
-  .auto-cta .cta-bullets{margin:8px 0 0;padding:0;list-style:none}
-  .auto-cta .cta-bullets li{display:flex;gap:8px;margin:6px 0}
-  .auto-cta .cta-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-  @media (max-width:820px){.auto-cta{grid-template-columns:1fr}.auto-cta .shot{max-height:160px}}
-</style>
+  <!-- CTA: Autoflower for Beginners (compact & sleek) -->
+  <style>
+    .auto-cta{display:grid;grid-template-columns:300px 1fr;gap:14px;align-items:center}
+    .auto-cta .shot{position:relative;aspect-ratio:16/10;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0d11;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    .auto-cta .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:.98;transform:scale(1.01)}
+    .auto-cta h3{margin:0 0 4px;color:#8ff5d8;font-size:1.02rem}
+    .auto-cta p{margin:0 0 6px}
+    .auto-cta .cta-bullets{margin:8px 0 0;padding:0;list-style:none}
+    .auto-cta .cta-bullets li{display:flex;gap:8px;margin:6px 0}
+    .auto-cta .cta-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+    @media (max-width:820px){.auto-cta{grid-template-columns:1fr}.auto-cta .shot{max-height:160px}}
+  </style>
 
-<aside class="cta-copy card auto-cta">
-  <figure class="shot">
-    <!-- keep exact filename -->
-         alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-         loading="lazy" decoding="async">
-  </figure>
+  <aside class="cta-copy card auto-cta">
+    <figure class="shot">
+      <!-- exact filename preserved -->
+      <img src="img-1681182405780.webp" alt="Handful of airy potting mix with perlite next to young cannabis leaves" loading="lazy" decoding="async">
+    </figure>
 
-  <div>
-    <h3 class="title">Great Autoflower For Beginners</h3>
-    <p class="subtle">No experience required.</p>
-    <ul class="cta-bullets">
-    </ul>
-    <div class="cta-actions">
-      <a class="btn"
-         href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
-         aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
-      <a class="btn-outline"
-         href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-         target="_blank" rel="sponsored noopener"
-         aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+    <div>
+      <h3 class="title">Great Autoflower For Beginners</h3>
+      <p class="subtle">No experience required.</p>
+      <ul class="cta-bullets">
+        <li>2×2–3×3 tents</li>
+        <li>Simple lighting & feeding</li>
+        <li>Week-by-week checkpoints</li>
+      </ul>
+      <div class="cta-actions">
+        <a class="btn" href="/cannabisfieldguide-site/autoflower-bible-for-beginners/" aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
+        <a class="btn-outline"
+           href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
+           target="_blank" rel="sponsored noopener"
+           aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+      </div>
+      <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
     </div>
-    <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
-  </div>
-</aside>
-  
+  </aside>
+
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
@@ -417,12 +424,45 @@
       <div class="glow-box">
         <h2 class="section-title">Explore the Guide</h2>
         <div class="directory" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
-          <article class="dir-card card stack-12"><h3 class="title">Cultivation</h3><p>From soil prep to indoor grows — practical, step-by-step how-tos.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a> <img src="img-1681182405780.webp"</article>
-          <article class="dir-card card stack-12"><h3 class="title">Wellness</h3><p>Pain, sleep, appetite, and mood — dosage basics and formats.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
-          <article class="dir-card card stack-12"><h3 class="title">Laws &amp; Buying</h3><p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
-          <article class="dir-card card stack-12"><h3 class="title">Strains &amp; Products</h3><p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
-          <article class="dir-card card stack-12"><h3 class="title">Guides &amp; How-Tos</h3><p>Roll, store, grind, clean glass, travel tips, and more.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
-          <article class="dir-card card stack-12"><h3 class="title">Blog &amp; Deals</h3><p>Fresh content and rotating promos from trusted partners.</p><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a></article>
+          <!-- Cultivation (now with a small, neatly sized image) -->
+          <article class="dir-card card">
+            <div class="dir-thumb">
+              <img src="img-1681182405780.webp" alt="Young cannabis leaves above airy soil mix">
+            </div>
+            <h3 class="title">Cultivation</h3>
+            <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
+            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          </article>
+
+          <article class="dir-card card">
+            <h3 class="title">Wellness</h3>
+            <p>Pain, sleep, appetite, and mood — dosage basics and formats.</p>
+            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          </article>
+
+          <article class="dir-card card">
+            <h3 class="title">Laws &amp; Buying</h3>
+            <p>Stay compliant. Learn delivery rules, ID checks, shipping, and age limits.</p>
+            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          </article>
+
+          <article class="dir-card card">
+            <h3 class="title">Strains &amp; Products</h3>
+            <p>Flower, gummies, vapes, concentrates — honest picks and reviews.</p>
+            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          </article>
+
+          <article class="dir-card card">
+            <h3 class="title">Guides &amp; How-Tos</h3>
+            <p>Roll, store, grind, clean glass, travel tips, and more.</p>
+            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          </article>
+
+          <article class="dir-card card">
+            <h3 class="title">Blog &amp; Deals</h3>
+            <p>Fresh content and rotating promos from trusted partners.</p>
+            <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
+          </article>
         </div>
         <p class="subtle" style="text-align:center;margin:16px 0 0">21+ only. This site is educational and for legal adults in compliant regions. Always follow local laws.</p>
       </div>

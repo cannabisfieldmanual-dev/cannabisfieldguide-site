@@ -262,24 +262,56 @@
         loading="lazy" decoding="async">
     </figure>
 
+    <!-- Make whole card click through to the guide -->
+<style>
+  .auto-cta { position: relative; }
+  .auto-cta .hit {
+    position:absolute; inset:0; z-index:1; /* full-surface click */
+  }
+  .auto-cta .cta-actions a { position: relative; z-index:2; } /* keep buttons on top */
+</style>
+
+<div class="container">
+  <aside class="cta-copy card auto-cta">
+    <!-- full-surface link -->
+    <a class="hit"
+       href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
+       aria-label="Open: Autoflower for Beginners"></a>
+
+    <figure class="shot">
+      <img
+        src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
+        alt="Handful of airy potting mix with perlite next to young cannabis leaves"
+        loading="lazy" decoding="async">
+    </figure>
+
     <div>
-      <h3 class="title">Great Autoflower For Beginners</h3>
+      <h3 class="title">
+        <a href="/cannabisfieldguide-site/autoflower-bible-for-beginners/">Great Autoflower For Beginners</a>
+      </h3>
       <p class="subtle">No experience required.</p>
       <ul class="cta-bullets">
         <li>2×2–3×3 tents</li>
         <li>Simple lighting &amp; feeding</li>
         <li>Week-by-week checkpoints</li>
       </ul>
+
       <div class="cta-actions">
+        <!-- primary button -> your guide -->
         <a class="btn"
            href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
            aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
+
+        <!-- keep secondary as-is (different destination) -->
         <a class="btn-outline"
            href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
            target="_blank" rel="sponsored noopener"
            aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
       </div>
-      <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+
+      <p class="subtle" style="font-size:.82rem;margin-top:8px">
+        Affiliate disclosure: we may earn a commission. No extra cost to you.
+      </p>
     </div>
   </aside>
 </div>

@@ -1,244 +1,243 @@
-<!doctype html>
-<html lang="en">
-<head>
-<!-- <h2 id="starter-guide">Starter Guide</h2> -->
-<a href="https://ilgm.com/resources/landing/grow-bible?aff=7946"  ><img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-728x90.jpg" width="728" height="90" alt="" /></a>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Autoflower Bible for Beginners: Gear, Timeline, Mistakes, Yields</title>
-<meta name="description" content="A redesigned, no-BS guide for first-time autoflower growers. Strategic images, clean tips, and affiliate-linked starter gear: AK-47 auto seeds, tents, soils, and complete kits.">
-<link rel="canonical" href="https://yourdomain.com/guides/autoflower-bible">
-<style>
-  :root{
-    --bg:#0b0d11;--panel:#12161c;--ink:#eaf0f7;--muted:#b9c3cf;--line:#223042;
-    --accent:#6ac2ff;--brand:#ffb020;--ok:#62e680;--warn:#ffd169
-  }
-  *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-  a{color:var(--accent)} a:hover{text-decoration:underline}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-  .topbar{position:sticky;top:0;z-index:50;background:rgba(11,13,17,.75);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-  .topbar a{color:var(--muted)} .topbar a:hover{color:var(--ink)}
-  header.hero{padding:84px 18px 42px;background:
-    linear-gradient(180deg,rgba(6,9,13,.85),rgba(6,9,13,.4),rgba(6,9,13,.9)),
-    url('/images/autoflowering-plants-under-250w-hps.jpg') center/cover no-repeat;border-bottom:1px solid var(--line)}
-  .title{font-size:clamp(34px,5vw,56px);line-height:1.06;margin:0 0 10px;font-weight:900}
-  .subtitle{margin:0 0 16px;color:#dfe7f0;max-width:900px}
-  .pill{display:inline-block;border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:#c5cfda;margin:6px 8px 0 0}
-  .cta{display:inline-block;background:var(--brand);color:#0b0d11;font-weight:900;padding:12px 16px;border-radius:12px;box-shadow:0 8px 28px rgba(255,176,32,.25)}
-  section{padding:28px 0;border-top:1px solid var(--line)}
-  h2{font-size:clamp(24px,3.2vw,34px);margin:0 0 10px} h3{font-size:clamp(18px,2.4vw,24px);margin:14px 0 8px}
-  p.lead{font-size:18px;color:#e3ebf5}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
-  .grid{display:grid;gap:18px} @media(min-width:980px){.grid.cols-2{grid-template-columns:1.25fr .9fr} .grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-  figure.card{margin:0;background:#0c0f14;border:1px solid var(--line);border-radius:14px;overflow:hidden}
-  figure.card img{width:100%;display:block} figure.card figcaption{padding:10px;color:#b9c3cf;border-top:1px solid var(--line);font-size:13px}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-  .chip{border:1px solid var(--line);color:#c5cfda;border-radius:999px;padding:6px 10px;font-size:12px}
-  .callout{border-left:4px solid var(--brand);padding:12px 14px;background:#11151c;border-radius:8px}
-  .kicker{letter-spacing:.12em;text-transform:uppercase;color:#9fb5c9;font-weight:800;font-size:12px}
-  .faq details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}
-  .faq summary{cursor:pointer;font-weight:700}
-  footer.site{padding:32px 16px;color:#b9c3cf;border-top:1px solid var(--line)}
-</style>
-<!-- Minimal FAQ schema -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Are autoflowers good for beginners?","acceptedAnswer":{"@type":"Answer","text":"Yes—fast timelines, compact size, and simple lighting. Just remember you have less time to recover from mistakes."}},
-    {"@type":"Question","name":"What schedule for autos?","acceptedAnswer":{"@type":"Answer","text":"Run 18/6 or 20/4 from seed to harvest. Autos don’t rely on 12/12 to flower."}},
-    {"@type":"Question","name":"How much can I harvest?","acceptedAnswer":{"@type":"Answer","text":"Many first runs pull 1–4 oz per plant; environment and training can increase this over time."}}
-  ]
-}
-</script>
-</head>
-<body>
-<div class="topbar"><div class="wrap"><a href="/">← Back to Home</a><span style="font-size:12px">Autoflower Bible</span></div></div>
-<header class="hero">
-  <div class="wrap">
-    <h1 class="title">Autoflower Bible for Beginners</h1>
-    <p class="subtitle">Fast harvests, small spaces, simple lighting. Also the truth: autos can be fickle, and you get less time to fix mistakes. This guide shows you how to set up, avoid the common traps, and bring a first run home.</p>
-    <p><span class="pill">2×2–3×3 Tent</span><span class="pill">150–250W LED</span><span class="pill">18/6 or 20/4</span><span class="pill">8–12 Weeks</span></p>
-    <p><a class="cta" href="https://ilgm.com/products/ak-47-autoflower-seeds?_gl=1*1jnycae*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NjAwMjI4NTgkbzUkZzEkdDE3NjAwMjQyMjMkajU0JGwwJGgw*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz&variant=UHJvZHVjdFZhcmlhbnQ6NzM1&aff=7946" rel="sponsored noopener" target="_blank">Start with AK-47 Autoflower Seeds →</a></p>
-  </div>
-</header>
+<!-- Autoflower Bible — Beginner to Expert -->
+<article class="doc">
+  <h1 id="starter-guide">Autoflower Bible: From First Seed to Expert Harvest</h1>
+  <p class="subtle">For legal adults in legal jurisdictions. Educational only.</p>
 
-<main class="wrap">
+  <!-- Table of Contents -->
+  <nav class="toc">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#autos-vs-photos">Autoflowers vs. Photoperiods</a></li>
+      <li><a href="#plan-your-run">Plan Your Run (Space, Budget, Goals)</a></li>
+      <li><a href="#gear-lists">Gear Lists (2×2 & 3×3 tents)</a></li>
+      <li><a href="#environment">Environment & VPD Basics</a></li>
+      <li><a href="#light">Lighting & DLI Targets</a></li>
+      <li><a href="#mediums">Growing Mediums: Soil, Coco, Hydro</a></li>
+      <li><a href="#water-nutes">Water, pH, EC/PPM, and Nutrients</a></li>
+      <li><a href="#germination">Germination & Seedling Care</a></li>
+      <li><a href="#veg-to-flower">Early Growth → Flower Transition</a></li>
+      <li><a href="#training">Training Autos (What’s Safe, What’s Not)</a></li>
+      <li><a href="#defoliate">Defoliation & Leaf Management</a></li>
+      <li><a href="#ipm">Pest, Pathogen & IPM</a></li>
+      <li><a href="#feeding-schedules">Feeding Schedules (Soil & Coco Examples)</a></li>
+      <li><a href="#watering-rhythm">Watering Rhythm & Pot Sizing</a></li>
+      <li><a href="#diagnostics">Diagnostics: Lockout, Burn, Deficiencies</a></li>
+      <li><a href="#scent-control">Scent Control & Noise</a></li>
+      <li><a href="#harvest">Harvest Timing, Drying & Curing</a></li>
+      <li><a href="#staggered">Staggered Harvests & Perpetual Runs</a></li>
+      <li><a href="#advanced">Advanced Tips (Dialing in PPFD, CO₂, Hydro)</a></li>
+      <li><a href="#checklists">Checklists & Quick Reference</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+    </ol>
+  </nav>
 
- <!-- Benefits with hero-side image -->
-<section id="why-autos" class="grid cols-2">
-  <article class="panel">
-    <h2>Why Autoflowers Are Great for First-Time Growers</h2>
-    <ul class="pros">
-      <li><strong>Short seed-to-harvest:</strong> many finish in <strong>8–12 weeks</strong>. Faster feedback = faster learning.</li>
-      <li><strong>Compact:</strong> ideal for <strong>2×2 or 3×3 tents</strong>, closets, or cabinets.</li>
-      <li><strong>Simple lighting:</strong> run <code>18/6</code> or <code>20/4</code> the whole grow—no 12/12 flip needed.</li>
-      <li><strong>Budget friendly:</strong> smaller gear and lower power draw.</li>
-      <li><strong>Staggered harvests:</strong> pop a new seed every 3–4 weeks for steady jars.</li>
-    </ul>
-    <div class="callout">Because autos aren’t triggered by a strict dark period, you can grow them almost anywhere—bedroom corner, utility room, or shop—so long as you maintain <strong>airflow</strong>, <strong>temperature</strong>, and <strong>humidity</strong>.</div>
-    <div class="chips">
-      <span class="chip">Beginner Safe</span><span class="chip">Low Fuss</span><span class="chip">Small Space</span>
-    </div>
-  </article>
-  <aside class="panel">
-    <figure class="card">
-      <img src="/images/2plant.jpg" alt="Two autoflowers nearing harvest on a small table (LST, fabric pots)">
-      <figcaption>Two autos nearing harvest (LST, fabric pots). A realistic first-run result.</figcaption>
-    </figure>
-    <div style="height:10px"></div>
-    <a class="cta" href="/autoflower-bible-for-beginners/#starter-guide">Read the Starter Guide →</a>
-  </aside>
-</section>
+  <h2 id="autos-vs-photos">1) Autoflowers vs. Photoperiods</h2>
+  <p><strong>Autoflowers</strong> flower by age (usually 8–12 weeks seed to harvest) instead of by light schedule. You can keep lights at <code>18/6</code> or <code>20/4</code> from sprout to chop. They’re compact, fast, and forgiving on power costs. The trade-offs: less time to recover from mistakes and fewer training options than photoperiods.</p>
+  <ul>
+    <li><strong>Pros:</strong> fast turnaround, simple lighting, small spaces, easy perpetual pipeline.</li>
+    <li><strong>Cons:</strong> limited veg time, stress can cut yield, heavy training is risky.</li>
+  </ul>
 
-  <!-- Setup split with tent shots floated right -->
-  <section id="setup" class="grid cols-2">
-    <article class="panel">
-      <h2>Simple Setup That Works (Without Going Broke)</h2>
-      <h3>Core Gear</h3>
-      <ul>
-        <li><strong>Tent:</strong> 2×2 or 3×3 (or <strong>4×4</strong> if you want headroom & expansion).</li>
-        <li><strong>Light:</strong> 150–250W full-spectrum LED, safe distance per PPFD chart.</li>
-        <li><strong>Air:</strong> 6″ inline fan + carbon filter, plus a small oscillating fan inside.</li>
-        <li><strong>Containers:</strong> 3–5 gal fabric pots with light, airy soil.</li>
-        <li><strong>Water & pH:</strong> Soil pH 6.0–6.5 (coco 5.8–6.2). Water slowly; let pots lighten.</li>
-      </ul>
-      <p class="callout">Pro move: Use final pots from the start to avoid transplant shock. Autos dislike delays.</p>
-      <div class="chips"><span class="chip">Quiet Fan</span><span class="chip">Carbon Filter</span><span class="chip">Timer</span><span class="chip">Hygrometer</span></div>
-    </article>
-    <aside class="panel">
-      <figure class="card">
-        <img src="/images/big-and-little-grow-tents.jpg" alt="Small veg tent next to flowering tent">
-        <figcaption>Flexible setups: a small veg tent beside a flower tent—autos don’t need blackout perfection.</figcaption>
-      </figure>
-      <div style="height:10px"></div>
-      <figure class="card">
-        <img src="/images/tent-4x4x80.jpg" alt="4×4×80 grow tent product shot">
-        <figcaption>4×4×80″ tent—bedroom corner to shop upgrade. Fits 6″ fan/filter + LED over 3–4 autos.</figcaption>
-      </figure>
-      <p style="margin-top:10px"><a class="cta" href="https://www.ebay.com/itm/154891454432?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fDkOqk1cewtb4deDPqNJi0QbynbBuw2M24ip3Q1%2FLAj1t2KlYjOhROF7If0NNUJNAkYXtMzcDTf45NzwnOvZxng11Fo9UW%2FO8KwtW9E4GJOyny%2F4m2crNDE%2BBkTGHDgh6%2FBYnGzIpXUwrOlKw7SNaelU6d4QAOn4mygSmp9W0mOpfZ%2FlxvXYVBqcM322zgeJQ%3D" rel="sponsored noopener" target="_blank">See the 4×4×80″ Tent →</a></p>
-    </aside>
-  </section>
+  <h2 id="plan-your-run">2) Plan Your Run (Space, Budget, Goals)</h2>
+  <p>Decide up front: <em>How many plants? What pot size? What yield goal? What noise/smell level is acceptable?</em> For a first run in a <strong>2×2</strong>, aim for <strong>1 plant in a 3–5 gal fabric pot</strong>. In a <strong>3×3</strong>, run <strong>2 plants in 3–5 gal</strong> or <strong>4 plants in 2–3 gal</strong> if you can keep environment stable.</p>
 
-  <!-- Soil choices with alternating image/text -->
-  <section id="soil">
-    <h2>Soil That Works (Autos Love Airy, Light Mixes)</h2>
-    <div class="grid cols-2">
-      <figure class="card">
-        <img src="/images/ocean-forest.jpg" alt="FoxFarm Ocean Forest soil bags">
-        <figcaption>FoxFarm Ocean Forest — rich, pH-adjusted, and well-draining. Great buffer for weeks 1–3/4.</figcaption>
-      </figure>
-      <div class="panel">
-        <h3>FoxFarm Ocean Forest — My Go-To</h3>
-        <p><strong>Why it’s great:</strong> chunky aeration, pH 6.3–6.8, and enough nutrition to carry most autos early—ideal for beginners who tend to overfeed.</p>
-        <ul><li>Start water-only; add light nutrients when leaf tips ask.</li><li>Mix in 10–20% extra perlite for drainage.</li></ul>
-        <p><a class="cta" href="https://www.ebay.com/itm/402920786962?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1dJNppAc31zo39Z%2B1Btm3yeHv%2FwZmRiRtxqpyhTe7fArjxBn3d7edhe5LGtYJqnYtIiTYtBi8IO%2BhHusoh0PaxxokfjlIeNl%2BV%2B5qkJ5HftB%2B%2FElcSB%2B0Fs59D%2F%2BP28GfibEoYRCgcUKh9dhF%2BopswjqY15R9093aKrl0MPngXaHYRPswiXsk7TzcXKbsPs6Ag%3D" rel="sponsored noopener" target="_blank">Get Ocean Forest →</a></p>
-      </div>
-    </div>
-    <div class="grid cols-2" style="margin-top:14px">
-      <div class="panel">
-        <h3>FoxFarm Happy Frog — Gentle Alternative</h3>
-        <p><strong>Why choose it:</strong> milder base with mycorrhizae and humic acids—kinder to seedlings and sensitive autos. You’ll feed a bit earlier than with Ocean Forest, but burn risk is lower.</p>
-        <ul><li>Great for seed-to-harvest in 3–5 gal fabric pots.</li><li>Excellent root development via beneficial microbes.</li></ul>
-        <p><a class="cta" href="https://www.ebay.com/itm/402924721715?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1cQYLXX%2BQsF6Hg76wlhGsp6u5msPrb%2FjSG%2FHGJTqjrDLkpplIFszv544ZyyVIjLyZfLhH91elEvgdsyrJJQ9C8h2Z65dHkTKnuVR5r584HAbO%2B8R5e9MtlqRzOH89pWSjzoNbCvaj5AImVVrDmSFPTXR3DJQwm1L9HRc3STK%2BWE2uzRa9W59eumDuKqciyBM5o%3D" rel="sponsored noopener" target="_blank">Get Happy Frog →</a></p>
-      </div>
-      <figure class="card">
-        <img src="/images/happy-frog.jpg" alt="FoxFarm Happy Frog soil bags">
-        <figcaption>Happy Frog — seedling-friendly, microbe-rich, easy to dial in for autos.</figcaption>
-      </figure>
-    </div>
-  </section>
+  <h2 id="gear-lists">3) Gear Lists (2×2 & 3×3)</h2>
+  <h3>2×2 Tent, Single Auto (quiet & simple)</h3>
+  <ul>
+    <li>24–36" LED board/light (true draw ~100–150 W), dimmable.</li>
+    <li>4" inline fan + carbon filter + speed controller.</li>
+    <li>Clip fan for plant movement.</li>
+    <li>Fabric pot 3–5 gal + saucer.</li>
+    <li>Medium (lightly amended soil or buffered coco + perlite).</li>
+    <li>Digital hygrometer/thermometer + pH pen + EC/TDS meter.</li>
+    <li>Basic nutrients (grow, bloom, cal-mag) or an organic top-dress kit.</li>
+  </ul>
 
-  <!-- Timeline with a feature image inline -->
-  <section id="timeline">
-    <h2>Week-by-Week Timeline</h2>
-    <div class="grid cols-2">
-      <div class="panel">
-        <ol>
-          <li><strong>Week 0–1 — Seedling:</strong> 72–78°F, high humidity, gentle light.</li>
-          <li><strong>Week 2–3 — Early Veg:</strong> Increase light; start light feed; begin gentle LST.</li>
-          <li><strong>Week 4–5 — Pre-Flower:</strong> Pistils show; avoid topping now.</li>
-          <li><strong>Week 6–8 — Flower Build:</strong> Bloom nutes; RH 40–50%; support branches.</li>
-          <li><strong>Week 9–12 — Ripen:</strong> Check trichomes with a loupe; harvest mostly cloudy with a touch of amber.</li>
-          <li><strong>Dry & Cure:</strong> 60°F/60% RH for ~7–10 days; jar-cure afterward.</li>
-        </ol>
-      </div>
-      <figure class="card">
-        <img src="/images/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg" alt="Week-6 flowering autos under LED">
-        <figcaption>Flower stage under LED. Keep air moving; monitor RH to avoid bud rot.</figcaption>
-      </figure>
-    </div>
-  </section>
+  <h3>3×3 Tent, Two Autos (more headroom)</h3>
+  <ul>
+    <li>Board/bar LED ~200–300 W true draw.</li>
+    <li>6" inline fan + carbon filter.</li>
+    <li>Two clip fans for cross-breeze.</li>
+    <li>Two 3–5 gal fabric pots or four 2–3 gal.</li>
+    <li>Same meters, medium, and nutrient set.</li>
+  </ul>
+  <p><strong>Noise & stealth:</strong> use insulated ducting, mount fan with straps, and run the fan on a controller to reduce vibration. Keep bends in ducting gentle.</p>
 
-  <!-- Starter picks: seeds + kit -->
-  <section id="starter-picks" class="grid cols-2">
-    <article class="panel">
-      <h2>Starter Picks (What Works Day One)</h2>
-      <h3>AK-47 Autoflower Seeds</h3>
-      <p>Classic, fast, compact, and beginner-friendly with balanced, upbeat effects.</p>
-      <p><a class="cta" href="https://ilgm.com/products/ak-47-autoflower-seeds?_gl=1*1jnycae*_ga*MjM3MTIzNTM0LjE3NTk3NjE3OTM.*_ga_0SSMP6YBF8*czE3NjAwMjI4NTgkbzUkZzEkdDE3NjAwMjQyMjMkajU0JGwwJGgw*_gcl_au*MTc2OTkwMDQ5NS4xNzU5NzYxNzkz&variant=UHJvZHVjdFZhcmlhbnQ6NzM1&aff=7946" rel="sponsored noopener" target="_blank">Shop AK-47 Autoflower Seeds →</a></p>
-      <div class="callout" style="margin-top:12px">Tip: Plant two seeds the first run. It hedges against a slow starter and teaches you faster by comparison.</div>
-    </article>
-    <aside class="panel">
-      <h3>Make It Easy-Mode: Full 4×4 Kit</h3>
-      <figure class="card">
-        <img src="/images/vivosun-4x4-kit.jpg" alt="Complete 4×4 grow kit with LED, fan, filter, and accessories">
-        <figcaption>Near plug-and-play: tent, LED, 6″ fan + carbon filter, ducting, trellis, pots, trimmers, meters.</figcaption>
-      </figure>
-      <p style="margin-top:10px"><a class="cta" href="https://www.ebay.com/itm/156027317886?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1e6SWBFKRXdIj9rf%2B3H6DUC7gzxzEWlySrOmqBRPcGb%2FahITter1jUI04zmlWV8N8gMxByDBddXCK5amIci2ZkdPJpBPAEoNI4gZ4Btk1gCJThS50w3qGcx1sImKBCAMphpSGr1oqTOU9ejTR7nqStr4LD6J%2BciVfwf1NPGOrhRCcQLke%2BCE93Gmqa639wJSnI%3D" rel="sponsored noopener" target="_blank">See the Full 4×4 Kit →</a></p>
-    </aside>
-  </section>
+  <h2 id="environment">4) Environment & VPD Basics</h2>
+  <p>Autos thrive when temps and humidity are stable. Use ranges rather than chasing perfection:</p>
+  <ul>
+    <li><strong>Seedling:</strong> 75–80 °F (24–27 °C), RH 65–75%</li>
+    <li><strong>Early veg:</strong> 72–78 °F (22–26 °C), RH 55–65%</li>
+    <li><strong>Flower weeks 3–6:</strong> 70–77 °F (21–25 °C), RH 45–55%</li>
+    <li><strong>Late flower:</strong> 68–75 °F (20–24 °C), RH 40–50%</li>
+  </ul>
+  <p><strong>VPD</strong> (vapor pressure deficit) tells you how hard a plant transpires. If leaves taco upward, RH is too low or PPFD too high; if droopy and soggy, RH too high/airflow poor. A tiny oscillating fan that gently wiggles leaves prevents microclimates and mold.</p>
 
-  <!-- Results gallery -->
-  <section id="results">
-    <h2>Real-World Results</h2>
-    <div class="gallery">
-      <figure class="card"><img src="/images/420-magazine-mobile882618051.jpg" alt="Single autoflower trained with LST"><figcaption>LST on a single plant = multiple colas without topping.</figcaption></figure>
-      <figure class="card"><img src="/images/two-cannabis-plants-before-harvest-grown-under-315-lec.jpg" alt="Two autos near harvest"><figcaption>Two autos nearing harvest; compact height, dense buds.</figcaption></figure>
-      <figure class="card"><img src="/images/two-cannabis-plants-before-harvest-grown-under-315-lec-1.jpg" alt="Two autos near harvest variant"><figcaption>Another angle of late flower—don’t forget to support branches.</figcaption></figure>
-    </div>
-  </section>
+  <h2 id="light">5) Lighting & DLI Targets</h2>
+  <p>Run autos at <code>18/6</code> (balanced growth + rest) or <code>20/4</code> (more light, slightly more heat). What matters is <strong>DLI</strong> (daily light integral): total photons per day. If you don’t own a meter, follow manufacturer’s PAR map and watch the plant: leaves praying = happy; bleaching or crisping = back off.</p>
+  <ul>
+    <li><strong>Seedling:</strong> 200–300 μmol/m²/s (~12–15 DLI @ 18 h)</li>
+    <li><strong>Veg:</strong> 350–500 μmol/m²/s (~22–32 DLI)</li>
+    <li><strong>Peak flower:</strong> 600–800 μmol/m²/s (~38–50 DLI)</li>
+  </ul>
+  <p>Raise/dim to maintain intensity while the canopy rises. Keep 12–18" from modern LEDs in flower (varies by model).</p>
 
-  <!-- Bonus reference -->
-  <section id="bonus" class="grid cols-2">
-    <article class="panel">
-      <h2>Bonus: Indica vs Sativa (Quick Reality Check)</h2>
-      <p>Most shelf strains are hybrids. Effects are shaped by <strong>terpenes + dose + your body</strong>. Use the label as a starting point and take notes to find your sweet spot.</p>
-      <a class="cta" href="https://www.ilovegrowingmarijuana.com/growing/germinating-autoflower-seeds/?aff=7946" rel="sponsored noopener" target="_blank">Beginner Germination Guide →</a>
-    </article>
-    <aside class="panel">
-      <figure class="card">
-        <img src="/images/indica-vs-sativa-1.webp" alt="Indica vs Sativa infographic">
-        <figcaption>Classic indica vs sativa differences (historical reference).</figcaption>
-      </figure>
-    </aside>
-  </section>
+  <h2 id="mediums">6) Growing Mediums: Soil, Coco, Hydro</h2>
+  <h3>Living/Amended Soil</h3>
+  <p>Great for beginners. Use a <em>light</em> seedling mix up top and a <em>hotter</em> amended layer below. Water with dechlorinated water, top-dress at week 3 and week 6, and focus on environment. pH ~6.3–6.8. Don’t overwater; wait for the pot to get light.</p>
 
-  <section class="faq">
-    <h2>FAQs</h2>
-    <details><summary>Do autos need total darkness?</summary><p>No. They aren’t triggered by dark period length. Focus on airflow, temp, and RH; 18/6 or 20/4 schedules work well.</p></details>
-    <details><summary>What’s a safe first edible dose if I grow edibles later?</summary><p>2–5 mg THC, or 1–2 mg THC with 5–10 mg CBD. Wait 2 hours before redosing.</p></details>
-    <details><summary>How do I avoid overwatering?</summary><p>Let pots get lighter, water in a ring, and ensure an airy mix with extra perlite.</p></details>
-  </section>
+  <h3>Coco Coir + Perlite (70/30)</h3>
+  <p>Fast growth and precise control. Always use <strong>cal-mag</strong> and keep coco <strong>constantly moist</strong>, not soaked. pH 5.8–6.0 most of the run. Feed low EC daily with runoff (10–20%).</p>
 
-</main>
+  <h3>DWC/Hydro</h3>
+  <p>Maximum growth, minimum forgiveness. Keep water 65–68 °F (18–20 °C), strong aeration, clean reservoir, and stable EC. If this is your first grow, master soil/coco first—autos punish hydro mistakes quickly.</p>
 
-<footer class="site">
-  <div class="wrap">
-    <nav style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:10px">
-      <a href="/">← Back to Home</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="/contact">Contact</a>
-    </nav>
-    <p style="margin:0;font-size:13px"><strong>Medical Disclaimer:</strong> Content is educational only and not a substitute for professional medical advice. Follow local laws.</p>
-    <p style="margin:0;font-size:13px"><strong>Affiliate Disclosure:</strong> Some links are affiliate links; we may earn a commission at no extra cost to you.</p>
-    <p style="margin:0;font-size:12px">© 2025 — All rights reserved. Public URL: <code>https://yourdomain.com/guides/autoflower-bible</code></p>
-  </div>
-</footer>
+  <h2 id="water-nutes">7) Water, pH, EC/PPM, and Nutrients</h2>
+  <p><strong>pH:</strong> Soil 6.3–6.8; Coco/Hydro 5.7–6.1. <strong>EC:</strong> start low and let leaves tell you if they want more.</p>
+  <ul>
+    <li><strong>Seedling (week 1):</strong> 0.2–0.4 EC (100–200 ppm 500-scale) + light cal-mag if using RO.</li>
+    <li><strong>Early veg (weeks 2–3):</strong> 0.6–0.9 EC.</li>
+    <li><strong>Pre-flower (weeks 4–5):</strong> 1.0–1.3 EC.</li>
+    <li><strong>Peak flower (weeks 6–8):</strong> 1.2–1.6 EC depending on cultivar hunger.</li>
+    <li><strong>Late flower (last 10–14 days):</strong> taper to 0.6–0.8 EC or plain water in soil-style runs.</li>
+  </ul>
+  <p><strong>Signs you’re heavy-handed:</strong> dark, clawed leaves; burnt tips; rising runoff EC. <strong>Signs you’re light:</strong> pale new growth, rapid yellowing, slow bud set. Adjust by 0.1–0.2 EC at a time.</p>
 
-</body>
-</html>
+  <h2 id="germination">8) Germination & Seedling Care</h2>
+  <ol>
+    <li><strong>Hydrate:</strong> 12–24 h soak in room-temp water (optionally 1 drop of kelp or a touch of H₂O₂).</li>
+    <li><strong>Pop:</strong> transfer to moist paper towel in a baggie, 74–78 °F, dark; wait for ¼–½" taproot.</li>
+    <li><strong>Plant:</strong> root down in final pot (autos dislike transplants) ¼–½" deep. Dome it for 1–2 days if RH is low.</li>
+  </ol>
+  <p><strong>Light:</strong> 200–300 μmol/m²/s; too much stretches or bleaches seedlings. <strong>Water:</strong> mist or a ring of water away from the stem. Roots chase moisture outward.</p>
+
+  <h2 id="veg-to-flower">9) Early Growth → Flower Transition</h2>
+  <p>Most autos show pistils by days 18–28. Growth will surge (the “stretch”) for ~2–3 weeks. Keep nitrogen moderate as you shift to bloom formulas; excessive N delays flower and foxtails later.</p>
+  <ul>
+    <li>Keep canopy even; raise short plants on blocks.</li>
+    <li>Increase airflow under/through the canopy.</li>
+    <li>Trim only what’s necessary to open clogged centers.</li>
+  </ul>
+
+  <h2 id="training">10) Training Autos (What’s Safe, What’s Not)</h2>
+  <p><strong>Safe for beginners:</strong> <em>LST</em> (soft ties to bend the main stem horizontally) starting when the 4th–5th node appears. Aim for an even row of tops under the light. Re-tie every few days during stretch.</p>
+  <p><strong>Advanced & risky:</strong> topping and mainlining. If you top, do it extremely early (day 14–18) on a vigorous plant only; missing the window reduces yield. Many expert auto growers skip topping and rely on LST + selective plucks.</p>
+
+  <h2 id="defoliate">11) Defoliation & Leaf Management</h2>
+  <p>Leaves are solar panels. Remove only what shades multiple bud sites or traps moisture. A good rule:</p>
+  <ul>
+    <li><strong>Pre-flower (day 21–28):</strong> light lollipop of weak lower growth.</li>
+    <li><strong>Mid-stretch (about week 5):</strong> thin 10–15% of biggest fans blocking prime sites.</li>
+    <li><strong>After stretch:</strong> minimal; let the plant finish.</li>
+  </ul>
+
+  <h2 id="ipm">12) Pest, Pathogen & IPM</h2>
+  <p>Prevent > cure. Quarantine new clones/seeds gear (if applicable), keep the floor clean, never overwater, and maintain steady airflow.</p>
+  <ul>
+    <li><strong>Fungus gnats:</strong> allow top inch to dry, yellow sticky cards, BTi dunks in water (soil only).</li>
+    <li><strong>Spider mites:</strong> increase airflow, leaf inspections, horticultural soap early; severe cases require resetting the room.</li>
+    <li><strong>Powdery mildew/botrytis:</strong> reduce RH, increase air exchange, remove infected tissue, improve canopy structure.</li>
+  </ul>
+
+  <h2 id="feeding-schedules">13) Feeding Schedules (Examples)</h2>
+  <h3>Lightly Amended Soil (3–5 gal fabric)</h3>
+  <ul>
+    <li><strong>Week 1:</strong> dechlorinated water, pH 6.5. Optional ¼-strength cal-mag if RO.</li>
+    <li><strong>Week 2–3:</strong> ¼–½ strength veg feed (N-lean for autos), 0.6–0.9 EC, pH 6.4–6.6. Top-dress with a balanced dry amendment at end of week 3.</li>
+    <li><strong>Week 4–5:</strong> shift to bloom-lean mix, 1.0–1.2 EC.</li>
+    <li><strong>Week 6–8:</strong> bloom formula + PK booster if your line recommends, 1.2–1.5 EC. Watch tips.</li>
+    <li><strong>Finish:</strong> taper to water-only or 0.6 EC for 10–14 days.</li>
+  </ul>
+
+  <h3>Coco 70/30 (daily feed to 10–20% runoff)</h3>
+  <ul>
+    <li><strong>Week 1:</strong> 0.3–0.5 EC with cal-mag, pH 5.8.</li>
+    <li><strong>Week 2–3:</strong> 0.7–0.9 EC, pH 5.8–6.0.</li>
+    <li><strong>Week 4–5:</strong> 1.0–1.2 EC; begin bloom formula as pistils show.</li>
+    <li><strong>Week 6–8:</strong> 1.2–1.5 EC depending on cultivar appetite.</li>
+    <li><strong>Finish:</strong> taper to 0.6–0.8 EC or plain water last 7–10 days.</li>
+  </ul>
+  <p>Always tailor to your specific nutrient line’s chart, starting 25–50% lower than their “medium” dose for autos.</p>
+
+  <h2 id="watering-rhythm">14) Watering Rhythm & Pot Sizing</h2>
+  <p><strong>Fabric pots breathe</strong> and encourage dense roots. Typical sizes:</p>
+  <ul>
+    <li>2–3 gal: fast cycles, smaller plants, good for 4 plants in 3×3.</li>
+    <li>3–5 gal: balanced, ideal for 1 plant (2×2) or 2 plants (3×3).</li>
+  </ul>
+  <p>Water in a <em>ring</em> around the seedling at first, then expand outward. In soil, wait until the pot is noticeably lighter and the top inch is dry; in coco, feed daily to runoff once roots establish.</p>
+
+  <h2 id="diagnostics">15) Diagnostics: Lockout, Burn, Deficiencies</h2>
+  <ul>
+    <li><strong>Overwatering:</strong> droopy, swollen leaves; slow growth. Fix: smaller, more frequent waterings; more airflow; ensure runoff drains.</li>
+    <li><strong>N toxicity:</strong> very dark green, clawed tips. Fix: reduce grow nutrients; increase runoff for a day or two.</li>
+    <li><strong>Cal-mag issues (coco/RO):</strong> rust spots or interveinal chlorosis. Fix: add 1–3 ml/gal cal-mag and hold pH steady.</li>
+    <li><strong>pH lockout:</strong> random deficiencies despite feeding. Fix: verify pens, reset medium within target pH.</li>
+    <li><strong>Light stress:</strong> bleach on top colas. Fix: raise or dim; increase distance 2–4".</li>
+  </ul>
+
+  <h2 id="scent-control">16) Scent Control & Noise</h2>
+  <p>Mount the carbon filter <em>inside</em> the tent, pull air through it, and exhaust outside the room if possible. Negative pressure (tent walls suck in slightly) prevents odors from escaping. Replace filters every few runs depending on humidity and load.</p>
+
+  <h2 id="harvest">17) Harvest Timing, Drying & Curing</h2>
+  <p><strong>Read trichomes, not breeder weeks.</strong> Use a loupe (30–60×):</p>
+  <ul>
+    <li><strong>Clear → cloudy:</strong> peak head high; slightly underdone.</li>
+    <li><strong>Mostly cloudy:</strong> balanced potency (common target).</li>
+    <li><strong>Cloudy with some amber:</strong> heavier body effect.</li>
+  </ul>
+  <h3>Drying</h3>
+  <ul>
+    <li>Trim fan leaves on chop day (wet trim) or hang whole plant (dry trim) at 60 °F/60% RH (~10–14 days).</li>
+    <li>Gentle airflow in the room, not directly on flowers. Darkness helps preserve terps.</li>
+  </ul>
+  <h3>Curing</h3>
+  <ul>
+    <li>Jar at ~10–12% moisture (stems snap but don’t shatter). Burp daily first week, then every few days.</li>
+    <li>Target 62% RH in jars; use small humidity packs if needed.</li>
+    <li>Flavor improves for 3–6 weeks; potency stabilizes; harshness fades.</li>
+  </ul>
+
+  <h2 id="staggered">18) Staggered Harvests & Perpetual Runs</h2>
+  <p>Pop <strong>one seed every 3–4 weeks</strong>. In a 3×3, run two plants 4 weeks apart. Keep lights 18/6 for all ages; raise/lower individual plants to balance PPFD. This yields steady jars without increasing tent size.</p>
+
+  <h2 id="advanced">19) Advanced Tips (Dialing in PPFD, CO₂, Hydro)</h2>
+  <ul>
+    <li><strong>PPFD mapping:</strong> Use a PAR meter or app to find hot/cold spots; rotate pots weekly for even development.</li>
+    <li><strong>CO₂ (only if sealed & high light):</strong> Only helpful if temps, RH, and PPFD are already near optimal (700–900 μmol/m²/s). Otherwise it’s wasted.</li>
+    <li><strong>Hydro DWC:</strong> Keep res clean, change weekly, maintain dissolved oxygen (big airstone), and watch water temps.</li>
+    <li><strong>Phenotype spread:</strong> Autos vary; pick genetics with consistent structure for predictable canopies.</li>
+  </ul>
+
+  <h2 id="checklists">20) Checklists & Quick Reference</h2>
+  <h3>Daily</h3>
+  <ul>
+    <li>Peek at leaves (pray/happy? taco/bleach?), check temp/RH, confirm gentle leaf flutter.</li>
+    <li>In coco: feed to runoff; in soil: check pot weight before watering.</li>
+  </ul>
+  <h3>Weekly</h3>
+  <ul>
+    <li>Defoliate lightly if airflow is blocked.</li>
+    <li>Verify pH pen calibration; log EC going in and runoff EC.</li>
+    <li>Smell and inspect for pests under leaves.</li>
+  </ul>
+  <h3>Pre-Harvest</h3>
+  <ul>
+    <li>Check trichomes 2–3×/week from week 7 onward.</li>
+    <li>Lower RH to 40–50% to reduce late-flower mold risk.</li>
+    <li>Stage drying space (60/60) before you chop.</li>
+  </ul>
+
+  <h2 id="glossary">21) Glossary</h2>
+  <ul>
+    <li><strong>DLI:</strong> daily light integral (total light per day).</li>
+    <li><strong>EC/PPM:</strong> nutrient strength; electrical conductivity / parts per million.</li>
+    <li><strong>LST:</strong> low-stress training (bending/tying stems).</li>
+    <li><strong>Foxtailing:</strong> spiky new growth on buds, often from heat/light stress.</li>
+    <li><strong>Runoff:</strong> nutrient solution that drains out of the pot; used to gauge salt buildup.</li>
+  </ul>
+
+  <!-- Closing -->
+  <hr>
+  <p><em>Keep it simple, keep it steady.</em> Autoflowers reward consistency more than wizardry. Nail the environment, feed lightly but often, train with a gentle hand, and harvest by the trichomes—not the calendar.</p>
+</article>

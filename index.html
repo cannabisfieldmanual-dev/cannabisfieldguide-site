@@ -299,40 +299,7 @@
     </div>
   </aside>
 </div>
-
-<!-- PLACE THIS ON THE TARGET PAGE at the section header -->
-<!-- <h2 id="starter-guide">Starter Guide</h2> -->
-
-
-
-
-
-
-You said:
-didnt work. why the fuck not? im sick of this
-
-
-ChatGPT said:
-
-Thought for 13s
-Totally get the frustration. The usual culprits are:
-
-wrong path resolution (needs a leading slash),
-
-the target id isn’t on the page, or
-
-a fixed header hides the scrolled-to section.
-
-Here’s a drop-in fix that covers all three:
-
-Uses an absolute path (/autoflower-bible-for-beginners/#starter-guide) so it works from any page.
-
-Adds a real anchor on the target page with header offset.
-
-Adds a tiny JS helper so same-page clicks smooth-scroll even if other JS interferes.
-
-html
-Copy code
+  
 <!-- CTA: Autoflower for Beginners (centered & sleek, no duplicates) -->
 <style>
   /* minimal, conflict-safe additions */

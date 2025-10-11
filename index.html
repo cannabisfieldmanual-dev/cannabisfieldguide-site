@@ -125,10 +125,10 @@
     .gear-card .inner{padding:14px 16px 16px}
     .gear-badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
 
-    /* Explore directory cards (adds a small header image for Cultivation only) */
+    /* Explore directory cards (small header image for Cultivation) */
     .dir-card{display:grid;grid-template-rows:auto auto 1fr auto;gap:8px;padding:14px}
     .dir-thumb{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0b0f12}
-    .dir-thumb img{width:100%;height:120px;object-fit:cover;display:block} /* <= SMALLER image */
+    .dir-thumb img{width:100%;height:120px;object-fit:cover;display:block}
     .dir-card h3{margin:0}
     .dir-card p{margin:0}
 
@@ -139,7 +139,7 @@
     /* Age bar */
     .age-notice{position:sticky;bottom:0;left:0;right:0;z-index:9999;background:
       linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);
-      border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);backdrop-filter:saturate(1.1) blur(6px)}
+      border-top:1px solid var(--line);padding:12px 16px;color:#ink;backdrop-filter:saturate(1.1) blur(6px)}
     .age-wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
     .age-text{font-size:.95rem}
     .age-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -169,6 +169,27 @@
     }
     .glow-box > *{ position:relative; z-index:1; }
     .glow-box .section-title{ color:#8ff5d8; }
+
+    /* Autoflower CTA: centered + full-surface link */
+    .auto-cta{
+      position:relative;
+      display:grid;
+      grid-template-columns:minmax(240px,320px) 1fr;
+      gap:14px; align-items:center;
+      max-width:900px; margin:18px auto; padding:14px;
+    }
+    .auto-cta .shot{
+      position:relative; aspect-ratio:16/10; border:1px solid var(--line);
+      border-radius:12px; overflow:hidden; background:#0b0d11;
+      box-shadow:0 10px 24px rgba(0,0,0,.25);
+    }
+    .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
+    .auto-cta .hit{position:absolute; inset:0; z-index:1}
+    .auto-cta .cta-actions a{position:relative; z-index:2}
+    @media (max-width:820px){
+      .auto-cta{grid-template-columns:1fr}
+      .auto-cta .shot{max-height:160px}
+    }
   </style>
 </head>
 <body>
@@ -215,107 +236,32 @@
       </aside>
     </div>
   </section>
-<!-- CTA: Autoflower for Beginners (centered & sleek) -->
-<style>
-  .auto-cta{
-    display:grid;
-    grid-template-columns:minmax(240px,320px) 1fr;
-    gap:14px;
-    align-items:center;
 
-    /* center the whole card */
-    max-width:900px;
-    margin:18px auto;   /* centers it on the page */
-    padding:14px;       /* breathing room inside the card */
-  }
-  .auto-cta .shot{
-    position:relative;
-    aspect-ratio:16/10;
-    border:1px solid var(--line);
-    border-radius:12px;
-    overflow:hidden;
-    background:#0b0d11;
-    box-shadow:0 10px 24px rgba(0,0,0,.25);
-  }
-  .auto-cta .shot img{
-    position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover; display:block; opacity:.98; transform:scale(1.01);
-  }
-  .auto-cta h3{margin:0 0 4px; color:#8ff5d8; font-size:1.02rem}
-  .auto-cta p{margin:0 0 6px}
-  .auto-cta .cta-bullets{margin:8px 0 0; padding:0; list-style:none}
-  .auto-cta .cta-bullets li{display:flex; gap:8px; margin:6px 0}
-  .auto-cta .cta-actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
-  @media (max-width:820px){
-    .auto-cta{grid-template-columns:1fr}
-    .auto-cta .shot{max-height:160px}
-  }
-</style>
-
-<div class="container">
-  <aside class="cta-copy card auto-cta">
-    <figure class="shot">
-      <!-- exact filename preserved -->
-      <img
-        src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
-        alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-        loading="lazy" decoding="async">
-    </figure>
-
-    <!-- Make whole card click through to the guide -->
-<style>
-  .auto-cta { position: relative; }
-  .auto-cta .hit {
-    position:absolute; inset:0; z-index:1; /* full-surface click */
-  }
-  .auto-cta .cta-actions a { position: relative; z-index:2; } /* keep buttons on top */
-</style>
-
-<div class="container">
-  <aside class="cta-copy card auto-cta">
-    <!-- full-surface link -->
-    <a class="hit"
-       href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
-       aria-label="Open: Autoflower for Beginners"></a>
-
-    <figure class="shot">
-      <img
-        src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
-        alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-        loading="lazy" decoding="async">
-    </figure>
-
-    <div>
-      <h3 class="title">
-        <a href="/cannabisfieldguide-site/autoflower-bible-for-beginners/">Great Autoflower For Beginners</a>
-      </h3>
-      <p class="subtle">No experience required.</p>
-      <ul class="cta-bullets">
-        <li>2×2–3×3 tents</li>
-        <li>Simple lighting &amp; feeding</li>
-        <li>Week-by-week checkpoints</li>
-      </ul>
-
-      <div class="cta-actions">
-        <!-- primary button -> your guide -->
-        <a class="btn"
-           href="/cannabisfieldguide-site/autoflower-bible-for-beginners/"
-           aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
-
-        <!-- keep secondary as-is (different destination) -->
-        <a class="btn-outline"
-           href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-           target="_blank" rel="sponsored noopener"
-           aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+  <!-- CTA: Autoflower for Beginners (centered & sleek, no duplicates) -->
+  <div class="container">
+    <aside class="cta-copy card auto-cta">
+      <a class="hit" href="/cannabisfieldguide-site/autoflower-bible-for-beginners/" aria-label="Open: Autoflower for Beginners"></a>
+      <figure class="shot">
+        <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
+             alt="Handful of airy potting mix with perlite next to young cannabis leaves"
+             loading="lazy" decoding="async">
+      </figure>
+      <div>
+        <h3 class="title"><a href="/cannabisfieldguide-site/autoflower-bible-for-beginners/">Great Autoflower For Beginners</a></h3>
+        <p class="subtle">No experience required.</p>
+        <ul class="cta-bullets">
+          <li>2×2–3×3 tents</li>
+          <li>Simple lighting &amp; feeding</li>
+          <li>Week-by-week checkpoints</li>
+        </ul>
+        <div class="cta-actions">
+          <a class="btn" href="/cannabisfieldguide-site/autoflower-bible-for-beginners/" aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
+          <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+        </div>
+        <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
       </div>
-
-      <p class="subtle" style="font-size:.82rem;margin-top:8px">
-        Affiliate disclosure: we may earn a commission. No extra cost to you.
-      </p>
-    </div>
-  </aside>
-</div>
-
+    </aside>
+  </div>
 
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
@@ -487,7 +433,7 @@
       <div class="glow-box">
         <h2 class="section-title">Explore the Guide</h2>
         <div class="directory" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
-          <!-- Cultivation (now with a small, neatly sized image) -->
+          <!-- Cultivation with small header image -->
           <article class="dir-card card">
             <div class="dir-thumb">
               <img src="img-1681182405780.webp" alt="Young cannabis leaves above airy soil mix">

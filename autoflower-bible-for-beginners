@@ -68,32 +68,31 @@
 
 <main class="wrap">
 
-  <!-- Benefits with hero-side image -->
-  <section id="why-autos" class="grid cols-2">
-    <article class="panel">
-      <h2>Why Autoflowers Are Great for First-Time Growers</h2>
-      <ul class="pros">
-        <li><strong>Short seed-to-harvest:</strong> many finish in <strong>8–12 weeks</strong>. Faster feedback = faster learning.</li>
-        <li><strong>Compact:</strong> ideal for <strong>2×2 or 3×3 tents</strong>, closets, or cabinets.</li>
-        <li><strong>Simple lighting:</strong> run <code>18/6</code> or <code>20/4</code> the whole grow—no 12/12 flip needed.</li>
-        <li><strong>Budget friendly:</strong> smaller gear and lower power draw.</li>
-        <li><strong>Staggered harvests:</strong> pop a new seed every 3–4 weeks for steady jars.</li>
-      </ul>
-      <div class="callout">Because autos aren’t triggered by a strict dark period, you can grow them almost anywhere—bedroom corner, utility room, or shop—so long as you maintain <strong>airflow</strong>, <strong>temperature</strong>, and <strong>humidity</strong>.</div>
-      <div class="chips">
-        <span class="chip">Beginner Safe</span><span class="chip">Low Fuss</span><span class="chip">Small Space</span>
-      </div>
-    </article>
-    <aside class="panel">
-      <figure class="card">
-        <img src="/images/2plant.jpg" alt="Two autoflowers nearing harvest on a small table (LST, fabric pots)">
-        <figcaption>Two autos nearing harvest (LST, fabric pots). A realistic first-run result.</figcaption>
-      </figure>
-      <div style="height:10px"></div>
-      <a class="cta" href="https://www.ilovegrowingmarijuana.com/growing/germinating-autoflower-seeds/?aff=7946" rel="sponsored noopener" target="_blank">Germinating Autoflower Seeds →</a>
-      <p style="color:#b9c3cf;font-size:12px;margin-top:6px">Affiliate link. We recommend sources with good genetics.</p>
-    </aside>
-  </section>
+ <!-- Benefits with hero-side image -->
+<section id="why-autos" class="grid cols-2">
+  <article class="panel">
+    <h2>Why Autoflowers Are Great for First-Time Growers</h2>
+    <ul class="pros">
+      <li><strong>Short seed-to-harvest:</strong> many finish in <strong>8–12 weeks</strong>. Faster feedback = faster learning.</li>
+      <li><strong>Compact:</strong> ideal for <strong>2×2 or 3×3 tents</strong>, closets, or cabinets.</li>
+      <li><strong>Simple lighting:</strong> run <code>18/6</code> or <code>20/4</code> the whole grow—no 12/12 flip needed.</li>
+      <li><strong>Budget friendly:</strong> smaller gear and lower power draw.</li>
+      <li><strong>Staggered harvests:</strong> pop a new seed every 3–4 weeks for steady jars.</li>
+    </ul>
+    <div class="callout">Because autos aren’t triggered by a strict dark period, you can grow them almost anywhere—bedroom corner, utility room, or shop—so long as you maintain <strong>airflow</strong>, <strong>temperature</strong>, and <strong>humidity</strong>.</div>
+    <div class="chips">
+      <span class="chip">Beginner Safe</span><span class="chip">Low Fuss</span><span class="chip">Small Space</span>
+    </div>
+  </article>
+  <aside class="panel">
+    <figure class="card">
+      <img src="/images/2plant.jpg" alt="Two autoflowers nearing harvest on a small table (LST, fabric pots)">
+      <figcaption>Two autos nearing harvest (LST, fabric pots). A realistic first-run result.</figcaption>
+    </figure>
+    <div style="height:10px"></div>
+    <a class="cta" href="/autoflower-bible-for-beginners/#starter-guide">Read the Starter Guide →</a>
+  </aside>
+</section>
 
   <!-- Setup split with tent shots floated right -->
   <section id="setup" class="grid cols-2">

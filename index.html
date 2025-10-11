@@ -237,31 +237,68 @@
     </div>
   </section>
 
-  <!-- CTA: Autoflower for Beginners (centered & sleek, no duplicates) -->
-  <div class="container">
-    <aside class="cta-copy card auto-cta">
-      <a class="hit" href="/cannabisfieldguide-site/autoflower-bible-for-beginners/" aria-label="Open: Autoflower for Beginners"></a>
-      <figure class="shot">
-        <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
-             alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-             loading="lazy" decoding="async">
-      </figure>
-      <div>
-        <h3 class="title"><a href="/cannabisfieldguide-site/autoflower-bible-for-beginners/">Great Autoflower For Beginners</a></h3>
-        <p class="subtle">No experience required.</p>
-        <ul class="cta-bullets">
-          <li>2×2–3×3 tents</li>
-          <li>Simple lighting &amp; feeding</li>
-          <li>Week-by-week checkpoints</li>
-        </ul>
-        <div class="cta-actions">
-          <a class="btn" href="/cannabisfieldguide-site/autoflower-bible-for-beginners/" aria-label="Read Autoflower for Beginners">Read the Starter Guide →</a>
-          <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-        </div>
-        <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+ <!-- CTA: Autoflower for Beginners (centered & sleek, no duplicates) -->
+<style>
+  /* minimal, conflict-safe additions */
+  .auto-cta{
+    display:grid; grid-template-columns:minmax(240px,320px) 1fr; gap:14px; align-items:center;
+    max-width:900px; margin:18px auto; padding:14px;
+  }
+  .auto-cta .shot{position:relative; aspect-ratio:16/10; border:1px solid var(--line);
+    border-radius:12px; overflow:hidden; background:#0b0d11; box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
+  .auto-cta h3{margin:0 0 4px; color:#8ff5d8; font-size:1.02rem}
+  .auto-cta p{margin:0 0 6px}
+  .auto-cta .cta-bullets{margin:8px 0 0; padding:0; list-style:none}
+  .auto-cta .cta-bullets li{display:flex; gap:8px; margin:6px 0}
+  .auto-cta .cta-actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
+  .auto-cta { position:relative }
+  .auto-cta .hit{ position:absolute; inset:0; z-index:1 }
+  .auto-cta .cta-actions a, .auto-cta h3 a{ position:relative; z-index:2 }
+  @media (max-width:820px){ .auto-cta{ grid-template-columns:1fr } .auto-cta .shot{ max-height:160px } }
+</style>
+
+<div class="container">
+  <aside class="cta-copy card auto-cta">
+    <!-- Full-surface click to your guide; RELATIVE path works on root or project sites -->
+    <a class="hit" href="autoflower-bible-for-beginners/" aria-label="Open: Autoflower for Beginners"></a>
+
+    <figure class="shot">
+      <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
+           alt="Handful of airy potting mix with perlite next to young cannabis leaves"
+           loading="lazy" decoding="async">
+    </figure>
+
+    <div>
+      <h3 class="title">
+        <a href="autoflower-bible-for-beginners/">Great Autoflower For Beginners</a>
+      </h3>
+      <p class="subtle">No experience required.</p>
+      <ul class="cta-bullets">
+        <li>2×2–3×3 tents</li>
+        <li>Simple lighting &amp; feeding</li>
+        <li>Week-by-week checkpoints</li>
+      </ul>
+
+      <div class="cta-actions">
+        <!-- primary button -> your guide (relative URL) -->
+        <a class="btn" href="autoflower-bible-for-beginners/" aria-label="Read Autoflower for Beginners">
+          Read the Starter Guide →
+        </a>
+
+        <!-- secondary stays external -->
+        <a class="btn-outline"
+           href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
+           target="_blank" rel="sponsored noopener"
+           aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
       </div>
-    </aside>
-  </div>
+
+      <p class="subtle" style="font-size:.82rem;margin-top:8px">
+        Affiliate disclosure: we may earn a commission. No extra cost to you.
+      </p>
+    </div>
+  </aside>
+</div>
 
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">

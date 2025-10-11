@@ -7,11 +7,17 @@
   <meta name="description" content="Cannabis Field Guide: honest, independent info on cultivation, wellness, laws, and product education — no hype. 15% off first purchase at GetBud Online with code GBO15.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0d0f10">
-  <link rel="canonical" href="https://cannabisfieldguide.org/">
+  <link rel="canonical" href="https://cannabisfieldguide.org/"/>
 
   <style>
-    :root{ --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a; --panel:#111418; --panel-2:#0f1216; --accent:#18f0b4; --accent2:#0acb92; --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35); }
-    *{box-sizing:border-box} html,body{height:100%} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+    :root{
+      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
+      --panel:#111418; --panel-2:#0f1216; --accent:#18f0b4; --accent2:#0acb92;
+      --rad:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
@@ -21,10 +27,12 @@
       radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
       linear-gradient(180deg, rgba(6,8,9,.55), rgba(6,8,9,.88)),
       url('images/smoke-bg.jpg') center/cover no-repeat;filter:saturate(1.03) contrast(1.02)}
-    @media (max-width:700px){.wallpaper{background:
-      radial-gradient(900px 400px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
-      linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),
-      url('images/smoke-bg.jpg') center/cover no-repeat}}
+    @media (max-width:700px){
+      .wallpaper{background:
+        radial-gradient(900px 400px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
+        linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),
+        url('images/smoke-bg.jpg') center/cover no-repeat}
+    }
 
     /* Primitives */
     .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
@@ -73,27 +81,36 @@
     .aff .title{color:var(--accent)}
     .aff .desc{margin:6px 0 10px}
 
-    /* CTA hero */
-    .cta-hero{margin:22px 0}
-    .cta-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
-    @media (max-width:900px){.cta-hero .wrap{grid-template-columns:1fr}}
-    .cta-visual{position:relative;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;background:linear-gradient(180deg,#0f141b 0%,#0b0d11 100%)}
-    .cta-visual .glow{position:absolute;inset:0;background:
-      radial-gradient(80% 60% at 20% 10%, rgba(122,255,175,.25) 0%, rgba(122,255,175,0) 60%),
-      radial-gradient(60% 70% at 90% 30%, rgba(106,194,255,.25) 0%, rgba(106,194,255,0) 60%);pointer-events:none}
-    .cta-visual .content{position:relative;z-index:1;padding:22px 18px 26px;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px}
-    .cta-visual .kicker{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-    .cta-visual h2{margin:6px 0 8px;font-size:clamp(26px,4.6vw,44px);line-height:1.04;font-weight:900}
-    .cta-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
-    @media (max-width:640px){.cta-chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    .cta-chip{border:1px solid var(--line);border-radius:999px;padding:8px 10px;text-align:center;color:#d2dae7;font-size:.82rem;background:#101418}
-    .cta-copy{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--rad);padding:18px}
-    .cta-copy h3{margin:0 0 6px;font-size:1.06rem;color:#8ff5d8;font-weight:900}
-    .cta-bullets{margin:10px 0 0;padding:0;list-style:none;color:#d5dbe6}
-    .cta-bullets li{display:flex;gap:8px;margin:8px 0}
+    /* CTA: Autoflower + Two-up */
+    .auto-cta{
+      position:relative; display:grid; grid-template-columns:minmax(240px,320px) 1fr;
+      gap:14px; align-items:center; max-width:900px; margin:18px auto; padding:14px;
+      background:var(--panel-2); border:1px solid var(--line); border-radius:var(--rad);
+    }
+    .auto-cta .shot{
+      position:relative; aspect-ratio:16/10; border:1px solid var(--line);
+      border-radius:12px; overflow:hidden; background:#0b0d11; box-shadow:0 10px 24px rgba(0,0,0,.25);
+    }
+    .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
+    .auto-cta .hit{position:absolute; inset:0; z-index:1}
+    .auto-cta .cta-actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
+    .auto-cta .cta-actions a, .auto-cta h3 a{position:relative; z-index:2}
+    .auto-cta h3{margin:0 0 6px; font-size:1.06rem; color:#8ff5d8; font-weight:900}
+    .cta-bullets{margin:10px 0 0; padding:0; list-style:none; color:#d5dbe6}
+    .cta-bullets li{display:flex; gap:8px; margin:8px 0}
     .cta-bullets li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-    .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-    @media (max-width:520px){.cta-actions{grid-template-columns:1fr}}
+    @media (max-width:820px){
+      .auto-cta{grid-template-columns:1fr}
+      .auto-cta .shot{max-height:160px}
+    }
+
+    .two-up{
+      display:grid; grid-template-columns:1fr minmax(340px,520px);
+      gap:16px; align-items:stretch; max-width:1100px; margin:24px auto; padding:0 18px;
+    }
+    .two-up .promo{display:block; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#0b0d11}
+    .two-up .promo img{width:100%; height:100%; object-fit:cover; display:block}
+    @media (max-width:900px){ .two-up{ grid-template-columns:1fr } }
 
     /* From the Guide grid + tiles */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
@@ -107,8 +124,6 @@
     .tile2:hover .thumb img{transform:scale(1.03);opacity:1}
     .tile2 .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
     .tile2 .meta{padding:10px 12px;border-top:1px solid var(--line);background:#0f1316;color:#b7becc;font-size:.92rem;line-height:1.4}
-
-    /* Square + product-fit variants */
     .tile2.card.square .thumb{aspect-ratio:1/1}
     .tile2.card.square .thumb img{object-fit:cover}
     .tile2.card.product-fit .thumb{aspect-ratio:4/3}
@@ -125,7 +140,7 @@
     .gear-card .inner{padding:14px 16px 16px}
     .gear-badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
 
-    /* Explore directory cards (small header image for Cultivation) */
+    /* Explore directory cards */
     .dir-card{display:grid;grid-template-rows:auto auto 1fr auto;gap:8px;padding:14px}
     .dir-thumb{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0b0f12}
     .dir-thumb img{width:100%;height:120px;object-fit:cover;display:block}
@@ -147,49 +162,6 @@
     .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
     .age-hidden{display:none}
     @media (prefers-reduced-motion: reduce){ .rotor img, .tile2 .thumb img {transition:none} }
-
-    /* Glow box for Explore section */
-    .glow-box{
-      position: relative; border-radius: 16px; padding: 16px;
-      background: linear-gradient(180deg,#0f1418 0%, #0b0d11 100%);
-      border: 1px solid rgba(24,240,180,.25);
-      box-shadow:
-        0 0 0 1px rgba(24,240,180,.18) inset,
-        0 12px 36px rgba(0,0,0,.35),
-        0 0 32px rgba(24,240,180,.18),
-        0 0 64px rgba(24,240,180,.12);
-    }
-    .glow-box::before{
-      content:""; position:absolute; inset:-6px; border-radius: 20px;
-      background:
-        radial-gradient(60% 50% at 20% 0%, rgba(24,240,180,.25), transparent 60%),
-        radial-gradient(70% 60% at 100% 20%, rgba(10,203,146,.18), transparent 60%),
-        radial-gradient(70% 60% at 0% 60%, rgba(24,240,180,.16), transparent 60%);
-      filter: blur(18px); z-index: 0; pointer-events:none;
-    }
-    .glow-box > *{ position:relative; z-index:1; }
-    .glow-box .section-title{ color:#8ff5d8; }
-
-    /* Autoflower CTA: centered + full-surface link */
-    .auto-cta{
-      position:relative;
-      display:grid;
-      grid-template-columns:minmax(240px,320px) 1fr;
-      gap:14px; align-items:center;
-      max-width:900px; margin:18px auto; padding:14px;
-    }
-    .auto-cta .shot{
-      position:relative; aspect-ratio:16/10; border:1px solid var(--line);
-      border-radius:12px; overflow:hidden; background:#0b0d11;
-      box-shadow:0 10px 24px rgba(0,0,0,.25);
-    }
-    .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
-    .auto-cta .hit{position:absolute; inset:0; z-index:1}
-    .auto-cta .cta-actions a{position:relative; z-index:2}
-    @media (max-width:820px){
-      .auto-cta{grid-template-columns:1fr}
-      .auto-cta .shot{max-height:160px}
-    }
   </style>
 </head>
 <body>
@@ -234,188 +206,45 @@
           <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
         </div>
       </aside>
-    </div><a href="https://ilgm.com/resources/landing/grow-bible?aff=7946"  ><img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-726x276.jpg" width="726" height="276" alt="" /></a>
     </div>
   </section>
 
-<!-- CTA: Autoflower for Beginners (centered & sleek, no duplicates) -->
-<style>
-  /* minimal, conflict-safe additions */
-  .auto-cta{
-    display:grid; grid-template-columns:minmax(240px,320px) 1fr; gap:14px; align-items:center;
-    max-width:900px; margin:18px auto; padding:14px;
-  }
-  .auto-cta .shot{position:relative; aspect-ratio:16/10; border:1px solid var(--line);
-    border-radius:12px; overflow:hidden; background:#0b0d11; box-shadow:0 10px 24px rgba(0,0,0,.25)}
-  .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
-  .auto-cta h3{margin:0 0 4px; color:#8ff5d8; font-size:1.02rem}
-  .auto-cta p{margin:0 0 6px}
-  .auto-cta .cta-bullets{margin:8px 0 0; padding:0; list-style:none}
-  .auto-cta .cta-bullets li{display:flex; gap:8px; margin:6px 0}
-  .auto-cta .cta-actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
-  .auto-cta { position:relative }
-  .auto-cta .hit{ position:absolute; inset:0; z-index:1 }
-  .auto-cta .cta-actions a, .auto-cta h3 a{ position:relative; z-index:2 }
-  @media (max-width:820px){ .auto-cta{ grid-template-columns:1fr } .auto-cta .shot{ max-height:160px } }
-</style>
+  <!-- Two-up: ILGM banner + Autoflower CTA -->
+  <section class="two-up" aria-label="Starter guide and grow bible">
+    <!-- Left: ILGM banner -->
+    <a class="promo" href="https://ilgm.com/resources/landing/grow-bible?aff=7946" target="_blank" rel="sponsored noopener noreferrer" aria-label="ILGM Grow Bible">
+      <img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-726x276.jpg" alt="ILGM Grow Bible — free download banner">
+    </a>
 
-<div class="container">
-  <aside class="cta-copy card auto-cta">
-    <!-- Full-surface click to your guide section -->
-    <a class="hit" href="autoflower-bible-for-beginners/#starter-guide" aria-label="Open: Autoflower for Beginners — Starter Guide"></a>
-
-    <figure class="shot">
-      <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
-           alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-           loading="lazy" decoding="async">
-    </figure>
-
-    <div>
-      <h3 class="title">
-        <a href="autoflower-bible-for-beginners/#starter-guide">Great Autoflower For Beginners</a>
-      </h3>
-      <p class="subtle">No experience required.</p>
-      <ul class="cta-bullets">
-        <li>2×2–3×3 tents</li>
-        <li>Simple lighting &amp; feeding</li>
-        <li>Week-by-week checkpoints</li>
-      </ul>
-
-      <div class="cta-actions">
-        <!-- primary button -> jump to section -->
-        <a class="btn" href="autoflower-bible-for-beginners/#starter-guide" aria-label="Read the Starter Guide">
-          Read the Starter Guide →
-        </a>
-
-        <!-- secondary stays external -->
-        <a class="btn-outline"
-           href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-           target="_blank" rel="sponsored noopener"
-           aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+    <!-- Right: Autoflower CTA card -->
+    <aside class="cta-copy auto-cta card">
+      <a class="hit" href="/autoflower-bible-for-beginners/#starter-guide" aria-label="Open: Autoflower for Beginners — Starter Guide"></a>
+      <figure class="shot">
+        <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
+             alt="Handful of airy potting mix with perlite next to young cannabis leaves" loading="lazy" decoding="async">
+      </figure>
+      <div>
+        <h3 class="title"><a href="/autoflower-bible-for-beginners/#starter-guide">Great Autoflower For Beginners</a></h3>
+        <p class="subtle">No experience required.</p>
+        <ul class="cta-bullets">
+          <li>2×2–3×3 tents</li>
+          <li>Simple lighting &amp; feeding</li>
+          <li>Week-by-week checkpoints</li>
+        </ul>
+        <div class="cta-actions">
+          <a class="btn" href="/autoflower-bible-for-beginners/#starter-guide" aria-label="Read the Starter Guide">Read the Starter Guide →</a>
+          <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
+             target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+        </div>
+        <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
       </div>
-
-      <p class="subtle" style="font-size:.82rem;margin-top:8px">
-        Affiliate disclosure: we may earn a commission. No extra cost to you.
-      </p>
-    </div>
-  </aside>
-</div>
-  
-<!-- CTA: Autoflower for Beginners (centered & sleek, no duplicates) -->
-<style>
-  /* minimal, conflict-safe additions */
-  .auto-cta{
-    display:grid; grid-template-columns:minmax(240px,320px) 1fr; gap:14px; align-items:center;
-    max-width:900px; margin:18px auto; padding:14px;
-  }
-  .auto-cta .shot{position:relative; aspect-ratio:16/10; border:1px solid var(--line);
-    border-radius:12px; overflow:hidden; background:#0b0d11; box-shadow:0 10px 24px rgba(0,0,0,.25)}
-  .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
-  .auto-cta h3{margin:0 0 4px; color:#8ff5d8; font-size:1.02rem}
-  .auto-cta p{margin:0 0 6px}
-  .auto-cta .cta-bullets{margin:8px 0 0; padding:0; list-style:none}
-  .auto-cta .cta-bullets li{display:flex; gap:8px; margin:6px 0}
-  .auto-cta .cta-actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
-  .auto-cta { position:relative }
-  .auto-cta .hit{ position:absolute; inset:0; z-index:1 }
-  .auto-cta .cta-actions a, .auto-cta h3 a{ position:relative; z-index:2 }
-  @media (max-width:820px){ .auto-cta{ grid-template-columns:1fr } .auto-cta .shot{ max-height:160px } }
-</style>
-
-<div class="container">
-  <aside class="cta-copy card auto-cta">
-    <!-- OPTION A (recommended): absolute path so it works from anywhere -->
-    <a class="hit" href="/autoflower-bible-for-beginners/#starter-guide"
-       aria-label="Open: Autoflower for Beginners — Starter Guide"></a>
-
-    <!-- If this CTA lives on the SAME page as the target, you can change the three hrefs below to just '#starter-guide' -->
-
-    <figure class="shot">
-      <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
-           alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-           loading="lazy" decoding="async">
-    </figure>
-
-    <!-- Two-up: banner + CTA side-by-side -->
-<style>
-  .two-up{
-    display:grid; grid-template-columns:1fr minmax(340px, 520px);
-    gap:16px; align-items:stretch; max-width:1100px; margin:24px auto;
-  }
-  .two-up .promo{
-    display:block; border:1px solid var(--line,#26313a); border-radius:12px; overflow:hidden;
-    background:#0b0d11;
-  }
-  .two-up .promo img{ width:100%; height:100%; object-fit:cover; display:block }
-  @media (max-width:900px){ .two-up{ grid-template-columns:1fr } }
-  /* keep your existing CTA styles */
-  .auto-cta{
-    display:grid; grid-template-columns:minmax(240px,320px) 1fr; gap:14px; align-items:center;
-    margin:0; padding:14px; height:100%;
-  }
-  .auto-cta .shot{position:relative; aspect-ratio:16/10; border:1px solid var(--line);
-    border-radius:12px; overflow:hidden; background:#0b0d11; box-shadow:0 10px 24px rgba(0,0,0,.25)}
-  .auto-cta .shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.98; transform:scale(1.01)}
-  .auto-cta h3{margin:0 0 4px; color:#8ff5d8; font-size:1.02rem}
-  .auto-cta p{margin:0 0 6px}
-  .auto-cta .cta-bullets{margin:8px 0 0; padding:0; list-style:none}
-  .auto-cta .cta-bullets li{display:flex; gap:8px; margin:6px 0}
-  .auto-cta .cta-actions{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
-  .auto-cta { position:relative }
-  .auto-cta .hit{ position:absolute; inset:0; z-index:1 }
-  .auto-cta .cta-actions a, .auto-cta h3 a{ position:relative; z-index:2 }
-  @media (max-width:820px){ .auto-cta{ grid-template-columns:1fr } .auto-cta .shot{ max-height:160px } }
-</style>
-
-<section class="two-up">
-  <!-- Left: banner -->
-  <a class="promo" href="https://ilgm.com/resources/landing/grow-bible?aff=7946" target="_blank" rel="sponsored noopener">
-    <img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-726x276.jpg" alt="Free Grow Bible download banner">
-  </a>
-
-  <!-- Right: your existing CTA card -->
-  <aside class="cta-copy card auto-cta">
-    <a class="hit" href="autoflower-bible-for-beginners/#starter-guide" aria-label="Open: Autoflower for Beginners — Starter Guide"></a>
-
-    <figure class="shot">
-      <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg"
-           alt="Handful of airy potting mix with perlite next to young cannabis leaves"
-           loading="lazy" decoding="async">
-    </figure>
-
-    <div>
-      <h3 class="title">
-        <a href="autoflower-bible-for-beginners/#starter-guide">Great Autoflower For Beginners</a>
-      </h3>
-      <p class="subtle">No experience required.</p>
-      <ul class="cta-bullets">
-        <li>2×2–3×3 tents</li>
-        <li>Simple lighting &amp; feeding</li>
-        <li>Week-by-week checkpoints</li>
-      </ul>
-
-      <div class="cta-actions">
-        <a class="btn" href="autoflower-bible-for-beginners/#starter-guide" aria-label="Read the Starter Guide">
-          Read the Starter Guide →
-        </a>
-        <a class="btn-outline"
-           href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-           target="_blank" rel="sponsored noopener"
-           aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-      </div>
-
-      <p class="subtle" style="font-size:.82rem;margin-top:8px">
-        Affiliate disclosure: we may earn a commission. No extra cost to you.
-      </p>
-    </div>
-  </aside>
-</section>
+    </aside>
+  </section>
 
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
     <div class="mosaic">
-
       <a href="rolling-tips.html" aria-label="Rolling Tips subpage">
         <article class="tile2 card">
           <div class="thumb">
@@ -474,7 +303,6 @@
         </div>
         <div class="meta">Beginner-friendly DWC with air pump — fast veg in small tents.</div>
       </article>
-
     </div>
   </section>
 
@@ -536,7 +364,7 @@
       </article>
     </div>
 
-    <!-- NEW: Grow Tents & Kits -->
+    <!-- Grow Tents & Kits -->
     <h2 class="section-title" style="margin-top:18px">Grow Tents &amp; Kits</h2>
     <div class="container gear-grid" style="padding:0">
       <!-- VIVOSUN Complete Kit -->
@@ -581,11 +409,8 @@
       <div class="glow-box">
         <h2 class="section-title">Explore the Guide</h2>
         <div class="directory" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
-          <!-- Cultivation with small header image -->
           <article class="dir-card card">
-            <div class="dir-thumb">
-              <img src="img-1681182405780.webp" alt="Young cannabis leaves above airy soil mix">
-            </div>
+            <div class="dir-thumb"><img src="img-1681182405780.webp" alt="Young cannabis leaves above airy soil mix"></div>
             <h3 class="title">Cultivation</h3>
             <p>From soil prep to indoor grows — practical, step-by-step how-tos.</p>
             <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">View →</a>
@@ -626,7 +451,7 @@
     </div>
   </main>
 
-  <!-- Banner -->
+  <!-- Banner (wide) -->
   <div class="container" style="margin:16px auto">
     <a href="https://ilgm.com/resources/landing/grow-bible?aff=7946" rel="sponsored noopener noreferrer" target="_blank" aria-label="ILGM Grow Bible">
       <img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-728x90.jpg" width="728" height="90" alt="ILGM Grow Bible banner" style="margin:0 auto;display:block;max-width:100%;height:auto" />
@@ -669,7 +494,7 @@
       btn?.addEventListener('click',function(){localStorage.setItem(KEY,'1');bar.classList.add('age-hidden');});
     })();
 
-    // tiny stock counters (fun, optional)
+    // tiny stock counters (optional fun)
     (function(){
       const sd=document.getElementById('sd-num'); if(sd){let n=+sd.textContent||15; setInterval(()=>{if(n>3&&Math.random()<0.28){sd.textContent=--n;}},7000);}
       const rz=document.getElementById('runtz-num'); if(rz){let m=+rz.textContent||10; setInterval(()=>{if(m>3&&Math.random()<0.26){rz.textContent=--m;}},7500);}

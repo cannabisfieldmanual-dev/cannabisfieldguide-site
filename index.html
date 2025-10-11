@@ -16,6 +16,7 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
 
+    /* Background */
     .wallpaper{position:fixed;inset:0;z-index:-1;pointer-events:none;background:
       radial-gradient(1200px 600px at 20% -10%, rgba(24,240,180,.08), transparent 60%),
       linear-gradient(180deg, rgba(6,8,9,.55), rgba(6,8,9,.88)),
@@ -25,6 +26,7 @@
       linear-gradient(180deg, rgba(6,8,9,.6), rgba(6,8,9,.9)),
       url('images/smoke-bg.jpg') center/cover no-repeat}}
 
+    /* Primitives */
     .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow)}
     .title{margin:0;font-weight:900;letter-spacing:.2px}
     .subtle{color:var(--muted)}
@@ -42,6 +44,7 @@
     .chiprow{display:flex;flex-wrap:wrap;gap:8px}
     .stars{color:#ffdc73;font-weight:900}
 
+    /* Header */
     header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(13,15,16,.95),rgba(13,15,16,.85));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.1) blur(8px)}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
     .brand{display:flex;align-items:center;gap:12px}
@@ -49,6 +52,7 @@
     .brand h1{font-size:1.06rem;margin:0;font-weight:900;letter-spacing:.4px}
     .nav a.btn{font-size:.92rem}
 
+    /* HERO */
     .hero{margin:22px 0}
     .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
     @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
@@ -69,6 +73,7 @@
     .aff .title{color:var(--accent)}
     .aff .desc{margin:6px 0 10px}
 
+    /* CTA hero */
     .cta-hero{margin:22px 0}
     .cta-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
     @media (max-width:900px){.cta-hero .wrap{grid-template-columns:1fr}}
@@ -90,6 +95,7 @@
     .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
     @media (max-width:520px){.cta-actions{grid-template-columns:1fr}}
 
+    /* From the Guide grid + tiles */
     .from{max-width:1200px;margin:10px auto 0;padding:0 16px}
     .from h2{margin:12px 0 12px;color:var(--accent);text-align:center}
     .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
@@ -102,6 +108,13 @@
     .tile2 .cap{position:absolute;left:10px;bottom:10px;padding:7px 10px;border-radius:10px;background:rgba(10,12,14,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);font-weight:800}
     .tile2 .meta{padding:10px 12px;border-top:1px solid var(--line);background:#0f1316;color:#b7becc;font-size:.92rem;line-height:1.4}
 
+    /* Square + product-fit variants */
+    .tile2.card.square .thumb{aspect-ratio:1/1}
+    .tile2.card.square .thumb img{object-fit:cover}
+    .tile2.card.product-fit .thumb{aspect-ratio:4/3}
+    .tile2.card.product-fit .thumb img{object-fit:contain;padding:10px}
+
+    /* Featured gear */
     .gear-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     @media (max-width:900px){.gear-grid{grid-template-columns:1fr}}
     .gear-card{overflow:hidden;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px}
@@ -112,9 +125,11 @@
     .gear-card .inner{padding:14px 16px 16px}
     .gear-badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
 
+    /* Footer / notices */
     footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
     .disclosure{margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem}
 
+    /* Age bar */
     .age-notice{position:sticky;bottom:0;left:0;right:0;z-index:9999;background:
       linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);
       border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);backdrop-filter:saturate(1.1) blur(6px)}
@@ -125,8 +140,26 @@
     .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
     .age-hidden{display:none}
     @media (prefers-reduced-motion: reduce){ .rotor img, .tile2 .thumb img {transition:none} }
-    .glow-box{position: relative; border-radius: 16px; padding: 16px;background: linear-gradient(180deg,#0f1418 0%, #0b0d11 100%);border: 1px solid rgba(24,240,180,.25);box-shadow:0 0 0 1px rgba(24,240,180,.18) inset,0 12px 36px rgba(0,0,0,.35),0 0 32px rgba(24,240,180,.18),0 0 64px rgba(24,240,180,.12);}
-    .glow-box::before{content:""; position:absolute; inset:-6px; border-radius: 20px;background:radial-gradient(60% 50% at 20% 0%, rgba(24,240,180,.25), transparent 60%),radial-gradient(70% 60% at 100% 20%, rgba(10,203,146,.18), transparent 60%),radial-gradient(70% 60% at 0% 60%, rgba(24,240,180,.16), transparent 60%);filter: blur(18px); z-index: 0; pointer-events:none;}
+
+    /* Glow box for Explore section */
+    .glow-box{
+      position: relative; border-radius: 16px; padding: 16px;
+      background: linear-gradient(180deg,#0f1418 0%, #0b0d11 100%);
+      border: 1px solid rgba(24,240,180,.25);
+      box-shadow:
+        0 0 0 1px rgba(24,240,180,.18) inset,
+        0 12px 36px rgba(0,0,0,.35),
+        0 0 32px rgba(24,240,180,.18),
+        0 0 64px rgba(24,240,180,.12);
+    }
+    .glow-box::before{
+      content:""; position:absolute; inset:-6px; border-radius: 20px;
+      background:
+        radial-gradient(60% 50% at 20% 0%, rgba(24,240,180,.25), transparent 60%),
+        radial-gradient(70% 60% at 100% 20%, rgba(10,203,146,.18), transparent 60%),
+        radial-gradient(70% 60% at 0% 60%, rgba(24,240,180,.16), transparent 60%);
+      filter: blur(18px); z-index: 0; pointer-events:none;
+    }
     .glow-box > *{ position:relative; z-index:1; }
     .glow-box .section-title{ color:#8ff5d8; }
   </style>
@@ -192,27 +225,32 @@
         </div>
       </article>
 
-     <!-- Copy + CTAs (HARD PATH TO SUBPAGE) -->
-<aside class="cta-copy card">
-  <figure class="thumb" style="margin:0 0 12px;border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#0b0d10">
-    <img src="fat-bastard-auto.jpg" alt="Frosty autoflower bud" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)">
-  </figure>
-
-  <h3>New: Autoflower for Beginners</h3>
-  <p class="subtle">Great genetics for first runs.</p>
-  <ul class="cta-bullets">
-    <li>Pros: Quick harvests; cons (less time to fix mistakes)</li>
-    <li>Simple setup (2×2–3×3), sane budgets</li>
-    <li>No need for darkness</li>
-  </ul>
-  <div class="cta-actions">
-    <a class="btn-outline"
-       href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-       target="_blank" rel="sponsored noopener"
-       aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-  </div>
-  <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
-</aside>
+      <!-- Copy + CTAs (with image) -->
+      <aside class="cta-copy card">
+        <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:12px;align-items:center">
+          <figure style="margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0d10">
+            <img src="fat-bastard-auto.jpg" alt="Frosty autoflower cola close-up" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
+          </figure>
+          <div>
+            <h3>New: Autoflower for Beginners</h3>
+            <p class="subtle">Great genetics for first runs.</p>
+            <ul class="cta-bullets">
+              <li>Honest pros &amp; cons (less time to fix mistakes)</li>
+              <li>Simple setup (2×2–3×3), sane budgets</li>
+              <li>Germination and feeding made easy</li>
+            </ul>
+            <div class="cta-actions">
+              <a class="btn-outline"
+                 href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
+                 target="_blank" rel="sponsored noopener"
+                 aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
+            </div>
+            <p class="subtle" style="font-size:.82rem;margin-top:10px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
 
   <!-- From the Guide -->
   <section class="from" aria-label="From the guide">
@@ -258,7 +296,7 @@
                alt="Pink/blue leaf-print aloha shirt with cannabis leaves" loading="lazy" decoding="async">
           <span class="cap">Leaf Aloha Shirt</span>
           <a class="hit"
-             href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1"
+             href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1eNgX3jjVvpuNePbfHHuN4a0cwOc0O%2F50uwOSxl4p4kjEMXfhyq6QN0L1kwEwjGCqjATEwZWi6MpoViCrSqEU1p1OwJ7hCFmlrdnWQeB8nHGIbHsC5QfNGfGwpK1%2FsofQ61rht7zkkqdzJS5RX55o8693BoaxT%2FsEGak5Mv2I%2BGC%2Fhwt6dQgMJVCFAYwQJ2of8%3D"
              target="_blank" rel="sponsored noopener noreferrer"
              aria-label="Buy the leaf print aloha shirt"></a>
         </div>
@@ -284,12 +322,13 @@
   <!-- FEATURED GEAR -->
   <section class="from" aria-label="Featured gear">
     <h2>Featured Gear</h2>
+
     <div class="container gear-grid" style="padding:0">
       <!-- Smell-Proof Bag -->
       <article class="gear-card">
         <figure>
           <img src="$_3.png" alt="Smell-proof lock bag with accessories organized" loading="lazy" decoding="async">
-          <span class="badge">★★★★★ 4.8/5</span>
+          <span class="badge" aria-label="Rating 4.8 out of 5">★★★★★ 4.8/5</span>
           <div class="fade" aria-hidden="true"></div>
         </figure>
         <div class="inner">
@@ -331,7 +370,8 @@
             ⚠️ Only <span id="gear2-num">9</span> in stock — price drops at checkout
           </div>
           <div class="gear-badges">
-            <span class="chip">UV + IR</span><span class="chip">Dimmable</span><span class="chip">Low Heat</span></div>
+            <span class="chip">UV + IR</span><span class="chip">Dimmable</span><span class="chip">Low Heat</span>
+          </div>
           <a class="btn" href="https://www.ebay.com/itm/226619010799?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener noreferrer">Price: $79.99 →</a>
         </div>
       </article>
@@ -343,7 +383,6 @@
       <!-- VIVOSUN Complete Kit -->
       <article class="gear-card">
         <figure>
-          <!-- Using the exact filename you provided -->
           <img src="s-l1600 (30).jpg" alt="VIVOSUN complete grow tent kit with LED and inline fan" loading="lazy" decoding="async">
           <span class="badge">Complete Kit</span>
           <div class="fade" aria-hidden="true"></div>
@@ -361,7 +400,6 @@
       <!-- Spider Farmer 1680D Tent -->
       <article class="gear-card">
         <figure>
-          <!-- Using the exact filename you provided -->
           <img src="s-l1600 (31).jpg" alt="Spider Farmer 1680D mylar grow tents lineup" loading="lazy" decoding="async">
           <span class="badge">Heavy-Duty 1680D</span>
           <div class="fade" aria-hidden="true"></div>

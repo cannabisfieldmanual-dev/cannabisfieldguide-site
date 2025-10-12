@@ -9,14 +9,13 @@
 
   <style>
     :root{
-      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a;
-      --panel:#111418;
+      --bg:#0d0f10; --ink:#e9ecf4; --muted:#b7becc; --line:#2b2f3a; --panel:#111418;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
 
-    /* Background (uses your original filename) */
+    /* Background (original filename kept) */
     .page-bg{
       position:fixed; inset:0; z-index:-1; pointer-events:none;
       background:
@@ -34,10 +33,9 @@
       }
     }
 
-    /* Basic content layout */
-    .container{max-width:900px;margin:0 auto;padding:24px 18px}
-    .doc{position:relative;z-index:1;background:rgba(17,20,24,.6); /* subtle lift for readability */
-         border:1px solid var(--line);border-radius:14px;padding:18px}
+    /* Layout */
+    .container{max-width:940px;margin:0 auto;padding:24px 18px}
+    .doc{position:relative;z-index:1;background:rgba(17,20,24,.62);border:1px solid var(--line);border-radius:14px;padding:18px}
     .doc h1,.doc h2,.doc h3{margin:0 0 10px}
     .doc h1{font-size:clamp(26px,4.4vw,40px);line-height:1.1}
     .doc .subtle{color:var(--muted);margin-top:-4px}
@@ -48,10 +46,24 @@
     hr{border:0;border-top:1px solid var(--line);margin:18px 0}
     a{color:#8ff5d8;text-decoration:none}
     a:hover{text-decoration:underline}
+
+    /* Figures */
+    figure{margin:14px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0f12}
+    figure img{display:block;width:100%;height:auto;object-fit:cover}
+    figcaption{padding:8px 10px;color:var(--muted);font-size:.92rem;background:#0f1216}
+
+    /* Side figure (floats on wide screens) */
+    .side{
+      float:right; width:min(44%,360px); margin:6px 0 10px 12px;
+    }
+    @media (max-width:860px){ .side{float:none; width:100%; margin:10px 0} }
+
+    /* 2-up gallery */
+    .duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:720px){ .duo{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
-  <!-- Background layer -->
   <div class="page-bg" aria-hidden="true"></div>
 
   <main class="container">
@@ -59,6 +71,13 @@
     <article class="doc">
       <h1 id="starter-guide">Autoflower Bible: From First Seed to Expert Harvest</h1>
       <p class="subtle">For legal adults in legal jurisdictions. Educational only.</p>
+
+      <!-- Hero proof-of-result image -->
+      <figure>
+        <img src="images/my-biggest-autoflower-on-file-was-grown-in-3-9-gallon-v0-rvlfwk7s9vb91.webp"
+             alt="Huge, well-trained autoflower in a tent with dense colas" loading="eager" decoding="async">
+        <figcaption>What an efficient auto can look like in a compact space.</figcaption>
+      </figure>
 
       <!-- Table of Contents -->
       <nav class="toc">
@@ -99,6 +118,14 @@
       <p>Decide up front: <em>How many plants? What pot size? What yield goal? What noise/smell level is acceptable?</em> For a first run in a <strong>2×2</strong>, aim for <strong>1 plant in a 3–5 gal fabric pot</strong>. In a <strong>3×3</strong>, run <strong>2 plants in 3–5 gal</strong> or <strong>4 plants in 2–3 gal</strong> if you can keep environment stable.</p>
 
       <h2 id="gear-lists">3) Gear Lists (2×2 &amp; 3×3)</h2>
+
+      <!-- Gear context image floated right -->
+      <figure class="side">
+        <img src="images/20210108_124957.jpg"
+             alt="Tall single autoflower in tent next to circulation fan" loading="lazy" decoding="async">
+        <figcaption>Simple 2×2 single-plant setup.</figcaption>
+      </figure>
+
       <h3>2×2 Tent, Single Auto (quiet &amp; simple)</h3>
       <ul>
         <li>24–36" LED board/light (true draw ~100–150 W), dimmable.</li>
@@ -169,6 +196,14 @@
       <p><strong>Light:</strong> 200–300 μmol/m²/s; too much stretches or bleaches seedlings. <strong>Water:</strong> mist or a ring of water away from the stem. Roots chase moisture outward.</p>
 
       <h2 id="veg-to-flower">9) Early Growth → Flower Transition</h2>
+
+      <!-- Stretch/transition visual -->
+      <figure>
+        <img src="images/Giant_autoflower_4.jpg"
+             alt="Autoflower canopy mid-stretch with strong vertical colas" loading="lazy" decoding="async">
+        <figcaption>During stretch, keep the canopy even and airflow moving through the center.</figcaption>
+      </figure>
+
       <p>Most autos show pistils by days 18–28. Growth will surge (the “stretch”) for ~2–3 weeks. Keep nitrogen moderate as you shift to bloom formulas; excessive N delays flower and foxtails later.</p>
       <ul>
         <li>Keep canopy even; raise short plants on blocks.</li>
@@ -177,6 +212,14 @@
       </ul>
 
       <h2 id="training">10) Training Autos (What’s Safe, What’s Not)</h2>
+
+      <!-- Training example (float) -->
+      <figure class="side">
+        <img src="images/20210108_124957.jpg"
+             alt="Tall stacked colas after LST in a tent" loading="lazy" decoding="async">
+        <figcaption>LST creates an even row of tops under your light.</figcaption>
+      </figure>
+
       <p><strong>Safe for beginners:</strong> <em>LST</em> (soft ties to bend the main stem horizontally) starting when the 4th–5th node appears. Aim for an even row of tops under the light. Re-tie every few days during stretch.</p>
       <p><strong>Advanced &amp; risky:</strong> topping and mainlining. If you top, do it extremely early (day 14–18) on a vigorous plant only; missing the window reduces yield. Many expert auto growers skip topping and rely on LST + selective plucks.</p>
 
@@ -237,6 +280,14 @@
       <p>Mount the carbon filter <em>inside</em> the tent, pull air through it, and exhaust outside the room if possible. Negative pressure (tent walls suck in slightly) prevents odors from escaping. Replace filters every few runs depending on humidity and load.</p>
 
       <h2 id="harvest">17) Harvest Timing, Drying &amp; Curing</h2>
+
+      <!-- Frosty harvest look -->
+      <figure>
+        <img src="images/autoflower-in-the-later-flowering-stage.webp"
+             alt="Frosty autoflower colas late in bloom" loading="lazy" decoding="async">
+        <figcaption>Judge harvest by trichomes, not calendar weeks.</figcaption>
+      </figure>
+
       <p><strong>Read trichomes, not breeder weeks.</strong> Use a loupe (30–60×):</p>
       <ul>
         <li><strong>Clear → cloudy:</strong> peak head high; slightly underdone.</li>
@@ -267,6 +318,21 @@
       </ul>
 
       <h2 id="checklists">20) Checklists &amp; Quick Reference</h2>
+
+      <!-- Small closing duo gallery -->
+      <div class="duo">
+        <figure>
+          <img src="images/20210108_124957.jpg"
+               alt="Single auto finishing strong in fabric pot" loading="lazy" decoding="async">
+          <figcaption>Single-plant focus = fewer variables to manage.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/Giant_autoflower_4.jpg"
+               alt="Broad, trained autoflower canopy filling a tent" loading="lazy" decoding="async">
+          <figcaption>Training + steady environment = full canopy.</figcaption>
+        </figure>
+      </div>
+
       <h3>Daily</h3>
       <ul>
         <li>Peek at leaves (pray/happy? taco/bleach?), check temp/RH, confirm gentle leaf flutter.</li>
@@ -294,7 +360,6 @@
         <li><strong>Runoff:</strong> nutrient solution that drains out of the pot; used to gauge salt buildup.</li>
       </ul>
 
-      <!-- Closing -->
       <hr>
       <p><em>Keep it simple, keep it steady.</em> Autoflowers reward consistency more than wizardry. Nail the environment, feed lightly but often, train with a gentle hand, and harvest by the trichomes—not the calendar.</p>
     </article>

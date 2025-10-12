@@ -257,26 +257,76 @@
       </div>
     </article>
 
-    <aside class="auto-cta card" aria-label="Autoflower Starter Guide">
-      <figure class="shot">
-        <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg" alt="Flowering tent — HLG board light" loading="lazy" decoding="async">
-      </figure>
-      <div class="inner">
-        <h3 class="title">Autoflower Bible</h3>
-        <p class="subtle">Read for free.</p>
-        <ul class="cta-bullets">
-          <li>2×2–3×3 tents</li>
-          <li>Simple lighting &amp; feeding</li>
-          <li>Week-by-week checkpoints</li>
-        </ul>
-        <div class="cta-actions" style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-          <a class="btn" href="/autoflower-bible-for-beginners#starter-guide" aria-label="Read the Starter Guide">Read the Starter Guide →</a>
-          <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
-        </div>
-        <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+   <!-- === Side-by-side: Autoflower CTA + Antminer CTA === -->
+<style>
+  .two-up-cta{
+    display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch;
+    max-width:1100px;margin:24px auto;padding:0 18px;
+  }
+  @media (max-width:900px){ .two-up-cta{grid-template-columns:1fr} }
+
+  .product-cta.card{
+    background:var(--panel-2);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;
+    display:grid;grid-template-rows:auto 1fr;min-height:100%;
+  }
+  .product-cta .shot{
+    margin:0;border-bottom:1px solid var(--line);background:#0b0d11;
+    display:flex;align-items:center;justify-content:center;padding:10px;
+  }
+  .product-cta .shot img{
+    width:100%;height:220px;object-fit:contain;display:block;filter:saturate(1.03);
+  }
+  .product-cta .inner{padding:14px}
+  .product-cta .bullets{margin:10px 0 0;padding:0;list-style:none;color:#d5dbe6}
+  .product-cta .bullets li{display:flex;gap:8px;margin:8px 0}
+  .product-cta .bullets li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+</style>
+
+<section class="two-up-cta" aria-label="Autoflower guide and featured deal">
+  <!-- LEFT: existing Autoflower CTA (unchanged) -->
+  <aside class="auto-cta card" aria-label="Autoflower Starter Guide">
+    <figure class="shot">
+      <img src="https://www.growweedeasy.com/wp-content/uploads/2022/06/week-6-flowering-defoliation-tent-hlg-300-r-spec-on.jpg" alt="Flowering tent — HLG board light" loading="lazy" decoding="async">
+    </figure>
+    <div class="inner">
+      <h3 class="title">Autoflower Bible</h3>
+      <p class="subtle">Read for free.</p>
+      <ul class="cta-bullets">
+        <li>2×2–3×3 tents</li>
+        <li>Simple lighting &amp; feeding</li>
+        <li>Week-by-week checkpoints</li>
+      </ul>
+      <div class="cta-actions" style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+        <a class="btn" href="/autoflower-bible-for-beginners#starter-guide" aria-label="Read the Starter Guide">Read the Starter Guide →</a>
+        <a class="btn-outline" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener" aria-label="Buy AK-47 Autoflower seeds">Start with AK-47 Autoflower</a>
       </div>
-    </aside>
-  </section>
+      <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate disclosure: we may earn a commission. No extra cost to you.</p>
+    </div>
+  </aside>
+
+  <!-- RIGHT: Antminer S21+ CTA (sized down and matching style) -->
+  <aside class="product-cta card" aria-label="Bitmain Antminer S21+ 235T">
+    <figure class="shot">
+      <img src="s-l1600 (34).jpg" alt="Bitmain Antminer S21+ 235T Bitcoin miner" loading="lazy" decoding="async">
+    </figure>
+    <div class="inner">
+      <h3 class="title" style="color:var(--accent);margin-bottom:6px">Bitmain Antminer S21+ • 235T</h3>
+      <p class="subtle" style="margin:0 0 8px">Serious SHA-256 performance for Bitcoin mining — efficient and ready to rack.</p>
+      <ul class="bullets">
+        <li>Hashrate: <strong>235 TH/s ±3%</strong></li>
+        <li>Power draw: <strong>~3,877 W ±5%</strong></li>
+        <li>Efficiency: <strong>~16.5 J/TH</strong></li>
+        <li>Best with <strong>200–240V</strong> circuit</li>
+      </ul>
+      <div class="cta-actions" style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+        <a class="btn" href="https://www.ebay.com/itm/146715110512?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener" aria-label="Shop the Bitmain Antminer S21+ on eBay">Shop on eBay →</a>
+        <a class="btn-outline" href="https://www.ebay.com/itm/146715110512?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener" aria-label="Check current price and availability">Check Price &amp; Stock</a>
+      </div>
+      <p class="subtle" style="font-size:.82rem;margin-top:8px">Affiliate link — we may earn a commission at no extra cost to you.</p>
+    </div>
+  </aside>
+</section>
+<!-- === /Side-by-side === -->
 
   <!-- From the Guide (ads interleaved) -->
   <section class="from" aria-label="From the guide">

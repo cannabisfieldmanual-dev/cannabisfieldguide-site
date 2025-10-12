@@ -216,19 +216,53 @@
   </div>
 </aside>
 
-  <!-- Two-up -->
-  <section class="two-up" aria-label="Starter guide and grow bible">
-    <article class="promo-wrap card" aria-labelledby="grow-bible-title">
-      <a class="promo" href="https://ilgm.com/resources/landing/grow-bible?aff=7946" target="_blank" rel="sponsored noopener noreferrer" aria-label="ILGM Grow Bible">
-        <img src="https://static.affiliatly.com/affiliate_files/banners/21567/2025-af-grow-bible---banner-726x276.jpg" alt="ILGM Grow Bible — free download banner">
-      </a>
-      <div class="promo-desc">
-        <h3 id="grow-bible-title" class="title" style="font-size:1rem;color:#8ff5d8;margin-bottom:6px">What You’ll Learn in the Grow Bible</h3>
-        <p class="subtle" style="margin:0 0 8px">A straightforward, beginner-friendly path from seed to cured bud.</p>
-        <ul class="promo-list" style="margin:10px 0 0;padding:0 0 0 18px;color:#d5dbe6">
-          <li>Choosing seeds (auto, photo, feminized)</li>
-          <li>From germination to harvest — step by step</li>
-          <li>Indoor vs. outdoor: pros &amp; cons</li>
+  <!-- Add to your CSS -->
+<style>
+  /* Background image behind the whole .aff card */
+  .aff.has-bg{
+    background: rgba(15,17,22,.92);
+    position: relative;
+    overflow: hidden;
+  }
+  .aff.has-bg::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.55)),
+      url('pexels-quang-nguyen-vinh-222549-2131614.jpg') center/cover no-repeat;
+    filter:saturate(1.05) contrast(1.03);
+    z-index:0;
+    opacity:.9;
+  }
+  .aff.has-bg::after{
+    z-index:1;
+  }
+  .aff.has-bg > *{
+    position:relative;
+    z-index:2;
+  }
+  .aff.has-bg .rotor{
+    background: rgba(11,13,16,.8);
+    backdrop-filter: blur(2px);
+  }
+</style>
+
+<!-- Updated HTML -->
+<aside class="aff card has-bg">
+  <a href="https://getbudonline.com/subid/christopher.serpico/" class="rotor" rel="sponsored noopener noreferrer" target="_blank" aria-label="Shop now at GetBud Online">
+    <img src="concentrates.jpg" alt="Gummies and concentrates" loading="eager" decoding="async" class="is-active">
+    <img src="vape.jpg" alt="Vape cartridges and batteries" loading="lazy" decoding="async">
+    <img src="cbd.jpg" alt="Flower and value ounces" loading="lazy" decoding="async">
+    <img src="qr%20(4).png" alt="QR code to shop" loading="lazy" decoding="async">
+  </a>
+  <div class="stack-8">
+    <h3 class="title">GetBud Online</h3>
+    <p class="subtle desc">Fresh bud, even burn, discreet + fast. <strong>15% off first purchase: GBO15</strong></p>
+    <div class="chiprow"><span class="chip">Even burn</span><span class="chip">Strain variety</span><span class="chip">Multi-pack deals</span></div>
+    <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" rel="sponsored noopener noreferrer" target="_blank">Shop Now →</a>
+  </div>
+</aside>
+
           <li>Soil vs. hydro: picking a medium</li>
           <li>Dialing in lights for healthy growth</li>
           <li>Watering &amp; feeding basics that work</li>

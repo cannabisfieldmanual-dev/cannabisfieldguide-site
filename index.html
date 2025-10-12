@@ -74,7 +74,6 @@
     .rotor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
     .rotor img.is-active{opacity:1}
     .aff .title{color:var(--accent)}
-    /* background variant */
     .aff.has-bg{background:rgba(15,17,22,.92)}
     .aff.has-bg::before{content:"";position:absolute;inset:0;background:
       linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.55)),
@@ -83,7 +82,7 @@
     .aff.has-bg>*{position:relative;z-index:2}
     .aff.has-bg .rotor{background:rgba(11,13,16,.8);backdrop-filter:blur(2px)}
 
-    /* Two-up CTA (Autoflower + Antminer) */
+    /* Two-up CTA */
     .two-up-cta{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch;max-width:1100px;margin:24px auto;padding:0 18px}
     @media (max-width:900px){.two-up-cta{grid-template-columns:1fr}}
     .product-cta.card{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-height:100%}
@@ -118,35 +117,18 @@
     .mosaic .adcard{grid-column:1/-1}
     @media (max-width:480px){.adcard{grid-template-columns:1fr}}
 
-    /* Featured gear */
-    .gear-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width:900px){.gear-grid{grid-template-columns:1fr}}
-    .gear-card{overflow:hidden;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px}
-    .gear-card figure{margin:0;position:relative;aspect-ratio:16/10;background:#0c0f12;border-bottom:1px solid var(--line);overflow:hidden}
-    .gear-card figure img{width:100%;height:100%;object-fit:contain;object-position:center;padding:10px;filter:saturate(1.03)}
-    .gear-card .badge{position:absolute;left:12px;top:12px}
-
-    /* Directory */
-    .dir-card{display:grid;grid-template-rows:auto auto 1fr auto;gap:8px;padding:14px}
-    .dir-thumb{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0b0f12}
-    .dir-thumb img{width:100%;height:120px;object-fit:cover}
-
-    /* Footer / notices */
-    footer{border-top:1px solid var(--line);padding:18px 0;color:#9aa3ad;font-size:.88rem}
-    .disclosure{margin:12px 0 0;padding:10px 12px;border:1px dashed var(--line);background:#0f1318;color:#d8e2e8;border-radius:12px;font-size:.95rem}
-
-    /* Age bar */
-    .age-notice{position:sticky;bottom:0;left:0;right:0;z-index:9999;background:
-      linear-gradient(180deg, rgba(13,15,16,0), rgba(13,15,16,.9) 18%), var(--panel);
-      border-top:1px solid var(--line);padding:12px 16px;color:var(--ink);backdrop-filter:saturate(1.1) blur(6px)}
-    .age-wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .age-text{font-size:.95rem}
-    .age-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    .age-btn{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081014;border:0;border-radius:10px;padding:9px 12px;font-weight:900;cursor:pointer}
-    .age-link{color:#b7becc;text-decoration:underline;text-underline-offset:3px}
-    .age-hidden{display:none}
-
-    @media (prefers-reduced-motion:reduce){ .rotor img, .tile2 .thumb img {transition:none} }
+    /* Three-across ad row (Roja + Skull Tote + Trimming Tray) */
+    .adrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch;margin-top:14px;grid-column:1/-1}
+    @media (max-width:900px){.adrow{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.adrow{grid-template-columns:1fr}}
+    .adbanner{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:center;border:1px solid var(--line);background:#0f1317;border-radius:16px;padding:14px;box-shadow:var(--shadow)}
+    .adbanner .shot{position:relative;border:1px solid #24303b;border-radius:12px;overflow:hidden;background:#0b0f12}
+    .adbanner .shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .adbanner h4{margin:0 0 6px;font-size:1.05rem;color:#8ff5d8}
+    .adbanner p{margin:0 0 10px;color:#b7becc}
+    .adbanner .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:10px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    .adbanner .ad-note{margin-top:6px;font-size:.82rem;color:#93a0ad}
+    @media (max-width:520px){.adbanner{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -181,11 +163,8 @@
 
       <!-- GetBud promo -->
       <aside class="aff card has-bg" aria-label="GetBud Online">
-        <!-- overlay header -->
-        <div class="aff-head"
-             style="position:absolute;left:14px;top:12px;z-index:3;display:inline-flex;align-items:center;gap:10px;padding:6px 10px;border-radius:12px;background:rgba(10,12,14,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);font-weight:900;letter-spacing:.2px;color:var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.25)">
-          <span aria-hidden="true"
-                style="width:10px;height:10px;border-radius:999px;display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 12px rgba(24,240,180,.6)"></span>
+        <div class="aff-head" style="position:absolute;left:14px;top:12px;z-index:3;display:inline-flex;align-items:center;gap:10px;padding:6px 10px;border-radius:12px;background:rgba(10,12,14,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);font-weight:900;letter-spacing:.2px;color:var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.25)">
+          <span aria-hidden="true" style="width:10px;height:10px;border-radius:999px;display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 12px rgba(24,240,180,.6)"></span>
           GetBud Online • Partner Offer
         </div>
 
@@ -209,7 +188,6 @@
 
   <!-- Two-up CTAs -->
   <section class="two-up-cta" aria-label="Autoflower guide and featured deal">
-    <!-- LEFT: Autoflower -->
     <aside class="auto-cta card" aria-label="Autoflower Starter Guide">
       <figure class="shot">
         <img src="autoflow.jpg" alt="Autoflower tent with LED board" loading="lazy" decoding="async">
@@ -230,7 +208,6 @@
       </div>
     </aside>
 
-    <!-- RIGHT: Antminer -->
     <aside class="product-cta card" aria-label="Bitmain Antminer S21+ 235T">
       <figure class="shot">
         <img src="bitmine.jpg" alt="Bitmain Antminer S21+ 235T Bitcoin miner" loading="lazy" decoding="async">
@@ -257,7 +234,6 @@
   <section class="from" aria-label="From the guide">
     <h2>From the Guide</h2>
     <div class="mosaic">
-
       <!-- Tile 1 -->
       <a href="rolling-tips.html" aria-label="Rolling Tips subpage">
         <article class="tile2 card">
@@ -333,106 +309,52 @@
         </div>
       </article>
 
-      <!-- Tile 4 -->
-      <article class="tile2 card">
-        <div class="thumb">
-          <img src="s-l1600%20(26).jpg" alt="Pink/blue leaf-print aloha shirt with cannabis leaves" loading="lazy" decoding="async">
-          <span class="cap">Leaf Aloha Shirt</span>
-          <a class="hit" href="https://www.ebay.com/itm/197644059578?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1eNgX3jjVvpuNePbfHHuN4a0cwOc0O%2F50uwOSxl4p4kjEMXfhyq6QN0L1kwEwjGCqjATEwZWi6MpoViCrSqEU1p1OwJ7hCFmlrdnWQeB8nHGIbHsC5QfNGfGwpK1%2FsofQ61rht7zkkqdzJS5RX55o8693BoaxT%2FsEGak5Mv2I%2BGC%2Fhwt6dQgMJVCFAYwQJ2of8%3D" target="_blank" rel="sponsored noopener noreferrer" aria-label="Buy the leaf print aloha shirt"></a>
-        </div>
-        <div class="meta">Breezy leaf + palm print, easy festival layer.</div>
-      </article>
+      <!-- THREE-ACROSS AD ROW (Roja + Skull Tote + Trimming Tray) -->
+      <div class="adrow">
+        <!-- Roja -->
+        <article class="adbanner" aria-label="Roja Parfums Elysium — Fragrance">
+          <a class="shot" href="https://www.ebay.com/itm/405559220328?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fAg3biC%2FS41yCkuQ01yxOG4nvRhxmCqmhLmR2Ww7%2B0RK6jf5CODbV%2BCGzAPVz%2FmCAXLvL6lD0rmGPFXlC5%2FYPN0Mw59zOC%2FkLFOiiztJE2Nji1gw2QkzyqKYIvdvrdsnvOlvNCrvS%2B8iLhSalwdXHQQMWNinU1pw7Uo3LGCkxH5%2BH35aRVRvR0hut9fOj4iA0%3D" target="_blank" rel="sponsored noopener noreferrer">
+            <span class="adbadge">Ad</span>
+            <img src="roja.jpg" alt="Roja Parfums Elysium bottle and box — blue gradient flacon">
+          </a>
+          <div>
+            <h4>Roja Parfums Elysium (Parfum Cologne)</h4>
+            <p>Bright citrus, clean woods, and classy musk. <strong>Smell like compliments — not bongwater.</strong></p>
+            <a class="btn" href="https://www.ebay.com/itm/405559220328?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fAg3biC%2FS41yCkuQ01yxOG4nvRhxmCqmhLmR2Ww7%2B0RK6jf5CODbV%2BCGzAPVz%2FmCAXLvL6lD0rmGPFXlC5%2FYPN0Mw59zOC%2FkLFOiiztJE2Nji1gw2QkzyqKYIvdvrdsnvOlvNCrvS%2B8iLhSalwdXHQQMWNinU1pw7Uo3LGCkxH5%2BH35aRVRvR0hut9fOj4iA0%3D" target="_blank" rel="sponsored noopener noreferrer">Check Price →</a>
+            <div class="ad-note">Affiliate link — we may earn a commission at no extra cost to you.</div>
+          </div>
+        </article>
 
-      <!-- Tile 5 -->
-      <article class="tile2 card product-fit">
-        <div class="thumb">
-          <img src="s-l1600%20(27).jpg" alt="Four-bucket DWC hydroponic system with air pump" loading="lazy" decoding="async">
-          <span class="cap">4-Bucket DWC Kit</span>
-          <a class="hit" href="https://www.ebay.com/itm/403829354759?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1" target="_blank" rel="sponsored noopener noreferrer" aria-label="Buy the 4-bucket DWC hydro kit"></a>
-        </div>
-        <div class="meta">Beginner-friendly DWC with air pump — fast veg in small tents.</div>
-      </article>
+        <!-- Skull Tote -->
+        <article class="adbanner" aria-label="Skull Art Leather Tote — Bag">
+          <a class="shot" href="https://www.ebay.com/itm/187336552597?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fRbM2hTTcEMIg0rz%2FVFZdtP5PgAQpBUNfyW2jhFz1A5TF9ttgGtBTh1Rm0cP246c9P1fHBKG%2FiBCUjkv6lWBERDliuUqEf%2FwLPcGDmSOIgpFPyVR71MXbAd%2B7%2BqZk4adyeb13SoZfjURJ%2F5PaQArjicWQksGdWL3Z9Y3Iv7JQ2CQ53WPMNuAIP8%2FhqabrS2oo%3D" target="_blank" rel="sponsored noopener noreferrer">
+            <span class="adbadge">Ad</span>
+            <img src="s-l1600 (34).jpg" alt="Skull artwork leather tote bag with strap">
+          </a>
+          <div>
+            <h4>Skull Art Leather Tote</h4>
+            <p>Bold street-art vibes with everyday utility. Carry the edge with you.</p>
+            <a class="btn" href="https://www.ebay.com/itm/187336552597?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fRbM2hTTcEMIg0rz%2FVFZdtP5PgAQpBUNfyW2jhFz1A5TF9ttgGtBTh1Rm0cP246c9P1fHBKG%2FiBCUjkv6lWBERDliuUqEf%2FwLPcGDmSOIgpFPyVR71MXbAd%2B7%2BqZk4adyeb13SoZfjURJ%2F5PaQArjicWQksGdWL3Z9Y3Iv7JQ2CQ53WPMNuAIP8%2FhqabrS2oo%3D" target="_blank" rel="sponsored noopener noreferrer">See Listing →</a>
+            <div class="ad-note">Affiliate link — we may earn a commission.</div>
+          </div>
+        </article>
 
-      <!-- Tile 6 (square banner) -->
-      <a href="https://ilgm.com/collections/deals?aff=7946" target="_blank" rel="sponsored noopener noreferrer" aria-label="ILGM Deals">
-        <img src="https://static.affiliatly.com/affiliate_files/banners/21567/croptober-2025-af---banner-300x300.jpg" width="300" height="300" alt="ILGM Croptober deals banner" />
-      </a>
-
-      <!-- Add once to your CSS -->
-      <style>
-        .adbanner{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:center;
-          border:1px solid var(--line);background:#0f1317;border-radius:16px;padding:14px;box-shadow:var(--shadow)}
-        .adbanner .shot{position:relative;border:1px solid #24303b;border-radius:12px;overflow:hidden;background:#0b0f12}
-        .adbanner .shot img{width:100%;height:100%;object-fit:cover;display:block}
-        .adbadge{position:absolute;left:10px;top:10px;z-index:2;font-size:.8rem;font-weight:800;color:#051512;
-          background:linear-gradient(90deg,var(--accent),var(--accent2));padding:4px 8px;border-radius:999px}
-        .adbanner h4{margin:0 0 6px;font-size:1.05rem;color:#8ff5d8}
-        .adbanner p{margin:0 0 10px;color:#b7becc}
-        .adbanner .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:10px 14px;border-radius:12px;
-          color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-        .adbanner .ad-note{margin-top:6px;font-size:.82rem;color:#93a0ad}
-        @media (max-width:520px){.adbanner{grid-template-columns:1fr}}
-      </style>
-
-     <!-- THREE-ACROSS AD ROW (Roja + Skull Tote + Trimming Tray) -->
-<style>
-  .adrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch;margin-top:14px}
-  @media (max-width:900px){.adrow{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:600px){.adrow{grid-template-columns:1fr}}
-  .adbanner{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:center;border:1px solid var(--line);background:#0f1317;border-radius:16px;padding:14px;box-shadow:var(--shadow)}
-  .adbanner .shot{position:relative;border:1px solid #24303b;border-radius:12px;overflow:hidden;background:#0b0f12}
-  .adbanner .shot img{width:100%;height:100%;object-fit:cover;display:block}
-  .adbadge{position:absolute;left:10px;top:10px;z-index:2;font-size:.8rem;font-weight:800;color:#051512;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:4px 8px;border-radius:999px}
-  .adbanner h4{margin:0 0 6px;font-size:1.05rem;color:#8ff5d8}
-  .adbanner p{margin:0 0 10px;color:#b7becc}
-  .adbanner .btn{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:10px 14px;border-radius:12px;color:#081014;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-  .adbanner .ad-note{margin-top:6px;font-size:.82rem;color:#93a0ad}
-  @media (max-width:520px){.adbanner{grid-template-columns:1fr}}
-</style>
-
-<div class="adrow">
-  <!-- DROP-IN BANNER: Roja Parfums Elysium -->
-  <article class="adbanner" aria-label="Roja Parfums Elysium — Fragrance">
-    <a class="shot" href="https://www.ebay.com/itm/405559220328?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fAg3biC%2FS41yCkuQ01yxOG4nvRhxmCqmhLmR2Ww7%2B0RK6jf5CODbV%2BCGzAPVz%2FmCAXLvL6lD0rmGPFXlC5%2FYPN0Mw59zOC%2FkLFOiiztJE2Nji1gw2QkzyqKYIvdvrdsnvOlvNCrvS%2B8iLhSalwdXHQQMWNinU1pw7Uo3LGCkxH5%2BH35aRVRvR0hut9fOj4iA0%3D" target="_blank" rel="sponsored noopener noreferrer">
-      <span class="adbadge">Ad</span>
-      <img src="roja.jpg" alt="Roja Parfums Elysium bottle and box — blue gradient flacon">
-    </a>
-    <div>
-      <h4>Roja Parfums Elysium (Parfum Cologne)</h4>
-      <p>Bright citrus, clean woods, and classy musk. <strong>Smell like compliments — not bongwater.</strong></p>
-      <a class="btn" href="https://www.ebay.com/itm/405559220328?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fAg3biC%2FS41yCkuQ01yxOG4nvRhxmCqmhLmR2Ww7%2B0RK6jf5CODbV%2BCGzAPVz%2FmCAXLvL6lD0rmGPFXlC5%2FYPN0Mw59zOC%2FkLFOiiztJE2Nji1gw2QkzyqKYIvdvrdsnvOlvNCrvS%2B8iLhSalwdXHQQMWNinU1pw7Uo3LGCkxH5%2BH35aRVRvR0hut9fOj4iA0%3D" target="_blank" rel="sponsored noopener noreferrer">Check Price →</a>
-      <div class="ad-note">Affiliate link — we may earn a commission at no extra cost to you.</div>
-    </div>
-  </article>
-
-  <!-- DROP-IN BANNER: Skull Handbag -->
-  <article class="adbanner" aria-label="Skull Art Leather Tote — Bag">
-    <a class="shot" href="https://www.ebay.com/itm/187336552597?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fRbM2hTTcEMIg0rz%2FVFZdtP5PgAQpBUNfyW2jhFz1A5TF9ttgGtBTh1Rm0cP246c9P1fHBKG%2FiBCUjkv6lWBERDliuUqEf%2FwLPcGDmSOIgpFPyVR71MXbAd%2B7%2BqZk4adyeb13SoZfjURJ%2F5PaQArjicWQksGdWL3Z9Y3Iv7JQ2CQ53WPMNuAIP8%2FhqabrS2oo%3D" target="_blank" rel="sponsored noopener noreferrer">
-      <span class="adbadge">Ad</span>
-      <img src="s-l1600 (34).jpg" alt="Skull artwork leather tote bag with strap">
-    </a>
-    <div>
-      <h4>Skull Art Leather Tote</h4>
-      <p>Bold street-art vibes with everyday utility. Carry the edge with you.</p>
-      <a class="btn" href="https://www.ebay.com/itm/187336552597?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fRbM2hTTcEMIg0rz%2FVFZdtP5PgAQpBUNfyW2jhFz1A5TF9ttgGtBTh1Rm0cP246c9P1fHBKG%2FiBCUjkv6lWBERDliuUqEf%2FwLPcGDmSOIgpFPyVR71MXbAd%2B7%2BqZk4adyeb13SoZfjURJ%2F5PaQArjicWQksGdWL3Z9Y3Iv7JQ2CQ53WPMNuAIP8%2FhqabrS2oo%3D" target="_blank" rel="sponsored noopener noreferrer">See Listing →</a>
-      <div class="ad-note">Affiliate link — we may earn a commission.</div>
-    </div>
-  </article>
-
-  <!-- DROP-IN BANNER: Common Culture Trimming Tray Kit -->
-  <article class="adbanner" aria-label="Common Culture Trimming Tray Kit — Tools">
-    <a class="shot" href="https://www.ebay.com/itm/303814813798?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fXWQvYhWxkd4anfpuzZMymmDs622MP%2B%2Brm2txD4i1njTeEF57hLbttGuRbMcX8p9ZG%2B0CzA42t0q9Y5qH1eZGya0TfPTKsPJCAgbmrdSZl9xemcvoxGQliyvhQTXzBc%2FTqYmmpWJMjneT40FesAZWYeVkI1XL1GwgfURxFZP1SnanSaZx%2B8FjYs%2BiTenTPomE%3D" target="_blank" rel="sponsored noopener noreferrer">
-      <span class="adbadge">Ad</span>
-      <img src="s-l1600 (36).jpg" alt="Common Culture trimming tray kit with tools and accessories">
-    </a>
-    <div>
-      <h4>Common Culture Trimming Tray Kit</h4>
-      <p>Keep the mess down and the kief up — dialed tools for tidy trim sessions.</p>
-      <a class="btn" href="https://www.ebay.com/itm/303814813798?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fXWQvYhWxkd4anfpuzZMymmDs622MP%2B%2Brm2txD4i1njTeEF57hLbttGuRbMcX8p9ZG%2B0CzA42t0q9Y5qH1eZGya0TfPTKsPJCAgbmrdSZl9xemcvoxGQliyvhQTXzBc%2FTqYmmpWJMjneT40FesAZWYeVkI1XL1GwgfURxFZP1SnanSaZx%2B8FjYs%2BiTenTPomE%3D" target="_blank" rel="sponsored noopener noreferrer">Shop Kit →</a>
-      <div class="ad-note">Affiliate link — we may earn a commission.</div>
-    </div>
-  </article>
-</div>
+        <!-- Trimming Tray -->
+        <article class="adbanner" aria-label="Common Culture Trimming Tray Kit — Tools">
+          <a class="shot" href="https://www.ebay.com/itm/303814813798?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fXWQvYhWxkd4anfpuzZMymmDs622MP%2B%2Brm2txD4i1njTeEF57hLbttGuRbMcX8p9ZG%2B0CzA42t0q9Y5qH1eZGya0TfPTKsPJCAgbmrdSZl9xemcvoxGQliyvhQTXzBc%2FTqYmmpWJMjneT40FesAZWYeVkI1XL1GwgfURxFZP1SnanSaZx%2B8FjYs%2BiTenTPomE%3D" target="_blank" rel="sponsored noopener noreferrer">
+            <span class="adbadge">Ad</span>
+            <img src="s-l1600 (36).jpg" alt="Common Culture trimming tray kit with tools and accessories">
+          </a>
+          <div>
+            <h4>Common Culture Trimming Tray Kit</h4>
+            <p>Keep the mess down and the kief up — dialed tools for tidy trim sessions.</p>
+            <a class="btn" href="https://www.ebay.com/itm/303814813798?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fXWQvYhWxkd4anfpuzZMymmDs622MP%2B%2Brm2txD4i1njTeEF57hLbttGuRbMcX8p9ZG%2B0CzA42t0q9Y5qH1eZGya0TfPTKsPJCAgbmrdSZl9xemcvoxGQliyvhQTXzBc%2FTqYmmpWJMjneT40FesAZWYeVkI1XL1GwgfURxFZP1SnanSaZx%2B8FjYs%2BiTenTPomE%3D" target="_blank" rel="sponsored noopener noreferrer">Shop Kit →</a>
+            <div class="ad-note">Affiliate link — we may earn a commission.</div>
+          </div>
+        </article>
+      </div><!-- /.adrow -->
+    </div><!-- /.mosaic -->
+  </section>
 
   <!-- FEATURED GEAR -->
   <section class="from" aria-label="Featured gear">

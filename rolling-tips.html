@@ -282,7 +282,51 @@
       </div>
     </article>
   </section>
+<!-- Designer Sneaker — Drop-in Affiliate Banner -->
+<a href="https://www.ebay.com/itm/197452054207?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1egeHkkbdi3%2Bk1%2FCBl8Lvp2ATWK4ZO8YTH1IraHaOmrXW0MSEwRih8low8CTb%2FVAqnhG3x2iqhoL0a7IkCg1cuIXwiisdS6%2BAKFsG7Bc4atk5QJvIWuNC1ojIQIb3S7f5HCcDc%2BW%2Bp%2BvPvLTQ5SE343hCe0SdttO7yEgop01T%2Bl2AqS1poHxuMLSkIexPHcmDY%3D"
+   target="_blank" rel="sponsored noopener noreferrer"
+   style="display:block;text-decoration:none;color:#e7ecef;background:#101319;border:1px solid #2b3641;border-radius:14px;overflow:hidden;margin:14px 0;">
+  <div style="display:flex;gap:14px;align-items:center;padding:12px;flex-wrap:wrap;">
+    <img src="s-l1600 (47).jpg" alt="Designer trail-style sneaker with gum sole"
+         style="width:140px;height:120px;object-fit:cover;border-radius:10px;background:#0b0d11;flex:0 0 auto;">
+    <div style="flex:1;min-width:230px">
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9aa4ad;margin-bottom:4px;">Ad • Designer Deal</div>
+      <h3 style="margin:0 0 6px;font-size:20px;line-height:1.25;color:#e7ecef;">Gucci Rhyton-Style Trail Sneaker</h3>
 
+      <div style="display:flex;gap:10px;align-items:center;margin:0 0 8px;">
+        <span aria-label="5 out of 5 stars" style="color:#ffd76a;font-weight:800;">★★★★★</span>
+        <span style="color:#aeb6c2;font-size:.92rem;">4.9/5 • 1,200+ sold</span>
+      </div>
+
+      <p style="margin:0 0 10px;color:#b9c1cc;font-size:.95rem;">
+        Chunky gum sole, metallic panels, serious drip. Ships fast—gift-ready.
+      </p>
+
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <span style="padding:6px 10px;border-radius:999px;background:#0f1217;border:1px solid #2b3641;font-weight:700;">
+          <s style="opacity:.7;">$995</s> <span style="color:#7ef29a">$639</span>
+        </span>
+        <span id="sneak-timer" style="font-size:.9rem;color:#ffb86b;">Deal ends in 29:59</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<script>
+  // Tiny per-banner countdown
+  (function(id, mins){
+    var el=document.getElementById(id); if(!el) return;
+    var end=Date.now()+mins*60*1000;
+    var t=setInterval(function(){
+      var s=Math.max(0, Math.floor((end-Date.now())/1000));
+      var m=String(Math.floor(s/60)).padStart(2,'0');
+      var r=String(s%60).padStart(2,'0');
+      el.textContent='Deal ends in '+m+':'+r;
+      if(s<=0) clearInterval(t);
+    },1000);
+  })('sneak-timer', 29.9);
+</script>
+</div>
   <!-- Storage & Morning Setups -->
   <section class="container grid">
     <aside class="card block">

@@ -309,35 +309,46 @@
         </div>
       </article>
 
-      <!-- THREE-ACROSS AD ROW (Roja + Skull Tote + Trimming Tray) -->
-      <div class="adrow">
-        <!-- Roja -->
-        <article class="adbanner" aria-label="Roja Parfums Elysium — Fragrance">
-          <a class="shot" href="https://www.ebay.com/itm/405559220328?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fAg3biC%2FS41yCkuQ01yxOG4nvRhxmCqmhLmR2Ww7%2B0RK6jf5CODbV%2BCGzAPVz%2FmCAXLvL6lD0rmGPFXlC5%2FYPN0Mw59zOC%2FkLFOiiztJE2Nji1gw2QkzyqKYIvdvrdsnvOlvNCrvS%2B8iLhSalwdXHQQMWNinU1pw7Uo3LGCkxH5%2BH35aRVRvR0hut9fOj4iA0%3D" target="_blank" rel="sponsored noopener noreferrer">
-            <span class="adbadge">Ad</span>
-            <img src="roja.jpg" alt="Roja Parfums Elysium bottle and box — blue gradient flacon">
-          </a>
-          <div>
-            <h4>Roja Parfums Elysium (Parfum Cologne)</h4>
-            <p>Bright citrus, clean woods, and classy musk. <strong>Smell like compliments — not bongwater.</strong></p>
-            <a class="btn" href="https://www.ebay.com/itm/405559220328?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fAg3biC%2FS41yCkuQ01yxOG4nvRhxmCqmhLmR2Ww7%2B0RK6jf5CODbV%2BCGzAPVz%2FmCAXLvL6lD0rmGPFXlC5%2FYPN0Mw59zOC%2FkLFOiiztJE2Nji1gw2QkzyqKYIvdvrdsnvOlvNCrvS%2B8iLhSalwdXHQQMWNinU1pw7Uo3LGCkxH5%2BH35aRVRvR0hut9fOj4iA0%3D" target="_blank" rel="sponsored noopener noreferrer">US $170.00 →</a>
-            <div class="ad-note">Affiliate link — we may earn a commission at no extra cost to you.</div>
-          </div>
-        </article>
-
-       <!-- Skull Tote -->
-<article class="adbanner" aria-label="Skull Art Leather Tote — Bag">
-  <a class="shot" href="https://www.ebay.com/itm/187336552597?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fRbM2hTTcEMIg0rz%2FVFZdtP5PgAQpBUNfyW2jhFz1A5TF9ttgGtBTh1Rm0cP246c9P1fHBKG%2FiBCUjkv6lWBERDliuUqEf%2FwLPcGDmSOIgpFPyVR71MXbAd%2B7%2BqZk4adyeb13SoZfjURJ%2F5PaQArjicWQksGdWL3Z9Y3Iv7JQ2CQ53WPMNuAIP8%2FhqabrS2oo%3D" target="_blank" rel="sponsored noopener noreferrer">
-    <span class="adbadge">Ad</span>
-    <img src="s-l1600 (34).jpg" alt="Skull artwork leather tote bag with strap">
-  </a>
-  <div>
-    <h4>Skull Art Leather Tote</h4>
-    <p>Bold street-art vibes with everyday utility. Carry the edge with you.</p>
-    <a class="btn" href="https://www.ebay.com/itm/187336552597?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339123670&toolid=80006&mkevt=1&amdata=enc%3AAQAKAAAAoFkggFvd1GGDu0w3yXCmi1fRbM2hTTcEMIg0rz%2FVFZdtP5PgAQpBUNfyW2jhFz1A5TF9ttgGtBTh1Rm0cP246c9P1fHBKG%2FiBCUjkv6lWBERDliuUqEf%2FwLPcGDmSOIgpFPyVR71MXbAd%2B7%2BqZk4adyeb13SoZfjURJ%2F5PaQArjicWQksGdWL3Z9Y3Iv7JQ2CQ53WPMNuAIP8%2FhqabrS2oo%3D" target="_blank" rel="sponsored noopener noreferrer">US $170.00 →</a>
-    <div class="ad-note">Affiliate link — we may earn a commission.</div>
-  </div>
-</article>
+      /* === Compact three-across ad row (Roja + Skull Tote + Trimming Tray) === */
+.adrow .adbanner{
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  padding: 12px;
+  min-height: auto;
+}
+.adrow .adbanner .shot{
+  width: 120px;
+  aspect-ratio: 1 / 1;      /* square thumb keeps height tight */
+}
+.adrow .adbanner .shot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* no tall stretching */
+}
+.adrow .adbanner h4{
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+.adrow .adbanner p{
+  font-size: .92rem;
+  margin: 0 0 8px;
+  display: -webkit-box;      /* clamp to 2 lines so cards stay short */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.adrow .adbanner .btn{
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+@media (min-width: 1000px){
+  .adrow{align-items: stretch}
+  .adrow .adbanner{display:grid}
+}
+@media (max-width: 520px){
+  .adrow .adbanner{grid-template-columns: 1fr}
+  .adrow .adbanner .shot{width: 100%; aspect-ratio: 16/9}
+}
 
 <!-- ======= Clean, desktop-friendly layout (main + sidebar) ======= -->
 <section class="shop-block" aria-label="Featured gear + promos">

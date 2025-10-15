@@ -309,47 +309,6 @@
         </div>
       </article>
 
-      /* === Compact three-across ad row (Roja + Skull Tote + Trimming Tray) === */
-.adrow .adbanner{
-  grid-template-columns: 120px 1fr;
-  gap: 12px;
-  padding: 12px;
-  min-height: auto;
-}
-.adrow .adbanner .shot{
-  width: 120px;
-  aspect-ratio: 1 / 1;      /* square thumb keeps height tight */
-}
-.adrow .adbanner .shot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;         /* no tall stretching */
-}
-.adrow .adbanner h4{
-  font-size: 1rem;
-  margin: 0 0 4px;
-}
-.adrow .adbanner p{
-  font-size: .92rem;
-  margin: 0 0 8px;
-  display: -webkit-box;      /* clamp to 2 lines so cards stay short */
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.adrow .adbanner .btn{
-  padding: 8px 12px;
-  border-radius: 10px;
-}
-@media (min-width: 1000px){
-  .adrow{align-items: stretch}
-  .adrow .adbanner{display:grid}
-}
-@media (max-width: 520px){
-  .adrow .adbanner{grid-template-columns: 1fr}
-  .adrow .adbanner .shot{width: 100%; aspect-ratio: 16/9}
-}
-
 <!-- ======= Clean, desktop-friendly layout (main + sidebar) ======= -->
 <section class="shop-block" aria-label="Featured gear + promos">
   <style>

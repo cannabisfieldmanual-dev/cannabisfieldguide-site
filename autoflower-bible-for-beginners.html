@@ -195,46 +195,113 @@
     <h1>Autoflower Bible: From First Seed to Expert Harvest</h1>
     <p class="subtle">A field-tested, hype-free walkthrough that gets you from “never grown” to jars you’re proud of—without burning cash or time.</p>
     <div class="disclosure"><strong>Affiliate disclosure:</strong> Some links are affiliate links. If you buy through them, we may earn a small commission at no extra cost to you. We only recommend products we trust and would use in our own tents. Adults 21+ only.</div>
+<!-- ===== Drop-in Ad Cards (responsive, matches your dark theme tokens) ===== -->
+<style>
+  /* Ad card shell */
+  .adcard{
+    position:relative;display:grid;gap:16px;align-items:center;
+    grid-template-columns:110px 1fr;
+    padding:14px;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,#12161c,#0c0f14);margin:18px 0;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+  }
+  @media(max-width:720px){ .adcard{grid-template-columns:80px 1fr} }
 
-    <div class="adcard">
-      <span class="adbadge">Ad</span>
-      <a class="shot" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener">
-        <img src="concentrates.jpg" alt="Discreet THC products assortment">
-      </a>
-      <div>
-        <h4>GetBud Online — Pre-Rolls, Flower, Vapes</h4>
-        <p>Fast, discreet, and fresh. <strong>New customers: 15% off with code <code>GBO15</code></strong>.</p>
-        <div class="chiprow"><span class="chip">Even-burn pre-rolls</span><span class="chip">Value packs</span><span class="chip">Quick ship</span></div>
-        <p style="margin-top:10px"><a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener">Shop GetBud →</a></p>
-      </div>
- <a href="https://ilgm.com/collections/deals?aff=7946"  ><img src="https://static.affiliatly.com/affiliate_files/banners/21567/img_0020.jpeg" width="726" height="276" alt="" /></a>
-    </div>
+  /* "Ad" badge */
+  .adbadge{
+    position:absolute;top:10px;left:10px;
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    padding:.2rem .5rem;border-radius:999px;
+    background:#1a8a56;border:1px solid #0e5a37;color:#eafff6;font-weight:800;
+  }
 
-    <h2>Why Autoflowers Work for Real-World Schedules</h2>
-    <p>Autoflowers transition to bloom based on age, not light schedule. That means you can run a single, simple cycle—<code>18/6</code> or <code>20/4</code>—from sprout to harvest, keep power predictable, and never worry about light leaks. In small apartments, dorms, or busy homes, that “set-and-hold” approach beats micromanaging timers and blackout curtains. The compromise is time: autos give you less recovery window if you overwater or stress them—so we keep moves minimal and environment steady.</p>
+  /* Image block */
+  .adcard .shot{
+    display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    background:#0b0d11;aspect-ratio:1/1; /* keeps a neat square on all screens */
+  }
+  .adcard .shot img{width:100%;height:100%;object-fit:cover;display:block}
 
-    <h2>Fast Setup That Actually Hits the Targets</h2>
-    <p>If you’re starting in a <strong>2×2</strong>, run <strong>one plant</strong> in a <strong>3–5 gal fabric pot</strong>. It’s easy to water, easy to train, and easy to light evenly. In a <strong>3×3</strong>, run <strong>two plants</strong> in 3–5 gal or <strong>four smaller plants</strong> in 2–3 gal if you already own a decent light. Keep the frame simple: a modest LED board, an inline fan with a carbon filter, and one clip fan to ripple the leaves.</p>
+  /* Text area */
+  .adcard h4{margin:0 0 6px;font-size:18px;color:#f8aa36}
+  .adcard p{margin:0;color:var(--sub)}
+  .chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .chip{border:1px solid #2b3641;border-radius:999px;padding:.28rem .6rem;font-size:.82rem;color:#cfe1ef;background:#0f131a}
 
-  <div class="adcard">
+  /* Buttons */
+  .btn,.btn-outline{
+    display:inline-flex;align-items:center;gap:.45rem;
+    padding:.6rem .9rem;border-radius:10px;font-weight:800;text-decoration:none
+  }
+  .btn{color:#f1f5f9;border:1px solid #2b3641;background:linear-gradient(180deg,#212a33,#151b22)}
+  .btn:hover{text-decoration:none;filter:brightness(1.03)}
+  .btn-outline{color:#dbe6f2;border:1px solid #2b3641;background:transparent}
+  .btn-outline:hover{background:#0f141b;text-decoration:none}
+
+  /* Wide banner (aff network image) */
+  .adbanner-img{
+    display:block;margin:12px 0;border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;line-height:0;background:#0b0d11
+  }
+  .adbanner-img img{width:100%;height:auto;display:block}
+</style>
+
+<!-- === Ad #1: GetBud Online === -->
+<div class="adcard">
   <span class="adbadge">Ad</span>
+
+  <a class="shot"
+     href="https://getbudonline.com/subid/christopher.serpico/"
+     target="_blank" rel="sponsored noopener noreferrer">
+    <img src="concentrates.jpg" alt="Discreet THC products assortment">
+  </a>
+
+  <div>
+    <h4>GetBud Online — Pre-Rolls, Flower, Vapes</h4>
+    <p>Fast, discreet, and fresh. <strong>New customers: 15% off with code <code>GBO15</code></strong>.</p>
+    <div class="chiprow">
+      <span class="chip">Even-burn pre-rolls</span>
+      <span class="chip">Value packs</span>
+      <span class="chip">Quick ship</span>
+    </div>
+    <p style="margin-top:10px">
+      <a class="btn" href="https://getbudonline.com/subid/christopher.serpico/" target="_blank" rel="sponsored noopener noreferrer">Shop GetBud →</a>
+    </p>
+
+    <!-- Optional affiliate banner below the copy -->
+    <a class="adbanner-img" href="https://ilgm.com/collections/deals?aff=7946" target="_blank" rel="sponsored noopener noreferrer" aria-label="See ILGM seed deals">
+      <img src="https://static.affiliatly.com/affiliate_files/banners/21567/img_0020.jpeg" width="726" height="276" alt="ILGM Deals Banner">
+    </a>
+  </div>
+</div>
+
+<h2>Why Autoflowers Work for Real-World Schedules</h2>
+<p>
+  Autoflowers transition to bloom based on age, not light schedule. That means you can run a single, simple cycle—<code>18/6</code> or <code>20/4</code>—from sprout to harvest, keep power predictable, and never worry about light leaks. In small apartments, dorms, or busy homes, that “set-and-hold” approach beats micromanaging timers and blackout curtains. The compromise is time: autos give you less recovery window if you overwater or stress them—so we keep moves minimal and environment steady.
+</p>
+
+<h2>Fast Setup That Actually Hits the Targets</h2>
+<p>
+  If you’re starting in a <strong>2×2</strong>, run <strong>one plant</strong> in a <strong>3–5 gal fabric pot</strong>. It’s easy to water, easy to train, and easy to light evenly. In a <strong>3×3</strong>, run <strong>two plants</strong> in 3–5 gal or <strong>four smaller plants</strong> in 2–3 gal if you already own a decent light. Keep the frame simple: a modest LED board, an inline fan with a carbon filter, and one clip fan to ripple the leaves.
+</p>
+
+<!-- === Ad #2: ILGM AK-47 Autoflower === -->
+<div class="adcard">
+  <span class="adbadge">Ad</span>
+
   <a class="shot"
      href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-     target="_blank" rel="sponsored noopener">
-    <!-- use original filename -->
-    <img src="autoflower-in-the-later-flowering-stage.webp"
-         alt="Frosty autoflower cola in late bloom">
+     target="_blank" rel="sponsored noopener noreferrer">
+    <!-- keep your original filename for cache-busting consistency -->
+    <img src="autoflower-in-the-later-flowering-stage.webp" alt="Frosty autoflower cola in late bloom">
   </a>
+
   <div>
     <h4>Start With Reliable Genetics: AK-47 Autoflower</h4>
-    <p>Consistent structure and forgiving feeding—perfect for a first run. From a trusted seed bank.</p>
-    <p>
-      <a class="btn"
-         href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946"
-         target="_blank" rel="sponsored noopener">Get AK-47 Auto →</a>
-      <a class="btn-outline"
-         href="https://ilgm.com/collections/deals?aff=7946"
-         target="_blank" rel="sponsored noopener">See ILGM Deals</a>
+    <p>Consistent structure and forgiving feeding—solid first-run genetics from a trusted seed bank.</p>
+    <p style="margin-top:10px">
+      <a class="btn" href="https://ilgm.com/products/ak-47-autoflower-seeds?aff=7946" target="_blank" rel="sponsored noopener noreferrer">Get AK-47 Auto →</a>
+      <a class="btn-outline" href="https://ilgm.com/collections/deals?aff=7946" target="_blank" rel="sponsored noopener noreferrer">See ILGM Deals</a>
     </p>
   </div>
 </div>
